@@ -1,26 +1,47 @@
 <script>
-	import {Route} from 'tinro'; 
+	import {Route, active} from 'tinro'; 
 
+	import About from './Views/About.svelte';
+	import Handbook from './Views/Handbook.svelte';
+	import Documents from './Views/Documents.svelte';
+	import Help from './Views/Help.svelte';
 </script>
 
 <div id="app">
-	<header></header>
+	<header>
+		<a href="/" use:active exact>About</a>
+		<a href="/handbook" use:active>Handbook</a>
+		<a href="/documents" use:active>Documents</a>
+		<a href="/help" use:active>Help</a>
+	</header>
 	<main>
-		<h1>Title Text</h1>
-		<h2>Heading Text</h2>
-		<h3>Subheading Text</h3>
-		<p>Body text</p>
-		<a class="action-button" href="https://thaddeus.education" target="_blank">Thaddeus</a>
-		<a class="regular-button" href="https://thaddeus.education" target="_blank">Thaddeus</a>
-		<section class="jumbotron">
-			<h2>a test</h2>
-		</section>
+		<Route path="/">
+			<About />
+		</Route>
+		<Route path="/handbook">
+			<Handbook />
+		</Route>
+		<Route path="/documents">
+			<Documents />
+		</Route>
+		<Route path="/help">
+			<Help />
+		</Route>
+		<Route fallback>
+			<About />
+		</Route>
 	</main>
 	<footer>
-		<h6>Caption Text</h6>
+		<h6>sponsored by the U.S. Department of State</h6>
 	</footer>
 </div>
 
 <style>
-	
+	@media screen and (max-width: 800px) {
+
+	}
+
+	@media screen and (min-width: 801px) {
+		
+	}
 </style>

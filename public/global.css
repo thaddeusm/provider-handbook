@@ -164,3 +164,22 @@ p {
 	text-align: center;
 	border-radius: var(--radius);
 }
+
+a {
+	text-decoration: none;
+	color: var(--black);
+}
+
+a:visited {
+	text-decoration: none;
+	color: var(--black);
+}
+
+a:active {
+	text-decoration: none;
+	color: var(--black);
+}
+
+.active {
+	border-bottom: 3px solid var(--red);
+}
