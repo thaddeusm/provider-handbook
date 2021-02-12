@@ -168,6 +168,7 @@ p {
 a {
 	text-decoration: none;
 	color: var(--black);
+	font-family: "Montserrat";
 }
 
 a:visited {
@@ -182,4 +183,11 @@ a:active {
 
 .active {
 	border-bottom: 3px solid var(--red);
+}
+
+button {
+	background: none;
+	border: none;
+	outline: none;
+	font-family: "Montserrat";
 }

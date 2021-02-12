@@ -6,14 +6,17 @@
 	import Handbook from './Views/Handbook.svelte';
 	import Documents from './Views/Documents.svelte';
 	import Help from './Views/Help.svelte';
+
+	import MobileHeader from './Components/MobileHeader.svelte';
 </script>
 
 <div id="app">
 	<header>
-		<a href="/" use:active exact>About</a>
+		<!-- <a href="/" use:active exact>About</a>
 		<a href="/handbook" use:active>Handbook</a>
 		<a href="/documents" use:active>Documents</a>
-		<a href="/help" use:active>Help</a>
+		<a href="/help" use:active>Help</a> -->
+		<MobileHeader />
 	</header>
 	<main>
 		<Route path="/">
@@ -44,5 +47,15 @@
 
 	@media screen and (min-width: 801px) {
 		
+	}
+
+	#app {
+		display: grid;
+		grid-template-rows: 15% 75% 10%;
+	}
+
+	footer {
+		align-self: center;
+		text-align: center;
 	}
 </style>
