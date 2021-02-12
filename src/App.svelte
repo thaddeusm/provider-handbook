@@ -1,5 +1,6 @@
 <script>
-	import {Route, active} from 'tinro'; 
+	import {Route, router, active} from 'tinro';
+	router.mode.hash();
 
 	import About from './Views/About.svelte';
 	import Handbook from './Views/Handbook.svelte';
