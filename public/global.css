@@ -1,63 +1,166 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+input,
+textarea,
+[contenteditable] {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+:root {
+	--brand: #002D62;
+	--brand-dark: #001329;
+	--brand-light: #3470B7;
+	--red: #D11242;
+	--gray: #E5E5E5;
+	--dark-gray: #868585;
+	--white: #FFFFFF;
+	--black: #000000;
+	--shadow: 0px 0px 5px #000000;
+	--radius: 2px;
+}
+
+::selection {
+    background: var(--brand-light);
+}
+
 html, body {
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
 
-body {
-	color: #333;
-	margin: 0;
-	padding: 8px;
-	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+#app {
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
 
-a {
-	color: rgb(0,100,200);
+@font-face {
+	font-family: "Montserrat";
+	src: url("./Montserrat.ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Montserrat-Bold";
+	src: url("./Montserrat-Bold.ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Montserrat-ExtraBold";
+	src: url("./Montserrat-ExtraBold.ttf");
+	font-display: swap;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: "Montserrat";
+	background: var(--white);
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1 {
+	font-size: 42px;
+	padding: 10px 0;
+	color: var(--brand);
+	font-family: "Montserrat-Bold";
+}
+
+h2	{
+	font-size: 28px;
+	padding: 30px 0;
+	color: var(--brand);
+	font-family: "Montserrat-Bold";
+}
+
+h3	{
+	font-size: 21px;
+	padding: 0;
+	color: var(--red);
+	font-family: "Montserrat-Bold";
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: 13px;
+	padding: 5px 0;
+	color: var(--black);
+	font-family: "Montserrat-ExtraBold";
+}
+
+p {
+	font-size: 15px;
+	padding: 10px 0 20px 0;
+	line-height: 1.5;
+	color: var(--black);
+	font-family: "Montserrat";
+}
+
+.action-button {
+	font-size: 21px;
+	font-family: "Montserrat";
+	padding: 15px 30px;
+	display: inline-block;
+	margin: 15px 0;
+	text-align: center;
+	color: var(--white);
+	background: var(--brand);
+	border-radius: var(--radius);
 	text-decoration: none;
 }
 
-a:hover {
-	text-decoration: underline;
+.regular-button {
+	font-size: 21px;
+	font-family: "Montserrat";
+	padding: 15px 30px;
+	display: inline-block;
+	margin: 15px 0;
+	text-align: center;
+	color: var(--white);
+	background: var(--dark-gray);
+	border-radius: var(--radius);
+	text-decoration: none;
+	box-shadow: var(--shadow);
 }
 
-a:visited {
-	color: rgb(0,80,160);
+.action-button-small {
+	font-size: 15px;
+	font-family: "Montserrat";
+	padding: 7px 15px;
+	display: inline-block;
+	margin: 7px 0;
+	text-align: center;
+	color: var(--white);
+	background: var(--brand);
+	border-radius: var(--radius);
+	text-decoration: none;
 }
 
-label {
-	display: block;
+.regular-button-small {
+	font-size: 15px;
+	font-family: "Montserrat";
+	padding: 7px 15px;
+	display: inline-block;
+	margin: 7px 0;
+	text-align: center;
+	color: var(--white);
+	background: var(--dark-gray);
+	border-radius: var(--radius);
+	text-decoration: none;
 }
 
-input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	-webkit-padding: 0.4em 0;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
-}
-
-input:disabled {
-	color: #ccc;
-}
-
-button {
-	color: #333;
-	background-color: #f4f4f4;
-	outline: none;
-}
-
-button:disabled {
-	color: #999;
-}
-
-button:not(:disabled):active {
-	background-color: #ddd;
-}
-
-button:focus {
-	border-color: #666;
+.jumbotron {
+	background: var(--gray);
+	padding: 25px;
+	margin: 25px auto;
+	text-align: center;
+	border-radius: var(--radius);
 }
