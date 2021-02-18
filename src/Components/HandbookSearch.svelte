@@ -56,7 +56,7 @@
 	#inputArea {
 		border: 1px solid var(--brand);
 		border-radius: 1px;
-		padding: 10px 5px;
+		padding: 10px 5px 8px 5px;
 		grid-area: inputArea;
 		display: grid;
 		grid-template-columns: 20% 80%;
@@ -78,7 +78,7 @@
 		border: none;
 		outline: none;
 		display: block;
-		max-width: 180px;
+		width: 100%;
 		grid-area: input;
 	}
 

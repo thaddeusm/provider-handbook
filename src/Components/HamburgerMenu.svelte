@@ -1,11 +1,15 @@
 <script>
-	import { slide } from 'svelte/transition';
+	import { router } from 'tinro';
 
 	import Hamburger from './../graphics/icons/Hamburger.svelte';
 	import Close from './../graphics/icons/Close.svelte';
 
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
+
+	$: if ($router.path) {
+		closeMenu();
+	}
 
 	let menuOpen = false;
 
@@ -32,7 +36,7 @@
 </style>
 
 {#if menuOpen}
-	<div class="button-container" transition:slide="{{duration: 200}}">
+	<div class="button-container">
 		<button on:click={closeMenu}>
 			<Close width={'2rem'} height={'2rem'}  />
 		</button>

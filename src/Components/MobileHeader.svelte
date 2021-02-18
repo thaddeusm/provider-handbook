@@ -1,4 +1,6 @@
 <script>
+	import { slide } from 'svelte/transition';
+
 	import Access from './../graphics/icons/Access.svelte';
 	import DownArrow from './../graphics/icons/DownArrow.svelte';
 	import UpArrow from './../graphics/icons/UpArrow.svelte';
@@ -12,15 +14,15 @@
 	let showSearch = false;
 
 	function toggleLogo() {
-		showTagline = !showTagline
+		showTagline = !showTagline;
 	}
 
 	function toggleSub() {
-		showSub = !showSub
+		showSub = !showSub;
 	}
 
 	function toggleSearch() {
-		showSearch = !showSearch
+		showSearch = !showSearch;
 	}
 </script>
 
@@ -30,9 +32,9 @@
 			<div class="tray">
 				<ul class="primary-list">
 					<li><a href="/">about</a></li>
-					<li><a href="/handbook">handbook</a></li>
+					
 					<li class="sub">
-						<a href="/documents">documents</a>
+						<a href="/handbook">handbook</a>
 						<button on:click={toggleSub}>
 							{#if showSub}
 								<UpArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} />
@@ -41,20 +43,21 @@
 							{/if}
 						</button>
 						{#if showSub}
-							<ul class="secondary-list">
+							<ul class="secondary-list" transition:slide="{{duration: 200}}">
 								<li>
 									<a>test</a>
 								</li>
 							</ul>
 						{/if}
 					</li>
+					<li><a href="/documents">documents</a></li>
 					<li><a href="/help">help</a></li>
 				</ul>
 			</div>
 		</HamburgerMenu>
 	</section>
 	<section class="center">
-		<Access width={'90%'} {showTagline} />
+		<Access width={'88%'} {showTagline} />
 	</section>
 	<section class="right">
 		{#if showSearch}
