@@ -8,7 +8,25 @@
 	import Help from './Views/Help.svelte';
 
 	import MobileHeader from './Components/MobileHeader.svelte';
+
+	let title;
+
+	$: {
+		if ($router.path == '/') {
+			title = 'Access - Provider Handbook';
+		} else {
+			let path = $router.path.split('/').join('');
+			let firstLetter = path[0].toUpperCase();
+			let revisedPathTitle = firstLetter + path.slice(1);
+
+			title = 'Access - Provider Handbook | ' + revisedPathTitle;
+		}
+	}
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
 
 <div id="app">
 	<header>
