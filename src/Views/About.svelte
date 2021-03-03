@@ -28,11 +28,13 @@
 		display: grid;
 		grid-template-rows: 60% 40%;
 		align-items: center;
-		justify-content: center;
+		/*justify-content: center;*/
 	}
 
 	.video-container {
 		text-align: center;
+		background: var(--gray);
+		padding: 10px 0;
 	}
 
 	.video {

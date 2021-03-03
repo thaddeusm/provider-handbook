@@ -57,7 +57,7 @@
 		</HamburgerMenu>
 	</section>
 	<section class="center">
-		<Access width={'88%'} {showTagline} />
+		<Access width={'10rem'} {showTagline} />
 	</section>
 	<section class="right">
 		{#if showSearch}
@@ -71,11 +71,22 @@
 </nav>
 
 <style>
+	@media screen and (max-width: 450px) {
+		nav {
+			grid-template-columns: 65px 1fr 65px;
+		}
+	}
+
+	@media screen and (min-width: 451px) and (max-width: 800px) {
+		nav {
+			grid-template-columns: 100px 1fr 100px;
+		}
+	}
+
 	nav {
 		display: grid;
 		align-items: center;
 		height: 100%;
-		grid-template-columns: .5fr 1fr .5fr;
 		grid-template-areas: "left center right";
 	}
 
@@ -86,6 +97,7 @@
 
 	.center {
 		grid-area: center;
+		text-align: center;
 	}
 
 	.right {

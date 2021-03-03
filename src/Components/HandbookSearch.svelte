@@ -3,7 +3,16 @@
 	import Close from './../graphics/icons/Close.svelte';
 
 	import { createEventDispatcher } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 
+	onMount(() => {
+		document.body.style.overflow = 'hidden';
+	});
+
+	onDestroy(() => {
+		document.body.style.overflow = 'auto';
+	});
+	
 	const dispatch = createEventDispatcher();
 
 	let query = '';
@@ -48,7 +57,7 @@
 
 	#searchBox {
 		display: grid;
-		grid-template-columns: .1fr 1.4fr .5fr;
+		grid-template-columns: .08fr 1.4fr .35fr;
 		grid-template-areas: ". inputArea closeArea";
 		align-items: center;
 	}

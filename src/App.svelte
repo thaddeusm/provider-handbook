@@ -59,21 +59,20 @@
 </div>
 
 <style>
-	@media screen and (max-width: 800px) {
-
-	}
-
-	@media screen and (min-width: 801px) {
-		
-	}
-
 	#app {
+		height: 100%;
 		display: grid;
-		grid-template-rows: 15% 75% 10%;
+		grid-template-rows: 15% auto 100px;
+	}
+
+	main {
+		/*overflow: auto;*/
 	}
 
 	footer {
-		align-self: center;
+		display: grid;
+		align-items: center;
 		text-align: center;
+		padding: 0 10px;
 	}
 </style>
