@@ -7,7 +7,7 @@
 	import Search from './../graphics/icons/Search.svelte';
 
 	import HamburgerMenu from './../components/HamburgerMenu.svelte';
-	import HandbookSearch from './../components/HandbookSearch.svelte';
+	import MobileHandbookSearch from './../components/MobileHandbookSearch.svelte';
 
 	let showTagline = true;
 	let showSub = false;
@@ -32,7 +32,6 @@
 			<div class="tray">
 				<ul class="primary-list">
 					<li><a href="/">about</a></li>
-					
 					<li class="sub">
 						<a href="/handbook">handbook</a>
 						<button on:click={toggleSub}>
@@ -61,7 +60,7 @@
 	</section>
 	<section class="right">
 		{#if showSearch}
-			<HandbookSearch on:close-search={toggleSearch} />
+			<MobileHandbookSearch on:close-search={toggleSearch} />
 		{:else}
 			<button on:click={toggleSearch}>
 				<Search color={'#000000'} width={'2rem'} height={'2rem'} />

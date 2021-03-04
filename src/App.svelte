@@ -1,5 +1,5 @@
 <script>
-	import {Route, router, active} from 'tinro';
+	import { Route, router } from 'tinro';
 	router.mode.hash();
 
 	import About from './Views/About.svelte';
@@ -8,6 +8,7 @@
 	import Help from './Views/Help.svelte';
 
 	import MobileHeader from './Components/MobileHeader.svelte';
+	import DesktopHeader from './Components/DesktopHeader.svelte';
 
 	let title;
 
@@ -29,12 +30,11 @@
 </svelte:head>
 
 <div id="app">
-	<header>
-		<!-- <a href="/" use:active exact>About</a>
-		<a href="/handbook" use:active>Handbook</a>
-		<a href="/documents" use:active>Documents</a>
-		<a href="/help" use:active>Help</a> -->
+	<header id="mobileHeader">
 		<MobileHeader />
+	</header>
+	<header id="desktopHeader">
+		<DesktopHeader />
 	</header>
 	<main>
 		<Route path="/">
@@ -59,6 +59,26 @@
 </div>
 
 <style>
+	@media screen and (max-width: 800px) {
+		#mobileHeader {
+			display: block;
+		}
+
+		#desktopHeader {
+			display: none;
+		}
+	}
+
+	@media screen and (min-width: 801px) {
+		#mobileHeader {
+			display: none;
+		}
+
+		#desktopHeader {
+			display: block;
+		}
+	}
+
 	#app {
 		height: 100%;
 		display: grid;
