@@ -1,8 +1,9 @@
 <script>
-	import Introduction from './../docs/Introduction.svx';
+	import Handbook from './../Docs/Handbook.json';
+	import InteractiveAvailable from './../Graphics/Icons/InteractiveAvailable.svelte';
 
-	function displayInvitationToInteractive(e) {
-		console.log(e.detail.data);
+	function openModal() {
+		console.log('open the modal');
 	}
 </script>
 
@@ -11,7 +12,24 @@
 		<h2>
 			Provider Handbook
 		</h2>
-		<Introduction on:open-modal={displayInvitationToInteractive} />
+		{#each Handbook.sections as handbookSection}
+			{#each handbookSection as section}
+				{#if section.style == "icon_subheading"}
+					<div class="icon-subheading">
+						<h3>
+							{section.content}
+						</h3>
+						<button on:click={openModal}>
+							<InteractiveAvailable width={'2rem'} height={'2rem'} />
+						</button>
+					</div>
+				{:else if section.style == "subheading"}
+					<h3>{section.content}</h3>
+				{:else}
+					<p>{section.content}</p>
+				{/if}
+			{/each}
+		{/each}
 	</section>
 </div>
 
