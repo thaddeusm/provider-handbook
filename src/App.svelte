@@ -53,9 +53,6 @@
 			<About />
 		</Route>
 	</main>
-	<footer>
-		<h6>sponsored by the U.S. Department of State</h6>
-	</footer>
 </div>
 
 <style>
@@ -82,17 +79,10 @@
 	#app {
 		height: 100%;
 		display: grid;
-		grid-template-rows: 15% auto 100px;
+		grid-template-rows: 130px auto;
 	}
 
 	main {
 		/*overflow: auto;*/
-	}
-
-	footer {
-		display: grid;
-		align-items: center;
-		text-align: center;
-		padding: 0 10px;
 	}
 </style>

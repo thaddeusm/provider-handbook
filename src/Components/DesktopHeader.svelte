@@ -2,6 +2,7 @@
 	import { fade } from 'svelte/transition';
 	import { active } from 'tinro';
 	import Search from './../graphics/icons/Search.svelte';
+	import Access from './../graphics/icons/Access.svelte';
 
 	import HandbookSearch from './../components/HandbookSearch.svelte';
 
@@ -13,6 +14,9 @@
 </script>
 
 <nav>
+	<aside>
+		<Access width={'15rem'} showTagline={false} />
+	</aside>
 	<section class="top">
 		{#if showSearch}
 			<section class="search-area" in:fade="{{duration: 300}}">
@@ -42,6 +46,15 @@
 		grid-template-areas: 
 			"top"
 			".";
+	}
+
+	aside {
+		position: absolute;
+		top: 0;
+		left: 2rem;
+		background: var(--white);
+		padding: 4rem;
+		z-index: 2;
 	}
 
 	.top {

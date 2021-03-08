@@ -20,20 +20,29 @@
 	<section class="action">
 		<a class="action-button" href="/handbook">view handbook</a>
 	</section>
+	<footer>
+		<h6>sponsored by the U.S. Department of State</h6>
+	</footer>
 </div>
 
 <style>
+	@media screen and (min-width: 801px) {
+		.video-container {
+			align-self: flex-end;
+		}
+	}
+
 	.container {
 		height: 100%;
 		display: grid;
-		grid-template-rows: 60% 40%;
+		grid-template-rows: 60% auto 100px;
 		align-items: center;
 		/*justify-content: center;*/
 	}
 
 	.video-container {
 		text-align: center;
-		background: var(--gray);
+		background: var(--white);
 		padding: 10px 0;
 	}
 
