@@ -121,7 +121,7 @@ p {
 	display: inline-block;
 	margin: 15px 0;
 	text-align: center;
-	color: var(--white);
+	color: var(--white)!important;
 	background: var(--brand);
 	border-radius: var(--radius);
 	text-decoration: none;

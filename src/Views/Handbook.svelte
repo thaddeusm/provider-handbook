@@ -1,10 +1,13 @@
 <script>
-	import VirtualList from '@sveltejs/svelte-virtual-list';
+	import { onMount } from 'svelte';
+
 	import Handbook from './../Docs/Handbook.json';
 	import InteractiveAvailable from './../Graphics/Icons/InteractiveAvailable.svelte';
 
 	let start;
 	let end;
+
+	let activeId;
 
 	$: {
 		console.log('start is ', start);
@@ -14,6 +17,20 @@
 	function openModal() {
 		console.log('open the modal');
 	}
+
+	onMount(async () => {
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					activeId = entry.target.getAttribute('id');
+				}
+			});
+		});
+
+		document.querySelectorAll('div[id]').forEach((div) => {
+			observer.observe(div);
+		});
+	});
 </script>
 
 <div class="container">
@@ -21,7 +38,7 @@
 		<ul>
 			{#each Handbook.sections as handbookSection, i}
 				<li>
-					<a class={start == i ? 'active': ''} href="#/handbook#{handbookSection[0].content.split(' ').join('')}" tinro-ignore>
+					<a class={activeId == handbookSection[0].content.split(' ').join('') ? 'active': ''} href="#/handbook#{handbookSection[0].content.split(' ').join('')}" tinro-ignore>
 						{handbookSection[0].content}
 					</a>
 				</li>
@@ -29,26 +46,28 @@
 		</ul>
 	</aside>
 	<section id="handbook">
-		<VirtualList items={Handbook.sections} let:item bind:start bind:end>
-			<div id="#{item[0].content.split(' ').join('')}" class="handbook-content-list">
-				{#each item as section}
-					{#if section.style == "icon_subheading"}
-						<div class="icon-subheading">
-							<h3>
-								{section.content}
-							</h3>
-							<button on:click={openModal}>
-								<InteractiveAvailable width={'2rem'} height={'2rem'} />
-							</button>
-						</div>
-					{:else if section.style == "subheading"}
-						<h3>{section.content}</h3>
-					{:else}
-						<p>{section.content}</p>
-					{/if}
-				{/each}
-			</div>
-		</VirtualList>
+		{#each Handbook.sections as handbookSection}
+ 			{#each handbookSection as section}
+ 				{#if section.style == "icon_subheading"}
+ 					<div class="icon-subheading" id="{handbookSection[0].content.split(' ').join('')}">
+ 						<h3>
+ 							{section.content}
+ 						</h3>
+ 						<button on:click={openModal}>
+ 							<InteractiveAvailable width={'2rem'} height={'2rem'} />
+ 						</button>
+ 					</div>
+ 				{:else if section.style == "subheading"}
+ 					<div id="{handbookSection[0].content.split(' ').join('')}">
+ 						<h3>
+	 						{section.content}
+	 					</h3>
+ 					</div>
+ 				{:else}
+ 					<p>{section.content}</p>
+ 				{/if}
+ 			{/each}
+ 		{/each}
 	</section>
 	<footer>
 		<h6>sponsored by the U.S. Department of State</h6>
@@ -86,7 +105,7 @@
 
 	@media screen and (min-width: 801px) {
 		.container {
-			grid-template-columns: 28rem 1fr;
+			grid-template-columns: 26rem 1fr;
 		}
 
 		.handbook-content-list {
@@ -97,20 +116,23 @@
 	.container {
 		height: 100%;
 		display: grid;
-		grid-template-rows: 73vh 100px;
+		grid-template-rows: 1fr 100px;
 		grid-template-areas: 
-			"links handbook ."
-			"links footer .";
+			". handbook"
+			". footer";
 	}
 
 	#handbook {
 		grid-area: handbook;
-		margin: 0 auto;
+		padding: 0 4rem;
 	}
 
 	aside {
 		background: var(--brand-dark);
-		margin-top: -65px;
+		position: fixed;
+		top: 0;
+		padding-top: 10px;
+		width: 26rem;
 		padding-bottom: 65px;
 		grid-area: links;
 		z-index: 1;
@@ -118,12 +140,13 @@
 	}
 
 	aside ul {
-
+		/*position: fixed;
+		top: 3rem;*/
 	}
 
 	aside ul li {
 		padding: 0 3rem;
-		margin: 3rem 0;
+		margin: 2rem 0;
 	}
 
 	aside ul li:first-child {

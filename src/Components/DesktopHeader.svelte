@@ -42,25 +42,26 @@
 	nav {
 		display: grid;
 		height: 100%;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: .70fr 1fr;
 		grid-template-areas: 
 			"top"
 			".";
 	}
 
 	aside {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 2rem;
 		background: var(--white);
-		padding: 4rem;
-		z-index: 2;
+		padding: 3rem;
+		z-index: 3;
 	}
 
 	.top {
 		grid-area: top;
 		display: grid;
 		align-items: center;
+		z-index: 2;
 		background: var(--brand);
 		grid-template-columns: auto auto;
 		grid-template-areas: ". navigationArea";
