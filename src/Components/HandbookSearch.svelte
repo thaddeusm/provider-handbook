@@ -42,7 +42,7 @@
 		top: 0;
 		right: 0;
 		display: grid;
-		grid-template-rows: 8% 92%;
+		grid-template-rows: 6% 94%;
 	}
 
 	#searchBox {
