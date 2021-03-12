@@ -127,6 +127,16 @@ p {
 	text-decoration: none;
 }
 
+.action-button:visited {
+	text-decoration: none;
+	color: var(--white);
+}
+
+.action-button:active {
+	text-decoration: none;
+	color: var(--white);
+}
+
 .regular-button {
 	font-size: 21px;
 	font-family: "Montserrat";
@@ -152,6 +162,16 @@ p {
 	background: var(--brand);
 	border-radius: var(--radius);
 	text-decoration: none;
+}
+
+.action-button-small:visited {
+	text-decoration: none;
+	color: var(--white);
+}
+
+.action-button-small:active {
+	text-decoration: none;
+	color: var(--white);
 }
 
 .regular-button-small {

@@ -26,7 +26,7 @@
 </div>
 
 <style>
-	@media screen and (min-width: 801px) {
+	@media screen and (min-width: 1101px) {
 		.video-container {
 			align-self: flex-end;
 		}

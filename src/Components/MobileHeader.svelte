@@ -76,7 +76,7 @@
 		}
 	}
 
-	@media screen and (min-width: 451px) and (max-width: 800px) {
+	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		nav {
 			grid-template-columns: 100px 1fr 100px;
 		}

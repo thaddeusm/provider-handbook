@@ -56,7 +56,7 @@
 </div>
 
 <style>
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 1100px) {
 		#mobileHeader {
 			display: block;
 		}
@@ -66,7 +66,7 @@
 		}
 	}
 
-	@media screen and (min-width: 801px) {
+	@media screen and (min-width: 1101px) {
 		#mobileHeader {
 			display: none;
 		}
@@ -79,7 +79,7 @@
 	#app {
 		height: 100%;
 		display: grid;
-		grid-template-rows: 130px auto;
+		grid-template-rows: 100px auto;
 	}
 
 	main {

@@ -3,19 +3,21 @@
 
 	import Handbook from './../Docs/Handbook.json';
 	import InteractiveAvailable from './../Graphics/Icons/InteractiveAvailable.svelte';
-
-	let start;
-	let end;
+	import PreviewModal from './../Components/PreviewModal.svelte';
 
 	let activeId;
+	let showPreview = false;
+	
+	let previewSection;
+	let previewURL;
+	let previewDescription;
 
-	$: {
-		console.log('start is ', start);
-		console.log('end is ', end);
-	}
-
-	function openModal() {
-		console.log('open the modal');
+	function openPreview(sectionTitle, link, description) {
+		showPreview = !showPreview;
+		
+		previewSection = sectionTitle;
+		previewURL = link;
+		previewDescription = description;
 	}
 
 	onMount(async () => {
@@ -53,7 +55,9 @@
  						<h3>
  							{section.content}
  						</h3>
- 						<button on:click={openModal}>
+ 						<button 
+ 							on:click={() => {openPreview(section.content.split(' ').join(''), section.link, section.interactive_description)}}
+ 						>
  							<InteractiveAvailable width={'2rem'} height={'2rem'} />
  						</button>
  					</div>
@@ -74,14 +78,46 @@
 	</footer>
 </div>
 
+{#if showPreview}
+	<PreviewModal>
+		<div slot="body" class="modal-body">
+			{#if previewSection}
+				<img class="large-preview-image" src={`/PreviewImages/${previewSection}Large.png`} />
+				<img class="small-preview-image" src={`/PreviewImages/${previewSection}Small.png`} />
+			{/if}
+		</div>
+		<div slot="footer" class="modal-footer">
+			<p class="description">
+				{previewDescription}
+			</p>
+			<div class="actions">
+				<button class="regular-button-small" on:click={() => {showPreview = false}}>close</button>
+				<a class="action-button-small" href="{previewURL}" target="_blank">go</a>
+			</div>
+		</div>
+	</PreviewModal>
+{/if}
+
 <style>
 	@media screen and (max-width: 450px) {
 		.container {
-			grid-template-columns: 15px 1fr;
+			grid-template-columns: 0 1fr;
+		}
+
+		#handbook {
+			padding: 0 1rem;
 		}
 
 		aside {
 			display: none;
+		}
+
+		.large-preview-image {
+			display: none!important;
+		}
+
+		.small-preview-image {
+			width: 35%;
 		}
 
 		.handbook-content-list {
@@ -89,13 +125,25 @@
 		}
 	}
 
-	@media screen and (min-width: 451px) and (max-width: 800px) {
+	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.container {
-			grid-template-columns: 35px 1fr;
+			grid-template-columns: 0 1fr;
+		}
+
+		#handbook {
+			padding: 0 2rem;
 		}
 
 		aside {
 			display: none;
+		}
+
+		.large-preview-image {
+			display: none!important;
+		}
+
+		.small-preview-image {
+			width: 45%;
 		}
 
 		.handbook-content-list {
@@ -103,9 +151,17 @@
 		}
 	}
 
-	@media screen and (min-width: 801px) {
+	@media screen and (min-width: 1101px) {
 		.container {
 			grid-template-columns: 26rem 1fr;
+		}
+
+		#handbook {
+			padding: 0 4rem;
+		}
+
+		.small-preview-image {
+			display: none!important;
 		}
 
 		.handbook-content-list {
@@ -124,7 +180,6 @@
 
 	#handbook {
 		grid-area: handbook;
-		padding: 0 4rem;
 	}
 
 	aside {
@@ -160,5 +215,36 @@
 
 	footer {
 		grid-area: footer;
+	}
+
+	.large-preview-image {
+		width: 50%;
+		margin: 0 auto;
+		display: block;
+		box-shadow: var(--shadow);
+		border-radius: var(--radius);
+	}
+
+	.small-preview-image {
+		margin: 0 auto;
+		display: block;
+		box-shadow: var(--shadow);
+		border-radius: var(--radius);
+	}
+
+	.description {
+		margin: 0;
+		padding: 0;
+	}
+
+	.modal-body {
+		align-self: center;
+	}
+
+	.modal-footer {
+		display: grid;
+		grid-template-rows: 40% 60%;
+		align-items: center;
+		height: 100%;
 	}
 </style>
