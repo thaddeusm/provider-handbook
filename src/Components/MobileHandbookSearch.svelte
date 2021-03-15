@@ -73,7 +73,7 @@
 		z-index: 3000;
 		display: grid;
 		align-items: center;
-		grid-template-rows: 15% 85%;
+		grid-template-rows: 100px 1fr;
 	}
 
 	#searchBox {
