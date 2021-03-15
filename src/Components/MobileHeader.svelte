@@ -1,6 +1,8 @@
 <script>
 	import { slide } from 'svelte/transition';
 
+	import Handbook from './../Docs/Handbook.json';
+
 	import Access from './../graphics/icons/Access.svelte';
 	import DownArrow from './../graphics/icons/DownArrow.svelte';
 	import UpArrow from './../graphics/icons/UpArrow.svelte';
@@ -43,9 +45,13 @@
 						</button>
 						{#if showSub}
 							<ul class="secondary-list" transition:slide="{{duration: 200}}">
-								<li>
-									<a>test</a>
-								</li>
+								{#each Handbook.sections as handbookSection, i}
+									<li>
+										<a href="#/handbook#{handbookSection[0].content.split(' ').join('')}" tinro-ignore>
+											{handbookSection[0].content}
+										</a>
+									</li>
+								{/each}
 							</ul>
 						{/if}
 					</li>
