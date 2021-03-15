@@ -42,6 +42,27 @@
 </aside>
 
 <style>
+	@media screen and (max-width: 450px) {
+		#searchBox {
+			grid-template-columns: .08fr 1.4fr 65px;
+		}
+
+		#inputArea {
+			grid-template-columns: 20% 80%;
+		}
+	}
+
+	@media screen and (min-width: 451px) and (max-width: 1100px) {
+		#searchBox {
+			grid-template-columns: 25px 1.4fr 100px;
+		}
+
+		#inputArea {
+			grid-template-columns: 7% 93%;
+		}
+	}
+
+
 	aside {
 		position: fixed;
 		top: 0;
@@ -57,7 +78,6 @@
 
 	#searchBox {
 		display: grid;
-		grid-template-columns: .08fr 1.4fr .35fr;
 		grid-template-areas: ". inputArea closeArea";
 		align-items: center;
 	}
@@ -68,7 +88,6 @@
 		padding: 10px 5px 8px 5px;
 		grid-area: inputArea;
 		display: grid;
-		grid-template-columns: 20% 80%;
 		grid-template-areas: "searchIcon input";
 		align-items: center;
 	}

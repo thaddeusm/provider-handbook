@@ -139,11 +139,11 @@
 		}
 
 		.large-preview-image {
-			display: none!important;
+			width: 40%;
 		}
 
 		.small-preview-image {
-			width: 45%;
+			display: none!important;
 		}
 
 		.handbook-content-list {
@@ -162,6 +162,10 @@
 
 		.small-preview-image {
 			display: none!important;
+		}
+
+		.large-preview-image {
+			width: 50%;
 		}
 
 		.handbook-content-list {
@@ -218,7 +222,6 @@
 	}
 
 	.large-preview-image {
-		width: 50%;
 		margin: 0 auto;
 		display: block;
 		box-shadow: var(--shadow);

@@ -74,11 +74,19 @@
 		nav {
 			grid-template-columns: 65px 1fr 65px;
 		}
+
+		.sub {
+			grid-template-columns: 80% 20%;
+		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		nav {
 			grid-template-columns: 100px 1fr 100px;
+		}
+
+		.sub {
+			grid-template-columns: 90% 10%;
 		}
 	}
 
@@ -137,7 +145,6 @@
 
 	.sub {
 		display: grid;
-		grid-template-columns: 80% 20%;
 		grid-template-rows: auto auto;
 		grid-template-areas: 
 			"link btn"
