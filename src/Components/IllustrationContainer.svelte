@@ -18,27 +18,40 @@
 
 <style>
 	@media screen and (max-width: 450px) {
+		.small-illustration {
+			display: block!important;
+		}
+
 		.large-illustration {
 			display: none!important;
 		}
 
+		section {
+			padding: 0;
+			margin: 0;
+		}
+
 		div {
-			margin: 1rem auto;
+			margin: .5rem 0;
 		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.small-illustration {
+			display: block!important;
+		}
+
+		.large-illustration {
 			display: none!important;
 		}
 
 		section {
 			background: var(--gray);
-			padding: 1rem;
+			padding: 2rem;
 		}
 
 		div {
-			margin: 2rem auto;
+			margin: 2rem 0;
 		}
 	}
 
@@ -47,13 +60,17 @@
 			display: none!important;
 		}
 
+		.large-illustration {
+			display: block!important;
+		}
+
 		section {
 			background: var(--gray);
-			padding: 1rem;
+			padding: 2rem;
 		}
 
 		div {
-			margin: 2rem auto;
+			margin: 2rem 0;
 		}
 	}
 

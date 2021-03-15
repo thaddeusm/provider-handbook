@@ -46,5 +46,11 @@
 				"title": "Enhancement Activity"
 			}
 		]
-	]
+	],
+	"glossary": {
+		"Enhancement Activities": {
+			"definition": "Enhancement activities are mandatory special eduational events that happen outside of students’ regular Access classes throughout the duration of the program.",
+			"reference": "#/handbook#EnhancementActivities"
+		}
+	}
 }

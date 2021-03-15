@@ -22,6 +22,23 @@
 		previewDescription = description;
 	}
 
+	function textWithTooltips(text) {
+		let glossary = Handbook.glossary;
+
+		let terms = Object.keys(glossary);
+		let defs = Object.values(glossary);
+
+		let newText;
+
+		for (let i=0; i<terms.length; i++) {
+			let term = new RegExp(terms[i], 'i');
+			let termText = terms[i];
+			newText = text.replace(term, `<em>${termText}</em>`);
+		}
+
+		return newText;
+	}
+
 	onMount(async () => {
 		const observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => {
@@ -78,7 +95,7 @@
  				{:else if section.style == "graphic"}
  					<Illustration title={section.title} />
  				{:else}
- 					<p>{@html section.content}</p>
+ 					<p>{@html textWithTooltips(section.content)}</p>
  				{/if}
  			{/each}
  		{/each}
