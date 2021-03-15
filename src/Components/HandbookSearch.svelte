@@ -36,8 +36,8 @@
 
 <style>
 	aside {
-		width: 55%;
-		height: 100%;
+		width: 47%;
+		height: 85%;
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -47,15 +47,15 @@
 
 	#searchBox {
 		display: grid;
-		grid-template-columns: 90% 2% 8%;
-		grid-template-areas: "inputArea . closeArea";
+		grid-template-columns: 1fr 95px;
+		grid-template-areas: "inputArea closeArea";
 		align-items: center;
 	}
 
 	#results {
 		background: var(--white);
 		height: 50%;
-		margin: 0 10% 0 9%;
+		margin: 0 95px;
 		overflow: auto;
 		box-shadow: var(--shadow);
 	}
@@ -64,13 +64,14 @@
 		border-radius: 1px;
 		grid-area: inputArea;
 		display: grid;
-		grid-template-columns: 10% 90%;
-		grid-template-areas: "searchIcon input";
+		grid-template-columns: 45px 50px 1fr;
+		grid-template-areas: ". searchIcon input";
 		align-items: center;
 	}
 
 	#closeArea {
 		grid-area: closeArea;
+		text-align: center;
 	}
 
 	input {
@@ -80,12 +81,11 @@
 		font-family: "Montserrat-Bold";
 		color: var(--white);
 		padding-bottom: 5px;
-		padding-left: 5%;
 		background: none;
 		border: none;
 		outline: none;
 		display: block;
-		width: 95%;
+		width: 100%;
 		grid-area: input;
 		border-bottom: 3px solid var(--white);
 	}
