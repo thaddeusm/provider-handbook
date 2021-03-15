@@ -5,6 +5,8 @@
 	import InteractiveAvailable from './../Graphics/Icons/InteractiveAvailable.svelte';
 	import PreviewModal from './../Components/PreviewModal.svelte';
 
+	import Illustration from './../Components/IllustrationContainer.svelte';
+
 	let activeId;
 	let showPreview = false;
 	
@@ -67,8 +69,16 @@
 	 						{section.content}
 	 					</h3>
  					</div>
+ 				{:else if section.style == "ordered_list"}
+ 					<ol>
+ 						{#each section.content as item}
+ 							<li>{item}</li>
+ 						{/each}
+ 					</ol>
+ 				{:else if section.style == "graphic"}
+ 					<Illustration title={section.title} />
  				{:else}
- 					<p>{section.content}</p>
+ 					<p>{@html section.content}</p>
  				{/if}
  			{/each}
  		{/each}
@@ -184,6 +194,23 @@
 
 	#handbook {
 		grid-area: handbook;
+	}
+
+	ol {
+		list-style-position: inside;
+		margin-bottom: 1rem;
+	}
+
+	ol li:first-child {
+		margin-top: -.5rem;
+	}
+
+	ol li {
+		margin: .5rem 0;
+		font-size: 15px;
+		line-height: 1.5;
+		color: var(--black);
+		font-family: "Montserrat";
 	}
 
 	aside {

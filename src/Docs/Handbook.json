@@ -10,15 +10,40 @@
 			},
 			{
 				"style": "paragraph", 
-				"content": "The intended audience of this handbook are both potential and current Access providers’ administrative staff and teachers."
+				"content": "<strong>What</strong>: Enhancement Activities (EAs) are mandatory special educational events that happen <strong>outside</strong> of students’ regular Access classes throughout the duration of the program. EAs are interactive opportunities for students to enhance their English language skills and personal skills."
 			},
 			{
 				"style": "paragraph", 
-				"content": "The goal of this handbook is to give an overview of the Access program, detail the process of applying to host an Access program, and to serve as a guide that highlights important program policies and resources available to Access providers and teachers. The policies and procedures of the Access program are updated each year, so please note that this handbook will be updated annually. Please ensure you consult the most updated version of the handbook."
+				"content": "There are four main topics for Enhancement Activities:"
+			},
+			{
+				"style": "ordered_list",
+				"content": [
+					"U.S. Culture and Democractic Values",
+					"Personal Development",
+					"Service Learning",
+					"Digital Literacy Skills"
+				]
 			},
 			{
 				"style": "paragraph",
-				"content": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer/U.S. Embassy point of contact and/or email accessprogram@state.gov."
+				"content": "<strong>Who</strong>: Access teachers (in consultation with the U.S. Embassy) plan and facilitate enhancement activities for Access students. Administrators support both students and teachers. Don’t forget to invite U.S. Embassy representatives and/or your RELO in advance!"
+			},
+			{
+				"style": "paragraph",
+				"content": "<strong>Where</strong>: EAs can occur within students’ regular Access classroom or they can occur outside of the classroom (in the program’s host city or nearby city/area)."
+			},
+			{
+				"style": "paragraph",
+				"content": "<strong>When</strong>: EAs must occur at least once per semester or quarter."
+			},
+			{
+				"style": "paragraph",
+				"content": "<strong>Why</strong>: EAs are often the most memorable experiences for Access students as they usually occur outside the classroom and encourage the development of community. EAs should be carefully designed to advance the students’ English skills AND reinforce a topic by creating a lasting impression and memory for students."
+			},
+			{
+				"style": "graphic",
+				"title": "Enhancement Activity"
 			}
 		]
 	]
