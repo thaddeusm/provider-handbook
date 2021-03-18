@@ -33,7 +33,7 @@
 		for (let i=0; i<terms.length; i++) {
 			let term = new RegExp(terms[i], 'i');
 			let termText = terms[i];
-			newText = text.replace(term, `<em>${termText}</em>`);
+			newText = text.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a tinro-ignore class="action-button-small" href="${defs[i].reference}">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
 		}
 
 		return newText;
@@ -150,6 +150,19 @@
 		.handbook-content-list {
 			padding: 0 15px 0 0;
 		}
+
+		:global(.tooltip) {
+			pointer-events: none;
+		}
+
+		:global(.tooltip-close) {
+			margin-left: 10px;
+			pointer-events: auto!important;
+		}
+
+		:global(.tooltip:hover) {
+			display: none;
+		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
@@ -176,6 +189,19 @@
 		.handbook-content-list {
 			padding: 0 35px 0 0;
 		}
+
+		:global(.tooltip) {
+			pointer-events: none;
+		}
+
+		:global(.tooltip-close) {
+			margin-left: 10px;
+			pointer-events: auto!important;
+		}
+
+		:global(.tooltip:hover) {
+			display: none;
+		}
 	}
 
 	@media screen and (min-width: 1101px) {
@@ -197,6 +223,10 @@
 
 		.handbook-content-list {
 			padding: 0 5rem;
+		}
+
+		:global(.tooltip-close) {
+			display: none;
 		}
 	}
 
@@ -293,5 +323,43 @@
 		grid-template-rows: 40% 60%;
 		align-items: center;
 		height: 100%;
+	}
+
+	:global(.glossary-term) {
+		cursor: default;
+	}
+
+	:global(.glossary-term:hover .tooltip) {
+		visibility: visible;
+	}
+
+	:global(.tooltip) {
+		visibility: hidden;
+		position: absolute;
+		background: var(--white);
+		padding: 10px 25px;
+		width: 260px;
+		margin-top: 35px;
+		margin-left: -245px;
+		z-index: 1000;
+		border-radius: var(--radius);
+		box-shadow: var(--shadow);
+		text-align: left;
+		display: inline;
+	}
+
+	:global(.tooltip)::before {
+		content: " ";
+		position: absolute;
+		top: -30px;
+		left: 50%;
+		margin-left: -15px;
+		border-width: 15px;
+		border-style: solid;
+		border-color: transparent transparent #c4c4c4 transparent;
+	}
+
+	:global(.tooltip-footer) {
+		text-align: center;
 	}
 </style>
