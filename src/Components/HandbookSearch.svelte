@@ -36,7 +36,7 @@
 
 <style>
 	aside {
-		width: 47%;
+		width: 750px;
 		height: 85%;
 		position: fixed;
 		top: 0;
