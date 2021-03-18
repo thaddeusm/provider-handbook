@@ -15,7 +15,7 @@
 
 <div class="container">
 	<section class="video-container">
-		<iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</section>
 	<section class="action">
 		<a class="action-button" href="/handbook">view handbook</a>
@@ -44,6 +44,7 @@
 		text-align: center;
 		background: var(--white);
 		padding: 10px 0;
+		z-index: 4;
 	}
 
 	.video {
