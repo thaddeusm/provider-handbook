@@ -150,6 +150,10 @@
 		.handbook-content-list {
 			padding: 0 15px 0 0;
 		}
+
+		:global(.tooltip-footer) {
+			align-self: flex-start;
+		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
@@ -219,7 +223,7 @@
 			background: var(--white);
 			bottom: 0;
 			left: 0;
-			height: 35%;
+			height: 30%;
 			z-index: 1000;
 			box-shadow: var(--shadow);
 			text-align: left;
@@ -227,18 +231,14 @@
 			visibility: hidden;
 			align-items: center;
 			pointer-events: none;
-			transition: visibility .1s;
-			-webkit-transition: visibility .1s;
-			transition-delay: .2s;
-			-webkit-transition-delay: .2s;
+			transition: visibility .05s;
+			-webkit-transition: visibility .05s;
+			transition-delay: .05s;
+			-webkit-transition-delay: .05s;
 		}
 
 		:global(.tooltip-body) {
 			padding: 0 15px;
-		}
-
-		:global(.tooltip-footer) {
-			align-self: flex-start;
 		}
 
 		:global(.tooltip)::before {
@@ -246,7 +246,7 @@
 			position: fixed;
 			top: 0;
 			left: 0;
-			height: 65%;
+			height: 70%;
 			width: 100%;
 			background: rgba(0, 0, 0, .2);
 		}
