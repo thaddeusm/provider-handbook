@@ -15,7 +15,9 @@
 
 <nav>
 	<aside>
-		<Access width={'15rem'} showTagline={false} />
+		<a href="/">
+			<Access width={'15rem'} />
+		</a>
 	</aside>
 	<section class="top">
 		{#if showSearch}

@@ -57,7 +57,9 @@
 		</HamburgerMenu>
 	</section>
 	<section class="center">
-		<Access width={'10rem'} />
+		<a href="/">
+			<Access width={'10rem'} />
+		</a>
 	</section>
 	<section class="right">
 		{#if showSearch}
