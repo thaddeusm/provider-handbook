@@ -1,5 +1,6 @@
 <script>
 	import { slide } from 'svelte/transition';
+	import { router } from 'tinro';
 
 	import Handbook from './../Docs/Handbook.json';
 
@@ -14,12 +15,29 @@
 	let showSub = false;
 	let showSearch = false;
 
+
+	$: {
+		if ($router.path == '/handbook') {
+			showSub = true;
+		} else {
+			showSub = false;
+		}
+	}
+
 	function toggleSub() {
 		showSub = !showSub;
 	}
 
 	function toggleSearch() {
 		showSearch = !showSearch;
+	}
+
+	function navigate(sectionId) {	
+		router.goto('/handbook');
+
+		setTimeout(() => {
+			jumpToId(sectionId);
+		}, 20, sectionId);
 	}
 </script>
 
@@ -39,10 +57,10 @@
 							{/if}
 						</button>
 						{#if showSub}
-							<ul class="secondary-list" transition:slide="{{duration: 200}}">
+							<ul class="secondary-list" in:slide="{{duration: 200}}">
 								{#each Handbook.sections as handbookSection, i}
 									<li>
-										<a href="#/handbook#{handbookSection[0].content.split(' ').join('')}" tinro-ignore>
+										<a on:click={() => {navigate(handbookSection[0].content.split(' ').join(''))}}>
 											{handbookSection[0].content}
 										</a>
 									</li>

@@ -12,6 +12,8 @@
 
 	let title;
 
+	let activeHandbookSection;
+
 	$: {
 		if ($router.path == '/') {
 			title = 'Access - Provider Handbook';

@@ -7,7 +7,7 @@
 
 	import Illustration from './../Components/IllustrationContainer.svelte';
 
-	let activeId;
+	let activeId = "Introduction";
 	let showPreview = false;
 	
 	let previewSection;
@@ -33,7 +33,7 @@
 		for (let i=0; i<terms.length; i++) {
 			let term = new RegExp(terms[i], 'i');
 			let termText = terms[i];
-			newText = text.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a tinro-ignore class="action-button-small tooltip-link" href="${defs[i].reference}">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
+			newText = text.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="action-button-small tooltip-link" onclick="jumpToId('${defs[i].reference}')">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
 		}
 
 		return newText;
@@ -43,13 +43,15 @@
 		const observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
-					activeId = entry.target.getAttribute('id');
+					if (activeId !== entry.target.getAttribute('id')) {
+						activeId = entry.target.getAttribute('id');
+					}
 				}
 			});
-		});
+		}, {threshold: [0, 1]});
 
-		document.querySelectorAll('div[id]').forEach((div) => {
-			observer.observe(div);
+		document.querySelectorAll('section[id]').forEach((section) => {
+			observer.observe(section);
 		});
 	});
 </script>
@@ -59,18 +61,18 @@
 		<ul>
 			{#each Handbook.sections as handbookSection, i}
 				<li>
-					<a class={activeId == handbookSection[0].content.split(' ').join('') ? 'active': ''} href="#/handbook#{handbookSection[0].content.split(' ').join('')}" tinro-ignore>
+					<a class={activeId == handbookSection[0].content.split(' ').join('') ? 'active': ''} on:click={() => {jumpToId(handbookSection[0].content.split(' ').join(''))}}>
 						{handbookSection[0].content}
 					</a>
 				</li>
 			{/each}
 		</ul>
 	</aside>
-	<section id="handbook">
+	<div id="handbook">
 		{#each Handbook.sections as handbookSection}
  			{#each handbookSection as section}
  				{#if section.style == "icon_subheading"}
- 					<div class="icon-subheading" id="{handbookSection[0].content.split(' ').join('')}">
+ 					<section class="icon-subheading" id="{handbookSection[0].content.split(' ').join('')}">
  						<h3>
  							{section.content}
  						</h3>
@@ -79,13 +81,13 @@
  						>
  							<InteractiveAvailable width={'2rem'} height={'2rem'} />
  						</button>
- 					</div>
+ 					</section>
  				{:else if section.style == "subheading"}
- 					<div id="{handbookSection[0].content.split(' ').join('')}">
+ 					<section id="{handbookSection[0].content.split(' ').join('')}">
  						<h3>
 	 						{section.content}
 	 					</h3>
- 					</div>
+ 					</section>
  				{:else if section.style == "ordered_list"}
  					<ol>
  						{#each section.content as item}
@@ -99,7 +101,7 @@
  				{/if}
  			{/each}
  		{/each}
-	</section>
+	</div>
 	<footer>
 		<h6>sponsored by the U.S. Department of State</h6>
 	</footer>
@@ -398,5 +400,9 @@
 
 	:global(.tooltip-footer) {
 		text-align: center;
+	}
+
+	:global(.tooltip-footer > a) {
+		cursor: pointer;
 	}
 </style>
