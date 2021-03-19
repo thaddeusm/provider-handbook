@@ -11,13 +11,8 @@
 	import HamburgerMenu from './../components/HamburgerMenu.svelte';
 	import MobileHandbookSearch from './../components/MobileHandbookSearch.svelte';
 
-	let showTagline = true;
 	let showSub = false;
 	let showSearch = false;
-
-	function toggleLogo() {
-		showTagline = !showTagline;
-	}
 
 	function toggleSub() {
 		showSub = !showSub;
@@ -30,7 +25,7 @@
 
 <nav>
 	<section class="left">
-		<HamburgerMenu on:menu-toggled={toggleLogo}>
+		<HamburgerMenu>
 			<div class="tray">
 				<ul class="primary-list">
 					<li><a href="/">about</a></li>
@@ -62,7 +57,7 @@
 		</HamburgerMenu>
 	</section>
 	<section class="center">
-		<Access width={'10rem'} {showTagline} />
+		<Access width={'10rem'} />
 	</section>
 	<section class="right">
 		{#if showSearch}
