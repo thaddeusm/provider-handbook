@@ -33,7 +33,7 @@
 		for (let i=0; i<terms.length; i++) {
 			let term = new RegExp(terms[i], 'i');
 			let termText = terms[i];
-			newText = text.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a tinro-ignore class="action-button-small" href="${defs[i].reference}">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
+			newText = text.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a tinro-ignore class="action-button-small tooltip-link" href="${defs[i].reference}">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
 		}
 
 		return newText;
@@ -150,47 +150,6 @@
 		.handbook-content-list {
 			padding: 0 15px 0 0;
 		}
-
-		:global(.tooltip) {
-			visibility: hidden;
-			position: fixed;
-			background: var(--white);
-			bottom: 0;
-			left: 0;
-			height: 35%;
-			z-index: 1000;
-			box-shadow: var(--shadow);
-			text-align: left;
-			display: grid;
-			align-items: center;
-			pointer-events: none;
-		}
-
-		:global(.tooltip-body) {
-			padding: 0 15px;
-		}
-
-		:global(.tooltip-footer) {
-			align-self: flex-start;
-		}
-
-		:global(.tooltip)::before {
-			content: " ";
-			position: fixed;
-			top: 0;
-			left: 0;
-			height: 65%;
-			width: 100%;
-			background: rgba(0, 0, 0, .2);
-		}
-
-		:global(.tooltip-close) {
-			margin-left: 10px;
-		}
-
-		:global(.tooltip:hover) {
-			display: none;
-		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
@@ -217,41 +176,6 @@
 		.handbook-content-list {
 			padding: 0 35px 0 0;
 		}
-
-		:global(.tooltip-close) {
-			margin-left: 10px;
-		}
-
-		:global(.tooltip) {
-			visibility: hidden;
-			position: absolute;
-			background: var(--white);
-			padding: 10px 25px;
-			width: 260px;
-			margin-top: 35px;
-			margin-left: -245px;
-			z-index: 1000;
-			border-radius: var(--radius);
-			box-shadow: var(--shadow);
-			text-align: left;
-			display: inline;
-			pointer-events: none;
-		}
-
-		:global(.tooltip:hover) {
-			display: none;
-		}
-
-		:global(.tooltip)::before {
-			content: " ";
-			position: absolute;
-			top: -30px;
-			left: 50%;
-			margin-left: -15px;
-			border-width: 15px;
-			border-style: solid;
-			border-color: transparent transparent #c4c4c4 transparent;
-		}
 	}
 
 	@media screen and (min-width: 1101px) {
@@ -273,6 +197,73 @@
 
 		.handbook-content-list {
 			padding: 0 5rem;
+		}
+	}
+
+	/* touch devices */
+	@media (pointer: coarse), (hover: none) {
+		:global(.glossary-term:hover .tooltip) {
+			visibility: visible;
+		}
+
+		:global(.tooltip-close, .tooltip-link) {
+			pointer-events: auto!important;
+		}
+
+		:global(.tooltip:hover) {
+			visibility: hidden!important;
+		}
+
+		:global(.tooltip) {
+			position: fixed;
+			background: var(--white);
+			bottom: 0;
+			left: 0;
+			height: 35%;
+			z-index: 1000;
+			box-shadow: var(--shadow);
+			text-align: left;
+			display: grid;
+			visibility: hidden;
+			align-items: center;
+			pointer-events: none;
+			transition: visibility .1s;
+			-webkit-transition: visibility .1s;
+			transition-delay: .2s;
+			-webkit-transition-delay: .2s;
+		}
+
+		:global(.tooltip-body) {
+			padding: 0 15px;
+		}
+
+		:global(.tooltip-footer) {
+			align-self: flex-start;
+		}
+
+		:global(.tooltip)::before {
+			content: " ";
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 65%;
+			width: 100%;
+			background: rgba(0, 0, 0, .2);
+		}
+
+		:global(.tooltip-close) {
+			margin-left: 10px;
+		}
+	}
+
+	/* devices with a mouse */
+	@media (hover: hover) {
+		:global(.glossary-term:hover .tooltip) {
+			visibility: visible;
+		}
+
+		:global(.tooltip::before:hover) {
+			visibility: visible;
 		}
 
 		:global(.tooltip-close) {
@@ -405,16 +396,7 @@
 		cursor: default;
 	}
 
-	:global(.glossary-term:hover .tooltip) {
-		visibility: visible;
-	}
-
-	:global(.tooltip::before:hover) {
-		visibility: visible;
-	}
-
 	:global(.tooltip-footer) {
 		text-align: center;
-		pointer-events: auto;
 	}
 </style>
