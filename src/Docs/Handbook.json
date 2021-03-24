@@ -3,7 +3,7 @@
 	"sections": [
 		[
 			{
-				"style": "subheading",
+				"style": "heading",
 				"content": "Introduction"
 			},
 			{
@@ -17,6 +17,92 @@
 			{
 				"style": "paragraph", 
 				"content": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer/U.S. Embassy point of contact and/or email <a href=\"mailto:accessprogram@state.gov\">accessprogram@state.gov</a>."
+			},
+			{
+				"style": "subheading",
+				"content": "A. How can I use this handbook?"
+			},
+			{
+				"style": "paragraph",
+				"content": "This handbook is structured into three main sections so providers can quickly find the information they need: Before: Pre-Program Launch Information and Activities, During: Program Implementation Information and Activities, and After: Program Close-Out."
+			},
+			{
+				"style": "graphic",
+				"title": "Handbook Characters"
+			},
+			{
+				"style": "paragraph",
+				"content": "Further, this handbook will link readers to online modules that provide more in-depth learning on specific topics. Look for and click on the icon below to navigate to find more information about that topic."
+			},
+			{
+				"style": "icon",
+				"title": "Interactive Available"
+			},
+			{
+				"style": "paragraph",
+				"content": "Providers can also use the ICON function to see the definition of certain words/phrases without leaving the handbook. Readers can also use the glossary at the end of the handbook to search for unfamiliar terms or acronyms."
+			},
+			{
+				"style": "icon_subheading",
+				"content": "What is Access?"
+			},
+			{
+				"style": "paragraph",
+				"content": "Access is a student-centered program that provides English language skills to underserved students  (primarily 13-20 years old) worldwide through extracurricular classes and activities. Access provides participants with a foundation of English language, leadership and professional skills, and exposure to U.S. culture and democratic values that may lead to better jobs and educational prospects, including future exchanges and study in the United States. The global Access Program has provided scholarships to approximately 200,000 students in over 80 countries since its inception in 2004."
+			},
+			{
+				"style": "icon_subheading",
+				"content": "Access Objective and Goals"
+			},
+			{
+				"style": "paragraph",
+				"content": "The objective of the Access program is to provide participants with improved English skills that may lead to better jobs and educational prospects, including future exchanges and study in the United States."
+			},
+			{
+				"style": "paragraph", 
+				"content": "Access students will"
+			},
+			{
+				"style": "ordered_list",
+				"content": [
+					"be given a foundation of English language skills,",
+					"gain an appreciation for U.S. culture and democratic values,",
+					"develop digital literacy skills",
+					"participate in Personal Development activities (e.g. self-confidence, critical thinking, etc.), and",
+					"take part in Service Learning activities."
+				]
+			},
+			{
+				"style": "subheading",
+				"content": "Eligibility to Host an Access Program"
+			},
+			{
+				"style": "paragraph",
+				"content": "If your school, educational institution, or organization (for-profit organizations are not eligible) is interested in hosting an Access program, please review the questions below to verify your eligibility. If you answered “No” to any of the questions, please consult with your U.S. Embassy contact or Regional English Language Officer (RELO) before continuing the process."
+			},
+			{
+				"style": "paragraph", 
+				"content": "Can your educational institution or organization"
+			},
+			{
+				"style": "ordered_list",
+				"content": [
+					"legally operate within the country where the proposed Access program will be implemented? (\"Legally operate\" means the Applicant Organization is incorporated, registered, or licensed as a legal entity in the country where the Access program will be implemented)",
+					"open a bank account that accepts transfers in U.S. Dollars?",
+					"follow a reporting schedule and submit program and financial reports on time?",
+					"fulfill the mandatory minimum of 360 program hours over 20-24 months?",
+					"acquire a room or space to accommodate the class?",
+					"retain teachers, administration, and students that can devote extended periods of time (6-8 hours) for enhancement and/or intensive sessions that can occur on weekends?",
+					"acquire and use Microsoft Excel 2010 (or newer) for reporting purposes?"
+				]
+			},
+			{
+				"style": "subheading", 
+				"content": "Lifecycle of an Access Program"
+			},
+			{
+				"style": "graphic",
+				"title": "Program Lifecycle"
 			}
 		],
 		[

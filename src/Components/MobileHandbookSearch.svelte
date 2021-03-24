@@ -1,6 +1,6 @@
 <script>
-	import Search from './../graphics/icons/Search.svelte';
-	import Close from './../graphics/icons/Close.svelte';
+	import Search from './../Graphics/Icons/Search.svelte';
+	import Close from './../Graphics/Icons/Close.svelte';
 
 	import { createEventDispatcher } from 'svelte';
 	import { onMount, onDestroy } from 'svelte';

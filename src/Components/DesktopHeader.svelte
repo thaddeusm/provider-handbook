@@ -1,10 +1,11 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import { active } from 'tinro';
-	import Search from './../graphics/icons/Search.svelte';
-	import Access from './../graphics/icons/Access.svelte';
+	
+	import Search from './../Graphics/Icons/Search.svelte';
+	import Access from './../Graphics/Icons/Access.svelte';
 
-	import HandbookSearch from './../components/HandbookSearch.svelte';
+	import HandbookSearch from './../Components/HandbookSearch.svelte';
 
 	let showSearch = false;
 

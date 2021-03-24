@@ -16,6 +16,7 @@ input:focus {
 	--brand: #002D62;
 	--brand-dark: #001329;
 	--brand-light: #3470B7;
+	--selection: #93B9E5;
 	--red: #D11242;
 	--gray: #E5E5E5;
 	--dark-gray: #868585;
@@ -26,7 +27,7 @@ input:focus {
 }
 
 ::selection {
-    background: var(--brand-light);
+    background: var(--selection);
 }
 
 html, body {

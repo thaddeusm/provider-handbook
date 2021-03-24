@@ -6,6 +6,7 @@
 	import PreviewModal from './../Components/PreviewModal.svelte';
 
 	import Illustration from './../Components/IllustrationContainer.svelte';
+	import Icon from './../Components/IconContainer.svelte'
 
 	let activeId = "Introduction";
 	let showPreview = false;
@@ -71,7 +72,13 @@
 	<div id="handbook">
 		{#each Handbook.sections as handbookSection}
  			{#each handbookSection as section}
- 				{#if section.style == "icon_subheading"}
+ 				{#if section.style == "heading"}
+ 					<section id="{handbookSection[0].content.split(' ').join('')}">
+ 						<h2>
+ 							{section.content}
+ 						</h2>
+ 					</section>
+ 				{:else if section.style == "icon_subheading"}
  					<section class="icon-subheading" id="{handbookSection[0].content.split(' ').join('')}">
  						<h3>
  							{section.content}
@@ -96,6 +103,8 @@
  					</ol>
  				{:else if section.style == "graphic"}
  					<Illustration title={section.title} />
+ 				{:else if section.style == "icon"}
+ 					<Icon title={section.title} />
  				{:else}
  					<p>{@html textWithTooltips(section.content)}</p>
  				{/if}

@@ -1,8 +1,8 @@
 <script>
 	import { router } from 'tinro';
 
-	import Hamburger from './../graphics/icons/Hamburger.svelte';
-	import Close from './../graphics/icons/Close.svelte';
+	import Hamburger from './../Graphics/Icons/Hamburger.svelte';
+	import Close from './../Graphics/Icons/Close.svelte';
 
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();

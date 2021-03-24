@@ -1,19 +1,27 @@
 <script>
+	import InteractiveAvailable from './../Graphics/Icons/InteractiveAvailable.svelte';
+
 	export let title;
 </script>
 
 <div>
-	<img class="large-illustration" src={`Illustrations/${title.split(' ').join('')}Desktop.svg`} alt={title} />
-	<img class="small-illustration" src={`Illustrations/${title.split(' ').join('')}Mobile.svg`} alt={title} />
+	{#if title == "Interactive Available"}
+		<section class="small-icon">
+			<InteractiveAvailable width={'3rem'} />
+		</section>
+		<section class="large-icon">
+			<InteractiveAvailable width={'5rem'} />
+		</section>
+	{/if}
 </div>
 
 <style>
 	@media screen and (max-width: 450px) {
-		.small-illustration {
+		.small-icon {
 			display: block!important;
 		}
 
-		.large-illustration {
+		.large-icon {
 			display: none!important;
 		}
 
@@ -28,11 +36,11 @@
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
-		.small-illustration {
+		.small-icon {
 			display: block!important;
 		}
 
-		.large-illustration {
+		.large-icon {
 			display: none!important;
 		}
 
@@ -47,11 +55,11 @@
 	}
 
 	@media screen and (min-width: 1101px) {
-		.small-illustration {
+		.small-icon {
 			display: none!important;
 		}
 
-		.large-illustration {
+		.large-icon {
 			display: block!important;
 		}
 
@@ -67,11 +75,5 @@
 
 	div {
 		text-align: center;
-	}
-
-	img {
-		display: block;
-		margin: 0 auto;
-		width: 100%;
 	}
 </style>

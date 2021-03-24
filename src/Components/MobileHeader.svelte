@@ -4,13 +4,13 @@
 
 	import Handbook from './../Docs/Handbook.json';
 
-	import Access from './../graphics/icons/Access.svelte';
-	import DownArrow from './../graphics/icons/DownArrow.svelte';
-	import UpArrow from './../graphics/icons/UpArrow.svelte';
-	import Search from './../graphics/icons/Search.svelte';
+	import Access from './../Graphics/Icons/Access.svelte';
+	import DownArrow from './../Graphics/Icons/DownArrow.svelte';
+	import UpArrow from './../Graphics/Icons/UpArrow.svelte';
+	import Search from './../Graphics/Icons/Search.svelte';
 
-	import HamburgerMenu from './../components/HamburgerMenu.svelte';
-	import MobileHandbookSearch from './../components/MobileHandbookSearch.svelte';
+	import HamburgerMenu from './../Components/HamburgerMenu.svelte';
+	import MobileHandbookSearch from './../Components/MobileHandbookSearch.svelte';
 
 	let showSub = false;
 	let showSearch = false;
