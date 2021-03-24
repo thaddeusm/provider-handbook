@@ -49,7 +49,7 @@
 					}
 				}
 			});
-		}, {threshold: [0, 1]});
+		}, {threshold: .50});
 
 		document.querySelectorAll('section[id]').forEach((section) => {
 			observer.observe(section);
@@ -375,6 +375,7 @@
 	aside ul li a {
 		color: var(--white);
 		font-size: 15px;
+		cursor: pointer;
 	}
 
 	footer {
