@@ -4,26 +4,21 @@
 	import Hamburger from './../Graphics/Icons/Hamburger.svelte';
 	import Close from './../Graphics/Icons/Close.svelte';
 
-	import { createEventDispatcher } from 'svelte';
-	const dispatch = createEventDispatcher();
+	export let menuOpen = false;
 
 	$: if ($router.path) {
 		closeMenu();
 	}
 
-	let menuOpen = false;
-
 	function openMenu() {
 		document.body.style.overflow = 'hidden';
 		window.scrollTo(0, 0);
 		menuOpen = true;
-		dispatch('menu-toggled');
 	}
 
 	function closeMenu() {
 		document.body.style.overflow = 'auto';
 		menuOpen = false;
-		dispatch('menu-toggled');
 	}
 </script>
 
@@ -34,7 +29,6 @@
 		z-index: 200;
 	}
 </style>
-
 {#if menuOpen}
 	<div class="button-container">
 		<button on:click={closeMenu}>

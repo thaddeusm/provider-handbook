@@ -61,11 +61,15 @@
 	<aside>
 		<ul>
 			{#each Handbook.sections as handbookSection, i}
-				<li>
-					<a class={activeId == handbookSection[0].content.split(' ').join('') ? 'active': ''} on:click={() => {jumpToId(handbookSection[0].content.split(' ').join(''))}}>
-						{handbookSection[0].content}
-					</a>
-				</li>
+				{#each handbookSection as section, j}
+					{#if section.style.includes('heading')}
+						<li class={section.style.includes('subheading') ? 'subheading' : ''}>
+							<a class={activeId == section.content.split(' ').join('') ? 'active': ''} on:click={() => {jumpToId(section.content.split(' ').join(''))}}>
+								{section.content}
+							</a>
+						</li>
+					{/if}
+				{/each}
 			{/each}
 		</ul>
 	</aside>
@@ -73,13 +77,13 @@
 		{#each Handbook.sections as handbookSection}
  			{#each handbookSection as section}
  				{#if section.style == "heading"}
- 					<section id="{handbookSection[0].content.split(' ').join('')}">
+ 					<section id="{section.content.split(' ').join('')}">
  						<h2>
  							{section.content}
  						</h2>
  					</section>
  				{:else if section.style == "icon_subheading"}
- 					<section class="icon-subheading" id="{handbookSection[0].content.split(' ').join('')}">
+ 					<section class="icon-subheading" id="{section.content.split(' ').join('')}">
  						<h3>
  							{section.content}
  						</h3>
@@ -90,7 +94,7 @@
  						</button>
  					</section>
  				{:else if section.style == "subheading"}
- 					<section id="{handbookSection[0].content.split(' ').join('')}">
+ 					<section id="{section.content.split(' ').join('')}">
  						<h3>
 	 						{section.content}
 	 					</h3>
@@ -336,6 +340,10 @@
 		line-height: 1.5;
 		color: var(--black);
 		font-family: "Montserrat";
+	}
+
+	.subheading {
+		margin-left: 1rem;
 	}
 
 	aside {

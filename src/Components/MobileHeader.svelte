@@ -14,7 +14,7 @@
 
 	let showSub = false;
 	let showSearch = false;
-
+	let menuOpen = false;
 
 	$: {
 		if ($router.path == '/handbook') {
@@ -33,17 +33,18 @@
 	}
 
 	function navigate(sectionId) {	
+		menuOpen = false;
+		document.body.style.overflow = 'auto';
 		router.goto('/handbook');
-
 		setTimeout(() => {
 			jumpToId(sectionId);
-		}, 20, sectionId);
+		}, 100, sectionId);
 	}
 </script>
 
 <nav>
 	<section class="left">
-		<HamburgerMenu>
+		<HamburgerMenu {menuOpen}>
 			<div class="tray">
 				<ul class="primary-list">
 					<li><a href="/">about</a></li>
@@ -59,11 +60,15 @@
 						{#if showSub}
 							<ul class="secondary-list" in:slide="{{duration: 200}}">
 								{#each Handbook.sections as handbookSection, i}
-									<li>
-										<a on:click={() => {navigate(handbookSection[0].content.split(' ').join(''))}}>
-											{handbookSection[0].content}
-										</a>
-									</li>
+									{#each handbookSection as section, j}
+										{#if section.style.includes('heading')}
+											<li class={section.style.includes('subheading') ? 'subheading' : ''}>
+												<a on:click={() => {navigate(section.content.split(' ').join(''))}}>
+													{section.content}
+												</a>
+											</li>
+										{/if}
+									{/each}
 								{/each}
 							</ul>
 						{/if}
@@ -198,5 +203,10 @@
 		color: var(--white);
 		font-size: 15px;
 		font-family: "Montserrat";
+		cursor: pointer;
+	}
+
+	.subheading {
+		padding-left: 3rem!important;
 	}
 </style>
