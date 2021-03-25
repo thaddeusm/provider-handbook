@@ -1,5 +1,6 @@
 <script>
 	import { slide } from 'svelte/transition';
+	import { search } from './../search.js';
 
 	import Search from './../Graphics/Icons/Search.svelte';
 	import Close from './../Graphics/Icons/Close.svelte';
@@ -9,9 +10,18 @@
 	const dispatch = createEventDispatcher();
 
 	let query = '';
+	let results = [];
 
 	function closeSearch() {
 		dispatch('close-search');
+	}
+
+	function handleKeyup(e) {
+		if (e.keyCode == 13 || e.keyCode == 32) {
+			results = search(query);
+
+			console.log(results);
+		}
 	}
 </script>
 
@@ -21,7 +31,7 @@
 			<section id="searchIcon">
 				<Search color={'#FFFFFF'} width={'25px'} height={'25px'} />
 			</section>
-			<input in:slide type="text" bind:value={query} placeholder="Search Handbook">
+			<input in:slide type="text" bind:value={query} placeholder="Search Handbook" on:keyup={handleKeyup}>
 		</section>
 		<section id="closeArea">
 			<button on:click={closeSearch}>
@@ -30,13 +40,24 @@
 		</section>
 	</section>
 	<section id="results">
-		
+		<ul id="resultList">
+			{#each results as result}
+				<li>
+					<h3>
+						{result.sectionTitle}
+					</h3>
+					<p>
+						{@html result.textSample}
+					</p>
+				</li>
+			{/each}
+		</ul>
 	</section>
 </aside>
 
 <style>
 	aside {
-		width: 750px;
+		width: 100%;
 		height: 85%;
 		position: fixed;
 		top: 0;
@@ -47,17 +68,37 @@
 
 	#searchBox {
 		display: grid;
-		grid-template-columns: 1fr 95px;
-		grid-template-areas: "inputArea closeArea";
+		grid-template-columns: 1fr 655px 95px;
+		grid-template-areas: ". inputArea closeArea";
 		align-items: center;
+		background: var(--brand);
 	}
 
 	#results {
+		display: grid;
+		grid-template-columns: 1fr 750px;
+		grid-template-areas: ". resultList";
+	}
+
+	#resultList {
+		grid-area: resultList;
 		background: var(--white);
-		height: 50%;
 		margin: 0 95px;
+		height: 50%;
 		overflow: auto;
 		box-shadow: var(--shadow);
+		list-style: none;
+	}
+
+	#resultList > li {
+		background: var(--gray);
+		padding: 20px;
+		margin: 20px 0;
+	}
+
+	#resultList > li > p {
+		background: var(--white);
+		padding: 5px 10px;
 	}
 
 	#inputArea {
