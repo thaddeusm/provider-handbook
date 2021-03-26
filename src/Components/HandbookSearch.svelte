@@ -1,5 +1,7 @@
 <script>
 	import { slide } from 'svelte/transition';
+	import { onMount } from 'svelte';
+
 	import { search } from './../search.js';
 
 	import Search from './../Graphics/Icons/Search.svelte';
@@ -12,6 +14,10 @@
 	let query = '';
 	let results = [];
 
+	let message = 'Enter a keyword to search the handbook.';
+
+	let input;
+
 	function closeSearch() {
 		dispatch('close-search');
 	}
@@ -20,9 +26,20 @@
 		if (e.keyCode == 13 || e.keyCode == 32) {
 			results = search(query);
 
-			console.log(results);
+			if (results.length == 0) {
+				message = 'Nothing found. Please try a different keyword.'
+			}
 		}
 	}
+
+	function navigate(section) {
+		closeSearch();
+		jumpToId(section);
+	}
+
+	onMount(() => {
+		input.focus();
+	})
 </script>
 
 <aside>
@@ -31,7 +48,7 @@
 			<section id="searchIcon">
 				<Search color={'#FFFFFF'} width={'25px'} height={'25px'} />
 			</section>
-			<input in:slide type="text" bind:value={query} placeholder="Search Handbook" on:keyup={handleKeyup}>
+			<input in:slide type="text" bind:value={query} bind:this={input} placeholder="Search Handbook" on:keyup={handleKeyup}>
 		</section>
 		<section id="closeArea">
 			<button on:click={closeSearch}>
@@ -41,16 +58,25 @@
 	</section>
 	<section id="results">
 		<ul id="resultList">
-			{#each results as result}
+			{#if results.length > 0}
+				{#each results as result}
+					<li>
+						<div class="result">
+							<h3>
+								{result.sectionTitle}
+							</h3>
+							<p>
+								{@html result.textSample}
+							</p>
+							<button class="action-button" on:click={() => {navigate(result.sectionTitle.split(' ').join(''))}}>go</button>
+						</div>
+					</li>
+				{/each}
+			{:else}
 				<li>
-					<h3>
-						{result.sectionTitle}
-					</h3>
-					<p>
-						{@html result.textSample}
-					</p>
+					<h6>{message}</h6>
 				</li>
-			{/each}
+			{/if}
 		</ul>
 	</section>
 </aside>
@@ -90,15 +116,51 @@
 		list-style: none;
 	}
 
+	li > h6 {
+		margin-top: 10px;
+		text-align: center;
+	}
+
 	#resultList > li {
 		background: var(--gray);
-		padding: 20px;
+		padding: 10px 20px 20px 20px;
 		margin: 20px 0;
 	}
 
-	#resultList > li > p {
+	#resultList > li > h3 {
+		margin-top: 0!important;
+	}
+
+	.result {
+		display: grid;
+		grid-template-rows: 55% 40% 5%;
+		grid-template-columns: 80% 20%;
+		grid-template-areas: 
+			"heading heading"
+			"sample actionButton"
+			". .";
+		align-items: center;
+		grid-column-gap: 10px;
+		height: 140px;
+	}
+
+	.result > h3 {
+		grid-area: heading;
+		align-self: flex-start;
+		margin: 0;
+	}
+
+	.result > p {
 		background: var(--white);
-		padding: 5px 10px;
+		padding: 15px;
+		grid-area: sample;
+		height: 45px;
+	}
+
+	.result > .action-button {
+		grid-area: actionButton;
+		margin: 0;
+		height: 74px;
 	}
 
 	#inputArea {

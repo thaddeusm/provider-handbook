@@ -22,10 +22,16 @@ export const search = (term) => {
 					if (listItem && listItem.toLowerCase().includes(term)) {
 						let index = listItem.toLowerCase().indexOf(term);
 
+						let itemLength = listItem.length;
+
 						let textSample;
 
-						if (listItem.length > 100) {
-							textSample = `...${listItem.slice(index - 25, index + 25)}...`;
+						if (itemLength > 100) {
+							if (index > 35) {
+								textSample = `...${listItem.slice(index - 35, index + 35)}...`;
+							} else {
+								textSample = `${listItem.slice(0, index + 35)}...`;
+							}
 						} else {
 							textSample = listItem;
 						}
@@ -43,12 +49,18 @@ export const search = (term) => {
 				if (contentBlock.content && contentBlock.content.toLowerCase().includes(term)) {
 					let index = contentBlock.content.toLowerCase().indexOf(term);
 
+					let textLength = contentBlock.content.length;
+
 					let textSample;
 
-					if (contentBlock.content.length > 100) {
-						textSample = `...${contentBlock.content.slice(index - 25, index + 25)}...`;
+					if (textLength > 100) {
+						if (index > 35) {
+							textSample = `...${contentBlock.content.slice(index - 35, index + 35)}...`;
+						} else {
+							textSample = `${contentBlock.content.slice(0, index + 35)}...`;
+						}
 					} else {
-						textSample = contentBlock.contentBlock;
+						textSample = contentBlock.content;
 					}
 
 					let regex = new RegExp(term, 'i');
