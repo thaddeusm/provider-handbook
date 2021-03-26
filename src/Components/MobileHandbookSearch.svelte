@@ -1,4 +1,22 @@
 <script>
+	import { search } from './../search.js';
+
+	import { results, searchQuery } from './../stores.js';
+
+	let results_value;
+
+	const unsubscribeResults = results.subscribe(value => {
+		results_value = value;
+	});
+
+	let search_query_value;
+
+	const unsubscribeSeachQuery = searchQuery.subscribe(value => {
+		search_query_value = value;
+	});
+
+	import ResultCard from './../Components/ResultCard.svelte';
+
 	import Search from './../Graphics/Icons/Search.svelte';
 	import Close from './../Graphics/Icons/Close.svelte';
 
@@ -15,11 +33,39 @@
 	
 	const dispatch = createEventDispatcher();
 
-	let query = '';
+	$: if (search_query_value) {
+		input.value = search_query_value;
+	}
+
+	let input;
+	let message = 'Enter a keyword to search the handbook.';
 
 	function closeSearch() {
 		dispatch('close-search');
 	}
+
+	function handleKeyup(e) {
+		searchQuery.set(input.value);
+
+		if (e.keyCode == 13 || e.keyCode == 32) {
+			results.set(search(search_query_value));
+
+			if (results_value.length == 0) {
+				message = 'Nothing found. Please try a different keyword.'
+			}
+		}
+	}
+
+	function navigate(e) {
+		let section = e.detail.section;
+
+		closeSearch();
+		jumpToId(section);
+	}
+
+	onMount(() => {
+		input.focus();
+	})
 </script>
 
 <aside>
@@ -28,7 +74,7 @@
 			<section id="searchIcon">
 				<Search color={'#000000'} width={'2rem'} height={'2rem'} />
 			</section>
-			<input type="text" bind:value={query}>
+			<input type="text" bind:this={input} on:keyup={handleKeyup}>
 		</section>
 		<section id="closeArea">
 			<button on:click={closeSearch}>
@@ -37,7 +83,19 @@
 		</section>
 	</section>
 	<section id="results">
-		
+		<ul id="resultList">
+			{#if $results.length > 0}
+				{#each $results as result}
+					<li>
+						<ResultCard {result} on:navigate={navigate} />
+					</li>
+				{/each}
+			{:else}
+				<li>
+					<h6>{message}</h6>
+				</li>
+			{/if}
+		</ul>
 	</section>
 </aside>
 
@@ -62,7 +120,6 @@
 		}
 	}
 
-
 	aside {
 		position: fixed;
 		top: 0;
@@ -72,7 +129,6 @@
 		background: var(--white);
 		z-index: 3000;
 		display: grid;
-		align-items: center;
 		grid-template-rows: 100px 1fr;
 	}
 
@@ -116,5 +172,33 @@
 
 	#searchIcon {
 		grid-area: searchIcon;
+	}
+
+	#results {
+		text-align: left;
+	}
+
+	#resultList {
+		grid-area: resultList;
+		background: var(--white);
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		list-style: none;
+	}
+
+	li > h6 {
+		margin-top: 10px;
+		text-align: center;
+	}
+
+	#resultList > li {
+		background: var(--gray);
+		padding: 10px 10px 20px 10px;
+		margin: 30px 0;
+	}
+
+	#resultList > li > h3 {
+		margin-top: 0!important;
 	}
 </style>

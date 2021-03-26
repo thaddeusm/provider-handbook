@@ -25,6 +25,10 @@
 			title = 'Access - Provider Handbook | ' + revisedPathTitle;
 		}
 	}
+
+	function toggleSearch() {
+		searchOpen = !searchOpen;
+	}
 </script>
 
 <svelte:head>

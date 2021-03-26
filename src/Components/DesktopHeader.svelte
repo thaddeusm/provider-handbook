@@ -1,16 +1,30 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import { active } from 'tinro';
+
+	import { searchOpen } from './../stores.js';
+
+	let search_open_value;
+
+	const unsubscribeSearchOpen = searchOpen.subscribe(value => {
+		search_open_value = value;
+	});
+
+	import { createEventDispatcher } from 'svelte';
+	
+	const dispatch = createEventDispatcher();
 	
 	import Search from './../Graphics/Icons/Search.svelte';
 	import Access from './../Graphics/Icons/Access.svelte';
 
 	import HandbookSearch from './../Components/HandbookSearch.svelte';
 
-	let showSearch = false;
+	export let showSearch = false;
 
 	function toggleSearch() {
-		showSearch = !showSearch;
+		searchOpen.set(!search_open_value);
+
+		dispatch('search-toggled');
 	}
 </script>
 
@@ -21,7 +35,7 @@
 		</a>
 	</aside>
 	<section class="top">
-		{#if showSearch}
+		{#if $searchOpen}
 			<section class="search-area" in:fade="{{duration: 300}}">
 				<HandbookSearch on:close-search={toggleSearch} />
 			</section>
@@ -57,14 +71,14 @@
 		left: 2rem;
 		background: var(--white);
 		padding: 3rem;
-		z-index: 3;
+		z-index: 7;
 	}
 
 	.top {
 		grid-area: top;
 		display: grid;
 		align-items: center;
-		z-index: 2;
+		z-index: 6;
 		background: var(--brand);
 		grid-template-columns: auto auto;
 		grid-template-areas: ". navigationArea";

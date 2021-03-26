@@ -1,8 +1,24 @@
 <script>
 	import { slide } from 'svelte/transition';
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 
 	import { search } from './../search.js';
+
+	import { results, searchQuery } from './../stores.js';
+
+	let search_query_value;
+
+	const unsubscribeSeachQuery = searchQuery.subscribe(value => {
+		search_query_value = value;
+	});
+
+	let results_value;
+
+	const unsubscribeResults = results.subscribe(value => {
+		results_value = value;
+	});
+
+	import ResultCard from './../Components/ResultCard.svelte';
 
 	import Search from './../Graphics/Icons/Search.svelte';
 	import Close from './../Graphics/Icons/Close.svelte';
@@ -11,11 +27,11 @@
 	
 	const dispatch = createEventDispatcher();
 
-	let query = '';
-	let results = [];
+	$: if (search_query_value) {
+		input.value = search_query_value;
+	}
 
 	let message = 'Enter a keyword to search the handbook.';
-
 	let input;
 
 	function closeSearch() {
@@ -23,16 +39,20 @@
 	}
 
 	function handleKeyup(e) {
-		if (e.keyCode == 13 || e.keyCode == 32) {
-			results = search(query);
+		searchQuery.set(input.value);
 
-			if (results.length == 0) {
+		if (e.keyCode == 13 || e.keyCode == 32) {
+			results.set(search(search_query_value));
+
+			if (results_value.length == 0) {
 				message = 'Nothing found. Please try a different keyword.'
 			}
 		}
 	}
 
-	function navigate(section) {
+	function navigate(e) {
+		let section = e.detail.section;
+
 		closeSearch();
 		jumpToId(section);
 	}
@@ -48,7 +68,7 @@
 			<section id="searchIcon">
 				<Search color={'#FFFFFF'} width={'25px'} height={'25px'} />
 			</section>
-			<input in:slide type="text" bind:value={query} bind:this={input} placeholder="Search Handbook" on:keyup={handleKeyup}>
+			<input in:slide type="text" bind:this={input} placeholder="Search Handbook" on:keyup={handleKeyup}>
 		</section>
 		<section id="closeArea">
 			<button on:click={closeSearch}>
@@ -58,18 +78,10 @@
 	</section>
 	<section id="results">
 		<ul id="resultList">
-			{#if results.length > 0}
-				{#each results as result}
+			{#if $results.length > 0}
+				{#each $results as result}
 					<li>
-						<div class="result">
-							<h3>
-								{result.sectionTitle}
-							</h3>
-							<p>
-								{@html result.textSample}
-							</p>
-							<button class="action-button" on:click={() => {navigate(result.sectionTitle.split(' ').join(''))}}>go</button>
-						</div>
+						<ResultCard {result} on:navigate={navigate} />
 					</li>
 				{/each}
 			{:else}
@@ -121,46 +133,18 @@
 		text-align: center;
 	}
 
+	#resultList > li:first-child {
+		margin-top: 25px;
+	}
+
 	#resultList > li {
 		background: var(--gray);
 		padding: 10px 20px 20px 20px;
-		margin: 20px 0;
+		margin: 50px 0;
 	}
 
 	#resultList > li > h3 {
 		margin-top: 0!important;
-	}
-
-	.result {
-		display: grid;
-		grid-template-rows: 55% 40% 5%;
-		grid-template-columns: 80% 20%;
-		grid-template-areas: 
-			"heading heading"
-			"sample actionButton"
-			". .";
-		align-items: center;
-		grid-column-gap: 10px;
-		height: 140px;
-	}
-
-	.result > h3 {
-		grid-area: heading;
-		align-self: flex-start;
-		margin: 0;
-	}
-
-	.result > p {
-		background: var(--white);
-		padding: 15px;
-		grid-area: sample;
-		height: 45px;
-	}
-
-	.result > .action-button {
-		grid-area: actionButton;
-		margin: 0;
-		height: 74px;
 	}
 
 	#inputArea {

@@ -35,7 +35,7 @@
 	.container {
 		height: 100%;
 		display: grid;
-		grid-template-rows: 60% auto 100px;
+		grid-template-rows: 65% auto 100px;
 		align-items: center;
 		/*justify-content: center;*/
 	}
@@ -44,7 +44,6 @@
 		text-align: center;
 		background: var(--white);
 		padding: 10px 0;
-		z-index: 4;
 	}
 
 	.video {
