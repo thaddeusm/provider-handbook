@@ -94,7 +94,7 @@
 
 	#searchBox {
 		display: grid;
-		grid-template-columns: 1fr 655px 95px;
+		grid-template-columns: 1fr 675px 75px;
 		grid-template-areas: ". inputArea closeArea";
 		align-items: center;
 		background: var(--brand);
@@ -109,7 +109,7 @@
 	#resultList {
 		grid-area: resultList;
 		background: var(--white);
-		margin: 0 95px;
+		margin: 0 75px 0 95px;
 		height: 50%;
 		overflow: auto;
 		box-shadow: var(--shadow);
