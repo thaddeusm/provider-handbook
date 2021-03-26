@@ -36,10 +36,6 @@
 
 	let input;
 
-	$: if (search_query_value && input.value) {
-		input.value = search_query_value;
-	}
-
 	let message = 'Enter a keyword to search the handbook.';
 
 	function closeSearch() {
@@ -59,6 +55,8 @@
 	}
 
 	function navigate(e) {
+		searchQuery.set('');
+
 		let section = e.detail.section;
 
 		router.goto('/handbook');
@@ -79,7 +77,7 @@
 			<section id="searchIcon">
 				<Search color={'#000000'} width={'2rem'} height={'2rem'} />
 			</section>
-			<input type="text" bind:this={input} on:keyup={handleKeyup}>
+			<input type="text" bind:this={input} bind:value={$searchQuery} on:keyup={handleKeyup}>
 		</section>
 		<section id="closeArea">
 			<button on:click={closeSearch}>

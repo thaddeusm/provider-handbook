@@ -28,10 +28,6 @@
 	
 	const dispatch = createEventDispatcher();
 
-	$: if (search_query_value) {
-		input.value = search_query_value;
-	}
-
 	let message = 'Enter a keyword to search the handbook.';
 	let input;
 
@@ -52,6 +48,8 @@
 	}
 
 	function navigate(e) {
+		searchQuery.set('');
+
 		let section = e.detail.section;
 		router.goto('/handbook');
 		setTimeout(() => {
@@ -71,7 +69,7 @@
 			<section id="searchIcon">
 				<Search color={'#FFFFFF'} width={'25px'} height={'25px'} />
 			</section>
-			<input in:slide type="text" bind:this={input} placeholder="Search Handbook" on:keyup={handleKeyup}>
+			<input in:slide type="text" bind:this={input} bind:value={$searchQuery} placeholder="Search Handbook" on:keyup={handleKeyup}>
 		</section>
 		<section id="closeArea">
 			<button on:click={closeSearch}>
