@@ -1,4 +1,5 @@
 <script>
+	import { router } from 'tinro';
 	import { search } from './../search.js';
 
 	import { results, searchQuery } from './../stores.js';
@@ -33,11 +34,12 @@
 	
 	const dispatch = createEventDispatcher();
 
-	$: if (search_query_value) {
+	let input;
+
+	$: if (search_query_value && input.value) {
 		input.value = search_query_value;
 	}
 
-	let input;
 	let message = 'Enter a keyword to search the handbook.';
 
 	function closeSearch() {
@@ -59,8 +61,11 @@
 	function navigate(e) {
 		let section = e.detail.section;
 
-		closeSearch();
-		jumpToId(section);
+		router.goto('/handbook');
+		setTimeout(() => {
+			jumpToId(section);
+			closeSearch();
+		}, 100, section);
 	}
 
 	onMount(() => {
@@ -116,7 +121,7 @@
 		}
 
 		#inputArea {
-			grid-template-columns: 7% 93%;
+			grid-template-columns: 50px 1fr;
 		}
 	}
 

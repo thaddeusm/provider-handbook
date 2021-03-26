@@ -1,4 +1,5 @@
 <script>
+	import { router } from 'tinro';
 	import { slide } from 'svelte/transition';
 	import { onMount, onDestroy } from 'svelte';
 
@@ -52,9 +53,11 @@
 
 	function navigate(e) {
 		let section = e.detail.section;
-
-		closeSearch();
-		jumpToId(section);
+		router.goto('/handbook');
+		setTimeout(() => {
+			jumpToId(section);
+			closeSearch();
+		}, 100, section);
 	}
 
 	onMount(() => {
