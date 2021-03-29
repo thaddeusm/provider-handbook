@@ -24,7 +24,26 @@
 
 <style>
 	@media screen and (max-width: 450px) {
-		
+		.result {
+			grid-template-rows: 43% 47% 10%;
+			grid-template-columns: 66% 31% 3%;
+			grid-template-areas: 
+				"heading heading ."
+				"sample actionButton ."
+				". . .";
+			height: 200px;
+			align-items: center;
+		}
+
+		.result > .action-button {
+			width: 100%;
+			max-width: 115px;
+			height: 119px;
+		}
+
+		.result > p {
+			height: 90px;
+		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
@@ -37,6 +56,14 @@
 				". . . .";
 			height: 160px;
 		}
+
+		.result > p {
+			height: 45px;
+		}
+
+		.result > .action-button {
+			height: 74px;
+		}
 	}
 
 	@media screen and (min-width: 1101px) {
@@ -48,6 +75,14 @@
 				"sample actionButton"
 				". .";
 			height: 140px;
+		}
+
+		.result > p {
+			height: 45px;
+		}
+
+		.result > .action-button {
+			height: 74px;
 		}
 	}
 
@@ -67,12 +102,10 @@
 		background: var(--white);
 		padding: 15px;
 		grid-area: sample;
-		height: 45px;
 	}
 
 	.result > .action-button {
 		grid-area: actionButton;
 		margin: 0;
-		height: 74px;
 	}
 </style>

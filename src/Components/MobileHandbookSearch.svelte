@@ -133,6 +133,7 @@
 		z-index: 3000;
 		display: grid;
 		grid-template-rows: 100px 1fr;
+		overflow: auto;
 	}
 
 	#searchBox {
