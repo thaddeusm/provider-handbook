@@ -49,6 +49,7 @@
 
 	function navigate(e) {
 		searchQuery.set('');
+		results.set([]);
 
 		let section = e.detail.section;
 		router.goto('/handbook');
@@ -60,7 +61,7 @@
 
 	onMount(() => {
 		input.focus();
-	})
+	});
 </script>
 
 <aside>

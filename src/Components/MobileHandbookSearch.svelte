@@ -56,6 +56,7 @@
 
 	function navigate(e) {
 		searchQuery.set('');
+		results.set([]);
 
 		let section = e.detail.section;
 
@@ -68,7 +69,7 @@
 
 	onMount(() => {
 		input.focus();
-	})
+	});
 </script>
 
 <aside>
