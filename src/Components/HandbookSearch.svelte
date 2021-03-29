@@ -40,10 +40,12 @@
 	function handleKeyup(e) {
 		searchQuery.set(input.value);
 
-		results.set(search(search_query_value));
+		if (e.keyCode == 13 || e.keyCode == 32) {
+			results.set(search(search_query_value));
 
-		if (results_value.length == 0) {
-			message = 'Nothing found. Please try a different keyword.'
+			if (results_value.length == 0) {
+				message = 'Nothing found. Please try a different keyword.'
+			}
 		}
 	}
 
@@ -67,7 +69,7 @@
 			<section id="searchIcon">
 				<Search color={'#FFFFFF'} width={'25px'} height={'25px'} />
 			</section>
-			<input in:slide type="text" bind:this={input} bind:value={$searchQuery} placeholder="Search Handbook" on:keyup={handleKeyup}>
+			<input in:slide type="text" bind:this={input} bind:value={$searchQuery} placeholder="Search Handbook" on:keyup={handleKeyup} />
 		</section>
 		<section id="closeArea">
 			<button on:click={closeSearch}>
