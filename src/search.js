@@ -1,6 +1,8 @@
 import Handbook from './Docs/Handbook.json';
 
 export const search = (term) => {
+	term = term.toLowerCase().trim();
+
 	let results = [];
 
 	for (let i=0; i<Handbook.sections.length; i++) {

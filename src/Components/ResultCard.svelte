@@ -31,18 +31,26 @@
 				"heading heading ."
 				"sample actionButton ."
 				". . .";
-			height: 200px;
+			height: 180px;
 			align-items: center;
 		}
 
 		.result > .action-button {
 			width: 100%;
 			max-width: 115px;
-			height: 119px;
+			height: 99px;
 		}
 
 		.result > p {
-			height: 90px;
+			height: 70px;
+			padding-bottom: 0;
+			overflow: auto;
+		}
+
+		.result > p::after {
+			content: '';
+			display: block;
+			padding-bottom: 15px;
 		}
 	}
 
