@@ -70,7 +70,7 @@
 			<section id="searchIcon">
 				<Search color={'#FFFFFF'} width={'25px'} height={'25px'} />
 			</section>
-			<input in:slide type="text" bind:this={input} bind:value={$searchQuery} placeholder="Search Handbook" on:keyup={handleKeyup}>
+			<input in:slide type="text" bind:this={input} bind:value={$searchQuery} placeholder="Search Handbook" on:keyup={handleKeyup} autocomplete="false">
 		</section>
 		<section id="closeArea">
 			<button on:click={closeSearch}>
