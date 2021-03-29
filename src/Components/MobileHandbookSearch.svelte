@@ -78,7 +78,7 @@
 			<section id="searchIcon">
 				<Search color={'#000000'} width={'2rem'} height={'2rem'} />
 			</section>
-			<input type="text" bind:this={input} bind:value={$searchQuery} on:keyup={handleKeyup} autocomplete="false">
+			<input type="text" bind:this={input} bind:value={$searchQuery} on:keyup={handleKeyup} autocomplete="off">
 		</section>
 		<section id="closeArea">
 			<button on:click={closeSearch}>
