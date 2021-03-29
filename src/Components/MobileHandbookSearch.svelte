@@ -47,12 +47,10 @@
 	function handleKeyup(e) {
 		searchQuery.set(input.value);
 
-		if (e.keyCode == 13 || e.keyCode == 32) {
-			results.set(search(search_query_value));
+		results.set(search(search_query_value));
 
-			if (results_value.length == 0) {
-				message = 'Nothing found. Please try a different keyword.'
-			}
+		if (results_value.length == 0) {
+			message = 'Nothing found. Please try a different keyword.'
 		}
 	}
 
