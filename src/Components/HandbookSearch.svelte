@@ -33,6 +33,8 @@
 
 	function closeSearch() {
 		dispatch('close-search');
+		searchQuery.set('');
+		results.set([]);
 	}
 
 	function handleKeyup(e) {
@@ -48,9 +50,6 @@
 	}
 
 	function navigate(e) {
-		searchQuery.set('');
-		results.set([]);
-
 		let section = e.detail.section;
 		router.goto('/handbook');
 		setTimeout(() => {
