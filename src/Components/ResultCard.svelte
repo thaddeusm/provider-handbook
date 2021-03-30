@@ -46,7 +46,6 @@
 			height: 70px;
 			padding: 10px;
 			padding-bottom: 0;
-			overflow: auto;
 		}
 
 		.result > p::after {
@@ -114,6 +113,7 @@
 	.result > p {
 		background: var(--white);
 		grid-area: sample;
+		overflow: auto;
 	}
 
 	.result > .action-button {
