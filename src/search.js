@@ -28,11 +28,11 @@ export const search = (term) => {
 
 						let textSample;
 
-						if (itemLength > 150) {
-							if (index > 60) {
-								textSample = `...${listItem.slice(index - 50, index + 50)}...`;
+						if (itemLength > 200) {
+							if (index > 80) {
+								textSample = `...${listItem.slice(index - 65, index + 65)}...`;
 							} else {
-								textSample = `${listItem.slice(0, index + 50)}...`;
+								textSample = `${listItem.slice(0, index + 65)}...`;
 							}
 						} else {
 							textSample = listItem;
@@ -57,11 +57,11 @@ export const search = (term) => {
 
 					let textSample;
 
-					if (textLength > 150) {
-						if (index > 60) {
-							textSample = `...${contentItem.slice(index - 50, index + 50)}...`;
+					if (textLength > 200) {
+						if (index > 80) {
+							textSample = `...${contentItem.slice(index - 65, index + 65)}...`;
 						} else {
-							textSample = `${contentItem.slice(0, index + 50)}...`;
+							textSample = `${contentItem.slice(0, index + 65)}...`;
 						}
 					} else {
 						textSample = contentItem;
