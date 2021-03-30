@@ -378,6 +378,20 @@
 		cursor: pointer;
 	}
 
+	.icon-subheading {
+		margin-top: 30px;
+		display: grid;
+		grid-template-columns: 1fr 45px;
+	}
+
+	.icon-subheading h3 {
+		margin-top: 0;
+	}
+
+	.icon-subheading button {
+		display: block;
+	}
+
 	footer {
 		grid-area: footer;
 	}
