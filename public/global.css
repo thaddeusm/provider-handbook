@@ -231,7 +231,7 @@ button {
 .icon-subheading {
 	margin-top: 30px;
 	display: grid;
-	grid-template-columns: 1fr 35px;
+	grid-template-columns: 1fr 45px;
 }
 
 .icon-subheading h3 {
