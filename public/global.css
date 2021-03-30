@@ -103,7 +103,7 @@ h3	{
 }
 
 h6 {
-	font-size: 13px;
+	font-size: 11px;
 	padding: 5px 0;
 	color: var(--black);
 	font-family: "Montserrat-ExtraBold";
@@ -120,9 +120,9 @@ p {
 .action-button {
 	font-size: 21px;
 	font-family: "Montserrat";
-	padding: 15px 30px;
+	padding: 10px 20px;
 	display: inline-block;
-	margin: 15px 0;
+	margin: 10px 0;
 	text-align: center;
 	color: var(--white)!important;
 	background: var(--brand);
@@ -143,9 +143,9 @@ p {
 .regular-button {
 	font-size: 21px;
 	font-family: "Montserrat";
-	padding: 15px 30px;
+	padding: 10px 20px;
 	display: inline-block;
-	margin: 15px 0;
+	margin: 10px 0;
 	text-align: center;
 	color: var(--white);
 	background: var(--dark-gray);
