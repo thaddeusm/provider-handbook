@@ -19,7 +19,7 @@ export const search = (term) => {
 
 			if (contentBlock.style.includes('list')) {
 				for (let k=0; k<contentBlock.content.length; k++) {
-					let listItem = contentBlock.content[k].toLowerCase();
+					let listItem = contentBlock.content[k];
 
 					if (listItem && listItem.toLowerCase().includes(term)) {
 						let index = listItem.toLowerCase().indexOf(term);
@@ -28,11 +28,11 @@ export const search = (term) => {
 
 						let textSample;
 
-						if (itemLength > 100) {
-							if (index > 35) {
-								textSample = `...${listItem.slice(index - 35, index + 35)}...`;
+						if (itemLength > 150) {
+							if (index > 60) {
+								textSample = `...${listItem.slice(index - 50, index + 50)}...`;
 							} else {
-								textSample = `${listItem.slice(0, index + 35)}...`;
+								textSample = `${listItem.slice(0, index + 50)}...`;
 							}
 						} else {
 							textSample = listItem;
@@ -42,34 +42,36 @@ export const search = (term) => {
 						textSample = textSample.replace(regex, `<strong>${term}</strong>`);
 
 						results.push({
-							textSample: textSample.toLowerCase(),
+							textSample: textSample,
 							sectionTitle: sectionTitle
 						});
 					}
 				}
 			} else {
-				if (contentBlock.content && contentBlock.content.toLowerCase().includes(term)) {
-					let index = contentBlock.content.toLowerCase().indexOf(term);
+				let contentItem = contentBlock.content;
+
+				if (contentBlock.content && contentItem.toLowerCase().includes(term)) {
+					let index = contentItem.toLowerCase().indexOf(term);
 
 					let textLength = contentBlock.content.length;
 
 					let textSample;
 
-					if (textLength > 100) {
-						if (index > 35) {
-							textSample = `...${contentBlock.content.slice(index - 35, index + 35)}...`;
+					if (textLength > 150) {
+						if (index > 60) {
+							textSample = `...${contentItem.slice(index - 50, index + 50)}...`;
 						} else {
-							textSample = `${contentBlock.content.slice(0, index + 35)}...`;
+							textSample = `${contentItem.slice(0, index + 50)}...`;
 						}
 					} else {
-						textSample = contentBlock.content;
+						textSample = contentItem;
 					}
 
 					let regex = new RegExp(term, 'i');
 					textSample = textSample.replace(regex, `<strong>${term}</strong>`);
 
 					results.push({
-						textSample: textSample.toLowerCase(),
+						textSample: textSample,
 						sectionTitle: sectionTitle
 					});
 				}	
