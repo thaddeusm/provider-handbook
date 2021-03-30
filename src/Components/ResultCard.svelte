@@ -25,24 +25,26 @@
 <style>
 	@media screen and (max-width: 450px) {
 		.result {
-			grid-template-rows: 43% 47% 10%;
-			grid-template-columns: 66% 31% 3%;
+			grid-template-rows: 49% 48% 3%;
+			grid-template-columns: 75% 22% 3%;
 			grid-template-areas: 
 				"heading heading ."
 				"sample actionButton ."
 				". . .";
-			height: 180px;
+			height: 160px;
 			align-items: center;
 		}
 
 		.result > .action-button {
 			width: 100%;
 			max-width: 115px;
-			height: 99px;
+			height: 79px;
+			padding: 0!important;
 		}
 
 		.result > p {
 			height: 70px;
+			padding: 10px;
 			padding-bottom: 0;
 			overflow: auto;
 		}
@@ -57,7 +59,7 @@
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.result {
 			grid-template-rows: 50% 40% 10%;
-			grid-template-columns: 10% 55% 20% 10%;
+			grid-template-columns: 5% 70% 15% 10%;
 			grid-template-areas: 
 				". heading heading ."
 				". sample actionButton ."
@@ -67,10 +69,12 @@
 
 		.result > p {
 			height: 45px;
+			padding: 15px;
 		}
 
 		.result > .action-button {
 			height: 74px;
+			padding: 0!important;
 		}
 	}
 
@@ -87,6 +91,7 @@
 
 		.result > p {
 			height: 45px;
+			padding: 15px;
 		}
 
 		.result > .action-button {
@@ -108,7 +113,6 @@
 
 	.result > p {
 		background: var(--white);
-		padding: 15px;
 		grid-area: sample;
 	}
 
