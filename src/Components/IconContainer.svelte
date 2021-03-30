@@ -7,7 +7,7 @@
 <div>
 	{#if title == "Interactive Available"}
 		<section class="small-icon">
-			<InteractiveAvailable width={'3rem'} />
+			<InteractiveAvailable width={'4rem'} />
 		</section>
 		<section class="large-icon">
 			<InteractiveAvailable width={'5rem'} />
@@ -29,10 +29,6 @@
 			padding: 0;
 			margin: 0;
 		}
-
-		div {
-			margin: .5rem 0;
-		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
@@ -46,11 +42,7 @@
 
 		section {
 			background: var(--gray);
-			padding: 2rem;
-		}
-
-		div {
-			margin: 2rem 0;
+			/*padding: 1rem;*/
 		}
 	}
 
@@ -65,11 +57,7 @@
 
 		section {
 			background: var(--gray);
-			padding: 2rem;
-		}
-
-		div {
-			margin: 2rem 0;
+			/*padding: 1rem;*/
 		}
 	}
 

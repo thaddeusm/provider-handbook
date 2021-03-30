@@ -17,13 +17,12 @@
 			display: none!important;
 		}
 
-		section {
-			padding: 0;
-			margin: 0;
-		}
-
 		div {
 			margin: .5rem 0;
+		}
+
+		img {
+			max-height: 500px;
 		}
 	}
 
@@ -36,13 +35,14 @@
 			display: none!important;
 		}
 
-		section {
-			background: var(--gray);
-			padding: 2rem;
-		}
-
 		div {
 			margin: 2rem 0;
+			padding: 1rem;
+			background: var(--gray);
+		}
+
+		img {
+			max-height: 700px;
 		}
 	}
 
@@ -55,13 +55,14 @@
 			display: block!important;
 		}
 
-		section {
-			background: var(--gray);
-			padding: 2rem;
-		}
-
 		div {
 			margin: 2rem 0;
+			padding: 1rem;
+			background: var(--gray);
+		}
+
+		img {
+			max-height: 800px;
 		}
 	}
 
@@ -72,6 +73,6 @@
 	img {
 		display: block;
 		margin: 0 auto;
-		width: 100%;
+		max-width: 100%
 	}
 </style>
