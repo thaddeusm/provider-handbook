@@ -166,6 +166,18 @@
 			padding: 0 15px 0 0;
 		}
 
+		:global(.tooltip) {
+			height: 30%;
+		}
+
+		:global(.tooltip)::before {
+			height: 70%;
+		}
+
+		:global(.tooltip-body) {
+			padding: 0 15px;
+		}
+
 		:global(.tooltip-footer) {
 			align-self: flex-start;
 		}
@@ -194,6 +206,18 @@
 
 		.handbook-content-list {
 			padding: 0 35px 0 0;
+		}
+
+		:global(.tooltip) {
+			height: 23%;
+		}
+
+		:global(.tooltip)::before {
+			height: 77%;
+		}
+
+		:global(.tooltip-body) {
+			padding: 0 32px;
 		}
 	}
 
@@ -238,7 +262,6 @@
 			background: var(--white);
 			bottom: 0;
 			left: 0;
-			height: 30%;
 			z-index: 1000;
 			box-shadow: var(--shadow);
 			text-align: left;
@@ -252,16 +275,11 @@
 			-webkit-transition-delay: .05s;
 		}
 
-		:global(.tooltip-body) {
-			padding: 0 15px;
-		}
-
 		:global(.tooltip)::before {
 			content: " ";
 			position: fixed;
 			top: 0;
 			left: 0;
-			height: 70%;
 			width: 100%;
 			background: rgba(0, 0, 0, .2);
 		}
@@ -335,7 +353,7 @@
 	}
 
 	ol li {
-		margin: .5rem 0;
+		margin: 1rem 0;
 		font-size: 15px;
 		line-height: 1.5;
 		color: var(--black);

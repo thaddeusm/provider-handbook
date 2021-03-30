@@ -37,7 +37,7 @@
 
 		div {
 			margin: 2rem 0;
-			padding: 1rem;
+			padding: 2rem;
 			background: var(--gray);
 		}
 
@@ -73,6 +73,8 @@
 	img {
 		display: block;
 		margin: 0 auto;
-		max-width: 100%
+		max-width: 100%;
+		box-shadow: var(--shadow);
+		border-radius: var(--radius);
 	}
 </style>
