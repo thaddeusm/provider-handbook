@@ -25,6 +25,7 @@
 	import MobileHandbookSearch from './../Components/MobileHandbookSearch.svelte';
 
 	let showSub = false;
+	let menuOpen = false;
 
 	$: {
 		if ($router.path == '/handbook') {
@@ -56,7 +57,7 @@
 
 <nav>
 	<section class="left">
-		<HamburgerMenu>
+		<HamburgerMenu {menuOpen}>
 			<div class="tray">
 				<ul class="primary-list">
 					<li><a href="/">about</a></li>
