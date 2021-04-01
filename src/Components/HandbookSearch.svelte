@@ -60,6 +60,11 @@
 
 	onMount(() => {
 		input.focus();
+		document.body.style.overflow = 'hidden';
+	});
+
+	onDestroy(() => {
+		document.body.style.overflow = 'auto';
 	});
 </script>
 

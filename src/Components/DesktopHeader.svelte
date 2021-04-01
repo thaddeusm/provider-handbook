@@ -58,11 +58,16 @@
 <style>
 	nav {
 		display: grid;
-		height: 100%;
+		height: 100px;
+		width: 100%;
 		grid-template-rows: .70fr 1fr;
 		grid-template-areas: 
 			"top"
 			".";
+		position: fixed;
+		z-index: 6;
+		top: 0;
+		left: 0;
 	}
 
 	aside {

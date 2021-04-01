@@ -23,14 +23,6 @@
 
 	import { createEventDispatcher } from 'svelte';
 	import { onMount, onDestroy } from 'svelte';
-
-	onMount(() => {
-		document.body.style.overflow = 'hidden';
-	});
-
-	onDestroy(() => {
-		document.body.style.overflow = 'auto';
-	});
 	
 	const dispatch = createEventDispatcher();
 
@@ -68,6 +60,11 @@
 
 	onMount(() => {
 		input.focus();
+		document.body.style.overflow = 'hidden';
+	});
+
+	onDestroy(() => {
+		document.body.style.overflow = 'auto';
 	});
 </script>
 

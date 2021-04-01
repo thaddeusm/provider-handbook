@@ -132,8 +132,13 @@
 	nav {
 		display: grid;
 		align-items: center;
-		height: 100%;
+		height: 100px;
+		width: 100%;
+		background: var(--white);
 		grid-template-areas: "left center right";
+		position: fixed;
+		top: 0;
+		left: 0;
 	}
 
 	.left {
