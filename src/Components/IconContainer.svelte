@@ -25,6 +25,10 @@
 			display: none!important;
 		}
 
+		div {
+			margin: .5rem 0;
+		}
+
 		section {
 			padding: 0;
 			margin: 0;
@@ -40,9 +44,10 @@
 			display: none!important;
 		}
 
-		section {
+		div {
+			margin: 2rem 0;
+			padding: 2rem;
 			background: var(--gray);
-			/*padding: 1rem;*/
 		}
 	}
 
@@ -55,13 +60,15 @@
 			display: block!important;
 		}
 
-		section {
+		div {
+			margin: 2rem 0;
+			padding: 1rem;
 			background: var(--gray);
-			/*padding: 1rem;*/
 		}
 	}
 
 	div {
 		text-align: center;
+		max-height: 200px;
 	}
 </style>
