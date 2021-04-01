@@ -4,69 +4,84 @@
 		[
 			{
 				"style": "heading",
-				"content": "Introduction"
+				"content": "Introduction",
+				"section": "Introduction"
 			},
 			{
 				"style": "paragraph", 
-				"content": "The intended audience of this handbook are both potential and current Access providers’ administrative staff and teachers."
+				"content": "The intended audience of this handbook are both potential and current Access providers’ administrative staff and teachers.",
+				"section": "Introduction"
 			},
 			{
 				"style": "paragraph", 
-				"content": "The goal of this handbook is to give an overview of the Access program, detail the process of applying to host an Access program, and to serve as a guide that highlights important program policies and resources available to Access providers and teachers. The policies and procedures of the Access program are updated each year, so please note that this handbook will be updated annually. Please ensure you consult the most updated version of the handbook."
+				"content": "The goal of this handbook is to give an overview of the Access program, detail the process of applying to host an Access program, and to serve as a guide that highlights important program policies and resources available to Access providers and teachers. The policies and procedures of the Access program are updated each year, so please note that this handbook will be updated annually. Please ensure you consult the most updated version of the handbook.",
+				"section": "Introduction"
 			},
 			{
 				"style": "paragraph", 
-				"content": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer/U.S. Embassy point of contact and/or email <a href=\"mailto:accessprogram@state.gov\">accessprogram@state.gov</a>."
+				"content": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer/U.S. Embassy point of contact and/or email <a href=\"mailto:accessprogram@state.gov\">accessprogram@state.gov</a>.",
+				"section": "Introduction"
 			},
 			{
 				"style": "subheading",
-				"content": "How can I use this handbook?"
+				"content": "How can I use this handbook?",
+				"section": "How can I use this handbook?"
 			},
 			{
 				"style": "paragraph",
-				"content": "This handbook is structured into three main sections so providers can quickly find the information they need: Before: Pre-Program Launch Information and Activities, During: Program Implementation Information and Activities, and After: Program Close-Out."
+				"content": "This handbook is structured into three main sections so providers can quickly find the information they need: Before: Pre-Program Launch Information and Activities, During: Program Implementation Information and Activities, and After: Program Close-Out.",
+				"section": "How can I use this handbook?"
 			},
 			{
 				"style": "graphic",
-				"title": "Handbook Characters"
+				"title": "Handbook Characters",
+				"section": "How can I use this handbook?"
 			},
 			{
 				"style": "paragraph",
-				"content": "Further, this handbook will link readers to online modules that provide more in-depth learning on specific topics. Look for and click on the icon below to navigate to find more information about that topic."
+				"content": "Further, this handbook will link readers to online modules that provide more in-depth learning on specific topics. Look for and click on the icon below to navigate to find more information about that topic.",
+				"section": "How can I use this handbook?"
 			},
 			{
 				"style": "icon",
-				"title": "Interactive Available"
+				"title": "Interactive Available",
+				"section": "How can I use this handbook?"
 			},
 			{
 				"style": "paragraph",
-				"content": "Providers can also use the ICON function to see the definition of certain words/phrases without leaving the handbook. Readers can also use the glossary at the end of the handbook to search for unfamiliar terms or acronyms."
+				"content": "Providers can also use the ICON function to see the definition of certain words/phrases without leaving the handbook. Readers can also use the glossary at the end of the handbook to search for unfamiliar terms or acronyms.",
+				"section": "How can I use this handbook?"
 			},
 			{
 				"style": "icon_subheading",
 				"content": "What is Access?",
 				"preview_image": "What is Access?",
 				"link": "https://rise.articulate.com/share/2MC9w1ZBjEU07mtfZIlRY52FzaygV2_F",
-				"interactive_description": "differentiate the Access Program from other English language learning programs"
+				"interactive_description": "differentiate the Access Program from other English language learning programs",
+				"section": "What is Access?"
 			},
 			{
 				"style": "paragraph",
-				"content": "Access is a student-centered program that provides English language skills to underserved students  (primarily 13-20 years old) worldwide through extracurricular classes and activities. Access provides participants with a foundation of English language, leadership and professional skills, and exposure to U.S. culture and democratic values that may lead to better jobs and educational prospects, including future exchanges and study in the United States. The global Access Program has provided scholarships to approximately 200,000 students in over 80 countries since its inception in 2004."
+				"content": "Access is a student-centered program that provides English language skills to underserved students  (primarily 13-20 years old) worldwide through extracurricular classes and activities. Access provides participants with a foundation of English language, leadership and professional skills, and exposure to U.S. culture and democratic values that may lead to better jobs and educational prospects, including future exchanges and study in the United States. The global Access Program has provided scholarships to approximately 200,000 students in over 80 countries since its inception in 2004.",
+				"section": "What is Access?"
 			},
 			{
 				"style": "icon_subheading",
 				"content": "Access Objective and Goals",
 				"preview_image": "What is Access?",
 				"link": "https://rise.articulate.com/share/2MC9w1ZBjEU07mtfZIlRY52FzaygV2_F",
-				"interactive_description": "differentiate the Access Program from other English language learning programs"
+				"interactive_description": "differentiate the Access Program from other English language learning programs",
+				"section": "Access Objective and Goals"
 			},
 			{
 				"style": "paragraph",
-				"content": "The objective of the Access program is to provide participants with improved English skills that may lead to better jobs and educational prospects, including future exchanges and study in the United States."
+				"content": "The objective of the Access program is to provide participants with improved English skills that may lead to better jobs and educational prospects, including future exchanges and study in the United States.",
+				"section": "Access Objective and Goals"
 			},
 			{
 				"style": "paragraph", 
-				"content": "Access students will"
+				"content": "Access students will",
+				"section": "Access Objective and Goals"
 			},
 			{
 				"style": "ordered_list",
@@ -76,19 +91,23 @@
 					"develop digital literacy skills",
 					"participate in Personal Development activities (e.g. self-confidence, critical thinking, etc.), and",
 					"take part in Service Learning activities."
-				]
+				],
+				"section": "Access Objective and Goals"
 			},
 			{
 				"style": "subheading",
-				"content": "Eligibility to Host an Access Program"
+				"content": "Eligibility to Host an Access Program",
+				"section": "Eligibility to Host an Access Program"
 			},
 			{
 				"style": "paragraph",
-				"content": "If your school, educational institution, or organization (for-profit organizations are not eligible) is interested in hosting an Access program, please review the questions below to verify your eligibility. If you answered “No” to any of the questions, please consult with your U.S. Embassy contact or Regional English Language Officer (RELO) before continuing the process."
+				"content": "If your school, educational institution, or organization (for-profit organizations are not eligible) is interested in hosting an Access program, please review the questions below to verify your eligibility. If you answered “No” to any of the questions, please consult with your U.S. Embassy contact or Regional English Language Officer (RELO) before continuing the process.",
+				"section": "Eligibility to Host an Access Program"
 			},
 			{
 				"style": "paragraph", 
-				"content": "Can your educational institution or organization"
+				"content": "Can your educational institution or organization",
+				"section": "Eligibility to Host an Access Program"
 			},
 			{
 				"style": "ordered_list",
@@ -100,15 +119,18 @@
 					"acquire a room or space to accommodate the class?",
 					"retain teachers, administration, and students that can devote extended periods of time (6-8 hours) for enhancement and/or intensive sessions that can occur on weekends?",
 					"acquire and use Microsoft Excel 2010 (or newer) for reporting purposes?"
-				]
+				],
+				"section": "Eligibility to Host an Access Program"
 			},
 			{
 				"style": "subheading", 
-				"content": "Lifecycle of an Access Program"
+				"content": "Lifecycle of an Access Program",
+				"section": "Lifecycle of an Access Program"
 			},
 			{
 				"style": "graphic",
-				"title": "Program Lifecycle"
+				"title": "Program Lifecycle",
+				"section": "Lifecycle of an Access Program"
 			}
 		],
 		[
@@ -117,15 +139,18 @@
 				"content": "Enhancement Activities",
 				"preview_image": "Enhancement Activities",
 				"link": "https://rise.articulate.com/share/mQAR905yySdtrKam7OrThTGkTX2TfUDu",
-				"interactive_description": "evaluate the effectiveness of sample enhancement activities"
+				"interactive_description": "evaluate the effectiveness of sample enhancement activities",
+				"section": "Enhancement Activities"
 			},
 			{
 				"style": "paragraph", 
-				"content": "<strong>What</strong>: Enhancement Activities (EAs) are mandatory special educational events that happen <strong>outside</strong> of students’ regular Access classes throughout the duration of the program. EAs are interactive opportunities for students to enhance their English language skills and personal skills."
+				"content": "<strong>What</strong>: Enhancement Activities (EAs) are mandatory special educational events that happen <strong>outside</strong> of students’ regular Access classes throughout the duration of the program. EAs are interactive opportunities for students to enhance their English language skills and personal skills.",
+				"section": "Enhancement Activities"
 			},
 			{
 				"style": "paragraph", 
-				"content": "There are four main topics for Enhancement Activities:"
+				"content": "There are four main topics for Enhancement Activities:",
+				"section": "Enhancement Activities"
 			},
 			{
 				"style": "ordered_list",
@@ -134,27 +159,33 @@
 					"Personal Development",
 					"Service Learning",
 					"Digital Literacy Skills"
-				]
+				],
+				"section": "Enhancement Activities"
 			},
 			{
 				"style": "paragraph",
-				"content": "<strong>Who</strong>: Access teachers (in consultation with the U.S. Embassy) plan and facilitate enhancement activities for Access students. Administrators support both students and teachers. Don’t forget to invite U.S. Embassy representatives and/or your RELO in advance!"
+				"content": "<strong>Who</strong>: Access teachers (in consultation with the U.S. Embassy) plan and facilitate enhancement activities for Access students. Administrators support both students and teachers. Don’t forget to invite U.S. Embassy representatives and/or your RELO in advance!",
+				"section": "Enhancement Activities"
 			},
 			{
 				"style": "paragraph",
-				"content": "<strong>Where</strong>: EAs can occur within students’ regular Access classroom or they can occur outside of the classroom (in the program’s host city or nearby city/area)."
+				"content": "<strong>Where</strong>: EAs can occur within students’ regular Access classroom or they can occur outside of the classroom (in the program’s host city or nearby city/area).",
+				"section": "Enhancement Activities"
 			},
 			{
 				"style": "paragraph",
-				"content": "<strong>When</strong>: EAs must occur at least once per semester or quarter."
+				"content": "<strong>When</strong>: EAs must occur at least once per semester or quarter.",
+				"section": "Enhancement Activities"
 			},
 			{
 				"style": "paragraph",
-				"content": "<strong>Why</strong>: EAs are often the most memorable experiences for Access students as they usually occur outside the classroom and encourage the development of community. EAs should be carefully designed to advance the students’ English skills AND reinforce a topic by creating a lasting impression and memory for students."
+				"content": "<strong>Why</strong>: EAs are often the most memorable experiences for Access students as they usually occur outside the classroom and encourage the development of community. EAs should be carefully designed to advance the students’ English skills AND reinforce a topic by creating a lasting impression and memory for students.",
+				"section": "Enhancement Activities"
 			},
 			{
 				"style": "graphic",
-				"title": "Enhancement Activity"
+				"title": "Enhancement Activity",
+				"section": "Enhancement Activities"
 			}
 		]
 	],

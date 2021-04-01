@@ -24,7 +24,7 @@
 		previewDescription = description;
 	}
 
-	function textWithTooltips(text) {
+	function textWithTooltips(text, section) {
 		let glossary = Handbook.glossary;
 
 		let terms = Object.keys(glossary);
@@ -35,7 +35,12 @@
 		for (let i=0; i<terms.length; i++) {
 			let term = new RegExp(terms[i], 'i');
 			let termText = terms[i];
-			newText = text.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="action-button-small tooltip-link" onclick="jumpToId('${defs[i].reference}')">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
+
+			if (section !== termText) {
+				newText = text.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="action-button-small tooltip-link" onclick="jumpToId('${defs[i].reference}')">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
+			} else {
+				newText = text;
+			}
 		}
 
 		return newText;
@@ -111,7 +116,7 @@
  				{:else if section.style == "icon"}
  					<Icon title={section.title} />
  				{:else}
- 					<p>{@html textWithTooltips(section.content)}</p>
+ 					<p>{@html textWithTooltips(section.content, section.section)}</p>
  				{/if}
  			{/each}
  		{/each}
