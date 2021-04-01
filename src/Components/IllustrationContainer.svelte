@@ -3,8 +3,8 @@
 </script>
 
 <div>
-	<img class="large-illustration" src={`Illustrations/${title.split(' ').join('')}Desktop.svg`} alt={title} />
-	<img class="small-illustration" src={`Illustrations/${title.split(' ').join('')}Mobile.svg`} alt={title} />
+	<img class="large-illustration" src={`Illustrations/${title.split(' ').join('').replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Desktop.svg`} alt={title} />
+	<img class="small-illustration" src={`Illustrations/${title.split(' ').join('').replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Mobile.svg`} alt={title} />
 </div>
 
 <style>

@@ -44,7 +44,10 @@
 			},
 			{
 				"style": "icon_subheading",
-				"content": "What is Access?"
+				"content": "What is Access?",
+				"preview_image": "What is Access?",
+				"link": "https://rise.articulate.com/share/2MC9w1ZBjEU07mtfZIlRY52FzaygV2_F",
+				"interactive_description": "differentiate the Access Program from other English language learning programs"
 			},
 			{
 				"style": "paragraph",
@@ -52,7 +55,10 @@
 			},
 			{
 				"style": "icon_subheading",
-				"content": "Access Objective and Goals"
+				"content": "Access Objective and Goals",
+				"preview_image": "What is Access?",
+				"link": "https://rise.articulate.com/share/2MC9w1ZBjEU07mtfZIlRY52FzaygV2_F",
+				"interactive_description": "differentiate the Access Program from other English language learning programs"
 			},
 			{
 				"style": "paragraph",
@@ -109,6 +115,7 @@
 			{
 				"style": "icon_subheading",
 				"content": "Enhancement Activities",
+				"preview_image": "Enhancement Activities",
 				"link": "https://rise.articulate.com/share/mQAR905yySdtrKam7OrThTGkTX2TfUDu",
 				"interactive_description": "evaluate the effectiveness of sample enhancement activities"
 			},

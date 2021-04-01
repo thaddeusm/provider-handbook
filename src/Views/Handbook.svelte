@@ -14,11 +14,12 @@
 	let previewSection;
 	let previewURL;
 	let previewDescription;
+	let previewImage;
 
-	function openPreview(sectionTitle, link, description) {
+	function openPreview(previewImageTitle, link, description) {
 		showPreview = !showPreview;
 		
-		previewSection = sectionTitle;
+		previewSection = previewImageTitle;
 		previewURL = link;
 		previewDescription = description;
 	}
@@ -88,7 +89,7 @@
  							{section.content}
  						</h3>
  						<button 
- 							on:click={() => {openPreview(section.content.split(' ').join(''), section.link, section.interactive_description)}}
+ 							on:click={() => {openPreview(section.preview_image.split(' ').join(''), section.link, section.interactive_description)}}
  						>
  							<InteractiveAvailable width={'2rem'} height={'2rem'} />
  						</button>
@@ -124,8 +125,8 @@
 	<PreviewModal>
 		<div slot="body" class="modal-body">
 			{#if previewSection}
-				<img class="large-preview-image" src={`/PreviewImages/${previewSection}Large.png`} />
-				<img class="small-preview-image" src={`/PreviewImages/${previewSection}Small.png`} />
+				<img class="large-preview-image" src={`/PreviewImages/${previewSection.replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Large.png`} />
+				<img class="small-preview-image" src={`/PreviewImages/${previewSection.replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Small.png`} />
 			{/if}
 		</div>
 		<div slot="footer" class="modal-footer">
