@@ -1,6 +1,7 @@
 <script>
 	let innerWidth = 0;
 	let videoHeight = 0;
+	let videoLoading = true;
 
 	$: {
 		if (innerWidth > 560) {
@@ -9,13 +10,18 @@
 			videoHeight = innerWidth * .56;
 		}
 	}
+
+	function handleLoad() {
+		videoLoading = false;
+	}
 </script>
 
 <svelte:window bind:innerWidth={innerWidth} />
 
 <div class="container">
-	<section class="video-container">
-		<iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<section class="{videoLoading ? 'video-container placeholder' : 'video-container'}">
+		<iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen on:load={handleLoad}></iframe>
+		
 	</section>
 	<section class="action">
 		<a class="action-button" href="/handbook">view handbook</a>
@@ -42,8 +48,13 @@
 
 	.video-container {
 		text-align: center;
-		background: var(--white);
 		padding: 10px 0;
+	}
+
+	.placeholder {
+		background: var(--gray);
+		width: 600px;
+		margin: 0 auto;
 	}
 
 	.video {
