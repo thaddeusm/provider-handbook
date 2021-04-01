@@ -49,7 +49,7 @@
 					}
 				}
 			});
-		}, {threshold: .50});
+		}, {threshold: .60});
 
 		document.querySelectorAll('section[id]').forEach((section) => {
 			observer.observe(section);
