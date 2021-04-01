@@ -19,7 +19,7 @@
 <svelte:window bind:innerWidth={innerWidth} />
 
 <div class="container">
-	<section class="{videoLoading ? 'video-container placeholder' : 'video-container'}">
+	<section class="{videoLoading ? 'placeholder' : 'video-container'}">
 		<iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen on:load={handleLoad}></iframe>
 		
 	</section>
@@ -53,7 +53,7 @@
 
 	.placeholder {
 		background: var(--gray);
-		width: 600px;
+		width: 100%;
 		margin: 0 auto;
 	}
 
