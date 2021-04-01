@@ -117,6 +117,11 @@
 		.sub {
 			grid-template-columns: 80% 20%;
 		}
+
+		.tray {
+			top: 15vh;
+			height: 85vh;
+		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
@@ -127,6 +132,11 @@
 		.sub {
 			grid-template-columns: 90% 10%;
 		}
+
+		.tray {
+			top: 10vh;
+			height: 90vh;
+		}
 	}
 
 	nav {
@@ -136,7 +146,6 @@
 		width: 100%;
 		background: var(--white);
 		grid-template-areas: "left center right";
-		position: fixed;
 		top: 0;
 		left: 0;
 	}
@@ -158,10 +167,9 @@
 
 	.tray {
 		position: absolute;
-		top: 100px;
 		left: 0;
 		width: 100%;
-		height: 100vh;
+		overflow: auto;
 		background: var(--brand);
 		z-index: 100!important;
 	}
