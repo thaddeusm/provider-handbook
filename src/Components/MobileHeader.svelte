@@ -130,11 +130,6 @@
 		.sub {
 			grid-template-columns: 80% 20%;
 		}
-
-		.tray {
-			top: 15vh;
-			height: 85vh;
-		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
@@ -144,11 +139,6 @@
 
 		.sub {
 			grid-template-columns: 90% 10%;
-		}
-
-		.tray {
-			top: 10vh;
-			height: 90vh;
 		}
 	}
 
@@ -179,26 +169,29 @@
 	}
 
 	.tray {
-		position: absolute;
+		position: absolute!important;
 		left: 0;
+		top: 100px;
 		width: 100%;
-		overflow: auto;
-		background: var(--brand);
+		height: 100%;
+		overflow: auto!important;
 		z-index: 100!important;
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-areas: 
+			"primaryList";
 	}
 
 	.primary-list {
 		list-style: none;
 		background: var(--brand);
-		/*display: grid;
-		height: 85%;
-		align-items: center;*/
+		grid-area: primaryList;
 	}
 
 	.primary-list > li {
 		text-align: left;
 		padding-left: 30px;
-		margin: 50px 0;
+		margin: 40px 0;
 	}
 
 	.primary-list > li > a {
