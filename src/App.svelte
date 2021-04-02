@@ -1,6 +1,7 @@
 <script>
 	import { Route, router } from 'tinro';
 	router.mode.hash();
+	import { onMount } from 'svelte';
 
 	import About from './Views/About.svelte';
 	import Handbook from './Views/Handbook.svelte';
@@ -13,6 +14,8 @@
 	let title;
 
 	let activeHandbookSection;
+
+	let showMobileHeader = false;
 
 	$: {
 		if ($router.path == '/') {
@@ -29,18 +32,33 @@
 	function toggleSearch() {
 		searchOpen = !searchOpen;
 	}
+
+	function handleResize() {
+		if (window.innerWidth < 1101) {
+			showMobileHeader = true;
+		} else {
+			showMobileHeader = false;
+		}
+	}
+
+	onMount(() => {
+		handleResize();
+	});
 </script>
 
 <svelte:head>
 	<title>{title}</title>
 </svelte:head>
 
+<svelte:window on:resize={handleResize} />
+
 <div id="app">
-	<header id="mobileHeader">
-		<MobileHeader />
-	</header>
-	<header id="desktopHeader">
-		<DesktopHeader />
+	<header>
+		{#if showMobileHeader}
+			<MobileHeader />
+		{:else}
+			<DesktopHeader />
+		{/if}
 	</header>
 	<main>
 		<Route path="/">
@@ -62,26 +80,6 @@
 </div>
 
 <style>
-	@media screen and (max-width: 1100px) {
-		#mobileHeader {
-			display: block;
-		}
-
-		#desktopHeader {
-			display: none;
-		}
-	}
-
-	@media screen and (min-width: 1101px) {
-		#mobileHeader {
-			display: none;
-		}
-
-		#desktopHeader {
-			display: block;
-		}
-	}
-
 	#app {
 		height: 100%;
 		display: grid;

@@ -46,6 +46,15 @@
 		return newText;
 	}
 
+	function handleJump(section) {
+		jumpToId(section);
+
+		setTimeout(() => {
+			console.log(section)
+			activeId = section;
+		}, 20, section);
+	}
+
 	onMount(async () => {
 		const observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => {
@@ -60,6 +69,10 @@
 		document.querySelectorAll('section[id]').forEach((section) => {
 			observer.observe(section);
 		});
+
+		document.querySelectorAll('span[id]').forEach((section) => {
+			observer.observe(section);
+		});
 	});
 </script>
 
@@ -70,7 +83,9 @@
 				{#each handbookSection as section, j}
 					{#if section.style.includes('heading')}
 						<li class={section.style.includes('subheading') ? 'subheading' : ''}>
-							<a class={activeId == section.content.split(' ').join('') ? 'active': ''} on:click={() => {jumpToId(section.content.split(' ').join(''))}}>
+							<a 
+								class={activeId == section.content.split(' ').join('') ? 'active': ''}
+								on:click={() => {handleJump(section.content.split(' ').join(''))}}>
 								{section.content}
 							</a>
 						</li>
@@ -89,7 +104,8 @@
  						</h2>
  					</section>
  				{:else if section.style == "icon_subheading"}
- 					<section class="icon-subheading" id="{section.content.split(' ').join('')}">
+ 					<span id="{section.content.split(' ').join('')}"></span>
+ 					<section class="icon-subheading">
  						<h3>
  							{section.content}
  						</h3>
@@ -230,6 +246,7 @@
 	@media screen and (min-width: 1101px) {
 		.container {
 			grid-template-columns: 26rem 1fr;
+			margin-top: -15px;
 		}
 
 		#handbook {
@@ -460,5 +477,14 @@
 
 	:global(.tooltip-footer > a) {
 		cursor: pointer;
+	}
+
+	[id]::before { 
+	  display: inline-block; 
+	  content: " "; 
+	  margin-top: -300px; 
+	  height: 300px; 
+	  visibility: hidden; 
+	  pointer-events: none;
 	}
 </style>

@@ -60,11 +60,6 @@
 
 	onMount(() => {
 		input.focus();
-		document.body.style.overflow = 'hidden';
-	});
-
-	onDestroy(() => {
-		document.body.style.overflow = 'auto';
 	});
 </script>
 
@@ -102,7 +97,7 @@
 <style>
 	aside {
 		width: 100%;
-		height: 85%;
+		height: 95%;
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -112,7 +107,7 @@
 
 	#searchBox {
 		display: grid;
-		grid-template-columns: 1fr 675px 75px;
+		grid-template-columns: 1fr 650px 85px;
 		grid-template-areas: ". inputArea closeArea";
 		align-items: center;
 		background: var(--brand);
@@ -120,14 +115,14 @@
 
 	#results {
 		display: grid;
-		grid-template-columns: 1fr 750px;
+		grid-template-columns: 1fr 725px;
 		grid-template-areas: ". resultList";
 	}
 
 	#resultList {
 		grid-area: resultList;
 		background: var(--white);
-		margin: 0 75px 0 95px;
+		margin: 0 85px 0 85px;
 		height: 50%;
 		overflow: auto;
 		box-shadow: var(--shadow);

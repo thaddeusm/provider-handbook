@@ -60,7 +60,7 @@
 		display: grid;
 		height: 100px;
 		width: 100%;
-		grid-template-rows: .70fr 1fr;
+		grid-template-rows: .85fr 1fr;
 		grid-template-areas: 
 			"top"
 			".";
