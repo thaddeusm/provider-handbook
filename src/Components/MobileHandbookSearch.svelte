@@ -157,7 +157,6 @@
 	input {
 		font-size: 21px;
 		letter-spacing: 2px;
-		text-transform: uppercase;
 		font-family: "Montserrat-Bold";
 		background: none;
 		border: none;

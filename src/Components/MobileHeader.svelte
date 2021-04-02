@@ -26,6 +26,7 @@
 
 	let showSub = false;
 	let menuOpen = false;
+	let scrolled = false;;
 
 	$: {
 		if ($router.path == '/handbook') {
@@ -53,7 +54,19 @@
 			jumpToId(sectionId);
 		}, 100, sectionId);
 	}
+
+	function handleScroll(e) {
+		let position = window.scrollY;
+
+		if (position > 50) {
+			scrolled = true;
+		} else {
+			scrolled = false;
+		}
+	}
 </script>
+
+<svelte:window on:scroll={handleScroll} />
 
 <nav>
 	<section class="left">
@@ -101,7 +114,7 @@
 		{#if $searchOpen}
 			<MobileHandbookSearch on:close-search={toggleSearch} />
 		{:else}
-			<button on:click={toggleSearch}>
+			<button id="searchButton" class:scrolled on:click={toggleSearch}>
 				<Search color={'#000000'} width={'2rem'} height={'2rem'} />
 			</button>
 		{/if}
@@ -234,5 +247,23 @@
 
 	.subheading {
 		padding-left: 3rem!important;
+	}
+
+	#searchButton {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 50px;
+		margin-top: 20px;
+		padding-top: 5px;
+		margin-bottom: 30px;
+		width: 70px;
+	}
+
+	.scrolled {
+		background: var(--white);
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+		box-shadow: var(--shadow);
 	}
 </style>
