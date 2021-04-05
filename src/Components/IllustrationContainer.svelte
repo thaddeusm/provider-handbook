@@ -46,6 +46,8 @@
 
 		img {
 			max-height: 350px;
+			box-shadow: var(--shadow);
+			border-radius: var(--radius);
 		}
 	}
 
@@ -67,6 +69,8 @@
 
 		img {
 			max-height: 500px;
+			box-shadow: var(--shadow);
+			border-radius: var(--radius);
 		}
 	}
 
@@ -78,7 +82,5 @@
 		display: block;
 		margin: 0 auto;
 		max-width: 100%;
-		box-shadow: var(--shadow);
-		border-radius: var(--radius);
 	}
 </style>
