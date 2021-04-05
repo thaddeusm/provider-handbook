@@ -271,6 +271,7 @@
 
 		.large-preview-image {
 			width: 50%;
+			min-width: 400px;
 		}
 
 		.handbook-content-list {
