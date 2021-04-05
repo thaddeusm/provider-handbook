@@ -21,7 +21,6 @@
 <div class="container">
 	<section class="{videoLoading ? 'placeholder' : 'video-container'}">
 		<iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen on:load={handleLoad}></iframe>
-		
 	</section>
 	<section class="action">
 		<a class="action-button" href="/handbook">view handbook</a>
@@ -34,6 +33,10 @@
 <style>
 	@media screen and (min-width: 1101px) {
 		.video-container {
+			align-self: flex-end;
+		}
+
+		.placeholder {
 			align-self: flex-end;
 		}
 	}
@@ -53,7 +56,8 @@
 
 	.placeholder {
 		background: var(--gray);
-		width: 100%;
+		max-width: 560px;
+		padding: 10px 0;
 		margin: 0 auto;
 	}
 
