@@ -147,7 +147,7 @@
 		}
 
 		.secondary-list {
-			max-height: 350px;
+			max-height: 255px;
 			overflow: auto;
 		}
 	}
