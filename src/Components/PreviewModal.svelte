@@ -64,6 +64,7 @@
 
 		.modal {
 			height: 90%;
+			width: 90%;
 			grid-template-rows: 80% 20%;
 		}
 	}
