@@ -8,6 +8,7 @@
 	import Documents from './Views/Documents.svelte';
 	import Help from './Views/Help.svelte';
 
+	import Transition from './Components/Transition.svelte';
 	import MobileHeader from './Components/MobileHeader.svelte';
 	import DesktopHeader from './Components/DesktopHeader.svelte';
 
@@ -61,21 +62,23 @@
 		{/if}
 	</header>
 	<main>
-		<Route path="/">
-			<About />
-		</Route>
-		<Route path="/handbook">
-			<Handbook />
-		</Route>
-		<Route path="/documents">
-			<Documents />
-		</Route>
-		<Route path="/help">
-			<Help />
-		</Route>
-		<Route fallback>
-			<About />
-		</Route>
+		<Transition>
+			<Route path="/">
+				<About />
+			</Route>
+			<Route path="/handbook">
+				<Handbook />
+			</Route>
+			<Route path="/documents">
+				<Documents />
+			</Route>
+			<Route path="/help">
+				<Help />
+			</Route>
+			<Route fallback>
+				<About />
+			</Route>
+		</Transition>
 	</main>
 </div>
 
