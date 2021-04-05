@@ -181,7 +181,7 @@
 		}
 
 		.small-preview-image {
-			width: 35%;
+			height: 225px;
 		}
 
 		.handbook-content-list {

@@ -19,7 +19,7 @@
 
 		div {
 			margin: 1rem 0;
-			height: 250px;
+			min-height: 250px;
 		}
 
 		img {

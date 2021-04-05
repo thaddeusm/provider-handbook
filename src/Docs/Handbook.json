@@ -135,6 +135,38 @@
 		],
 		[
 			{
+				"style": "heading",
+				"content": "Before: Pre-Program Launch Information and Activities",
+				"section": "Before: Pre-Program Launch Information and Activities"
+			},
+			{
+				"style": "subheading",
+				"content": "Planning a 2-Year Access Program",
+				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "paragraph", 
+				"content": "Providers are required to provide a detailed plan for their 2-year program and list all program activities that will occur in their initial application and proposal. This section aims to support potential providers with strategic long-term program planning by detailing program requirements that must be included in their proposal and guidance to plan an effective 2-year Access program.",
+				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "paragraph", 
+				"content": "Access students must receive a minimum of 360 hours of instruction distributed over a 20-24 month program. The 360 instruction hours include all the main components of the Access program: after school instruction, enhancement activities, and intensive sessions.",
+				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "paragraph", 
+				"content": "Providers can divide 360 hours among the three activities as they want to meet the Access goals in their context.",
+				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "graphic",
+				"title": "Program Hours",
+				"section": "Planning a 2-Year Access Program"
+			}
+		],
+		[
+			{
 				"style": "icon_subheading",
 				"content": "Enhancement Activities",
 				"preview_image": "Enhancement Activities",
