@@ -62,7 +62,7 @@
 			margin: 2rem 0;
 			padding: 1rem;
 			background: var(--gray);
-			height: 500px;
+			min-height: 200px;
 		}
 
 		img {

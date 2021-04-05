@@ -69,7 +69,7 @@
 			<section id="searchIcon">
 				<Search color={'#FFFFFF'} width={'25px'} height={'25px'} />
 			</section>
-			<input in:slide type="text" bind:this={input} bind:value={$searchQuery} placeholder="Search Handbook" on:keyup={handleKeyup} />
+			<input in:slide type="text" bind:this={input} bind:value={$searchQuery} placeholder="search the handbook" on:keyup={handleKeyup} />
 		</section>
 		<section id="closeArea">
 			<button on:click={closeSearch}>
@@ -97,7 +97,7 @@
 <style>
 	aside {
 		width: 100%;
-		height: 95%;
+		height: 85%;
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -165,7 +165,6 @@
 	input {
 		font-size: 21px;
 		letter-spacing: 2px;
-		text-transform: uppercase;
 		font-family: "Montserrat-Bold";
 		color: var(--white);
 		padding-bottom: 5px;
