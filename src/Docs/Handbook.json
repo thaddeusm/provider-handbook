@@ -163,6 +163,66 @@
 				"style": "graphic",
 				"title": "Program Hours",
 				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "subheading",
+				"content": "Example Academic Year Calendar",
+				"section": "Example Academic Year Calendar"
+			},
+			{
+				"style": "paragraph",
+				"content": "Each Access class must receive a minimum of 360 hours of instruction within 20-24 months.",
+				"section": "Example Academic Year Calendar"
+			},
+			{
+				"style": "graphic",
+				"title": "Two Year Calendar",
+				"section": "Example Academic Year Calendar"
+			},
+			{
+				"style": "paragraph",
+				"content": "Providers are required to complete (at minimum) 180 hours or more of instruction per academic year. If this is not possible at any point during the program, please consult with your RELO.",
+				"section": "Example Academic Year Calendar"
+			},
+			{
+				"style": "subheading",
+				"content": "Example Weekly Class Schedule",
+				"section": "Example Weekly Class Schedule"
+			},
+			{
+				"style": "graphic",
+				"title": "Weekly Class Schedule",
+				"section": "Example Weekly Class Schedule"
+			},
+			{
+				"style": "subheading",
+				"content": "After School Instruction (ASI)",
+				"section": "After School Instruction (ASI)"
+			},
+			{
+				"style": "paragraph",
+				"content": "<strong>What</strong>: ASI is a fundamental and mandatory component of the Access program and is the English language instruction students receive outside of their normal school hours.",
+				"section": "After School Instruction (ASI)"
+			},
+			{
+				"style": "paragraph",
+				"content": "<strong>Who</strong>: Access students are taught by Access teachers. Administrators support both students and teachers.",
+				"section": "After School Instruction (ASI)"
+			},
+			{
+				"style": "paragraph",
+				"content": "<strong>Where</strong>: ASI takes place in their Access classroom or learning space.",
+				"section": "After School Instruction (ASI)"
+			},
+			{
+				"style": "paragraph",
+				"content": "<strong>When</strong>: AAI classes normally take place after the students’ regular school hours or on the weekend.",
+				"section": "After School Instruction (ASI)"
+			},
+			{
+				"style": "paragraph",
+				"content": "<strong>Why</strong>: ASI supports the goals of Access (see Access goals).",
+				"section": "After School Instruction (ASI)"
 			}
 		],
 		[
@@ -225,6 +285,10 @@
 		"Enhancement Activities": {
 			"definition": "Enhancement activities are mandatory special eduational events that happen outside of students’ regular Access classes throughout the duration of the program.",
 			"reference": "EnhancementActivities"
+		},
+		"Access Goals": {
+			"definition": "The objective of the Access program is to provide participants with improved English skills that may lead to better jobs and educational prospects, including future exchanges and study in the United States.",
+			"reference": "WhatisAccess?"
 		}
 	}
 }
