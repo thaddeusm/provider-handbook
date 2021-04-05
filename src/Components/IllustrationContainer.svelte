@@ -19,10 +19,12 @@
 
 		div {
 			margin: 1rem 0;
+			height: 250px;
 		}
 
 		img {
-			max-height: 500px;
+			min-height: 250px;
+			width: 100%;
 		}
 	}
 
@@ -39,10 +41,11 @@
 			margin: 2rem 0;
 			padding: 2rem;
 			background: var(--gray);
+			height: 350px;
 		}
 
 		img {
-			max-height: 700px;
+			max-height: 350px;
 		}
 	}
 
@@ -59,10 +62,11 @@
 			margin: 2rem 0;
 			padding: 1rem;
 			background: var(--gray);
+			height: 500px;
 		}
 
 		img {
-			max-height: 800px;
+			max-height: 500px;
 		}
 	}
 
