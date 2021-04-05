@@ -130,6 +130,11 @@
 		.sub {
 			grid-template-columns: 80% 20%;
 		}
+
+		.secondary-list {
+			max-height: 150px;
+			overflow: auto;
+		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
@@ -139,6 +144,11 @@
 
 		.sub {
 			grid-template-columns: 90% 10%;
+		}
+
+		.secondary-list {
+			max-height: 350px;
+			overflow: auto;
 		}
 	}
 
@@ -222,8 +232,6 @@
 		background: var(--brand-dark);
 		margin-top: 10px;
 		margin-left: -30px;
-		max-height: 150px;
-		overflow: auto;
 	}
 
 	.secondary-list > li {

@@ -205,6 +205,26 @@
 		}
 	}
 
+	@media screen and (min-width: 451px) and (max-width: 800px) {
+		.large-preview-image {
+			display: none!important;
+		}
+
+		.small-preview-image {
+			width: 40%;
+		}
+	}
+
+	@media screen and (min-width: 801px) and (max-width: 1100px) {
+		.large-preview-image {
+			width: 40%;
+		}
+
+		.small-preview-image {
+			display: none!important;
+		}
+	}
+
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.container {
 			grid-template-columns: 0 1fr;
@@ -216,14 +236,6 @@
 
 		aside {
 			display: none;
-		}
-
-		.large-preview-image {
-			width: 40%;
-		}
-
-		.small-preview-image {
-			display: none!important;
 		}
 
 		.handbook-content-list {
