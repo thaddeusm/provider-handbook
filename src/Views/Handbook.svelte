@@ -211,7 +211,7 @@
 		}
 
 		.small-preview-image {
-			width: 40%;
+			height: 450px;
 		}
 	}
 
