@@ -169,13 +169,12 @@
 	}
 
 	.tray {
-		position: absolute!important;
+		position: absolute;
 		left: 0;
 		top: 100px;
 		width: 100%;
 		height: 100%;
 		overflow: auto!important;
-		z-index: 100!important;
 		display: grid;
 		grid-template-rows: 1fr;
 		grid-template-areas: 
@@ -223,6 +222,8 @@
 		background: var(--brand-dark);
 		margin-top: 10px;
 		margin-left: -30px;
+		max-height: 150px;
+		overflow: auto;
 	}
 
 	.secondary-list > li {
