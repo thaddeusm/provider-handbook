@@ -135,6 +135,10 @@
 			max-height: 150px;
 			overflow: auto;
 		}
+
+		#searchButton {
+			width: 70px;
+		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
@@ -149,6 +153,10 @@
 		.secondary-list {
 			max-height: 255px;
 			overflow: auto;
+		}
+
+		#searchButton {
+			width: 100px;
 		}
 	}
 
@@ -259,7 +267,6 @@
 		margin-top: 20px;
 		padding-top: 5px;
 		margin-bottom: 30px;
-		width: 70px;
 	}
 
 	.scrolled {
