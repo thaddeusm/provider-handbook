@@ -409,6 +409,7 @@
 		grid-area: links;
 		z-index: 1;
 		height: 100%;
+		overflow: auto;
 	}
 
 	aside ul {
@@ -418,7 +419,7 @@
 
 	aside ul li {
 		padding: 0 3rem;
-		margin: 2rem 0;
+		margin: 1.8rem 0;
 	}
 
 	aside ul li:first-child {
