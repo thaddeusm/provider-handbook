@@ -23,7 +23,6 @@
 		}
 
 		img {
-			min-height: 250px;
 			width: 100%;
 		}
 	}
@@ -40,14 +39,8 @@
 		div {
 			margin: 2rem 0;
 			padding: 2rem;
-			background: var(--gray);
+			/*background: var(--gray);*/
 			height: 350px;
-		}
-
-		img {
-			max-height: 350px;
-			box-shadow: var(--shadow);
-			border-radius: var(--radius);
 		}
 	}
 
@@ -61,16 +54,9 @@
 		}
 
 		div {
-			margin: 2rem 0;
-			padding: 1rem;
-			background: var(--gray);
+			margin: .5rem 0;
+			/*background: var(--gray);*/
 			min-height: 200px;
-		}
-
-		img {
-			max-height: 500px;
-			box-shadow: var(--shadow);
-			border-radius: var(--radius);
 		}
 	}
 
