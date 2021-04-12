@@ -390,7 +390,7 @@
 
 	ol li {
 		margin: 1rem 0;
-		font-size: 15px;
+		font-size: 16px;
 		line-height: 1.5;
 		color: var(--black);
 		font-family: "Montserrat";
@@ -420,7 +420,7 @@
 
 	aside ul li {
 		padding: 0 3rem;
-		margin: 1.8rem 0;
+		margin: 1.5rem 0;
 	}
 
 	aside ul li:first-child {
@@ -429,7 +429,7 @@
 
 	aside ul li a {
 		color: var(--white);
-		font-size: 15px;
+		font-size: 16px;
 		cursor: pointer;
 	}
 

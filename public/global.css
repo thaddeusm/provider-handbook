@@ -103,14 +103,14 @@ h3	{
 }
 
 h6 {
-	font-size: 11px;
+	font-size: 12px;
 	padding: 5px 0;
 	color: var(--black);
 	font-family: "Montserrat-ExtraBold";
 }
 
 p {
-	font-size: 15px;
+	font-size: 16px;
 	padding: 10px 0 20px 0;
 	line-height: 1.5;
 	color: var(--black);

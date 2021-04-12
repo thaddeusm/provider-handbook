@@ -250,7 +250,7 @@
 
 	.secondary-list > li > a {
 		color: var(--white);
-		font-size: 15px;
+		font-size: 16px;
 		font-family: "Montserrat";
 		cursor: pointer;
 	}
