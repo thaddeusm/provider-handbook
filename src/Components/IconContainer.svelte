@@ -1,5 +1,6 @@
 <script>
 	import InteractiveAvailable from './../Graphics/Icons/InteractiveAvailable.svelte';
+	import DoS from './../Graphics/Icons/DoS.svelte';
 
 	export let title;
 </script>
@@ -7,10 +8,17 @@
 <div>
 	{#if title == "Interactive Available"}
 		<section class="small-icon">
-			<InteractiveAvailable width={'4rem'} />
+			<InteractiveAvailable width={'5rem'} height={'5rem'} />
 		</section>
 		<section class="large-icon">
-			<InteractiveAvailable width={'5rem'} />
+			<InteractiveAvailable width={'6rem'} height={'6rem'} />
+		</section>
+	{:else if title == "DoS"}
+		<section class="small-icon">
+			<DoS width={'6rem'} height={'6rem'} />
+		</section>
+		<section class="large-icon">
+			<DoS width={'7rem'} height={'7rem'} />
 		</section>
 	{/if}
 </div>
@@ -27,11 +35,6 @@
 
 		div {
 			margin: .5rem 0;
-		}
-
-		section {
-			padding: 0;
-			margin: 0;
 		}
 	}
 
@@ -62,13 +65,15 @@
 
 		div {
 			margin: 2rem 0;
-			padding: 1rem;
-			background: var(--gray);
 		}
 	}
 
 	div {
 		text-align: center;
-		max-height: 200px;
+	}
+
+	section {
+		padding: 0;
+		margin: 0;
 	}
 </style>

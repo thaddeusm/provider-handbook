@@ -1,4 +1,6 @@
 <script>
+	import Footer from './../Components/Footer.svelte';
+
 	let innerWidth = 0;
 	let videoHeight = 0;
 	let videoLoading = true;
@@ -26,7 +28,7 @@
 		<a class="action-button" href="/handbook">view handbook</a>
 	</section>
 	<footer>
-		<h6>sponsored by the U.S. Department of State</h6>
+		<Footer />
 	</footer>
 </div>
 
@@ -44,7 +46,7 @@
 	.container {
 		height: 100%;
 		display: grid;
-		grid-template-rows: 65% auto 100px;
+		grid-template-rows: 65% auto auto;
 		align-items: center;
 		/*justify-content: center;*/
 	}

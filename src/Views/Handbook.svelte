@@ -4,6 +4,7 @@
 	import Handbook from './../Docs/Handbook.json';
 	import InteractiveAvailable from './../Graphics/Icons/InteractiveAvailable.svelte';
 	import PreviewModal from './../Components/PreviewModal.svelte';
+	import Footer from './../Components/Footer.svelte';
 
 	import Illustration from './../Components/IllustrationContainer.svelte';
 	import Icon from './../Components/IconContainer.svelte'
@@ -138,7 +139,7 @@
  		{/each}
 	</div>
 	<footer>
-		<h6>sponsored by the U.S. Department of State</h6>
+		<Footer />
 	</footer>
 </div>
 
