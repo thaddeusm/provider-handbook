@@ -11,5 +11,6 @@
 	div {
 		text-align: center;
 		max-height: 50px;
+		margin-top: 4rem;
 	}
 </style>

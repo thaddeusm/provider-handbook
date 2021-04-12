@@ -34,7 +34,7 @@
 		}
 
 		div {
-			margin: .5rem 0;
+			margin: 1rem 0;
 		}
 	}
 
@@ -49,8 +49,6 @@
 
 		div {
 			margin: 2rem 0;
-			padding: 2rem;
-			background: var(--gray);
 		}
 	}
 
