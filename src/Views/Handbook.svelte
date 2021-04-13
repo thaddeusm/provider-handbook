@@ -107,14 +107,14 @@
  				{:else if section.style == "icon_subheading"}
  					<span id="{section.content.split(' ').join('')}"></span>
  					<section class="icon-subheading">
- 						<h3>
- 							{section.content}
- 						</h3>
  						<button 
  							on:click={() => {openPreview(section.preview_image.split(' ').join(''), section.link, section.interactive_description)}}
  						>
  							<InteractiveAvailable width={'2rem'} height={'2rem'} />
  						</button>
+ 						<h3>
+ 							{section.content}
+ 						</h3>
  					</section>
  				{:else if section.style == "subheading"}
  					<section id="{section.content.split(' ').join('')}">
@@ -175,6 +175,15 @@
 
 		aside {
 			display: none;
+		}
+
+		.icon-subheading {
+			grid-template-columns: 1fr 50px;
+			grid-template-areas: "subheading interactiveLinkButton";
+		}
+
+		.icon-subheading button {
+			text-align: left;
 		}
 
 		.large-preview-image {
@@ -239,6 +248,16 @@
 			display: none;
 		}
 
+		.icon-subheading {
+			grid-template-columns: auto 1fr;
+			grid-column-gap: 30px;
+			grid-template-areas: "subheading interactiveLinkButton";
+		}
+
+		.icon-subheading button {
+			text-align: left;
+		}
+
 		.handbook-content-list {
 			padding: 0 35px 0 0;
 		}
@@ -264,6 +283,16 @@
 
 		#handbook {
 			padding: 0 4rem;
+		}
+
+		.icon-subheading {
+			grid-template-columns: auto 1fr;
+			grid-column-gap: 30px;
+			grid-template-areas: "subheading interactiveLinkButton";
+		}
+
+		.icon-subheading button {
+			text-align: left;
 		}
 
 		.small-preview-image {
@@ -436,15 +465,18 @@
 	.icon-subheading {
 		margin-top: 30px;
 		display: grid;
-		grid-template-columns: 1fr 45px;
 	}
 
 	.icon-subheading h3 {
 		margin-top: 0;
+		display: inline;
+		grid-area: subheading;
 	}
 
 	.icon-subheading button {
 		display: block;
+		grid-area: interactiveLinkButton;
+		margin-top: .5rem;
 	}
 
 	footer {

@@ -37,10 +37,9 @@
 		}
 
 		div {
-			margin: 2rem 0;
-			padding: 2rem;
+			margin: 1rem 0;
 			/*background: var(--gray);*/
-			height: 350px;
+			/*height: 350px;*/
 		}
 	}
 
