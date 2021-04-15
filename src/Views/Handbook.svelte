@@ -107,11 +107,14 @@
  				{:else if section.style == "icon_subheading"}
  					<span id="{section.content.split(' ').join('')}"></span>
  					<section class="icon-subheading">
- 						<button 
+ 						<!-- <button 
  							on:click={() => {openPreview(section.preview_image.split(' ').join(''), section.link, section.interactive_description)}}
  						>
  							<InteractiveAvailable width={'2rem'} height={'2rem'} />
- 						</button>
+ 						</button> -->
+ 						<a href="{section.link}" target="_blank">
+ 							<InteractiveAvailable width={'2rem'} height={'2rem'} />
+ 						</a>
  						<h3>
  							{section.content}
  						</h3>
@@ -182,7 +185,7 @@
 			grid-template-areas: "subheading interactiveLinkButton";
 		}
 
-		.icon-subheading button {
+		.icon-subheading a {
 			text-align: left;
 		}
 
@@ -254,7 +257,7 @@
 			grid-template-areas: "subheading interactiveLinkButton";
 		}
 
-		.icon-subheading button {
+		.icon-subheading a {
 			text-align: left;
 		}
 
@@ -291,7 +294,7 @@
 			grid-template-areas: "subheading interactiveLinkButton";
 		}
 
-		.icon-subheading button {
+		.icon-subheading a {
 			text-align: left;
 		}
 
@@ -473,7 +476,7 @@
 		grid-area: subheading;
 	}
 
-	.icon-subheading button {
+	.icon-subheading a {
 		display: block;
 		grid-area: interactiveLinkButton;
 		margin-top: .5rem;
