@@ -452,7 +452,8 @@
 
 	aside ul li {
 		padding: 0 3rem;
-		margin: 1.5rem 0;
+		margin: 1.3rem 0;
+		line-height: 1.5;
 	}
 
 	aside ul li:first-child {
