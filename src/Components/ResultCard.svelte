@@ -79,28 +79,27 @@
 
 	@media screen and (min-width: 1101px) {
 		.result {
-			grid-template-rows: 55% 40% 5%;
+			grid-template-rows: 75px 1fr;
 			grid-template-columns: 80% 18% 2%;
 			grid-template-areas: 
 				"heading heading"
-				"sample actionButton"
-				". .";
-			height: 140px;
+				"sample actionButton";
+			min-height: 180px;
 		}
 
 		.result > p {
-			height: 45px;
+			/*height: 80px;*/
 			padding: 15px;
 		}
 
 		.result > .action-button {
-			height: 74px;
+			height: 100%;
 		}
 	}
 
 	.result {
 		display: grid;
-		align-items: center;
+		/*align-items: center;*/
 		grid-column-gap: 10px;
 	}
 

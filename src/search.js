@@ -30,9 +30,9 @@ export const search = (term) => {
 
 						if (itemLength > 200) {
 							if (index > 80) {
-								textSample = `...${listItem.slice(index - 65, index + 65)}...`;
+								textSample = `...${listItem.slice(index - 60, index + 60)}...`;
 							} else {
-								textSample = `${listItem.slice(0, index + 65)}...`;
+								textSample = `${listItem.slice(0, index + 60)}...`;
 							}
 						} else {
 							textSample = listItem;
@@ -59,9 +59,9 @@ export const search = (term) => {
 
 					if (textLength > 200) {
 						if (index > 80) {
-							textSample = `...${contentItem.slice(index - 65, index + 65)}...`;
+							textSample = `...${contentItem.slice(index - 60, index + 60)}...`;
 						} else {
-							textSample = `${contentItem.slice(0, index + 65)}...`;
+							textSample = `${contentItem.slice(0, index + 60)}...`;
 						}
 					} else {
 						textSample = contentItem;
