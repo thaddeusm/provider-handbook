@@ -25,62 +25,51 @@
 <style>
 	@media screen and (max-width: 450px) {
 		.result {
-			grid-template-rows: 49% 48% 3%;
+			grid-template-rows: 75px 100px;
 			grid-template-columns: 75% 22% 3%;
 			grid-template-areas: 
 				"heading heading ."
-				"sample actionButton ."
-				". . .";
-			height: 160px;
+				"sample actionButton .";
+			min-height: 175px;
 			align-items: center;
 		}
 
-		.result > .action-button {
-			width: 100%;
-			max-width: 115px;
-			height: 79px;
-			padding: 0!important;
-		}
-
 		.result > p {
-			height: 70px;
 			padding: 10px;
-			padding-bottom: 0;
+			height: 80px;
+			overflow: auto;
 		}
 
-		.result > p::after {
-			content: '';
-			display: block;
-			padding-bottom: 15px;
+		.result > .action-button {
+			height: 100px;
 		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.result {
-			grid-template-rows: 50% 40% 10%;
-			grid-template-columns: 5% 70% 15% 10%;
+			grid-template-rows: 40% 50% 10%;
+			grid-template-columns: 60px 1fr .25fr 82px;
 			grid-template-areas: 
 				". heading heading ."
 				". sample actionButton ."
 				". . . .";
-			height: 160px;
+			min-height: 200px;
 		}
 
 		.result > p {
-			height: 45px;
+			height: 80px;
 			padding: 15px;
 		}
 
 		.result > .action-button {
-			height: 74px;
-			padding: 0!important;
+			height: 110px;
 		}
 	}
 
 	@media screen and (min-width: 1101px) {
 		.result {
 			grid-template-rows: 75px 1fr;
-			grid-template-columns: 80% 18% 2%;
+			grid-template-columns: 80% 18%;
 			grid-template-areas: 
 				"heading heading"
 				"sample actionButton";
@@ -88,7 +77,6 @@
 		}
 
 		.result > p {
-			/*height: 80px;*/
 			padding: 15px;
 		}
 
@@ -99,7 +87,6 @@
 
 	.result {
 		display: grid;
-		/*align-items: center;*/
 		grid-column-gap: 10px;
 	}
 
@@ -112,7 +99,6 @@
 	.result > p {
 		background: var(--white);
 		grid-area: sample;
-		overflow: auto;
 	}
 
 	.result > .action-button {
