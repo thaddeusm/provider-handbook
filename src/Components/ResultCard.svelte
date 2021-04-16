@@ -4,9 +4,10 @@
 	const dispatch = createEventDispatcher();
 
 	export let result;
+	export let index;
 
 	function navigate(section) {
-		dispatch('navigate', {section: section});
+		dispatch('navigate', {index: index, section: section});
 	}
 </script>
 
@@ -59,6 +60,7 @@
 		.result > p {
 			height: 80px;
 			padding: 15px;
+			overflow: auto;
 		}
 
 		.result > .action-button {

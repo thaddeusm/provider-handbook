@@ -2,7 +2,7 @@
 	import { fade } from 'svelte/transition';
 	import { active } from 'tinro';
 
-	import { searchOpen } from './../stores.js';
+	import { searchOpen, results } from './../stores.js';
 
 	let search_open_value;
 
@@ -18,6 +18,7 @@
 	import Access from './../Graphics/Icons/Access.svelte';
 
 	import HandbookSearch from './../Components/HandbookSearch.svelte';
+	import ResultNavigator from './../Components/ResultNavigator.svelte';
 
 	export let showSearch = false;
 
@@ -39,6 +40,8 @@
 			<section class="search-area" in:fade="{{duration: 300}}">
 				<HandbookSearch on:close-search={toggleSearch} />
 			</section>
+		{:else if !$searchOpen && $results.length > 0}
+			<ResultNavigator />
 		{:else}
 			<section class="link-navigation-area">
 				<ul>

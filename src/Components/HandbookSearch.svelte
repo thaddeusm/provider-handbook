@@ -5,7 +5,7 @@
 
 	import { search } from './../search.js';
 
-	import { results, searchQuery } from './../stores.js';
+	import { results, searchQuery, activeResult } from './../stores.js';
 
 	let search_query_value;
 
@@ -33,8 +33,8 @@
 
 	function closeSearch() {
 		dispatch('close-search');
-		searchQuery.set('');
-		results.set([]);
+		// searchQuery.set('');
+		// results.set([]);
 	}
 
 	function handleKeyup(e) {
@@ -49,6 +49,13 @@
 
 	function navigate(e) {
 		let section = e.detail.section;
+		let index = e.detail.index;
+
+		activeResult.set({
+			index: index,
+			section: section
+		});
+
 		router.goto('/handbook');
 		setTimeout(() => {
 			jumpToId(section);
@@ -78,9 +85,9 @@
 	<section id="results">
 		<ul id="resultList">
 			{#if $results.length > 0}
-				{#each $results as result}
+				{#each $results as result, i}
 					<li>
-						<ResultCard {result} on:navigate={navigate} />
+						<ResultCard {result} index={i} on:navigate={navigate} />
 					</li>
 				{/each}
 			{:else}

@@ -2,7 +2,7 @@
 	import { slide } from 'svelte/transition';
 	import { router } from 'tinro';
 
-	import { searchOpen } from './../stores.js';
+	import { searchOpen, results } from './../stores.js';
 
 	let search_open_value;
 
@@ -23,6 +23,7 @@
 
 	import HamburgerMenu from './../Components/HamburgerMenu.svelte';
 	import MobileHandbookSearch from './../Components/MobileHandbookSearch.svelte';
+	import ResultNavigator from './../Components/ResultNavigator.svelte';
 
 	let showSub = false;
 	let menuOpen = false;
@@ -113,6 +114,8 @@
 	<section class="right">
 		{#if $searchOpen}
 			<MobileHandbookSearch on:close-search={toggleSearch} />
+		{:else if !$searchOpen && $results.length > 0}
+			<ResultNavigator />
 		{:else}
 			<button id="searchButton" class:scrolled on:click={toggleSearch}>
 				<Search color={'#000000'} width={'2rem'} height={'2rem'} />
