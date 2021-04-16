@@ -44,7 +44,11 @@
 
 	@media screen and (min-width: 450px) and (max-width: 1000px) {
 		.container {
-			grid-template-rows: 350px 120px auto auto;
+			grid-template-rows: 350px 10% 20% 50px;
+		}
+
+		.action {
+			align-self: center;
 		}
 	}
 
