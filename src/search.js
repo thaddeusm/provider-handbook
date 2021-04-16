@@ -39,7 +39,7 @@ export const search = (term) => {
 						}
 
 						let regex = new RegExp(term, 'i');
-						textSample = textSample.replace(regex, `<strong>${term}</strong>`);
+						textSample = textSample.replace(regex, `<span class="bold-text">${term}</span>`);
 
 						results.push({
 							textSample: textSample,
@@ -68,7 +68,7 @@ export const search = (term) => {
 					}
 
 					let regex = new RegExp(term, 'i');
-					textSample = textSample.replace(regex, `<strong>${term}</strong>`);
+					textSample = textSample.replace(regex, `<span class="bold-text">${term}</span>`);
 
 					results.push({
 						textSample: textSample,

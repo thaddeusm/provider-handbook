@@ -227,3 +227,9 @@ button {
 	cursor: pointer;
 	font-size: 15px;
 }
+
+.bold-text {
+	color: var(--white);
+	background: var(--brand);
+	font-weight: 800;
+}
