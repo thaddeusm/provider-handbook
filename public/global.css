@@ -111,7 +111,7 @@ h6 {
 
 p {
 	font-size: 16px;
-	padding: 10px 0 20px 0;
+	margin: 10px 0 20px 0;
 	line-height: 1.5;
 	color: var(--black);
 	font-family: "Montserrat";
@@ -232,4 +232,10 @@ button {
 	color: var(--white);
 	background: var(--brand);
 	font-weight: 800;
+}
+
+.active-section {
+	border-right: 4rem solid var(--red);
+	margin-right: -6rem;
+	padding-right: 2rem;
 }

@@ -58,7 +58,7 @@
 		}
 
 		.result > p {
-			height: 80px;
+			max-height: 80px;
 			padding: 15px;
 			overflow: auto;
 		}
@@ -101,6 +101,7 @@
 	.result > p {
 		background: var(--white);
 		grid-area: sample;
+		margin: 0;
 	}
 
 	.result > .action-button {

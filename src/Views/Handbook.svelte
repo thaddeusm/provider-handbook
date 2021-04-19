@@ -1,5 +1,18 @@
 <script>
 	import { onMount } from 'svelte';
+	import { searchOpen, results, searchQuery, activeResult } from './../stores.js';
+
+	let search_query_value;
+
+	const unsubscribeSeachQuery = searchQuery.subscribe(value => {
+		search_query_value = value;
+	});
+
+	let active_result_value;
+
+	const unsubscribeActiveResult = activeResult.subscribe(value => {
+		active_result_value = value;
+	});
 
 	import Handbook from './../Docs/Handbook.json';
 	import InteractiveAvailable from './../Graphics/Icons/InteractiveAvailable.svelte';
@@ -25,26 +38,41 @@
 		previewDescription = description;
 	}
 
-	function textWithTooltips(text, section) {
+	function textWithMarkup(text, section, isActive) {
 		let glossary = Handbook.glossary;
 
 		let terms = Object.keys(glossary);
 		let defs = Object.values(glossary);
 
-		let newText;
+		let textWithTooltips;
 
+		// add tooltips
 		for (let i=0; i<terms.length; i++) {
 			let term = new RegExp(terms[i], 'i');
 			let termText = terms[i];
 
 			if (section !== termText) {
-				newText = text.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="action-button-small tooltip-link" onclick="jumpToId('${defs[i].reference}')">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
+				textWithTooltips = text.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="action-button-small tooltip-link" onclick="jumpToId('${defs[i].reference}')">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
 			} else {
-				newText = text;
+				textWithTooltips = text;
 			}
 		}
 
-		return newText;
+		// add search highlights
+		let textWithHighlights;
+
+		let query = new RegExp(search_query_value, 'i');
+		textWithHighlights = textWithTooltips.replace(query, `<span class="bold-text">${search_query_value}</span>`);
+
+		let finalText;
+
+		if (isActive && textWithHighlights.search(search_query_value) !== -1) {
+			finalText = `<p class="active-section">${textWithHighlights}</p>`;
+		} else {
+			finalText = `<p>${textWithHighlights}</p>`;
+		}
+
+		return finalText;
 	}
 
 	function handleJump(section) {
@@ -136,7 +164,11 @@
  				{:else if section.style == "icon"}
  					<Icon title={section.title} />
  				{:else}
- 					<p>{@html textWithTooltips(section.content, section.section)}</p>
+ 					{#if $activeResult.section == section.section.split(' ').join('')}
+ 						{@html textWithMarkup(section.content, section.section, true, $searchQuery)}
+ 					{:else}
+						{@html textWithMarkup(section.content, section.section, false, $searchQuery)}	
+ 					{/if}
  				{/if}
  			{/each}
  		{/each}

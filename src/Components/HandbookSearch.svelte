@@ -19,6 +19,12 @@
 		results_value = value;
 	});
 
+	let active_result_value;
+
+	const unsubscribeActiveResult = activeResult.subscribe(value => {
+		active_result_value = value;
+	});
+
 	import ResultCard from './../Components/ResultCard.svelte';
 
 	import Search from './../Graphics/Icons/Search.svelte';
@@ -38,8 +44,6 @@
 	}
 
 	function handleKeyup(e) {
-		searchQuery.set(input.value);
-
 		results.set(search(search_query_value));
 
 		if (results_value.length == 0) {
@@ -55,6 +59,8 @@
 			index: index,
 			section: section
 		});
+
+		console.log(active_result_value)
 
 		router.goto('/handbook');
 		setTimeout(() => {
@@ -84,7 +90,7 @@
 	</section>
 	<section id="results">
 		<ul id="resultList">
-			{#if $results.length > 0}
+			{#if $results.length > 1}
 				{#each $results as result, i}
 					<li>
 						<ResultCard {result} index={i} on:navigate={navigate} />
@@ -102,7 +108,7 @@
 <style>
 	aside {
 		width: 100%;
-		height: 85%;
+		height: 95%;
 		position: fixed;
 		top: 0;
 		right: 0;
