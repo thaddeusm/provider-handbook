@@ -285,7 +285,7 @@
 		}
 
 		#handbook {
-			padding: 0 4rem;
+			padding: 0 6rem;
 		}
 
 		.icon-subheading {
