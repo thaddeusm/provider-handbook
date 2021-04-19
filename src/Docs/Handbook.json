@@ -36,7 +36,7 @@
 				"style": "graphic",
 				"title": "Handbook Characters",
 				"section": "How can I use this handbook?",
-				"description": "This handbook includes avatars to represent administrators, teachers, and students in the Access Program."
+				"content": "This handbook includes avatars to represent administrators, teachers, and students in the Access Program."
 			},
 			{
 				"style": "paragraph",
@@ -132,7 +132,7 @@
 				"style": "graphic",
 				"title": "Program Lifecycle",
 				"section": "Lifecycle of an Access Program",
-				"description": "An Access Program follows the following steps: an Embassy publishes a call for proposals, potential providers submit proposals, ECA/Embassy reviews proposals, proposal is approved, the provider implements the program, and the provider submits documentation to close-out the program."
+				"content": "An Access Program follows the following steps: an Embassy publishes a call for proposals, potential providers submit proposals, ECA/Embassy reviews proposals, proposal is approved, the provider implements the program, and the provider submits documentation to close-out the program."
 			}
 		],
 		[
@@ -165,7 +165,7 @@
 				"style": "graphic",
 				"title": "Program Hours",
 				"section": "Planning a 2-Year Access Program",
-				"description": "Imaginary administrators discuss a possible schedule for their Access Program."
+				"content": "Imaginary administrators discuss a possible schedule for their Access Program."
 			},
 			{
 				"style": "subheading",
@@ -181,7 +181,7 @@
 				"style": "graphic",
 				"title": "Two Year Calendar",
 				"section": "Example Academic Year Calendar",
-				"description": "A calendar might follow an academic year pattern over two years, with a total of four semesters and summer sessions."
+				"content": "A calendar might follow an academic year pattern over two years, with a total of four semesters and summer sessions."
 			},
 			{
 				"style": "paragraph",
@@ -197,7 +197,7 @@
 				"style": "graphic",
 				"title": "Weekly Class Schedule",
 				"section": "Example Weekly Class Schedule",
-				"description": "A weekly schedule should include frequent after school instruction sessions with enhancement activities or intensive sessions scheduled separately."
+				"content": "A weekly schedule should include frequent after school instruction sessions with enhancement activities or intensive sessions scheduled separately."
 			},
 			{
 				"style": "subheading",
@@ -283,7 +283,7 @@
 				"style": "graphic",
 				"title": "Enhancement Activity",
 				"section": "Enhancement Activities",
-				"description": "An example student describes why they enjoyed an enhancement activity."
+				"content": "An example student describes why they enjoyed an enhancement activity."
 			}
 		]
 	],
