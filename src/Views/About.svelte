@@ -1,5 +1,9 @@
 <script>
+	import PreviewModal from './../Components/PreviewModal.svelte';
 	import Footer from './../Components/Footer.svelte';
+	import Play from './../Graphics/Icons/Play.svelte';
+
+	let showVideo = false;
 
 	let innerWidth = 0;
 	let videoHeight = 0;
@@ -21,8 +25,10 @@
 <svelte:window bind:innerWidth={innerWidth} />
 
 <div class="container">
-	<section class="{videoLoading ? 'placeholder' : 'video-container'}">
-		<iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen on:load={handleLoad}></iframe>
+	<section class="video-button-area">
+		<button on:click={() => {showVideo = true}}>
+			<Play width={'5rem'} height={'5rem'} />
+		</button>
 	</section>
 	<p>
 		a student-centered program that provides English language skills to underserved youth worldwide
@@ -35,6 +41,21 @@
 	</footer>
 </div>
 
+{#if showVideo}
+	<PreviewModal>
+		<div slot="body" class="modal-body">
+			<section class="{videoLoading ? 'placeholder' : 'video-container'}">
+				<iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen on:load={handleLoad}></iframe>
+			</section>
+		</div>
+		<div slot="footer" class="modal-footer">
+			<div class="actions">
+				<button class="regular-button-small" on:click={() => {showVideo = false}}>close</button>
+			</div>
+		</div>
+	</PreviewModal>
+{/if}
+
 <style>
 	@media screen and (max-width: 450px) {
 		.container {
@@ -42,9 +63,9 @@
 		}
 	}
 
-	@media screen and (min-width: 450px) and (max-width: 1000px) {
+	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.container {
-			grid-template-rows: 350px 10% 20% 50px;
+			grid-template-rows: 350px 100px 50px auto;
 		}
 
 		.action {
@@ -54,7 +75,7 @@
 
 	@media screen and (min-width: 1101px) {
 		.container {
-			grid-template-rows: 425px 100px auto auto;
+			grid-template-rows: 1.5fr .5fr .5fr auto;
 		}
 
 		.video-container {
@@ -67,17 +88,21 @@
 	}
 
 	.container {
-		max-height: 100%;
 		display: grid;
 		align-items: center;
-		/*justify-content: center;*/
+		height: 90%;
 	}
 
 	p {
 		text-align: center;
 		max-width: 500px;
 		margin: 0 auto;
+		padding: 0 .5rem;
 		align-self: flex-start;
+	}
+
+	.video-button-area {
+		text-align: center;
 	}
 
 	.video-container {

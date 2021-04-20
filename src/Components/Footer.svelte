@@ -18,17 +18,17 @@
 		div {
 			grid-column-gap: 5px;
 			display: grid;
-			grid-template-rows: .5fr 1fr 1fr;
-			grid-template-columns: 1fr;
+			grid-template-rows: .25fr 1fr;
+			grid-template-columns: 1fr 1fr;
 			grid-template-areas: 
-				"center"
-				"left"
-				"right";
-			margin-top: 2rem;
+				"center center"
+				"left right";
+			margin-top: 4rem;
+			height: 200px;
 		}
 	}
 
-	@media screen and (min-width: 450px) and (max-width: 1000px) {
+	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		div {
 			grid-column-gap: 5px;
 			display: grid;
@@ -38,6 +38,7 @@
 				"center center"
 				"left right";
 			margin-top: 4rem;
+			height: 200px;
 		}
 	}
 
@@ -48,6 +49,7 @@
 			grid-template-columns: .5fr 1fr .5fr;
 			grid-template-areas: "left center right";
 			margin-top: 4rem;
+			height: 100px;
 		}
 	}
 
