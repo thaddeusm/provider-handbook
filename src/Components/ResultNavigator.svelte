@@ -1,5 +1,6 @@
 <script>
 	import { search } from './../search.js';
+	import { onMount, onDestroy } from 'svelte';
 
 	import Search from './../Graphics/Icons/Search.svelte';
 	import RightArrow from './../Graphics/Icons/RightArrow.svelte';
@@ -10,7 +11,7 @@
 	
 	const dispatch = createEventDispatcher();
 
-	import { searchOpen, results, searchQuery, activeResult } from './../stores.js';
+	import { navigatingResults, searchOpen, results, searchQuery, activeResult } from './../stores.js';
 
 	let results_value;
 
@@ -35,9 +36,9 @@
 	let newSection;
 
 	function handleKeyup() {
-		// open default search UI
-
-		dispatch('open-search');
+		searchOpen.set(true);
+		results.set([]);
+		// dispatch('open-search');
 	}
 
 	function incrementResult() {
@@ -73,6 +74,14 @@
 			section: ''
 		});
 	}
+
+	onMount(() => {
+		navigatingResults.set(true);
+	});
+
+	onDestroy(() => {
+		navigatingResults.set(false);
+	});
 </script>
 
 <aside>

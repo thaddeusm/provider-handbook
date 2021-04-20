@@ -3,6 +3,8 @@
 	router.mode.hash();
 	import { onMount } from 'svelte';
 
+	import { navigatingResults } from './stores';
+
 	import About from './Views/About.svelte';
 	import Handbook from './Views/Handbook.svelte';
 	import Documents from './Views/Documents.svelte';
@@ -27,6 +29,12 @@
 			let revisedPathTitle = firstLetter + path.slice(1);
 
 			title = 'Access - Provider Handbook | ' + revisedPathTitle;
+		}
+	}
+
+	$: {
+		if (!$router.path.includes('Handbook')) {
+			navigatingResults.set(false);
 		}
 	}
 

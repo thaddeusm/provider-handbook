@@ -9,18 +9,18 @@ export const search = (term) => {
 	for (let i=0; i<Handbook.sections.length; i++) {
 		let section = Handbook.sections[i];
 
-		let sectionTitle = section[0].content;
+		let sectionTitle = section[0].text;
 
 		for (let j=0; j<section.length; j++) {
 			let contentBlock = section[j];
 
 			if (contentBlock.style.includes('heading')) {
-				sectionTitle = contentBlock.content;
+				sectionTitle = contentBlock.text;
 			}
 
 			if (contentBlock.style.includes('list')) {
-				for (let k=0; k<contentBlock.content.length; k++) {
-					let listItem = contentBlock.content[k];
+				for (let k=0; k<contentBlock.text.length; k++) {
+					let listItem = contentBlock.text[k];
 
 					if (listItem && listItem.toLowerCase().includes(term)) {
 						let index = listItem.toLowerCase().indexOf(term);
@@ -53,12 +53,12 @@ export const search = (term) => {
 					}
 				}
 			} else {
-				let contentItem = contentBlock.content;
+				let contentItem = contentBlock.text;
 
-				if (contentBlock.content && contentItem.toLowerCase().includes(term)) {
+				if (contentBlock.text && contentItem.toLowerCase().includes(term)) {
 					let index = contentItem.toLowerCase().indexOf(term);
 
-					let textLength = contentBlock.content.length;
+					let textLength = contentBlock.text.length;
 
 					let textSample;
 

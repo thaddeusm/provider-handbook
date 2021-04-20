@@ -1,11 +1,10 @@
 <script>
 	import { router } from 'tinro';
-	import { slide } from 'svelte/transition';
 	import { onMount, onDestroy } from 'svelte';
 
 	import { search } from './../search.js';
 
-	import { results, searchQuery, activeResult } from './../stores.js';
+	import { navigatingResults, results, searchQuery, activeResult } from './../stores.js';
 
 	let search_query_value;
 
@@ -39,16 +38,10 @@
 
 	function closeSearch() {
 		dispatch('close-search');
-		// searchQuery.set('');
-		// results.set([]);
 	}
 
 	function handleKeyup(e) {
 		results.set(search(search_query_value));
-
-		if (results_value.length == 0) {
-			message = 'Nothing found. Please try a different keyword.'
-		}
 	}
 
 	function navigate(e) {
@@ -60,11 +53,10 @@
 			section: section
 		});
 
-		console.log(active_result_value)
-
 		router.goto('/handbook');
 		setTimeout(() => {
 			jumpToId(section);
+			navigatingResults.set(true);
 			closeSearch();
 		}, 100, section);
 	}
@@ -80,7 +72,7 @@
 			<section id="searchIcon">
 				<Search color={'#FFFFFF'} width={'25px'} height={'25px'} />
 			</section>
-			<input in:slide type="text" bind:this={input} bind:value={$searchQuery} placeholder="search the handbook" on:keyup={handleKeyup} />
+			<input type="text" bind:this={input} bind:value={$searchQuery} placeholder="search the handbook" on:keyup={handleKeyup} />
 		</section>
 		<section id="closeArea">
 			<button on:click={closeSearch}>
@@ -90,17 +82,15 @@
 	</section>
 	<section id="results">
 		<ul id="resultList">
-			{#if $results.length > 1}
-				{#each $results as result, i}
-					<li>
-						<ResultCard {result} index={i} on:navigate={navigate} />
-					</li>
-				{/each}
+			{#each $results as result, i}
+				<li>
+					<ResultCard {result} index={i} on:navigate={navigate} />
+				</li>
 			{:else}
 				<li>
 					<h6>{message}</h6>
 				</li>
-			{/if}
+			{/each}
 		</ul>
 	</section>
 </aside>

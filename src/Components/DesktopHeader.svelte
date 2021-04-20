@@ -1,8 +1,7 @@
 <script>
-	import { fade } from 'svelte/transition';
 	import { active } from 'tinro';
 
-	import { searchOpen, results } from './../stores.js';
+	import { navigatingResults, searchOpen, results } from './../stores.js';
 
 	let search_open_value;
 
@@ -37,10 +36,10 @@
 	</aside>
 	<section class="top">
 		{#if $searchOpen}
-			<section class="search-area" in:fade="{{duration: 300}}">
+			<section class="search-area">
 				<HandbookSearch on:close-search={toggleSearch} />
 			</section>
-		{:else if !$searchOpen && $results.length > 0}
+		{:else if $navigatingResults}
 			<ResultNavigator />
 		{:else}
 			<section class="link-navigation-area">

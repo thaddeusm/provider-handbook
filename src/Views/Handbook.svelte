@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { searchOpen, results, searchQuery, activeResult } from './../stores.js';
+	import { navigatingResults, searchOpen, results, searchQuery, activeResult } from './../stores.js';
 
 	let search_query_value;
 
@@ -12,6 +12,12 @@
 
 	const unsubscribeActiveResult = activeResult.subscribe(value => {
 		active_result_value = value;
+	});
+
+	let navigating_results_value;
+
+	const unsubscribeNavigatingResults = navigatingResults.subscribe(value => {
+		navigating_results_value = value;
 	});
 
 	import Handbook from './../Docs/Handbook.json';
@@ -62,7 +68,12 @@
 		let textWithHighlights;
 
 		let query = new RegExp(search_query_value, 'i');
-		textWithHighlights = textWithTooltips.replace(query, `<span class="bold-text">${search_query_value}</span>`);
+
+		if (navigating_results_value) {
+			textWithHighlights = textWithTooltips.replace(query, `<span class="bold-text">${search_query_value}</span>`);
+		} else {
+			textWithHighlights = textWithTooltips;
+		}
 
 		let finalText;
 
@@ -156,9 +167,9 @@
  					<ol>
  						{#each section.content as item}
  							{#if $activeResult.section == section.section.split(' ').join('')}
-		 						{@html textWithMarkup('li', item, section.section, true, $searchQuery)}
+		 						{@html textWithMarkup('li', item, section.section, true, $navigatingResults)}
 		 					{:else}
-								{@html textWithMarkup('li', item, section.section, false, $searchQuery)}
+								{@html textWithMarkup('li', item, section.section, false, $navigatingResults)}
 		 					{/if}
  						{/each}
  					</ol>
@@ -168,9 +179,9 @@
  					<Icon title={section.title} />
  				{:else}
  					{#if $activeResult.section == section.section.split(' ').join('')}
- 						{@html textWithMarkup('p', section.content, section.section, true, $searchQuery)}
+ 						{@html textWithMarkup('p', section.content, section.section, true, $navigatingResults)}
  					{:else}
-						{@html textWithMarkup('p', section.content, section.section, false, $searchQuery)}	
+						{@html textWithMarkup('p', section.content, section.section, false, $navigatingResults)}	
  					{/if}
  				{/if}
  			{/each}
