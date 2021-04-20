@@ -74,7 +74,7 @@
 	}
 
 	aside {
-		position: fixed;
+		position: absolute;
 		top: 0;
 		left: 2rem;
 		background: var(--white);

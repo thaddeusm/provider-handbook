@@ -67,7 +67,7 @@
 	}
 
 	.container {
-		height: 100%;
+		max-height: 100%;
 		display: grid;
 		align-items: center;
 		/*justify-content: center;*/
