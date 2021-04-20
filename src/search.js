@@ -4,6 +4,7 @@ export const search = (term) => {
 	term = term.toLowerCase().trim();
 
 	let results = [];
+	let includedSections = [];
 
 	for (let i=0; i<Handbook.sections.length; i++) {
 		let section = Handbook.sections[i];
@@ -41,10 +42,14 @@ export const search = (term) => {
 						let regex = new RegExp(term, 'i');
 						textSample = textSample.replace(regex, `<span class="bold-text">${term}</span>`);
 
-						results.push({
-							textSample: textSample,
-							sectionTitle: sectionTitle
-						});
+						if (includedSections.indexOf(sectionTitle) == -1) {
+							results.push({
+								textSample: textSample,
+								sectionTitle: sectionTitle
+							});
+							
+							includedSections.push(sectionTitle)
+						}
 					}
 				}
 			} else {
@@ -70,10 +75,14 @@ export const search = (term) => {
 					let regex = new RegExp(term, 'i');
 					textSample = textSample.replace(regex, `<span class="bold-text">${term}</span>`);
 
-					results.push({
-						textSample: textSample,
-						sectionTitle: sectionTitle
-					});
+					if (includedSections.indexOf(sectionTitle) == -1) {
+						results.push({
+							textSample: textSample,
+							sectionTitle: sectionTitle
+						});
+						
+						includedSections.push(sectionTitle)
+					}
 				}	
 			}
 		}

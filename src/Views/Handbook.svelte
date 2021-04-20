@@ -38,7 +38,7 @@
 		previewDescription = description;
 	}
 
-	function textWithMarkup(text, section, isActive) {
+	function textWithMarkup(element, text, section, isActive) {
 		let glossary = Handbook.glossary;
 
 		let terms = Object.keys(glossary);
@@ -67,9 +67,9 @@
 		let finalText;
 
 		if (isActive && textWithHighlights.search(search_query_value) !== -1) {
-			finalText = `<p class="active-section">${textWithHighlights}</p>`;
+			finalText = `<${element} class="active-section">${textWithHighlights}</${element}>`;
 		} else {
-			finalText = `<p>${textWithHighlights}</p>`;
+			finalText = `<${element}>${textWithHighlights}</${element}>`;
 		}
 
 		return finalText;
@@ -79,7 +79,6 @@
 		jumpToId(section);
 
 		setTimeout(() => {
-			console.log(section)
 			activeId = section;
 		}, 20, section);
 	}
@@ -156,7 +155,11 @@
  				{:else if section.style == "ordered_list"}
  					<ol>
  						{#each section.content as item}
- 							<li>{item}</li>
+ 							{#if $activeResult.section == section.section.split(' ').join('')}
+		 						{@html textWithMarkup('li', item, section.section, true, $searchQuery)}
+		 					{:else}
+								{@html textWithMarkup('li', item, section.section, false, $searchQuery)}
+		 					{/if}
  						{/each}
  					</ol>
  				{:else if section.style == "graphic"}
@@ -165,9 +168,9 @@
  					<Icon title={section.title} />
  				{:else}
  					{#if $activeResult.section == section.section.split(' ').join('')}
- 						{@html textWithMarkup(section.content, section.section, true, $searchQuery)}
+ 						{@html textWithMarkup('p', section.content, section.section, true, $searchQuery)}
  					{:else}
-						{@html textWithMarkup(section.content, section.section, false, $searchQuery)}	
+						{@html textWithMarkup('p', section.content, section.section, false, $searchQuery)}	
  					{/if}
  				{/if}
  			{/each}
@@ -448,11 +451,11 @@
 		margin-bottom: 1rem;
 	}
 
-	ol li:first-child {
+	:global(ol li):first-child {
 		margin-top: -.5rem;
 	}
 
-	ol li {
+	:global(ol li) {
 		margin: 1rem 0;
 		font-size: 16px;
 		line-height: 1.5;
