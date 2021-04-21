@@ -1,5 +1,25 @@
 import Handbook from './Docs/Handbook.json';
 
+import { navigatingResults, searchOpen, results, searchQuery, activeResult } from './stores.js';
+
+let results_value;
+
+const unsubscribeResults = results.subscribe(value => {
+	results_value = value;
+});
+
+let search_query_value;
+
+const unsubscribeSeachQuery = searchQuery.subscribe(value => {
+	search_query_value = value;
+});
+
+let active_result_value;
+
+const unsubscribeActiveResult = activeResult.subscribe(value => {
+	active_result_value = value;
+});
+
 export const search = (term) => {
 	term = term.toLowerCase().trim();
 
@@ -89,4 +109,56 @@ export const search = (term) => {
 	}
 
 	return results;
+};
+
+export const clearResults = () => {
+	results.set([]);
+	activeResult.set({
+		index: 0,
+		section: ''
+	});
+};
+
+export const resetSearchQuery = () => {
+	searchQuery.set('');
+};
+
+export const closeSearch = () => {
+	searchOpen.set(false);
+};
+
+export const openSearch = () => {
+	searchOpen.set(true);
+};
+
+export const closeResultNavigator = () => {
+	navigatingResults.set(false);
+};
+
+export const openResultNavigator = () => {
+	navigatingResults.set(true);
+};
+
+export const incrementActiveResult = () => {
+	let newIndex = active_result_value.index + 1;
+	let newSection = results_value[newIndex].sectionTitle.split(' ').join('');
+
+	activeResult.set({
+		index: newIndex,
+		section: newSection
+	});
+
+	jumpToId(newSection);
+};
+
+export const decrementActiveResult = () => {
+	let newIndex = active_result_value.index - 1;
+	let newSection = results_value[newIndex].sectionTitle.split(' ').join('');
+
+	activeResult.set({
+		index: newIndex,
+		section: newSection
+	});
+
+	jumpToId(newSection);
 };

@@ -3,7 +3,7 @@
 	router.mode.hash();
 	import { onMount } from 'svelte';
 
-	import { navigatingResults } from './stores';
+	import { closeSearch, closeResultNavigator, resetSearchQuery, clearResults } from './search';
 
 	import About from './Views/About.svelte';
 	import Handbook from './Views/Handbook.svelte';
@@ -33,13 +33,12 @@
 	}
 
 	$: {
-		if (!$router.path.includes('Handbook')) {
-			navigatingResults.set(false);
+		if (!$router.path.includes('handbook')) {
+			closeResultNavigator();
+			closeSearch();
+			clearResults();
+			resetSearchQuery();
 		}
-	}
-
-	function toggleSearch() {
-		searchOpen = !searchOpen;
 	}
 
 	function handleResize() {

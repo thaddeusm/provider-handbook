@@ -1,5 +1,5 @@
 <script>
-	import { search } from './../search.js';
+	import { search, clearResults, resetSearchQuery, openSearch, closeSearch, openResultNavigator, closeResultNavigator, incrementActiveResult, decrementActiveResult } from './../search.js';
 	import { onMount, onDestroy } from 'svelte';
 
 	import Search from './../Graphics/Icons/Search.svelte';
@@ -7,80 +7,28 @@
 	import LeftArrow from './../Graphics/Icons/LeftArrow.svelte';
 	import Close from './../Graphics/Icons/Close.svelte';
 
-	import { createEventDispatcher } from 'svelte';
-	
-	const dispatch = createEventDispatcher();
-
 	import { navigatingResults, searchOpen, results, searchQuery, activeResult } from './../stores.js';
 
-	let results_value;
-
-	const unsubscribeResults = results.subscribe(value => {
-		results_value = value;
-	});
-
-	let search_query_value;
-
-	const unsubscribeSeachQuery = searchQuery.subscribe(value => {
-		search_query_value = value;
-	});
-
-	let active_result_value;
-
-	const unsubscribeActiveResult = activeResult.subscribe(value => {
-		active_result_value = value;
-	});
-
 	let input;
-	let newIndex;
-	let newSection;
 
 	function handleKeyup() {
-		searchOpen.set(true);
-		results.set([]);
-		// dispatch('open-search');
+		openSearch();
+		clearResults();
 	}
 
-	function incrementResult() {
-		newIndex = active_result_value.index + 1;
-		newSection = results_value[newIndex].sectionTitle.split(' ').join('');
-
-		activeResult.set({
-			index: newIndex,
-			section: newSection
-		});
-
-		jumpToId(newSection);
-	}
-
-	function decrementResult() {
-		newIndex = active_result_value.index - 1;
-		newSection = results_value[newIndex].sectionTitle.split(' ').join('');
-
-		activeResult.set({
-			index: newIndex,
-			section: newSection
-		});
-
-		jumpToId(newSection);
-	}
-
-	function closeSearch() {
-		searchOpen.set(false);
-		results.set([]);
-		searchQuery.set('');
-		activeResult.set({
-			index: 0,
-			section: ''
-		});
+	function handleCloseButtonClick() {
+		closeSearch();
+		closeResultNavigator();
+		clearResults();
+		resetSearchQuery();
 	}
 
 	onMount(() => {
-		navigatingResults.set(true);
+		openResultNavigator();
 	});
 
 	onDestroy(() => {
-		navigatingResults.set(false);
+		closeResultNavigator();
 	});
 </script>
 
@@ -96,15 +44,15 @@
 			</span>
 		</section>
 		<section id="arrowArea">
-			<button on:click={decrementResult}>
+			<button on:click={decrementActiveResult}>
 				<LeftArrow width={'25px'} height={'25px'} color={'#FFFFFF'} />
 			</button>
-			<button on:click={incrementResult}>
+			<button on:click={incrementActiveResult}>
 				<RightArrow width={'25px'} height={'25px'} color={'#FFFFFF'} />
 			</button>
 		</section>
 		<section id="closeArea">
-			<button on:click={closeSearch}>
+			<button on:click={handleCloseButtonClick}>
 				<Close width={'25px'} height={'25px'} color={'#FFFFFF'} />
 			</button>
 		</section>
