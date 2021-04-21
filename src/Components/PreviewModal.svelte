@@ -11,8 +11,8 @@
 
 	let style = `background: ${background}`;
 
-	function handleClick() {
-		if (allowClose) {
+	function handleClick(e) {
+		if (allowClose && e.target.tagName !== 'VIDEO') {
 			dispatch('close');
 		}
 	}

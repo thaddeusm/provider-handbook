@@ -46,7 +46,8 @@
 		<div slot="body" class="modal-body">
 			<section class="{videoLoading ? 'placeholder' : 'video-container'}">
 				<!-- <iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen on:load={handleLoad}></iframe> -->
-				<video on:loadeddata={handleLoad} 
+				<video 
+					on:loadeddata={handleLoad} 
 					controls
 					src="https://res.cloudinary.com/dhomo4ksd/video/upload/v1600369229/Writing%20Toolkit%20Tutorials/What%20is%20a%20writing%20project.mp4"
 				>		
@@ -82,14 +83,6 @@
 		.container {
 			grid-template-rows: 1.5fr .5fr .5fr auto;
 		}
-
-		.video-container {
-			align-self: flex-end;
-		}
-
-		.placeholder {
-			align-self: flex-end;
-		}
 	}
 
 	.container {
@@ -118,18 +111,21 @@
 	.placeholder {
 		background: var(--black);
 		width: 100%;
-		height: 100%;
 		max-width: 1150px;
 		margin: 0 auto;
 	}
 
 	video {
 		width: 100%;
-		max-width: 1150px;
+		max-width: 1100px;
 		height: auto;
 		margin: 0 auto;
 		display: block;
 		background: var(--gray);
+	}
+
+	video::-webkit-media-controls-fullscreen-button {
+	    display: none;
 	}
 
 	.action-button {
