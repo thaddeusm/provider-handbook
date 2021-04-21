@@ -60,7 +60,9 @@ export const search = (term) => {
 						}
 
 						let regex = new RegExp(term, 'i');
-						textSample = textSample.replace(regex, `<span class="bold-text">${term}</span>`);
+						textSample = textSample.replace(regex, (match) => {
+							return `<span class="bold-text">${match}</span>`;
+						});
 
 						if (includedSections.indexOf(sectionTitle) == -1) {
 							results.push({
@@ -93,7 +95,9 @@ export const search = (term) => {
 					}
 
 					let regex = new RegExp(term, 'i');
-					textSample = textSample.replace(regex, `<span class="bold-text">${term}</span>`);
+					textSample = textSample.replace(regex, (match) => {
+						return `<span class="bold-text">${match}</span>`;
+					});
 
 					if (includedSections.indexOf(sectionTitle) == -1) {
 						results.push({

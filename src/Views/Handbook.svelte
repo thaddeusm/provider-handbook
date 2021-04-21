@@ -70,7 +70,9 @@
 		let query = new RegExp(search_query_value, 'i');
 
 		if (navigating_results_value) {
-			textWithHighlights = textWithTooltips.replace(query, `<span class="bold-text">${search_query_value}</span>`);
+			textWithHighlights = textWithTooltips.replace(query, (match) =>{ 
+				return `<span class="bold-text">${match}</span>`
+			});
 		} else {
 			textWithHighlights = textWithTooltips;
 		}
