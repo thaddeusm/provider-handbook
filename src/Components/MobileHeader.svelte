@@ -56,45 +56,49 @@
 
 <nav>
 	<section class="left">
-		<HamburgerMenu {menuOpen}>
-			<div class="tray">
-				<ul class="primary-list">
-					<li><a href="/">about</a></li>
-					<li class="sub">
-						<a href="/handbook">handbook</a>
-						<button on:click={toggleSub}>
+		{#if !$navigatingResults}
+			<HamburgerMenu {menuOpen}>
+				<div class="tray">
+					<ul class="primary-list">
+						<li><a href="/">about</a></li>
+						<li class="sub">
+							<a href="/handbook">handbook</a>
+							<button on:click={toggleSub}>
+								{#if showSub}
+									<UpArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} />
+								{:else}
+									<DownArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} />
+								{/if}
+							</button>
 							{#if showSub}
-								<UpArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} />
-							{:else}
-								<DownArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} />
-							{/if}
-						</button>
-						{#if showSub}
-							<ul class="secondary-list" in:slide="{{duration: 200}}">
-								{#each Handbook.sections as handbookSection, i}
-									{#each handbookSection as section, j}
-										{#if section.style.includes('heading')}
-											<li class={section.style.includes('subheading') ? 'subheading' : ''}>
-												<a on:click={() => {navigate(section.content.split(' ').join(''))}}>
-													{section.content}
-												</a>
-											</li>
-										{/if}
+								<ul class="secondary-list" in:slide="{{duration: 200}}">
+									{#each Handbook.sections as handbookSection, i}
+										{#each handbookSection as section, j}
+											{#if section.style.includes('heading')}
+												<li class={section.style.includes('subheading') ? 'subheading' : ''}>
+													<a on:click={() => {navigate(section.content.split(' ').join(''))}}>
+														{section.content}
+													</a>
+												</li>
+											{/if}
+										{/each}
 									{/each}
-								{/each}
-							</ul>
-						{/if}
-					</li>
-					<li><a href="/documents">documents</a></li>
-					<li><a href="/help">help</a></li>
-				</ul>
-			</div>
-		</HamburgerMenu>
+								</ul>
+							{/if}
+						</li>
+						<li><a href="/documents">documents</a></li>
+						<li><a href="/help">help</a></li>
+					</ul>
+				</div>
+			</HamburgerMenu>
+		{/if}
 	</section>
 	<section class="center">
-		<a href="/">
-			<Access width={'9rem'} />
-		</a>
+		{#if !$navigatingResults}
+			<a href="/">
+				<Access width={'9rem'} />
+			</a>
+		{/if}
 	</section>
 	<section class="right">
 		{#if $searchOpen}

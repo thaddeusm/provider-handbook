@@ -10,6 +10,19 @@
 	import { navigatingResults, searchOpen, results, searchQuery, activeResult } from './../stores.js';
 
 	let input;
+	let innerWidth;
+	let iconColor = '#FFFFFF';
+	let iconSize = '25px';
+
+	$: {
+		if (innerWidth > 1100) {
+			iconColor = '#FFFFFF';
+			iconSize = '25px';
+		} else {
+			iconColor = '#000000';
+			iconSize = '2rem';
+		}
+	}
 
 	function handleKeyup() {
 		openSearch();
@@ -25,28 +38,30 @@
 	});
 </script>
 
+<svelte:window bind:innerWidth={innerWidth} />
+
 <aside>
 	<section id="searchBox">
 		<section id="inputArea">
 			<section id="searchIcon">
-				<Search color={'#FFFFFF'} width={'25px'} height={'25px'} />
+				<Search color={iconColor} width={iconSize} height={iconSize} />
 			</section>
 			<input type="text" bind:this={input} bind:value={$searchQuery} placeholder="search the handbook" on:keyup={handleKeyup} />
 			<span id="resultLocation">
-				{`${$activeResult.index + 1} of ${$results.length}`}
+				{`${$activeResult.index + 1} / ${$results.length}`}
 			</span>
 		</section>
 		<section id="arrowArea">
 			<button on:click={decrementActiveResult}>
-				<LeftArrow width={'25px'} height={'25px'} color={'#FFFFFF'} />
+				<LeftArrow width={iconSize} height={iconSize} color={iconColor} />
 			</button>
 			<button on:click={incrementActiveResult}>
-				<RightArrow width={'25px'} height={'25px'} color={'#FFFFFF'} />
+				<RightArrow width={iconSize} height={iconSize} color={iconColor} />
 			</button>
 		</section>
 		<section id="closeArea">
 			<button on:click={resetSearch}>
-				<Close width={'25px'} height={'25px'} color={'#FFFFFF'} />
+				<Close width={iconSize} height={iconSize} color={iconColor} />
 			</button>
 		</section>
 	</section>
@@ -55,35 +70,74 @@
 <style>
 	@media screen and (max-width: 450px) {
 		#searchBox {
-			grid-template-columns: .08fr 1.4fr 65px;
+			grid-template-columns: .08fr .9fr .5fr 65px;
+			grid-template-areas: ". inputArea arrowArea closeArea";
 		}
 
 		#inputArea {
-			grid-template-columns: 20% 80%;
+			grid-template-columns: 45px 1fr;
+			grid-template-areas: "searchIcon input";
+			border: 1px solid var(--brand)!important;
+			border-radius: 1px;
+			padding: 10px 5px 8px 5px;
 		}
 
 		aside {
 			top: 0;
+			background: var(--white);
+		}
+
+		input {
+			color: var(--black);
+		}
+
+		#resultLocation {
+			display: none!important;
+		}
+
+		#arrowArea {
+			text-align: right;
+			align-self: center;
 		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		#searchBox {
-			grid-template-columns: 25px 1.4fr 100px;
+			grid-template-columns: 25px 1.2fr .2fr 100px;
+			grid-template-areas: ". inputArea arrowArea closeArea";
 		}
 
 		#inputArea {
-			grid-template-columns: 50px 1fr;
+			grid-template-columns: 50px .5fr .5fr;
+			grid-template-areas: "searchIcon input resultLocation";
+			border: 1px solid var(--brand);
+			border-radius: 1px;
+			padding: 10px 15px 8px 5px;
 		}
 
 		aside {
 			top: 0;
+			background: var(--white);
+		}
+
+		input {
+			color: var(--black);
+		}
+
+		#resultLocation {
+			color: var(--dark-gray);
+			font-size: 15px;
+		}
+
+		#arrowArea {
+			text-align: right;
 		}
 	}
 
 	@media screen and (min-width: 1101px) {
 		#inputArea {
 			grid-template-columns: 45px 50px 1fr auto;
+			grid-template-areas: ". searchIcon input resultLocation";
 		}
 
 		#searchBox {
@@ -102,6 +156,12 @@
 			padding-bottom: 5px;
 			border-bottom: 3px solid var(--white)!important;
 			color: var(--gray);
+			font-size: 21px;
+		}
+
+		#arrowArea {
+			text-align: center;
+			align-self: center;
 		}
 	}
 
@@ -128,12 +188,10 @@
 		border-radius: 1px;
 		grid-area: inputArea;
 		display: grid;
-		grid-template-areas: ". searchIcon input resultLocation";
 		align-items: center;
 	}
 
 	#resultLocation {
-		font-size: 21px;
 		letter-spacing: 2px;
 		font-family: "Montserrat-Bold";
 		background: none;
@@ -163,8 +221,6 @@
 
 	#arrowArea {
 		grid-area: arrowArea;
-		text-align: center;
-		align-self: center;
 	}
 
 	#closeArea {

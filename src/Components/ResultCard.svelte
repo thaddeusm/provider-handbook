@@ -48,29 +48,27 @@
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.result {
-			grid-template-rows: 40% 50% 10%;
+			grid-template-rows: 35% 60% 5%;
 			grid-template-columns: 60px 1fr .25fr 82px;
 			grid-template-areas: 
 				". heading heading ."
 				". sample actionButton ."
 				". . . .";
-			min-height: 200px;
+			min-height: 180px;
 		}
 
 		.result > p {
-			max-height: 80px;
 			padding: 15px;
-			overflow: auto;
 		}
 
 		.result > .action-button {
-			height: 110px;
+			height: 100%;
 		}
 	}
 
 	@media screen and (min-width: 1101px) {
 		.result {
-			grid-template-rows: 75px 1fr;
+			grid-template-rows: 70px 1fr;
 			grid-template-columns: 80% 18%;
 			grid-template-areas: 
 				"heading heading"
