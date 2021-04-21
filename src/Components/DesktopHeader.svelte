@@ -23,12 +23,12 @@
 		</a>
 	</aside>
 	<section class="top">
-		{#if $searchOpen}
+		{#if $navigatingResults}
+			<ResultNavigator />
+		{:else if $searchOpen}
 			<section class="search-area">
 				<HandbookSearch on:close-search={closeSearch} />
 			</section>
-		{:else if $navigatingResults}
-			<ResultNavigator />
 		{:else}
 			<section class="link-navigation-area">
 				<ul>
@@ -50,7 +50,7 @@
 		display: grid;
 		height: 100px;
 		width: 100%;
-		grid-template-rows: .85fr 1fr;
+		grid-template-rows: 50px 1fr;
 		grid-template-areas: 
 			"top"
 			".";

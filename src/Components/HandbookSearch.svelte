@@ -99,12 +99,12 @@
 <style>
 	aside {
 		width: 100%;
-		height: 95%;
+		height: 100%;
 		position: fixed;
 		top: 0;
 		right: 0;
 		display: grid;
-		grid-template-rows: 6% 94%;
+		grid-template-rows: 50px 1fr;
 	}
 
 	#searchBox {

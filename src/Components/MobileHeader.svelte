@@ -3,7 +3,15 @@
 	import { router } from 'tinro';
 
 	import { searchOpen, results, navigatingResults } from './../stores.js';
+
+	let navigating_results_value;
+
+	const unsubscribeNavigatingResults = navigatingResults.subscribe(value => {
+		navigating_results_value = value;
+	});
 	import { closeSearch, openSearch } from './../search.js';
+
+	import { onMount } from 'svelte';
 
 	import Handbook from './../Docs/Handbook.json';
 
@@ -50,6 +58,10 @@
 			scrolled = false;
 		}
 	}
+
+	onMount(() => {
+		console.log(navigating_results_value)
+	})
 </script>
 
 <svelte:window on:scroll={handleScroll} />
@@ -101,10 +113,10 @@
 		{/if}
 	</section>
 	<section class="right">
-		{#if $searchOpen}
-			<MobileHandbookSearch on:close-search={closeSearch} />
-		{:else if $navigatingResults}
+		{#if $navigatingResults}
 			<ResultNavigator />
+		{:else if $searchOpen}
+			<MobileHandbookSearch on:close-search={closeSearch} />
 		{:else}
 			<button id="searchButton" class:scrolled on:click={openSearch}>
 				<Search color={'#000000'} width={'2rem'} height={'2rem'} />

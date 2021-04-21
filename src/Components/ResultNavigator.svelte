@@ -1,6 +1,5 @@
 <script>
 	import { search, clearResults, resetSearchQuery, openSearch, closeSearch, openResultNavigator, closeResultNavigator, incrementActiveResult, decrementActiveResult, resetSearch } from './../search.js';
-	import { onMount, onDestroy } from 'svelte';
 
 	import Search from './../Graphics/Icons/Search.svelte';
 	import RightArrow from './../Graphics/Icons/RightArrow.svelte';
@@ -15,14 +14,6 @@
 		openSearch();
 		clearResults();
 	}
-
-	onMount(() => {
-		openResultNavigator();
-	});
-
-	onDestroy(() => {
-		closeResultNavigator();
-	});
 </script>
 
 <aside>
@@ -75,7 +66,7 @@
 <style>
 	@media screen and (max-width: 450px) {
 		#searchBox {
-			grid-template-columns: .08fr .9fr .5fr 65px;
+			grid-template-columns: .08fr .85fr .55fr 65px;
 			grid-template-areas: ". inputArea arrowArea closeArea";
 		}
 
@@ -88,8 +79,9 @@
 		}
 
 		aside {
-			top: 0;
+			height: 100px;
 			background: var(--white);
+			align-items: center;
 		}
 
 		input {
@@ -112,7 +104,7 @@
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		#searchBox {
-			grid-template-columns: 25px 1.2fr .2fr 100px;
+			grid-template-columns: 25px 1fr 100px 100px;
 			grid-template-areas: ". inputArea arrowArea closeArea";
 		}
 
@@ -125,8 +117,9 @@
 		}
 
 		aside {
-			top: 0;
+			height: 100px;
 			background: var(--white);
+			align-items: center;
 		}
 
 		input {
@@ -148,6 +141,10 @@
 	}
 
 	@media screen and (min-width: 1101px) {
+		aside {
+			height: 50px;
+		}
+
 		#inputArea {
 			grid-template-columns: 45px 50px 1fr auto;
 			grid-template-areas: ". searchIcon input resultLocation";
@@ -184,12 +181,11 @@
 
 	aside {
 		width: 100%;
-		height: 100px;
 		position: fixed;
 		right: 0;
+		top: 0;
 		display: grid;
 		grid-template-rows: 1fr;
-		align-items: center;
 	}
 
 	#searchBox {
