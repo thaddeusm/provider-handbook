@@ -36,9 +36,7 @@ export const search = (term) => {
 
 			if (contentBlock.style.includes('heading')) {
 				sectionTitle = contentBlock.text;
-			}
-
-			if (contentBlock.style.includes('list')) {
+			} else if (contentBlock.style.includes('list')) {
 				for (let k=0; k<contentBlock.text.length; k++) {
 					let listItem = contentBlock.text[k];
 
