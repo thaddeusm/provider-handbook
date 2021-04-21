@@ -1,5 +1,5 @@
 <script>
-	import DOS from './../Graphics/Icons/DOS.svelte';
+	import DOS from './../Graphics/Icons/DoS.svelte';
 	import Access from './../Graphics/Icons/Access.svelte';
 </script>
 
