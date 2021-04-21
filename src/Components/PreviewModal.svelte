@@ -2,6 +2,21 @@
 	import { fade } from 'svelte/transition';
 	import { onMount, onDestroy } from 'svelte';
 
+	import { createEventDispatcher } from 'svelte';
+	
+	const dispatch = createEventDispatcher();
+
+	export let allowClose = false;
+	export let background = '#ffffff';
+
+	let style = `background: ${background}`;
+
+	function handleClick() {
+		if (allowClose) {
+			dispatch('close');
+		}
+	}
+
 	onMount(() => {
 		document.body.style.overflow = 'hidden';
 	});
@@ -11,8 +26,8 @@
 	});
 </script>
 
-<div class="overlay" in:fade="{{duration: 100}}">
-	<div class="modal">
+<div class="overlay" in:fade="{{duration: 100}}" on:click={handleClick}>
+	<div class="modal" style={style}>
 		<slot name="body"></slot>
 		<slot name="footer"></slot>
 	</div>
@@ -65,7 +80,7 @@
 		.modal {
 			height: 90%;
 			width: 90%;
-			grid-template-rows: 80% 20%;
+			grid-template-rows: 1fr auto;
 		}
 	}
 
@@ -78,7 +93,7 @@
 		display: grid;
 		justify-content: center;
 		align-items: center;
-		background: rgba(0, 0, 0, .5);
+		background: rgba(0, 0, 0, .9);
 		z-index: 3000;
 	}
 

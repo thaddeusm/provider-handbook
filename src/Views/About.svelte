@@ -42,17 +42,22 @@
 </div>
 
 {#if showVideo}
-	<PreviewModal>
+	<PreviewModal allowClose={true} background={'none'} on:close={() => {showVideo = false}}>
 		<div slot="body" class="modal-body">
-			<section class="{videoLoading ? 'placeholder' : 'video-container'}">
+			<!-- <section class="{videoLoading ? 'placeholder' : 'video-container'}">
 				<iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen on:load={handleLoad}></iframe>
-			</section>
+			</section> -->
+			<video 
+				controls
+				src="https://res.cloudinary.com/dhomo4ksd/video/upload/v1600369229/Writing%20Toolkit%20Tutorials/What%20is%20a%20writing%20project.mp4"
+			>		
+			</video>
 		</div>
-		<div slot="footer" class="modal-footer">
+		<!-- <div slot="footer" class="modal-footer">
 			<div class="actions">
 				<button class="regular-button-small" on:click={() => {showVideo = false}}>close</button>
 			</div>
-		</div>
+		</div> -->
 	</PreviewModal>
 {/if}
 
@@ -117,9 +122,13 @@
 		margin: 0 auto;
 	}
 
-	.video {
-		max-width: 560px;
+	video {
+		width: 100%;
+		max-width: 1150px;
+		height: auto;
 		margin: 0 auto;
+		display: block;
+		background: var(--gray);
 	}
 
 	.action-button {
