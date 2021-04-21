@@ -33,6 +33,10 @@
 	let message = 'Enter a keyword to search the handbook.';
 
 	function handleKeyup(e) {
+		runSearch();
+	}
+
+	function runSearch() {
 		if (search_query_value !== '') {
 			results.set(search(search_query_value));
 		} else {
@@ -64,6 +68,7 @@
 
 	onMount(() => {
 		input.focus();
+		runSearch();
 	});
 </script>
 

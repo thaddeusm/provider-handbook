@@ -4,11 +4,6 @@
 
 	import { searchOpen, results, navigatingResults } from './../stores.js';
 
-	let navigating_results_value;
-
-	const unsubscribeNavigatingResults = navigatingResults.subscribe(value => {
-		navigating_results_value = value;
-	});
 	import { closeSearch, openSearch } from './../search.js';
 
 	import { onMount } from 'svelte';
@@ -58,10 +53,6 @@
 			scrolled = false;
 		}
 	}
-
-	onMount(() => {
-		console.log(navigating_results_value)
-	})
 </script>
 
 <svelte:window on:scroll={handleScroll} />
@@ -113,10 +104,10 @@
 		{/if}
 	</section>
 	<section class="right">
-		{#if $navigatingResults}
-			<ResultNavigator />
-		{:else if $searchOpen}
+		{#if $searchOpen}
 			<MobileHandbookSearch on:close-search={closeSearch} />
+		{:else if $navigatingResults}
+			<ResultNavigator />
 		{:else}
 			<button id="searchButton" class:scrolled on:click={openSearch}>
 				<Search color={'#000000'} width={'2rem'} height={'2rem'} />

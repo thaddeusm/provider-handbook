@@ -23,12 +23,12 @@
 		</a>
 	</aside>
 	<section class="top">
-		{#if $navigatingResults}
-			<ResultNavigator />
-		{:else if $searchOpen}
+		{#if $searchOpen}
 			<section class="search-area">
 				<HandbookSearch on:close-search={closeSearch} />
 			</section>
+		{:else if $navigatingResults}
+			<ResultNavigator />
 		{:else}
 			<section class="link-navigation-area">
 				<ul>
