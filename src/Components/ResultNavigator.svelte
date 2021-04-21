@@ -10,19 +10,6 @@
 	import { navigatingResults, searchOpen, results, searchQuery, activeResult } from './../stores.js';
 
 	let input;
-	let innerWidth;
-	let iconColor = '#FFFFFF';
-	let iconSize = '25px';
-
-	$: {
-		if (innerWidth > 1100) {
-			iconColor = '#FFFFFF';
-			iconSize = '25px';
-		} else {
-			iconColor = '#000000';
-			iconSize = '2rem';
-		}
-	}
 
 	function handleKeyup() {
 		openSearch();
@@ -38,13 +25,16 @@
 	});
 </script>
 
-<svelte:window bind:innerWidth={innerWidth} />
-
 <aside>
 	<section id="searchBox">
 		<section id="inputArea">
 			<section id="searchIcon">
-				<Search color={iconColor} width={iconSize} height={iconSize} />
+				<div class="small-icon">
+					<Search color={'#000000'} width={'2rem'} height={'2rem'} />
+				</div>
+				<div class="large-icon">
+					<Search color={'#FFFFFF'} width={'25px'} height={'25px'} />
+				</div>
 			</section>
 			<input type="text" bind:this={input} bind:value={$searchQuery} placeholder="search the handbook" on:keyup={handleKeyup} />
 			<span id="resultLocation">
@@ -52,16 +42,31 @@
 			</span>
 		</section>
 		<section id="arrowArea">
-			<button on:click={decrementActiveResult}>
-				<LeftArrow width={iconSize} height={iconSize} color={iconColor} />
+			<button on:click={decrementActiveResult} disabled={$activeResult.index == 0}>
+				<div class="small-icon">
+					<LeftArrow color={'#000000'} width={'2rem'} height={'2rem'} />
+				</div>
+				<div class="large-icon">
+					<LeftArrow color={'#FFFFFF'} width={'25px'} height={'25px'} />
+				</div>
 			</button>
-			<button on:click={incrementActiveResult}>
-				<RightArrow width={iconSize} height={iconSize} color={iconColor} />
+			<button on:click={incrementActiveResult} disabled={$activeResult.index == $results.length - 1}>
+				<div class="small-icon">
+					<RightArrow color={'#000000'} width={'2rem'} height={'2rem'} />
+				</div>
+				<div class="large-icon">
+					<RightArrow color={'#FFFFFF'} width={'25px'} height={'25px'} />
+				</div>
 			</button>
 		</section>
 		<section id="closeArea">
 			<button on:click={resetSearch}>
-				<Close width={iconSize} height={iconSize} color={iconColor} />
+				<div class="small-icon">
+					<Close color={'#000000'} width={'2rem'} height={'2rem'} />
+				</div>
+				<div class="large-icon">
+					<Close color={'#FFFFFF'} width={'25px'} height={'25px'} />
+				</div>
 			</button>
 		</section>
 	</section>
@@ -99,6 +104,10 @@
 			text-align: right;
 			align-self: center;
 		}
+
+		.large-icon {
+			display: none;
+		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
@@ -132,6 +141,10 @@
 		#arrowArea {
 			text-align: right;
 		}
+
+		.large-icon {
+			display: none;
+		}
 	}
 
 	@media screen and (min-width: 1101px) {
@@ -162,6 +175,10 @@
 		#arrowArea {
 			text-align: center;
 			align-self: center;
+		}
+
+		.small-icon {
+			display: none;
 		}
 	}
 
@@ -226,5 +243,10 @@
 	#closeArea {
 		grid-area: closeArea;
 		text-align: center;
+	}
+
+	button:disabled {
+		cursor: not-allowed;
+		opacity: .2;
 	}
 </style>
