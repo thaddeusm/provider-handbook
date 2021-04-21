@@ -2,17 +2,8 @@
 	import { slide } from 'svelte/transition';
 	import { router } from 'tinro';
 
-	import { searchOpen, results } from './../stores.js';
-
-	let search_open_value;
-
-	const unsubscribeSearchOpen = searchOpen.subscribe(value => {
-		search_open_value = value;
-	});
-
-	import { createEventDispatcher } from 'svelte';
-	
-	const dispatch = createEventDispatcher();
+	import { searchOpen, results, navigatingResults } from './../stores.js';
+	import { closeSearch, openSearch } from './../search.js';
 
 	import Handbook from './../Docs/Handbook.json';
 
@@ -39,12 +30,6 @@
 
 	function toggleSub() {
 		showSub = !showSub;
-	}
-
-	function toggleSearch() {
-		searchOpen.set(!search_open_value);
-
-		dispatch('search-toggled');
 	}
 
 	function navigate(sectionId) {	
@@ -113,11 +98,11 @@
 	</section>
 	<section class="right">
 		{#if $searchOpen}
-			<MobileHandbookSearch on:close-search={toggleSearch} />
-		{:else if !$searchOpen && $results.length > 0}
+			<MobileHandbookSearch on:close-search={closeSearch} />
+		{:else if $navigatingResults}
 			<ResultNavigator />
 		{:else}
-			<button id="searchButton" class:scrolled on:click={toggleSearch}>
+			<button id="searchButton" class:scrolled on:click={openSearch}>
 				<Search color={'#000000'} width={'2rem'} height={'2rem'} />
 			</button>
 		{/if}

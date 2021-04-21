@@ -1,8 +1,8 @@
 <script>
 	import { router } from 'tinro';
-	import { search } from './../search.js';
+	import { search, closeSearch, openResultNavigator, clearResults } from './../search.js';
 
-	import { results, searchQuery, activeResult } from './../stores.js';
+	import { navigatingResults, results, searchQuery, activeResult } from './../stores.js';
 
 	let results_value;
 
@@ -21,27 +21,21 @@
 	import Search from './../Graphics/Icons/Search.svelte';
 	import Close from './../Graphics/Icons/Close.svelte';
 
-	import { createEventDispatcher } from 'svelte';
 	import { onMount, onDestroy } from 'svelte';
-	
-	const dispatch = createEventDispatcher();
 
 	let input;
 
 	let message = 'Enter a keyword to search the handbook.';
 
-	function closeSearch() {
-		dispatch('close-search');
-		// searchQuery.set('');
-		// results.set([]);
-	}
-
 	function handleKeyup(e) {
-		searchQuery.set(input.value);
+		if (search_query_value !== '') {
+			results.set(search(search_query_value));
+		} else {
+			message = 'Enter a keyword to search the handbook.';
+			clearResults();
+		}
 
-		results.set(search(search_query_value));
-
-		if (results_value.length == 0) {
+		if (results_value.length == 0 && search_query_value !== '') {
 			message = 'Nothing found. Please try a different keyword.'
 		}
 	}
@@ -58,6 +52,7 @@
 		router.goto('/handbook');
 		setTimeout(() => {
 			jumpToId(section);
+			openResultNavigator();
 			closeSearch();
 		}, 100, section);
 	}
@@ -88,17 +83,15 @@
 	</section>
 	<section id="results">
 		<ul id="resultList">
-			{#if $results.length > 0}
-				{#each $results as result, i}
-					<li>
-						<ResultCard {result} index={i} on:navigate={navigate} />
-					</li>
-				{/each}
+			{#each $results as result, i}
+				<li>
+					<ResultCard {result} index={i} on:navigate={navigate} />
+				</li>
 			{:else}
 				<li>
 					<h6>{message}</h6>
 				</li>
-			{/if}
+			{/each}
 		</ul>
 	</section>
 </aside>

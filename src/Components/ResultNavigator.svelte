@@ -1,5 +1,5 @@
 <script>
-	import { search, clearResults, resetSearchQuery, openSearch, closeSearch, openResultNavigator, closeResultNavigator, incrementActiveResult, decrementActiveResult } from './../search.js';
+	import { search, clearResults, resetSearchQuery, openSearch, closeSearch, openResultNavigator, closeResultNavigator, incrementActiveResult, decrementActiveResult, resetSearch } from './../search.js';
 	import { onMount, onDestroy } from 'svelte';
 
 	import Search from './../Graphics/Icons/Search.svelte';
@@ -14,13 +14,6 @@
 	function handleKeyup() {
 		openSearch();
 		clearResults();
-	}
-
-	function handleCloseButtonClick() {
-		closeSearch();
-		closeResultNavigator();
-		clearResults();
-		resetSearchQuery();
 	}
 
 	onMount(() => {
@@ -52,7 +45,7 @@
 			</button>
 		</section>
 		<section id="closeArea">
-			<button on:click={handleCloseButtonClick}>
+			<button on:click={resetSearch}>
 				<Close width={'25px'} height={'25px'} color={'#FFFFFF'} />
 			</button>
 		</section>
@@ -61,89 +54,121 @@
 
 <style>
 	@media screen and (max-width: 450px) {
-		
-	}
-
-	@media screen and (min-width: 451px) and (max-width: 1100px) {
-		
-	}
-
-	@media screen and (min-width: 1101px) {
-		aside {
-			width: 100%;
-			height: 100px;
-			position: fixed;
-			right: 0;
-			display: grid;
-			grid-template-rows: 1fr;
-			align-items: center;
-		}
-
 		#searchBox {
-			display: grid;
-			grid-template-columns: 1fr 550px 100px 85px;
-			grid-template-areas: ". inputArea arrowArea closeArea";
-			align-items: center;
-			background: var(--brand);
+			grid-template-columns: .08fr 1.4fr 65px;
 		}
 
 		#inputArea {
-			border-radius: 1px;
-			grid-area: inputArea;
-			display: grid;
+			grid-template-columns: 20% 80%;
+		}
+
+		aside {
+			top: 0;
+		}
+	}
+
+	@media screen and (min-width: 451px) and (max-width: 1100px) {
+		#searchBox {
+			grid-template-columns: 25px 1.4fr 100px;
+		}
+
+		#inputArea {
+			grid-template-columns: 50px 1fr;
+		}
+
+		aside {
+			top: 0;
+		}
+	}
+
+	@media screen and (min-width: 1101px) {
+		#inputArea {
 			grid-template-columns: 45px 50px 1fr auto;
-			grid-template-areas: ". searchIcon input resultLocation";
-			align-items: center;
 		}
 
-		#arrowArea {
-			grid-area: arrowArea;
-			text-align: center;
-			align-self: center;
-		}
-
-		#closeArea {
-			grid-area: closeArea;
-			text-align: center;
+		#searchBox {
+			grid-template-columns: 1fr 550px 100px 85px;
+			grid-template-areas: ". inputArea arrowArea closeArea";
+			background: var(--brand);
 		}
 
 		input {
-			font-size: 21px;
-			letter-spacing: 2px;
-			font-family: "Montserrat-Bold";
-			color: var(--white);
 			padding-bottom: 5px;
-			background: none;
-			border: none;
-			outline: none;
-			display: block;
-			width: 100%;
-			grid-area: input;
-			border-bottom: 3px solid var(--white);
-		}
-
-		input:focus {
-			outline: none;
+			border-bottom: 3px solid var(--white)!important;
+			color: var(--white);
 		}
 
 		#resultLocation {
-			font-size: 21px;
-			letter-spacing: 2px;
-			font-family: "Montserrat-Bold";
-			color: var(--gray);
 			padding-bottom: 5px;
-			background: none;
-			border: none;
-			text-align: right;
-			outline: none;
-			display: block;
-			width: 100%;
-			grid-area: resultLocation;
-			border-bottom: 3px solid var(--white);
+			border-bottom: 3px solid var(--white)!important;
+			color: var(--gray);
 		}
+	}
 
-		#searchIcon {
-			grid-area: searchIcon;
-		}
+	aside {
+		width: 100%;
+		height: 100px;
+		position: fixed;
+		right: 0;
+		display: grid;
+		grid-template-rows: 1fr;
+		align-items: center;
+	}
+
+	#searchBox {
+		display: grid;
+		align-items: center;
+	}
+
+	#searchIcon {
+		grid-area: searchIcon;
+	}
+
+	#inputArea {
+		border-radius: 1px;
+		grid-area: inputArea;
+		display: grid;
+		grid-template-areas: ". searchIcon input resultLocation";
+		align-items: center;
+	}
+
+	#resultLocation {
+		font-size: 21px;
+		letter-spacing: 2px;
+		font-family: "Montserrat-Bold";
+		background: none;
+		border: none;
+		text-align: right;
+		outline: none;
+		display: block;
+		width: 100%;
+		grid-area: resultLocation;
+	}
+
+	input {
+		font-size: 21px;
+		letter-spacing: 2px;
+		font-family: "Montserrat-Bold";
+		background: none;
+		border: none;
+		outline: none;
+		display: block;
+		width: 100%;
+		grid-area: input;
+	}
+
+	input:focus {
+		outline: none;
+	}
+
+	#arrowArea {
+		grid-area: arrowArea;
+		text-align: center;
+		align-self: center;
+	}
+
+	#closeArea {
+		grid-area: closeArea;
+		text-align: center;
 	}
 </style>

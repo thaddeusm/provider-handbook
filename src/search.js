@@ -162,3 +162,10 @@ export const decrementActiveResult = () => {
 
 	jumpToId(newSection);
 };
+
+export const resetSearch = () => {
+	closeSearch();
+	closeResultNavigator();
+	clearResults();
+	resetSearchQuery();
+};

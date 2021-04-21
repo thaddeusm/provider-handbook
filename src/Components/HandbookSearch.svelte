@@ -2,7 +2,7 @@
 	import { router } from 'tinro';
 	import { onMount, onDestroy } from 'svelte';
 
-	import { search } from './../search.js';
+	import { search, resetSearch, closeSearch, openResultNavigator, clearResults } from './../search.js';
 
 	import { navigatingResults, results, searchQuery, activeResult } from './../stores.js';
 
@@ -29,19 +29,20 @@
 	import Search from './../Graphics/Icons/Search.svelte';
 	import Close from './../Graphics/Icons/Close.svelte';
 
-	import { createEventDispatcher } from 'svelte';
-	
-	const dispatch = createEventDispatcher();
-
-	let message = 'Enter a keyword to search the handbook.';
 	let input;
-
-	function closeSearch() {
-		dispatch('close-search');
-	}
+	let message = 'Enter a keyword to search the handbook.';
 
 	function handleKeyup(e) {
-		results.set(search(search_query_value));
+		if (search_query_value !== '') {
+			results.set(search(search_query_value));
+		} else {
+			clearResults();
+			message = 'Enter a keyword to search the handbook.';
+		}
+
+		if (results_value.length == 0 && search_query_value !== '') {
+			message = 'Nothing found. Please try a different keyword.'
+		}
 	}
 
 	function navigate(e) {
@@ -56,7 +57,7 @@
 		router.goto('/handbook');
 		setTimeout(() => {
 			jumpToId(section);
-			navigatingResults.set(true);
+			openResultNavigator();
 			closeSearch();
 		}, 100, section);
 	}
@@ -75,7 +76,7 @@
 			<input type="text" bind:this={input} bind:value={$searchQuery} placeholder="search the handbook" on:keyup={handleKeyup} />
 		</section>
 		<section id="closeArea">
-			<button on:click={closeSearch}>
+			<button on:click={resetSearch}>
 				<Close width={'25px'} height={'25px'} color={'#FFFFFF'} />
 			</button>
 		</section>

@@ -3,11 +3,7 @@
 
 	import { navigatingResults, searchOpen, results } from './../stores.js';
 
-	let search_open_value;
-
-	const unsubscribeSearchOpen = searchOpen.subscribe(value => {
-		search_open_value = value;
-	});
+	import { closeSearch, openSearch } from './../search.js';
 
 	import { createEventDispatcher } from 'svelte';
 	
@@ -18,14 +14,6 @@
 
 	import HandbookSearch from './../Components/HandbookSearch.svelte';
 	import ResultNavigator from './../Components/ResultNavigator.svelte';
-
-	export let showSearch = false;
-
-	function toggleSearch() {
-		searchOpen.set(!search_open_value);
-
-		dispatch('search-toggled');
-	}
 </script>
 
 <nav>
@@ -37,7 +25,7 @@
 	<section class="top">
 		{#if $searchOpen}
 			<section class="search-area">
-				<HandbookSearch on:close-search={toggleSearch} />
+				<HandbookSearch on:close-search={closeSearch} />
 			</section>
 		{:else if $navigatingResults}
 			<ResultNavigator />
@@ -49,7 +37,7 @@
 					<li><a href="/documents" use:active>Documents</a></li>
 					<li><a href="/help" use:active>Help</a></li>
 				</ul>
-				<button id="searchButton" on:click={toggleSearch}>
+				<button id="searchButton" on:click={openSearch}>
 					<Search color={'#FFFFFF'} width={'25px'} height={'25px'} />
 				</button>
 			</section>
