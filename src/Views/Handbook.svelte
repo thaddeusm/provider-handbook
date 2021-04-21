@@ -79,7 +79,7 @@
 
 		let finalText;
 
-		if (isActive && textWithHighlights.search(search_query_value) !== -1) {
+		if (isActive && textWithHighlights.search(query) !== -1) {
 			finalText = `<${element} class="active-section">${textWithHighlights}</${element}>`;
 		} else {
 			finalText = `<${element}>${textWithHighlights}</${element}>`;
