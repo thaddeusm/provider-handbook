@@ -44,14 +44,14 @@
 {#if showVideo}
 	<PreviewModal allowClose={true} background={'none'} on:close={() => {showVideo = false}}>
 		<div slot="body" class="modal-body">
-			<!-- <section class="{videoLoading ? 'placeholder' : 'video-container'}">
-				<iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen on:load={handleLoad}></iframe>
-			</section> -->
-			<video 
-				controls
-				src="https://res.cloudinary.com/dhomo4ksd/video/upload/v1600369229/Writing%20Toolkit%20Tutorials/What%20is%20a%20writing%20project.mp4"
-			>		
-			</video>
+			<section class="{videoLoading ? 'placeholder' : 'video-container'}">
+				<!-- <iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen on:load={handleLoad}></iframe> -->
+				<video on:loadeddata={handleLoad} 
+					controls
+					src="https://res.cloudinary.com/dhomo4ksd/video/upload/v1600369229/Writing%20Toolkit%20Tutorials/What%20is%20a%20writing%20project.mp4"
+				>		
+				</video>
+			</section>
 		</div>
 		<!-- <div slot="footer" class="modal-footer">
 			<div class="actions">
@@ -112,13 +112,14 @@
 
 	.video-container {
 		text-align: center;
-		padding: 10px 0;
+		background: var(--black);
 	}
 
 	.placeholder {
-		background: var(--gray);
-		max-width: 560px;
-		padding: 10px 0;
+		background: var(--black);
+		width: 100%;
+		height: 100%;
+		max-width: 1150px;
 		margin: 0 auto;
 	}
 
