@@ -79,7 +79,7 @@
 
 		let finalText;
 
-		if (isActive && textWithHighlights.search(query) !== -1) {
+		if (isActive && text.search(query) !== -1) {
 			finalText = `<${element} class="active-section">${textWithHighlights}</${element}>`;
 		} else {
 			finalText = `<${element}>${textWithHighlights}</${element}>`;
@@ -169,9 +169,9 @@
  					<ol>
  						{#each section.content as item}
  							{#if $activeResult.section == section.section.split(' ').join('')}
-		 						{@html textWithMarkup('li', item, section.section, true, $navigatingResults)}
+		 						{@html textWithMarkup('li', item, true, $navigatingResults)}
 		 					{:else}
-								{@html textWithMarkup('li', item, section.section, false, $navigatingResults)}
+								{@html textWithMarkup('li', item, false, $navigatingResults)}
 		 					{/if}
  						{/each}
  					</ol>
@@ -181,9 +181,9 @@
  					<Icon title={section.title} />
  				{:else}
  					{#if $activeResult.section == section.section.split(' ').join('')}
- 						{@html textWithMarkup('p', section.content, section.section, true, $navigatingResults)}
+ 						{@html textWithMarkup('p', section.text, section.section, true, $navigatingResults)}
  					{:else}
-						{@html textWithMarkup('p', section.content, section.section, false, $navigatingResults)}	
+						{@html textWithMarkup('p', section.text, section.section, false, $navigatingResults)}	
  					{/if}
  				{/if}
  			{/each}
