@@ -161,7 +161,8 @@
 		animation-name: pulse;
 		animation-direction: alternate;
 		animation-duration: .5s;
-		animation-iteration-count: 4;
+		animation-iteration-count: 2;
 		animation-timing-function: ease;
+		z-index: 0;
 	}
 </style>
