@@ -192,6 +192,7 @@
 		grid-template-rows: 1fr;
 		grid-template-areas: 
 			"primaryList";
+		z-index: 100;
 	}
 
 	.primary-list {
