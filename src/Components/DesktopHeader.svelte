@@ -81,10 +81,9 @@
 
 	.link-navigation-area {
 		grid-area: navigationArea;
-		text-align: right;
 		display: grid;
 		align-items: center;
-		grid-template-columns: 90% 2% 8%;
+		grid-template-columns: 1fr 10px 85px;
 		grid-template-areas: "linkList . search";
 	}
 
@@ -94,6 +93,7 @@
 
 	ul {
 		grid-area: linkList;
+		text-align: right;
 	}
 
 	li {
@@ -111,6 +111,7 @@
 
 	#searchButton {
 		display: block;
+		text-align: center!important;
 		grid-area: search;
 	}
 </style>
