@@ -250,11 +250,11 @@
 		}
 
 		:global(.tooltip) {
-			height: 30%;
+			height: 40%;
 		}
 
 		:global(.tooltip)::before {
-			height: 70%;
+			height: 60%;
 		}
 
 		:global(.tooltip-body) {
@@ -314,11 +314,11 @@
 		}
 
 		:global(.tooltip) {
-			height: 23%;
+			height: 25%;
 		}
 
 		:global(.tooltip)::before {
-			height: 77%;
+			height: 75%;
 		}
 
 		:global(.tooltip-body) {
