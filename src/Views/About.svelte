@@ -115,6 +115,13 @@
 
 	.video-button-area {
 		text-align: center;
+		background: var(--gray);
+		width: 320px;
+		height: 165px;
+		margin: 0 auto;
+		border-radius: var(--radius);
+		display: grid;
+		align-items: center;
 	}
 
 	.video-container {
