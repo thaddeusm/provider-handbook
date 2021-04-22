@@ -79,8 +79,8 @@
 										{#each handbookSection as section, j}
 											{#if section.style.includes('heading')}
 												<li class={section.style.includes('subheading') ? 'subheading' : ''}>
-													<a on:click={() => {navigate(section.content.split(' ').join(''))}}>
-														{section.content}
+													<a on:click={() => {navigate(section.text.split(' ').join(''))}}>
+														{section.text}
 													</a>
 												</li>
 											{/if}
@@ -89,8 +89,8 @@
 								</ul>
 							{/if}
 						</li>
-						<li><a href="/documents">documents</a></li>
-						<li><a href="/help">help</a></li>
+						<!-- <li><a href="/documents">documents</a></li>
+						<li><a href="/help">help</a></li> -->
 					</ul>
 				</div>
 			</HamburgerMenu>

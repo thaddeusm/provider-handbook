@@ -46,6 +46,7 @@
 
 		.modal {
 			height: 90%;
+			width: 100%;
 			grid-template-rows: 65% 35%;
 		}
 	}
@@ -63,7 +64,7 @@
 		.modal {
 			height: 90%;
 			width: 100%;
-			grid-template-rows: 75% 25%;
+			grid-template-rows: 1fr auto;
 		}
 	}
 

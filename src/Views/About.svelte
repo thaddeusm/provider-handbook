@@ -26,12 +26,12 @@
 
 <div class="container">
 	<section class="video-button-area">
-		<button on:click={() => {showVideo = true}}>
+		<button on:click={() => {showVideo = true}} class="animated">
 			<Play width={'5rem'} height={'5rem'} />
 		</button>
 	</section>
 	<p>
-		a student-centered program that provides English language skills to underserved youth worldwide
+		<span class="touch-message">Touch</span><span class="click-message">Click</span> the icon above to learn about this new presentation of the provider handbook.
 	</p>
 	<section class="action">
 		<a class="action-button" href="/handbook">view handbook</a>
@@ -44,15 +44,15 @@
 {#if showVideo}
 	<PreviewModal allowClose={true} background={'none'} on:close={() => {showVideo = false}}>
 		<div slot="body" class="modal-body">
-			<section class="{videoLoading ? 'placeholder' : 'video-container'}">
-				<!-- <iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen on:load={handleLoad}></iframe> -->
-				<video 
-					on:loadeddata={handleLoad} 
-					controls
-					src="https://res.cloudinary.com/dhomo4ksd/video/upload/v1600369229/Writing%20Toolkit%20Tutorials/What%20is%20a%20writing%20project.mp4"
-				>		
-				</video>
-			</section>
+			<!-- <section class="{videoLoading ? 'placeholder' : 'video-container'}">
+				<iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen on:load={handleLoad}></iframe>
+			</section> -->
+			<video
+				preload
+				controls
+				src="https://res.cloudinary.com/dhomo4ksd/video/upload/v1600369229/Writing%20Toolkit%20Tutorials/What%20is%20a%20writing%20project.mp4"
+			>		
+			</video>
 		</div>
 		<!-- <div slot="footer" class="modal-footer">
 			<div class="actions">
@@ -63,6 +63,20 @@
 {/if}
 
 <style>
+	/* touch devices */
+	@media (pointer: coarse), (hover: none) {
+		.click-message {
+			display: none;
+		}
+	}
+
+	/* devices with a mouse */
+	@media (hover: hover) {
+		.touch-message {
+			display: none;
+		}
+	}
+
 	@media screen and (max-width: 450px) {
 		.container {
 			grid-template-rows: 250px 120px auto auto;
@@ -93,9 +107,9 @@
 
 	p {
 		text-align: center;
-		max-width: 500px;
+		max-width: 450px;
 		margin: 0 auto;
-		padding: 0 .5rem;
+		padding: 0 1rem;
 		align-self: flex-start;
 	}
 
@@ -111,7 +125,7 @@
 	.placeholder {
 		background: var(--black);
 		width: 100%;
-		max-width: 1150px;
+		max-width: 800px;
 		margin: 0 auto;
 	}
 
@@ -121,7 +135,7 @@
 		height: auto;
 		margin: 0 auto;
 		display: block;
-		background: var(--gray);
+		background: var(--black);
 	}
 
 	video::-webkit-media-controls-fullscreen-button {
@@ -132,5 +146,22 @@
 		display: block;
 		max-width: 170px;
 		margin: 0 auto;
+	}
+
+	@keyframes pulse {
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(1.1);
+		}
+	}
+
+	.animated {
+		animation-name: pulse;
+		animation-direction: alternate;
+		animation-duration: .5s;
+		animation-iteration-count: 4;
+		animation-timing-function: ease;
 	}
 </style>

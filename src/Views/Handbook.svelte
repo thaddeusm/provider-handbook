@@ -125,9 +125,9 @@
 					{#if section.style.includes('heading')}
 						<li class={section.style.includes('subheading') ? 'subheading' : ''}>
 							<a 
-								class={activeId == section.content.split(' ').join('') ? 'active': ''}
-								on:click={() => {handleJump(section.content.split(' ').join(''))}}>
-								{section.content}
+								class={activeId == section.text.split(' ').join('') ? 'active': ''}
+								on:click={() => {handleJump(section.text.split(' ').join(''))}}>
+								{section.text}
 							</a>
 						</li>
 					{/if}
@@ -139,13 +139,13 @@
 		{#each Handbook.sections as handbookSection}
  			{#each handbookSection as section}
  				{#if section.style == "heading"}
- 					<section id="{section.content.split(' ').join('')}">
+ 					<section id="{section.text.split(' ').join('')}">
  						<h2>
- 							{section.content}
+ 							{section.text}
  						</h2>
  					</section>
  				{:else if section.style == "icon_subheading"}
- 					<span id="{section.content.split(' ').join('')}"></span>
+ 					<span id="{section.text.split(' ').join('')}"></span>
  					<section class="icon-subheading">
  						<!-- <button 
  							on:click={() => {openPreview(section.preview_image.split(' ').join(''), section.link, section.interactive_description)}}
@@ -156,18 +156,18 @@
  							<InteractiveAvailable width={'2rem'} height={'2rem'} />
  						</a>
  						<h3>
- 							{section.content}
+ 							{section.text}
  						</h3>
  					</section>
  				{:else if section.style == "subheading"}
- 					<section id="{section.content.split(' ').join('')}">
+ 					<section id="{section.text.split(' ').join('')}">
  						<h3>
-	 						{section.content}
+	 						{section.text}
 	 					</h3>
  					</section>
  				{:else if section.style == "ordered_list"}
  					<ol>
- 						{#each section.content as item}
+ 						{#each section.text as item}
  							{#if $activeResult.section == section.section.split(' ').join('')}
 		 						{@html textWithMarkup('li', item, true, $navigatingResults)}
 		 					{:else}

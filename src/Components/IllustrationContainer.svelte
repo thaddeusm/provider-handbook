@@ -53,7 +53,7 @@
 		}
 
 		div {
-			margin: .5rem 0;
+			margin: 1rem 0;
 			/*background: var(--gray);*/
 			min-height: 200px;
 		}
