@@ -135,7 +135,7 @@
 		height: auto;
 		margin: 0 auto;
 		display: block;
-		background: var(--black);
+		background: var(--white);
 	}
 
 	video::-webkit-media-controls-fullscreen-button {
