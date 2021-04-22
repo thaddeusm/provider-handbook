@@ -50,7 +50,7 @@
 			<video
 				preload
 				controls
-				src="https://res.cloudinary.com/dhomo4ksd/video/upload/v1600369229/Writing%20Toolkit%20Tutorials/What%20is%20a%20writing%20project.mp4"
+				src="https://res.cloudinary.com/dhomo4ksd/video/upload/v1619109428/Access/Walkthrough_Video_nqlxg5.mp4"
 			>		
 			</video>
 		</div>
