@@ -1,5 +1,5 @@
 <script>
-	import { Route, router } from 'tinro';
+	import { Route, router, meta } from 'tinro';
 	router.mode.hash();
 	import { onMount } from 'svelte';
 
@@ -38,6 +38,12 @@
 			closeSearch();
 			clearResults();
 			resetSearchQuery();
+		} else {
+			if ($router.hash.length > 1) {
+				setTimeout(() => {
+					jumpToId($router.hash);
+				}, 500)
+			}
 		}
 	}
 

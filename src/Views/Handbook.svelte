@@ -126,7 +126,8 @@
 						<li class={section.style.includes('subheading') ? 'subheading' : ''}>
 							<a 
 								class={activeId == section.text.split(' ').join('') ? 'active': ''}
-								on:click={() => {handleJump(section.text.split(' ').join(''))}}>
+								on:click={() => {handleJump(section.text.split(' ').join(''))}}
+							>
 								{section.text}
 							</a>
 						</li>

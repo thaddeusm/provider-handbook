@@ -24,6 +24,8 @@
 	<script type="text/javascript">
 		// workaround to jump internally
 		function jumpToId(id) {
+			let locationBase = window.location.href.split('#')[0]
+			window.location.href = `${locationBase}#/handbook#${id}`;
 			document.getElementById(id).scrollIntoView();
 		}
 	</script>
