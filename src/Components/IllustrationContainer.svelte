@@ -1,10 +1,11 @@
 <script>
 	export let title;
+	export let altText;
 </script>
 
 <div>
-	<img class="large-illustration" src={`Illustrations/${title.split(' ').join('').replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Desktop.svg`} alt={title} />
-	<img class="small-illustration" src={`Illustrations/${title.split(' ').join('').replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Mobile.svg`} alt={title} />
+	<img class="large-illustration" src={`Illustrations/${title.split(' ').join('').replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Desktop.svg`} alt={altText} {title} />
+	<img class="small-illustration" src={`Illustrations/${title.split(' ').join('').replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Mobile.svg`} alt={altText} {title} />
 </div>
 
 <style>
@@ -67,5 +68,6 @@
 		display: block;
 		margin: 0 auto;
 		max-width: 100%;
+		color: #000000;
 	}
 </style>

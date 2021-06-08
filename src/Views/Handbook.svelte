@@ -26,7 +26,6 @@
 	import Footer from './../Components/Footer.svelte';
 
 	import Illustration from './../Components/IllustrationContainer.svelte';
-	import Icon from './../Components/IconContainer.svelte'
 
 	let activeId = "Introduction";
 	let showPreview = false;
@@ -145,21 +144,6 @@
  							{section.text}
  						</h2>
  					</section>
- 				{:else if section.style == "icon_subheading"}
- 					<span id="{section.text.split(' ').join('')}"></span>
- 					<section class="icon-subheading">
- 						<!-- <button 
- 							on:click={() => {openPreview(section.preview_image.split(' ').join(''), section.link, section.interactive_description)}}
- 						>
- 							<InteractiveAvailable width={'2rem'} height={'2rem'} />
- 						</button> -->
- 						<a href="{section.link}" target="_blank">
- 							<InteractiveAvailable width={'2rem'} height={'2rem'} />
- 						</a>
- 						<h3>
- 							{section.text}
- 						</h3>
- 					</section>
  				{:else if section.style == "subheading"}
  					<section id="{section.text.split(' ').join('')}">
  						<h3>
@@ -176,10 +160,20 @@
 		 					{/if}
  						{/each}
  					</ol>
+ 				{:else if section.style == "unordered_list"}
+ 					<ul>
+ 						{#each section.text as item}
+ 							{#if $activeResult.section == section.section.split(' ').join('')}
+		 						{@html textWithMarkup('li', item, true, $navigatingResults)}
+		 					{:else}
+								{@html textWithMarkup('li', item, false, $navigatingResults)}
+		 					{/if}
+ 						{/each}
+ 					</ul>
  				{:else if section.style == "graphic"}
- 					<Illustration title={section.title} />
- 				{:else if section.style == "icon"}
- 					<Icon title={section.title} />
+ 					<Illustration title={section.title} altText={section.text} />
+ 				{:else if section.style == "external_link"}
+ 					<p>Learn more: <a class="external-link" href="{section.url}" target="_blank">{section.text}</a></p>
  				{:else}
  					{#if $activeResult.section == section.section.split(' ').join('')}
  						{@html textWithMarkup('p', section.text, section.section, true, $navigatingResults)}
@@ -460,7 +454,7 @@
 		grid-area: handbook;
 	}
 
-	ol {
+	ol, ul {
 		list-style-position: inside;
 		margin-bottom: 1rem;
 	}
@@ -470,6 +464,18 @@
 	}
 
 	:global(ol li) {
+		margin: 1rem 0;
+		font-size: 16px;
+		line-height: 1.5;
+		color: var(--black);
+		font-family: "Montserrat";
+	}
+
+	:global(ul li):first-child {
+		margin-top: -.5rem;
+	}
+
+	:global(ul li) {
 		margin: 1rem 0;
 		font-size: 16px;
 		line-height: 1.5;
@@ -495,8 +501,7 @@
 	}
 
 	aside ul {
-		/*position: fixed;
-		top: 3rem;*/
+		list-style: none;
 	}
 
 	aside ul li {
@@ -585,5 +590,10 @@
 	  height: 300px; 
 	  visibility: hidden; 
 	  pointer-events: none;
+	}
+
+	.external-link {
+		font-size: 16px;
+		border-bottom: 3px solid var(--brand-light);
 	}
 </style>

@@ -14,12 +14,12 @@
 			},
 			{
 				"style": "paragraph", 
-				"text": "The goal of this handbook is to give an overview of the Access program, detail the process of applying to host an Access program, and to serve as a guide that highlights important program policies and resources available to Access providers and teachers. The policies and procedures of the Access program are updated each year, so please note that this handbook will be updated annually. Please ensure you consult the most updated version of the handbook.",
+				"text": "The goal of this handbook is to give an overview of the Access Program, detail the process of applying to host an Access Program, and to serve as a guide that highlights important program policies and resources available to Access providers and teachers. The policies and procedures of the Access Program will be updated in this handbook on an as needed basis and providers will be notified of major changes.",
 				"section": "Introduction"
 			},
 			{
 				"style": "paragraph", 
-				"text": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer/U.S. Embassy point of contact.",
+				"text": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer (RELO)/U.S. Embassy point of contact and/or email accessprogram@state.gov. ",
 				"section": "Introduction"
 			},
 			{
@@ -29,12 +29,12 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "This handbook is structured into three main sections so providers can quickly find the information they need: Before: Pre-Program Launch Information and Activities, During: Program Implementation Information and Activities, and After: Program Close-Out.",
+				"text": "This handbook is structured into three main sections so providers can quickly find the information they need: Before: Pre-Program Launch Information and Activities, During: Program Implementation Information and Activities, and After: Program Close-Out. ",
 				"section": "How can I use this handbook?"
 			},
 			{
 				"style": "paragraph",
-				"text": "This handbook includes avatars to represent administrators, teachers, and students in the Access Program.",
+				"text": "In addition to giving important program information, this handbook features examples to help readers understand how the Access program works from three points of view: ",
 				"section": "How can I use this handbook?"
 			},
 			{
@@ -45,107 +45,206 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "Further, this handbook will link readers to online modules that provide more in-depth learning on specific topics. When you see the icon below in the handbook you can click it to find more information about that topic.",
+				"text": "Further, this handbook will link readers to short tutorials that provide more in-depth learning on specific topics. Links to interactive tutorials will be marked by underlining and a short description of what the interactive aims to help the provider better understand. Throughout the handbook, glossary terms will be underlined in the text. Users can click or touch these words to see a quick definition.",
 				"section": "How can I use this handbook?"
 			},
 			{
-				"style": "icon",
-				"title": "Interactive Available",
-				"section": "How can I use this handbook?",
-				"text": "How can I use this handbook?"
-			},
-			{
-				"style": "icon_subheading",
+				"style": "subheading",
 				"text": "What is Access?",
-				"link": "https://rise.articulate.com/share/2MC9w1ZBjEU07mtfZIlRY52FzaygV2_F",
-				"interactive_description": "differentiate the Access Program from other English language learning programs",
 				"section": "What is Access?"
 			},
 			{
 				"style": "paragraph",
-				"text": "Access is a student-centered program that provides English language skills to underserved students (primarily 13-20 years old) worldwide through extracurricular classes and activities. Access provides participants with a foundation of English language, leadership and professional skills, and exposure to U.S. culture and democratic values that may lead to better jobs and educational prospects, including future exchanges and study in the United States. The global Access Program has provided scholarships to approximately 200,000 students in over 80 countries since its inception in 2004.",
+				"text": "Access is a student-centered program sponsored by the U.S. Department of State and U.S. Embassies that provides English language skills to underserved students (primarily 13-20 years old) worldwide through extracurricular classes and activities. Access provides participants with a foundation of English language, leadership and professional skills, and exposure to U.S. culture and democratic values that may lead to better jobs and educational prospects, including future exchanges and study in the United States. The global Access Program has provided scholarships to approximately 200,000 students in over 80 countries since its inception in 2004.",
 				"section": "What is Access?"
-			}
-		],
-		[
-			{
-				"style": "heading",
-				"text": "Before: Pre-Program Launch Information and Activities",
-				"section": "Before: Pre-Program Launch Information and Activities"
-			}
-		],
-		[
-			{
-				"style": "icon_subheading",
-				"text": "Enhancement Activities",
-				"link": "https://rise.articulate.com/share/mQAR905yySdtrKam7OrThTGkTX2TfUDu",
-				"interactive_description": "evaluate the effectiveness of sample enhancement activities",
-				"section": "Enhancement Activities"
 			},
 			{
-				"style": "paragraph", 
-				"text": "What: Enhancement Activities (EAs) are mandatory special educational events that happen outside of students’ regular Access classes throughout the duration of the program. EAs are interactive opportunities for students to enhance their English language skills and personal skills.",
-				"section": "Enhancement Activities"
+				"style": "external_link",
+				"url": "https://rise.articulate.com/share/2MC9w1ZBjEU07mtfZIlRY52FzaygV2_F",
+				"text": "What are the major features of the Access Program?",
+				"section": "What is Access?"
 			},
 			{
-				"style": "paragraph", 
-				"text": "There are four main topics for Enhancement Activities:",
-				"section": "Enhancement Activities"
+				"style": "subheading",
+				"text": "Access Goals and Objectives",
+				"section": "Access Goals and Objectives"
+			},
+			{
+				"style": "paragraph",
+				"text": "The goal of the Access Program is to provide participants with improved English skills that may lead to better jobs and educational prospects, including future exchanges and study in the United States.",
+				"section": "Access Goals and Objectives"
+			},
+			{
+				"style": "paragraph",
+				"text": "The objectives of the Access Program are to equip students with effective English language, communication, and critical thinking skills through meaningful interaction, cooperative and student-centered learning strategies, interest and age-appropriate activities, and real-life application.",
+				"section": "Access Goals and Objectives"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access students will",
+				"section": "Access Goals and Objectives"
 			},
 			{
 				"style": "ordered_list",
 				"text": [
-					"U.S. Culture and Democractic Values",
-					"Personal Development",
-					"Service Learning",
-					"Digital Literacy Skills"
+					"Be given a foundation of English language skills - Equipping students with English language skills can increase their competitiveness in the job market, allow them to expand their network, build people-to-people connections, and make students more competitive for future U.S. Embassy exchanges.",
+					"Gain an appreciation for U.S. culture and democratic values - A key element of the Access Program is to familiarize students with important features of U.S. culture and values to encourage mutual understanding between the U.S. and the host country. Students are encouraged to develop respect for and interest in other cultures, customs, and beliefs. Providers are encouraged to thoughtfully design their curriculum to integrate the following topics: global citizenship, critical thinking, human rights, U.S. democracy and government, U.S. civil society, diversity and tolerance, U.S. History, U.S. education system, U.S. family and relationship values, U.S. and global gender issues, climate and the environment, U.S. and global health, and STEM.",
+					"Develop digital literacy skills - In addition to learning general computer skills, using and understanding a wider variety of informational technologies has become essential to a young person’s personal and academic future. Providing Access Program participants with these tools for an ever-changing digital world has become an objective for the Access Program. This will give program participants the ability to find, evaluate and critically analyze online information for its trustworthiness and accuracy, give students opportunities to connect and collaborate with others in and outside their Access classes, and be able to create and share content. Digital literacy activities can also be integrated into the curriculum so that the program’s learners gain the appropriate skills for helping to build a positive online identity, understand the features of a safe and secure online identity, and contribute to the global online community.",
+					"Participate in personal development activities - The Access Program seeks to foster students’ personal development by building balanced intellectual and emotional capabilities to better prepare them for future academic and professional endeavors. Students should be introduced to topics such as: career development and employable skills, critical thinking, self-confidence, media literacy, 21st century and soft skills, leadership skills, emotional literacy and self-awareness, pursuing higher education, and applying for U.S. government-sponsored exchange programs. ",
+					"Take part in Service Learning activities - Service learning is a teaching approach that combines specific learning objectives with service to the community to provide a learning experience in which students develop new skills and a deeper understanding of their community. Students must be actively involved in the service learning project planning process and should lead the assessment of community needs, design of the project to address the community need, and reflect before, during and after the service experience. In addition, service activities should be designed to meet specific learning objectives as well as empowering the students with the skills of researching, planning, implementing and reflecting. It is important for students to use English as much as possible while completing their service learning project."
 				],
-				"section": "Enhancement Activities"
+				"section": "Access Goals and Objectives"
 			},
 			{
 				"style": "paragraph",
-				"text": "Who: Access teachers (in consultation with the U.S. Embassy) plan and facilitate enhancement activities for Access students. Administrators support both students and teachers. Don’t forget to invite U.S. Embassy representatives and/or your RELO in advance!",
-				"section": "Enhancement Activities"
+				"text": "The service learning component of the Access Program increases the students’ awareness of issues facing their respective communities, while also giving them an understanding of the ways they can positively contribute to civil society.",
+				"section": "Access Goals and Objectives"
+			},
+			{
+				"style": "external_link",
+				"url": "",
+				"text": "What is Service Learning?",
+				"section": "Access Goals and Objectives"
+			},
+			{
+				"style": "subheading",
+				"text": "Eligibility to Host an Access Program",
+				"section": "Eligibility to Host an Access Program"
 			},
 			{
 				"style": "paragraph",
-				"text": "Where: EAs can occur within students’ regular Access classroom or they can occur outside of the classroom (in the program’s host city or nearby city/area).",
-				"section": "Enhancement Activities"
+				"text": "If your school, educational institution, or organization (for-profit organizations are not eligible) is interested in hosting an Access Program, please review the questions below to verify your eligibility. If you answered “No” to any of the questions, please consult with your U.S. Embassy contact or Regional English Language Officer (RELO) before continuing the process.",
+				"section": "Eligibility to Host an Access Program"
 			},
 			{
 				"style": "paragraph",
-				"text": "When: EAs must occur at least once per semester or quarter.",
-				"section": "Enhancement Activities"
+				"text": "Can your educational institution or organization…",
+				"section": "Eligibility to Host an Access Program"
 			},
 			{
-				"style": "paragraph",
-				"text": "Why: EAs are often the most memorable experiences for Access students as they usually occur outside the classroom and encourage the development of community. EAs should be carefully designed to advance the students’ English skills AND reinforce a topic by creating a lasting impression and memory for students.",
-				"section": "Enhancement Activities"
+				"style": "ordered_list",
+				"text": [
+					"...legally operate within the country where the proposed Access Program will be implemented? (\"Legally operate\" means the Applicant Organization is incorporated, registered, or licensed as a legal entity in the country where the Access Program will be implemented)",
+					"...open a bank account that accepts transfers in U.S. Dollars?",
+					"...follow a reporting schedule and submit program and financial reports on time?",
+					"...fulfill the mandatory minimum of 360 program hours over 20-24 months?",
+					"...acquire a room or space to accommodate the class?",
+					"...retain teachers, administration, and students that can devote extended periods of time (6-8 hours) for Enhancement and/or Intensive Sessions that can occur on weekends?",
+					"...acquire and use Microsoft Excel 2010 (or newer) for reporting purposes?"
+				],
+				"section": "Eligibility to Host an Access Program"
+			},
+			{
+				"style": "subheading",
+				"text": "Introduction to Access Stakeholders",
+				"section": "Introduction to Access Stakeholders"
 			},
 			{
 				"style": "graphic",
-				"title": "Enhancement Activity",
-				"section": "Enhancement Activities",
-				"text": "An example student describes why they enjoyed an enhancement activity."
-			}
-		],
-		[
-			{
-				"style": "icon_subheading",
-				"text": "Recruiting Teachers",
-				"link": "https://rise.articulate.com/share/bsq0lkbc-IzQT2u4tRIafgA32G8_C-3E",
-				"interactive_description": "contrast the qualifications for an Access teacher with those of a language instructor and identify effective interview questions for recognizing a potential Access teacher",
-				"section": "Recruiting Teachers"
+				"title": "Stakeholders",
+				"section": "Introduction to Access Stakeholders",
+				"text": "Access Program stakeholders include: the Bureau of Educational and Cultural Affairs, FHI 360, a Regional English Language Officer, U.S. Embassy or Consulate, an Access provider, and Access students."
 			},
 			{
 				"style": "paragraph",
-				"text": "Providers must consult with the U.S. Embassy when developing teacher recruitment plans and selecting teachers. It is recommended that the Access teacher position(s) should be advertised outside of the institution and all qualified teachers be encouraged to apply. If Access teachers are hired from within the Access provider institution, please justify this choice in the program proposal.",
-				"section": "Recruiting Teachers"
+				"text": "Bureau of Educational and Cultural Affairs (ECA)",
+				"section": "Introduction to Access Stakeholders"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Allocate program funds by region and country",
+					"Create program guidelines and policies",
+					"Approve the selection of Access providers",
+					"Authorize disbursements and reporting schedules for providers"
+				],
+				"section": "Introduction to Access Stakeholders"
 			},
 			{
 				"style": "paragraph",
-				"text": "Access teachers are required to use a student-centered and communicative approach to teaching, and the interview can be crucial to determining if a teacher has the skill set required for the Access program. It is recommended that the provider use multiple methods (teaching demonstration, lesson plan, portfolio, etc.) and a standardized rubric to evaluate potential Access teachers.",
-				"section": "Recruiting Teachers"
+				"text": "FHI 360",
+				"section": "Introduction to Access Stakeholders"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Pay out funds to Access providers",
+					"Collaborate with ECA and RELO to evaluate trending issues and identify solutions",
+					"Create and maintain online systems to track the lifecycle of programs",
+					"Collect, review, and provide feedback on official program documentation"
+				],
+				"section": "Introduction to Access Stakeholders"
+			},
+			{
+				"style": "paragraph",
+				"text": "Regional English Language Officer (RELO)",
+				"section": "Introduction to Access Stakeholders"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Provide guidance on program preparation, design, and implementation",
+					"Communicate with ECA, FHI 360, U.S. Embassy/Consulate, and Access providers to resolve issues",
+					"Review and certify proposals",
+					"Visit and monitor Access Program sites"
+				],
+				"section": "Introduction to Access Stakeholders"
+			},
+			{
+				"style": "paragraph",
+				"text": "U.S. Embassy/Consulate",
+				"section": "Introduction to Access Stakeholders"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Collaborate with RELO to select Access providers",
+					"Serve as the primary point of contact (POC) between FHI 360 and the Access providers",
+					"Monitor and evaluate the impact of the program to meet mission strategic goals",
+					"Review and approve official program documentation"
+				],
+				"section": "Introduction to Access Stakeholders"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access Provider",
+				"section": "Introduction to Access Stakeholders"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Plan, prepare, and implement program while following U.S. Embassy guidelines",
+					"Complete and submit proposal, programmatic, and financial reports",
+					"Engage students and organize After School Instruction classes, Enhancement Activities, and (if applicable) Intensive Sessions",
+					"Inform U.S. Embassy and RELO about significant program developments and highlights"
+				],
+				"section": "Introduction to Access Stakeholders"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access Students",
+				"section": "Introduction to Access Stakeholders"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Gain a foundation of English language skills by actively participating in Access classes",
+					"Gain an understanding and appreciation of U.S. culture and democratic values",
+					"Engage in Enhancement Activities and Service Learning Activities",
+					"Develop knowledge and skills through Access classes that can contribute to the socio-economic development of their countries"
+				],
+				"section": "Introduction to Access Stakeholders"
+			},
+			{
+				"style": "subheading",
+				"text": "Lifecycle of an Access Program",
+				"section": "Lifecycle of an Access Program"
+			},
+			{
+				"style": "graphic",
+				"title": "Program Lifecycle",
+				"section": "Lifecycle of an Access Program",
+				"text": "The lifecycle of an Access program includes: a call for proposals, proposal submission, proposal review and revision, proposal approval, program implementation, and program close-out."
 			}
 		]
 	],
