@@ -19,34 +19,35 @@
 			},
 			{
 				"style": "paragraph", 
-				"text": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer (RELO)/U.S. Embassy point of contact and/or email accessprogram@state.gov. ",
+				"text": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer (RELO)/U.S. Embassy point of contact and/or email accessprogram@state.gov.",
+				"markup": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer (RELO)/U.S. Embassy point of contact and/or email <a href=\"mailto:accessprogram@state.gov\">accessprogram@state.gov</a>.",
 				"section": "Introduction"
 			},
 			{
 				"style": "subheading",
-				"text": "How can I use this handbook?",
-				"section": "How can I use this handbook?"
+				"text": "How to Use This Handbook",
+				"section": "How to Use This Handbook"
 			},
 			{
 				"style": "paragraph",
 				"text": "This handbook is structured into three main sections so providers can quickly find the information they need: Before: Pre-Program Launch Information and Activities, During: Program Implementation Information and Activities, and After: Program Close-Out. ",
-				"section": "How can I use this handbook?"
+				"section": "How to Use This Handbook"
 			},
 			{
 				"style": "paragraph",
 				"text": "In addition to giving important program information, this handbook features examples to help readers understand how the Access program works from three points of view: ",
-				"section": "How can I use this handbook?"
+				"section": "How to Use This Handbook"
 			},
 			{
 				"style": "graphic",
 				"title": "Handbook Characters",
-				"section": "How can I use this handbook?",
+				"section": "How to Use This Handbook",
 				"text": "This handbook includes avatars to represent administrators, teachers, and students in the Access Program."
 			},
 			{
 				"style": "paragraph",
 				"text": "Further, this handbook will link readers to short tutorials that provide more in-depth learning on specific topics. Links to interactive tutorials will be marked by underlining and a short description of what the interactive aims to help the provider better understand. Throughout the handbook, glossary terms will be underlined in the text. Users can click or touch these words to see a quick definition.",
-				"section": "How can I use this handbook?"
+				"section": "How to Use This Handbook"
 			},
 			{
 				"style": "subheading",

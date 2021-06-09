@@ -101,7 +101,7 @@
 		margin: 0 20px;
 	}
 
-	li a {
+	a {
 		font-size: 21px;
 		padding: 0;
 		color: var(--white);

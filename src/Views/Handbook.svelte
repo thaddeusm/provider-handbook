@@ -124,7 +124,7 @@
 					{#if section.style.includes('heading')}
 						<li class={section.style.includes('subheading') ? 'subheading' : ''}>
 							<a 
-								class={activeId == section.text.split(' ').join('') ? 'active': ''}
+								class={activeId == section.text.split(' ').join('') ? 'active': 'inactive'}
 								on:click={() => {handleJump(section.text.split(' ').join(''))}}
 							>
 								{section.text}
@@ -177,13 +177,17 @@
  						<span class="external-link-icon">
  							<InteractiveAvailable width={'2rem'} height={'2rem'} />
  						</span>
- 						<a class="external-link" href="{section.url}" target="_blank">learn more: {section.text}</a>
+ 						<a class="external-link" href="{section.url}" target="_blank">{section.text}</a>
  					</p>
  				{:else}
  					{#if $activeResult.section == section.section.split(' ').join('')}
  						{@html textWithMarkup('p', section.text, section.section, true, $navigatingResults)}
  					{:else}
-						{@html textWithMarkup('p', section.text, section.section, false, $navigatingResults)}	
+						{@html 
+							section.markup ? 
+								textWithMarkup('p', section.markup, section.section, false, $navigatingResults) :
+								textWithMarkup('p', section.text, section.section, false, $navigatingResults)
+						}
  					{/if}
  				{/if}
  			{/each}
@@ -460,6 +464,10 @@
 		color: var(--white);
 		font-size: 16px;
 		cursor: pointer;
+	}
+
+	.inactive {
+		border-bottom: 3px solid var(--brand-dark);
 	}
 
 	footer {
