@@ -39,8 +39,6 @@
 
 		div {
 			margin: 1rem 0;
-			/*background: var(--gray);*/
-			/*height: 350px;*/
 		}
 	}
 
@@ -55,8 +53,10 @@
 
 		div {
 			margin: 1rem 0;
-			/*background: var(--gray);*/
-			min-height: 200px;
+		}
+
+		img {
+			width: 100%;
 		}
 	}
 

@@ -46,7 +46,7 @@
 		div {
 			grid-column-gap: 10px;
 			display: grid;
-			grid-template-columns: 25rem 1fr 25rem;
+			grid-template-columns: .5fr 1fr .5fr;
 			grid-template-areas: "left center right";
 			margin-top: 4rem;
 			height: 100px;

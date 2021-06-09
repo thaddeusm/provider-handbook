@@ -173,7 +173,12 @@
  				{:else if section.style == "graphic"}
  					<Illustration title={section.title} altText={section.text} />
  				{:else if section.style == "external_link"}
- 					<p>Learn more: <a class="external-link" href="{section.url}" target="_blank">{section.text}</a></p>
+ 					<p class="external-link-block">
+ 						<span class="external-link-icon">
+ 							<InteractiveAvailable width={'2rem'} height={'2rem'} />
+ 						</span>
+ 						<a class="external-link" href="{section.url}" target="_blank">learn more: {section.text}</a>
+ 					</p>
  				{:else}
  					{#if $activeResult.section == section.section.split(' ').join('')}
  						{@html textWithMarkup('p', section.text, section.section, true, $navigatingResults)}
@@ -213,6 +218,9 @@
 	@media screen and (max-width: 450px) {
 		.container {
 			grid-template-columns: 0 1fr;
+			grid-template-areas: 
+				". handbook"
+				". footer";
 		}
 
 		#handbook {
@@ -221,23 +229,6 @@
 
 		aside {
 			display: none;
-		}
-
-		.icon-subheading {
-			grid-template-columns: 1fr 50px;
-			grid-template-areas: "subheading interactiveLinkButton";
-		}
-
-		.icon-subheading a {
-			text-align: left;
-		}
-
-		.large-preview-image {
-			display: none!important;
-		}
-
-		.small-preview-image {
-			height: 225px;
 		}
 
 		.handbook-content-list {
@@ -261,29 +252,12 @@
 		}
 	}
 
-	@media screen and (min-width: 451px) and (max-width: 800px) {
-		.large-preview-image {
-			display: none!important;
-		}
-
-		.small-preview-image {
-			height: 450px;
-		}
-	}
-
-	@media screen and (min-width: 801px) and (max-width: 1100px) {
-		.large-preview-image {
-			width: 40%;
-		}
-
-		.small-preview-image {
-			display: none!important;
-		}
-	}
-
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.container {
 			grid-template-columns: 0 1fr;
+			grid-template-areas: 
+				". handbook"
+				". footer";
 		}
 
 		#handbook {
@@ -292,16 +266,6 @@
 
 		aside {
 			display: none;
-		}
-
-		.icon-subheading {
-			grid-template-columns: auto 1fr;
-			grid-column-gap: 30px;
-			grid-template-areas: "subheading interactiveLinkButton";
-		}
-
-		.icon-subheading a {
-			text-align: left;
 		}
 
 		.handbook-content-list {
@@ -323,34 +287,16 @@
 
 	@media screen and (min-width: 1101px) {
 		.container {
-			grid-template-columns: 26rem 1fr;
-			margin-top: -15px;
+			grid-template-columns: 410px auto;
+			grid-template-areas: 
+				". handbook"
+				". footer";
+			margin-top: -50px;
 		}
 
 		#handbook {
-			padding: 0 6rem;
-		}
-
-		.icon-subheading {
-			grid-template-columns: auto 1fr;
-			grid-column-gap: 30px;
-			grid-template-areas: "subheading interactiveLinkButton";
-		}
-
-		.icon-subheading a {
-			text-align: left;
-		}
-
-		.small-preview-image {
-			display: none!important;
-		}
-
-		.large-preview-image {
-			width: 50%;
-		}
-
-		.handbook-content-list {
-			padding: 0 5rem;
+			max-width: 750px;
+			margin: 0 auto;
 		}
 	}
 
@@ -445,9 +391,6 @@
 		height: 100%;
 		display: grid;
 		grid-template-rows: 1fr 100px;
-		grid-template-areas: 
-			". handbook"
-			". footer";
 	}
 
 	#handbook {
@@ -490,14 +433,13 @@
 	aside {
 		background: var(--brand-dark);
 		position: fixed;
+		height: 100%;
+		margin-top: 10px;
 		top: 0;
-		padding-top: 10px;
-		width: 26rem;
-		padding-bottom: 65px;
+		width: 410px;
+		overflow: auto;
 		grid-area: links;
 		z-index: 1;
-		height: 100%;
-		overflow: auto;
 	}
 
 	aside ul {
@@ -506,7 +448,7 @@
 
 	aside ul li {
 		padding: 0 3rem;
-		margin: 1.3rem 0;
+		margin: 1rem 0;
 		line-height: 1.5;
 	}
 
@@ -520,39 +462,8 @@
 		cursor: pointer;
 	}
 
-	.icon-subheading {
-		margin-top: 30px;
-		display: grid;
-	}
-
-	.icon-subheading h3 {
-		margin-top: 0;
-		display: inline;
-		grid-area: subheading;
-	}
-
-	.icon-subheading a {
-		display: block;
-		grid-area: interactiveLinkButton;
-		margin-top: .5rem;
-	}
-
 	footer {
 		grid-area: footer;
-	}
-
-	.large-preview-image {
-		margin: 0 auto;
-		display: block;
-		box-shadow: var(--shadow);
-		border-radius: var(--radius);
-	}
-
-	.small-preview-image {
-		margin: 0 auto;
-		display: block;
-		box-shadow: var(--shadow);
-		border-radius: var(--radius);
 	}
 
 	.description {
@@ -592,8 +503,23 @@
 	  pointer-events: none;
 	}
 
+	.external-link-block {
+		display: grid;
+		grid-template-columns: 3rem auto 1fr;
+		grid-template-areas: "icon link .";
+		height: 50px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.external-link-icon {
+		grid-area: icon;
+	}
+
 	.external-link {
 		font-size: 16px;
 		border-bottom: 3px solid var(--brand-light);
+		grid-area: link;
+		margin-bottom: 15px;
 	}
 </style>
