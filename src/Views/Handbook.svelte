@@ -1,4 +1,5 @@
 <script>
+	import { router } from 'tinro';
 	import { onMount } from 'svelte';
 	import { navigatingResults, searchOpen, results, searchQuery, activeResult } from './../stores.js';
 
@@ -107,6 +108,10 @@
 		document.querySelectorAll('span[id]').forEach((section) => {
 			observer.observe(section);
 		});
+
+		if ($router.hash.length > 1) {
+			activeId = router.hash;
+		}
 	});
 </script>
 
