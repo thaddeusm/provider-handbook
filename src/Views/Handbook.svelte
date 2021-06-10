@@ -519,7 +519,10 @@
 
 	.external-link {
 		font-size: 16px;
-		border-bottom: 3px solid var(--brand-light);
+		text-decoration: underline;
+		text-decoration-color: var(--brand-light);
+		text-decoration-thickness: 3px;
+		text-decoration-skip-ink: none;
 		grid-area: link;
 		margin-bottom: 15px;
 	}
