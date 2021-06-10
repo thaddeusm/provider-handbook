@@ -20,7 +20,7 @@
 			{
 				"style": "paragraph", 
 				"text": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer (RELO)/U.S. Embassy point of contact and/or email accessprogram@state.gov.",
-				"markup": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer (RELO)/U.S. Embassy point of contact and/or email <a href=\"mailto:accessprogram@state.gov\">accessprogram@state.gov</a>.",
+				"markup": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer (RELO)/U.S. Embassy point of contact and/or email <a style=\"border-bottom: 3px solid #3470B7\" href=\"mailto:accessprogram@state.gov\">accessprogram@state.gov</a>.",
 				"section": "Introduction"
 			},
 			{
@@ -82,7 +82,7 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "Access students will",
+				"text": "Access students will:",
 				"section": "Access Goals and Objectives"
 			},
 			{
@@ -93,6 +93,13 @@
 					"Develop digital literacy skills - In addition to learning general computer skills, using and understanding a wider variety of informational technologies has become essential to a young person’s personal and academic future. Providing Access Program participants with these tools for an ever-changing digital world has become an objective for the Access Program. This will give program participants the ability to find, evaluate and critically analyze online information for its trustworthiness and accuracy, give students opportunities to connect and collaborate with others in and outside their Access classes, and be able to create and share content. Digital literacy activities can also be integrated into the curriculum so that the program’s learners gain the appropriate skills for helping to build a positive online identity, understand the features of a safe and secure online identity, and contribute to the global online community.",
 					"Participate in personal development activities - The Access Program seeks to foster students’ personal development by building balanced intellectual and emotional capabilities to better prepare them for future academic and professional endeavors. Students should be introduced to topics such as: career development and employable skills, critical thinking, self-confidence, media literacy, 21st century and soft skills, leadership skills, emotional literacy and self-awareness, pursuing higher education, and applying for U.S. government-sponsored exchange programs. ",
 					"Take part in Service Learning activities - Service learning is a teaching approach that combines specific learning objectives with service to the community to provide a learning experience in which students develop new skills and a deeper understanding of their community. Students must be actively involved in the service learning project planning process and should lead the assessment of community needs, design of the project to address the community need, and reflect before, during and after the service experience. In addition, service activities should be designed to meet specific learning objectives as well as empowering the students with the skills of researching, planning, implementing and reflecting. It is important for students to use English as much as possible while completing their service learning project."
+				],
+				"markup": [
+					"<strong>Be given a foundation of English language skills,</strong><br>Equipping students with English language skills can increase their competitiveness in the job market, allow them to expand their network, build people-to-people connections, and make students more competitive for future U.S. Embassy exchanges.",
+					"<strong>Gain an appreciation for U.S. culture and democratic values,</strong><br>A key element of the Access Program is to familiarize students with important features of U.S. culture and values to encourage mutual understanding between the U.S. and the host country. Students are encouraged to develop respect for and interest in other cultures, customs, and beliefs. Providers are encouraged to thoughtfully design their curriculum to integrate the following topics: global citizenship, critical thinking, human rights, U.S. democracy and government, U.S. civil society, diversity and tolerance, U.S. History, U.S. education system, U.S. family and relationship values, U.S. and global gender issues, climate and the environment, U.S. and global health, and STEM.",
+					"<strong>Develop digital literacy skills,</strong><br>In addition to learning general computer skills, using and understanding a wider variety of informational technologies has become essential to a young person’s personal and academic future. Providing Access Program participants with these tools for an ever-changing digital world has become an objective for the Access Program. This will give program participants the ability to find, evaluate and critically analyze online information for its trustworthiness and accuracy, give students opportunities to connect and collaborate with others in and outside their Access classes, and be able to create and share content. Digital literacy activities can also be integrated into the curriculum so that the program’s learners gain the appropriate skills for helping to build a positive online identity, understand the features of a safe and secure online identity, and contribute to the global online community.",
+					"<strong>Participate in personal development activities,</strong><br>The Access Program seeks to foster students’ personal development by building balanced intellectual and emotional capabilities to better prepare them for future academic and professional endeavors. Students should be introduced to topics such as: career development and employable skills, critical thinking, self-confidence, media literacy, 21st century and soft skills, leadership skills, emotional literacy and self-awareness, pursuing higher education, and applying for U.S. government-sponsored exchange programs. ",
+					"<strong>Take part in Service Learning activities,</strong><br>Service learning is a teaching approach that combines specific learning objectives with service to the community to provide a learning experience in which students develop new skills and a deeper understanding of their community. Students must be actively involved in the service learning project planning process and should lead the assessment of community needs, design of the project to address the community need, and reflect before, during and after the service experience. In addition, service activities should be designed to meet specific learning objectives as well as empowering the students with the skills of researching, planning, implementing and reflecting. It is important for students to use English as much as possible while completing their service learning project."
 				],
 				"section": "Access Goals and Objectives"
 			},
@@ -149,6 +156,7 @@
 			{
 				"style": "paragraph",
 				"text": "Bureau of Educational and Cultural Affairs (ECA)",
+				"markup": "<strong>Bureau of Educational and Cultural Affairs (ECA)</strong>",
 				"section": "Introduction to Access Stakeholders"
 			},
 			{
@@ -164,6 +172,7 @@
 			{
 				"style": "paragraph",
 				"text": "FHI 360",
+				"markup": "<strong>FHI 360</strong>",
 				"section": "Introduction to Access Stakeholders"
 			},
 			{
@@ -179,6 +188,7 @@
 			{
 				"style": "paragraph",
 				"text": "Regional English Language Officer (RELO)",
+				"markup": "<strong>Regional English Language Officer (RELO)</strong>",
 				"section": "Introduction to Access Stakeholders"
 			},
 			{
@@ -194,6 +204,7 @@
 			{
 				"style": "paragraph",
 				"text": "U.S. Embassy/Consulate",
+				"markup": "<strong>U.S. Embassy/Consulate</strong>",
 				"section": "Introduction to Access Stakeholders"
 			},
 			{
@@ -209,6 +220,7 @@
 			{
 				"style": "paragraph",
 				"text": "Access Provider",
+				"markup": "<strong>Access Provider</strong>",
 				"section": "Introduction to Access Stakeholders"
 			},
 			{
@@ -224,6 +236,7 @@
 			{
 				"style": "paragraph",
 				"text": "Access Students",
+				"markup": "<strong>Access Students</strong>",
 				"section": "Introduction to Access Stakeholders"
 			},
 			{
@@ -246,6 +259,18 @@
 				"title": "Program Lifecycle",
 				"section": "Lifecycle of an Access Program",
 				"text": "The lifecycle of an Access program includes: a call for proposals, proposal submission, proposal review and revision, proposal approval, program implementation, and program close-out."
+			}
+		],
+		[
+			{
+				"style": "heading",
+				"text": "Before: Pre-Program Launch Information and Activities",
+				"section": "Before: Pre-Program Launch Information and Activities"
+			},
+			{
+				"style": "subheading",
+				"text": "Planning a 2-Year Access Program",
+				"section": "Planning a 2-Year Access Program"
 			}
 		]
 	],

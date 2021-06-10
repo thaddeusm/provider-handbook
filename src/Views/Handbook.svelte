@@ -21,6 +21,7 @@
 	});
 
 	import Handbook from './../Docs/Handbook.json';
+	import HandbookDesktopToC from './../Components/HandbookDesktopToC.svelte';
 	import InteractiveAvailable from './../Graphics/Icons/InteractiveAvailable.svelte';
 	import PreviewModal from './../Components/PreviewModal.svelte';
 	import Footer from './../Components/Footer.svelte';
@@ -87,14 +88,6 @@
 		return finalText;
 	}
 
-	function handleJump(section) {
-		jumpToId(section);
-
-		setTimeout(() => {
-			activeId = section;
-		}, 20, section);
-	}
-
 	onMount(async () => {
 		const observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => {
@@ -118,22 +111,7 @@
 
 <div class="container">
 	<aside>
-		<ul>
-			{#each Handbook.sections as handbookSection, i}
-				{#each handbookSection as section, j}
-					{#if section.style.includes('heading')}
-						<li class={section.style.includes('subheading') ? 'subheading' : ''}>
-							<a 
-								class={activeId == section.text.split(' ').join('') ? 'active': 'inactive'}
-								on:click={() => {handleJump(section.text.split(' ').join(''))}}
-							>
-								{section.text}
-							</a>
-						</li>
-					{/if}
-				{/each}
-			{/each}
-		</ul>
+		<HandbookDesktopToC sections={Handbook.sections} {activeId} />
 	</aside>
 	<div id="handbook">
 		{#each Handbook.sections as handbookSection}
@@ -152,23 +130,43 @@
  					</section>
  				{:else if section.style == "ordered_list"}
  					<ol>
- 						{#each section.text as item}
- 							{#if $activeResult.section == section.section.split(' ').join('')}
-		 						{@html textWithMarkup('li', item, true, $navigatingResults)}
-		 					{:else}
-								{@html textWithMarkup('li', item, false, $navigatingResults)}
-		 					{/if}
- 						{/each}
+ 						{#if section.markup}
+ 							{#each section.markup as item}
+	 							{#if $activeResult.section == section.section.split(' ').join('')}
+			 						{@html textWithMarkup('li', item, true, $navigatingResults)}
+			 					{:else}
+									{@html textWithMarkup('li', item, false, $navigatingResults)}
+			 					{/if}
+	 						{/each}
+ 						{:else}
+	 						{#each section.text as item}
+	 							{#if $activeResult.section == section.section.split(' ').join('')}
+			 						{@html textWithMarkup('li', item, true, $navigatingResults)}
+			 					{:else}
+									{@html textWithMarkup('li', item, false, $navigatingResults)}
+			 					{/if}
+	 						{/each}
+	 					{/if}
  					</ol>
  				{:else if section.style == "unordered_list"}
  					<ul>
- 						{#each section.text as item}
- 							{#if $activeResult.section == section.section.split(' ').join('')}
-		 						{@html textWithMarkup('li', item, true, $navigatingResults)}
-		 					{:else}
-								{@html textWithMarkup('li', item, false, $navigatingResults)}
-		 					{/if}
- 						{/each}
+ 						{#if section.markup}
+ 							{#each section.markup as item}
+	 							{#if $activeResult.section == section.section.split(' ').join('')}
+			 						{@html textWithMarkup('li', item, true, $navigatingResults)}
+			 					{:else}
+									{@html textWithMarkup('li', item, false, $navigatingResults)}
+			 					{/if}
+	 						{/each}
+ 						{:else}
+	 						{#each section.text as item}
+	 							{#if $activeResult.section == section.section.split(' ').join('')}
+			 						{@html textWithMarkup('li', item, true, $navigatingResults)}
+			 					{:else}
+									{@html textWithMarkup('li', item, false, $navigatingResults)}
+			 					{/if}
+	 						{/each}
+	 					{/if}
  					</ul>
  				{:else if section.style == "graphic"}
  					<Illustration title={section.title} altText={section.text} />
@@ -181,7 +179,12 @@
  					</p>
  				{:else}
  					{#if $activeResult.section == section.section.split(' ').join('')}
- 						{@html textWithMarkup('p', section.text, section.section, true, $navigatingResults)}
+ 						{@html 
+ 							section.markup ? 
+ 								textWithMarkup('p', section.markup, section.section, true, $navigatingResults)
+ 									:
+ 								textWithMarkup('p', section.text, section.section, true, $navigatingResults)
+ 							}
  					{:else}
 						{@html 
 							section.markup ? 
@@ -299,7 +302,7 @@
 		}
 
 		#handbook {
-			max-width: 750px;
+			max-width: 725px;
 			margin: 0 auto;
 		}
 	}
@@ -403,7 +406,7 @@
 
 	ol, ul {
 		list-style-position: inside;
-		margin-bottom: 1rem;
+		margin: 1rem 0 3rem 0;
 	}
 
 	:global(ol li):first-child {
@@ -430,10 +433,6 @@
 		font-family: "Montserrat";
 	}
 
-	.subheading {
-		margin-left: 1rem;
-	}
-
 	aside {
 		background: var(--brand-dark);
 		position: fixed;
@@ -444,26 +443,6 @@
 		overflow: auto;
 		grid-area: links;
 		z-index: 1;
-	}
-
-	aside ul {
-		list-style: none;
-	}
-
-	aside ul li {
-		padding: 0 3rem;
-		margin: 1rem 0;
-		line-height: 1.5;
-	}
-
-	aside ul li:first-child {
-		margin-top: 13rem;
-	}
-
-	aside ul li a {
-		color: var(--white);
-		font-size: 16px;
-		cursor: pointer;
 	}
 
 	.inactive {
@@ -503,12 +482,12 @@
 	}
 
 	[id]::before { 
-	  display: inline-block; 
-	  content: " "; 
-	  margin-top: -300px; 
-	  height: 300px; 
-	  visibility: hidden; 
-	  pointer-events: none;
+		display: inline-block; 
+		content: " "; 
+		margin-top: -300px; 
+		height: 300px; 
+		visibility: hidden; 
+		pointer-events: none;
 	}
 
 	.external-link-block {
