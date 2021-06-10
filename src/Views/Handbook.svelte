@@ -23,6 +23,7 @@
 	import Handbook from './../Docs/Handbook.json';
 	import HandbookDesktopToC from './../Components/HandbookDesktopToC.svelte';
 	import InteractiveAvailable from './../Graphics/Icons/InteractiveAvailable.svelte';
+	import ResourceAvailable from './../Graphics/Icons/ResourceAvailable.svelte';
 	import PreviewModal from './../Components/PreviewModal.svelte';
 	import Footer from './../Components/Footer.svelte';
 
@@ -177,6 +178,13 @@
  						</span>
  						<a class="external-link" href="{section.url}" target="_blank">{section.text}</a>
  					</p>
+ 				{:else if section.style == "external_resource"}
+ 					<p class="external-link-block">
+ 						<span class="external-link-icon">
+ 							<ResourceAvailable width={'2rem'} height={'2rem'} />
+ 						</span>
+ 						<a class="external-link" href="{section.url}" target="_blank">{section.text}</a>
+ 					</p>
  				{:else}
  					{#if $activeResult.section == section.section.split(' ').join('')}
  						{@html 
@@ -304,6 +312,7 @@
 		#handbook {
 			max-width: 725px;
 			margin: 0 auto;
+			padding: 0 1rem;
 		}
 	}
 
