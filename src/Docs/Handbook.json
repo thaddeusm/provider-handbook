@@ -456,6 +456,95 @@
 				"text": "Example Enhancement Activity Ideas by Topic",
 				"url": "",
 				"section": "Enhancement Activities"
+			},
+			{
+				"style": "subheading",
+				"text": "Intensive Sessions",
+				"section": "Intensive Sessions"
+			},
+			{
+				"style": "paragraph",
+				"text": "What: Intensive Sessions are an optional, but an essential component to the program. Intensive Sessions are between three days to four-week long programs that occur outside of students’ After School Instruction classes and can constitute part of the total 360 hours of the program. Intensive Sessions must include English language instruction and focus on one or more of the following topics: U.S. culture and values, personal development, service learning, and/or digital literacy skills.",
+				"markup": "<strong>What</strong>: Intensive Sessions are an optional, but an essential component to the program. Intensive Sessions are between three days to four-week long programs that occur <strong>outside</strong> of students’ After School Instruction classes and can constitute part of the total 360 hours of the program. Intensive Sessions must include English language instruction and focus on one or more of the following topics: U.S. culture and values, personal development, service learning, and/or digital literacy skills.",
+				"section": "Intensive Sessions"
+			},
+			{
+				"style": "paragraph",
+				"text": "Who: Access teachers plan and facilitate Intensive Sessions for all Access students. Administrators support both students and teachers. For all Intensive Sessions, there should be at least one adult chaperone per ten students if the activity is outside of the After School Instruction site.",
+				"markup": "<strong>Who</strong>: Access teachers plan and facilitate Intensive Sessions for <strong>all</strong> Access students. Administrators support both students and teachers. For all Intensive Sessions, there should be at least one adult chaperone per ten students if the activity is outside of the After School Instruction site.",
+				"section": "Intensive Sessions"
+			},
+			{
+				"style": "paragraph",
+				"text": "When: We recommend at least 1 Intensive Session during your program. Please note that Intensive Session hours should not exceed 30% (108 of 360 hours) of the total number of program hours. Intensive Sessions can occur three (minimum) to eight (maximum) hours a day, and can be held at the beginning, middle, and/or end of the Access Program.",
+				"markup": "<strong>When</strong>: We recommend at least 1 Intensive Session during your program. Please note that Intensive Session hours should not exceed 30% (108 of 360 hours) of the total number of program hours. Intensive Sessions can occur three (minimum) to eight (maximum) hours a day, and can be held at the beginning, middle, and/or end of the Access Program.",
+				"section": "Intensive Sessions"
+			},
+			{
+				"style": "paragraph",
+				"text": "Why: Intensive Sessions are important opportunities to practice English language skills, build teams, gain confidence, encourage closer relationships with teachers, and opportunities for mentorship and role modeling.",
+				"markup": "<strong>Why</strong>: Intensive Sessions are important opportunities to practice English language skills, build teams, gain confidence, encourage closer relationships with teachers, and opportunities for mentorship and role modeling.",
+				"section": "Intensive Sessions"
+			},
+			{
+				"style": "graphic",
+				"title": "Intensive Session Idea",
+				"text": "A teacher discusses an Intensive Session idea with an administrator.",
+				"section": "Intensive Sessions"
+			},
+			{
+				"style": "external_link",
+				"url": "https://rise.articulate.com/share/vo5p__L8RdzRgwDxjh6vt1lFnjrLs5Z2",
+				"text": "What are Effective Intensive Session Activities?",
+				"section": "Intensive Sessions"
+			},
+			{
+				"style": "external_link",
+				"url": "https://rise.articulate.com/share/zY8MxTaL3YEo8C65BGjSW7-kX4Fn_wTZ",
+				"text": "What Makes a US Culture Activity Effective?",
+				"section": "Intensive Sessions"
+			},
+			{
+				"style": "paragraph",
+				"text": "Important Points when planning Intensive Session and Enhancement Activity events:",
+				"markup": "<strong>Important Points when planning Intensive Session and Enhancement Activity events:</strong>",
+				"section": "Intensive Sessions"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"The provider must undertake efforts to project the health, safety, and welfare of all participants in the Access Program and address any issues immediately",
+					"Students must have signed consent forms from their parents/guardians before any off-site activities",
+					"The students must have some form of medical/travel insurance for any activities that occur outside of the city/area of the Access Program (insurance is not required for activities that occur within the city/area of the Access Program)",
+					"For every Intensive Session and Enhancement Activity event, there must be a ratio of one (1) or more adult chaperons (teacher, coordinator, parent/guardian volunteer, etc.) for every 10 Access students",
+					"Intensive Session and Enhancement Activity programming must be conducted in English and include English language learning activities"
+				],
+				"markup": [
+					"The provider must undertake efforts to project the health, safety, and welfare of all participants in the Access Program and address any issues immediately",
+					"Students must have signed consent forms from their parents/guardians before any off-site activities",
+					"The students must have some form of medical/travel insurance for any activities that occur outside of the city/area of the Access Program (insurance is not required for activities that occur <strong>within</strong> the city/area of the Access Program)",
+					"For every Intensive Session and Enhancement Activity event, there must be a ratio of one (1) or more adult chaperons (teacher, coordinator, parent/guardian volunteer, etc.) for every 10 Access students",
+					"Intensive Session and Enhancement Activity programming must be conducted in English and include English language learning activities"
+				],
+				"section": "Intensive Sessions"
+			},
+			{
+				"style": "external_link",
+				"text": "How do I Evaluate a Service Learning Project?",
+				"url": "https://rise.articulate.com/share/5TYhS_VHhrYKaWiZQoEZbAQM4QVAQ_Nu",
+				"section": "Intensive Sessions"
+			},
+			{
+				"style": "external_resource",
+				"text": "Example Off-Site Parent Consent Form",
+				"url": "",
+				"section": "Intensive Sessions"
+			},
+			{
+				"style": "external_resource",
+				"text": "Example Intensive Session Ideas",
+				"url": "",
+				"section": "Intensive Sessions"
 			}
 		]
 	],

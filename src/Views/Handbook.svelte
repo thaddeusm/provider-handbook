@@ -181,14 +181,24 @@
  						<span class="external-link-icon">
  							<InteractiveAvailable width={'2rem'} height={'2rem'} />
  						</span>
- 						<a class="external-link" href="{section.url}" target="_blank">{section.text}</a>
+ 						<a class="external-link" href="{section.url}" target="_blank">
+ 							{section.text}
+ 							{#if section.url == ''}
+ 								(coming soon)
+ 							{/if}
+ 						</a>
  					</p>
  				{:else if section.style == "external_resource"}
  					<p class="external-link-block">
  						<span class="external-link-icon">
  							<ResourceAvailable width={'2rem'} height={'2rem'} />
  						</span>
- 						<a class="external-link" href="{section.url}" target="_blank">{section.text}</a>
+ 						<a class="external-link" href="{section.url}" target="_blank">
+ 							{section.text}
+ 							{#if section.url == ''}
+ 								(coming soon)
+ 							{/if}
+ 						</a>
  					</p>
  				{:else}
  					{#if $activeResult.section == section.section.split(' ').join('')}
