@@ -55,7 +55,7 @@
 	}
 </script>
 
-<svelte:window on:scroll={handleScroll} />
+<svelte:window on:scroll={handleScroll} on:resize={handleScroll} />
 
 <nav>
 	<section class="left">

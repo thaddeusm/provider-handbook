@@ -522,7 +522,7 @@
 		text-decoration: underline;
 		text-decoration-color: var(--brand-light);
 		text-decoration-thickness: 3px;
-		text-decoration-skip-ink: none;
+		text-decoration-skip-ink: none!important;
 		grid-area: link;
 		margin-bottom: 15px;
 	}
