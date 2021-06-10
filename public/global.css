@@ -216,7 +216,10 @@ a:active {
 }
 
 .active {
-	border-bottom: 3px solid var(--red);
+	text-decoration: underline;
+	text-decoration-color: var(--red)!important;
+	text-decoration-thickness: 3px;
+	text-decoration-skip-ink: none;
 }
 
 button {
