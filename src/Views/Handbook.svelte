@@ -99,7 +99,7 @@
 					}
 				}
 			});
-		}, {threshold: .60});
+		}, {threshold: .57});
 
 		document.querySelectorAll('section[id]').forEach((section) => {
 			observer.observe(section);
@@ -178,7 +178,7 @@
  					<Illustration title={section.title} altText={section.text} />
  				{:else if section.style == "external_link"}
  					<p class="external-link-block">
- 						<span class="external-link-icon">
+ 						<span class="external-link-icon" title="Interactive Tutorial Available">
  							<InteractiveAvailable width={'2rem'} height={'2rem'} />
  						</span>
  						<a class="external-link" href="{section.url}" target="_blank">
@@ -190,8 +190,8 @@
  					</p>
  				{:else if section.style == "external_resource"}
  					<p class="external-link-block">
- 						<span class="external-link-icon">
- 							<ResourceAvailable width={'2rem'} height={'2rem'} />
+ 						<span class="external-link-icon" title="Resource Available">
+ 							<ResourceAvailable width={'2rem'} height={'2rem'} color={'#D11242'} />
  						</span>
  						<a class="external-link" href="{section.url}" target="_blank">
  							{section.text}
@@ -519,7 +519,7 @@
 		grid-template-columns: 3rem auto 1fr;
 		grid-template-areas: "icon link .";
 		height: 50px;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: center;
 	}
 
@@ -534,6 +534,5 @@
 		text-decoration-thickness: 3px;
 		text-decoration-skip-ink: none!important;
 		grid-area: link;
-		margin-bottom: 15px;
 	}
 </style>
