@@ -398,7 +398,7 @@
 			padding: 10px 25px;
 			width: 260px;
 			margin-top: 35px;
-			margin-left: -245px;
+			margin-left: -210px;
 			z-index: 1000;
 			border-radius: var(--radius);
 			box-shadow: var(--shadow);
@@ -495,6 +495,7 @@
 
 	:global(.glossary-term) {
 		cursor: default;
+		font-size: 16px;
 	}
 
 	:global(.tooltip-footer) {

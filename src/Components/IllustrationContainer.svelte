@@ -19,7 +19,7 @@
 		}
 
 		div {
-			margin: 1rem 0;
+			margin: 1.5rem 0;
 			min-height: 250px;
 		}
 
@@ -38,7 +38,7 @@
 		}
 
 		div {
-			margin: 1rem 0;
+			margin: 1.5rem 0;
 		}
 	}
 
