@@ -62,7 +62,7 @@
 			{
 				"style": "external_link",
 				"url": "https://rise.articulate.com/share/2MC9w1ZBjEU07mtfZIlRY52FzaygV2_F",
-				"text": "What are the major features of the Access Program?",
+				"text": "What are the Major Features of the Access Program?",
 				"section": "What is Access?"
 			},
 			{
@@ -301,14 +301,15 @@
 				"text": "Access administrators discuss when to schedule After School Instruction."
 			},
 			{
-				"style": "subheading",
+				"style": "paragraph",
 				"text": "Example Access Program Calendars",
-				"section": "Example Access Program Calendars"
+				"markup": "<strong>Example Access Program Calendars</strong>",
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "When designing their program, providers can review example 2-year Access Program calendars below while noting the requirements for the program below.",
-				"section": "Example Access Program Calendars"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "unordered_list",
@@ -316,23 +317,24 @@
 					"Each Access class must receive a minimum of 360 hours of instruction within 20-24 months",
 					"Providers are required to complete (at minimum) 180 hours or more of instruction per academic year. If this is not possible at any point during the program, please consult with your U.S. Embassy POC and/or RELO"
 				],
-				"section": "Example Access Program Calendars"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "external_resource",
 				"text": "Example 2-year Access Program Calendar",
 				"url": "https://docs.google.com/spreadsheets/d/1SoP34HK_Xbwm8FkecJJop_b6ZsjQ0tMEQ6tgEf8YTlQ/edit?usp=sharing",
-				"section": "Example Access Program Calendars"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
-				"style": "subheading",
+				"style": "paragraph",
 				"text": "Weekly Access Schedule",
-				"section": "Weekly Access Schedule"
+				"markup": "<strong>Weekly Access Schedule</strong>",
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Each Access Program must include weekly instruction that can occur before school, after school, or on weekends. Usually, the preferred time for teaching is after school and so we call the weekly instruction After School Instruction.",
-				"section": "Weekly Access Schedule"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "unordered_list",
@@ -341,69 +343,71 @@
 					"Please note that additional justification in the proposal is needed if students will be attending Access after school instruction classes more than 10 hours per week",
 					"With RELO approval, online instruction can be counted as after school instruction hours. Consult your U.S. Embassy POC or RELO for guidance on the maximum number of online hours for the program"
 				],
-				"section": "Weekly Access Schedule"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
-				"style": "subheading",
+				"style": "paragraph",
 				"text": "After School Instruction",
-				"section": "After School Instruction"
+				"markup": "<strong>After School Instruction</strong>",
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "What: After School Instruction is a fundamental and mandatory component of the Access Program and is the English language instruction students receive outside of their normal school hours.",
 				"markup": "<strong>What</strong>: After School Instruction is a fundamental and mandatory component of the Access Program and is the English language instruction students receive outside of their normal school hours.",
-				"section": "After School Instruction"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "To achieve the language and personal development goals of the Access program, teachers are encouraged to use a student-centered approach such as the Communicative Language Teaching (CLT) approach.",
-				"section": "After School Instruction"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "The CLT approach encourages teachers to create opportunities in the classroom for students to authentically use and learn English through interactive and meaningful activities. After School Instruction lessons should be communicative and interactive, not focused on rote memorization.",
-				"section": "After School Instruction"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Who: Access students are taught by Access teachers. Administrators support both students and teachers.",
 				"markup": "<strong>Who</strong>: Access students are taught by Access teachers. Administrators support both students and teachers.",
-				"section": "After School Instruction"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Where: Access classes normally take place after the students’ regular school hours or on the weekend.",
 				"markup": "<strong>Where</strong>: Access classes normally take place after the students’ regular school hours or on the weekend.",
-				"section": "After School Instruction"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Why: Access classes support the goals of Access. ",
 				"markup": "<strong>Why</strong>: Access classes support the goals of Access. ",
-				"section": "After School Instruction"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "external_link",
 				"text": "What are Effective After School Instruction Activities?",
 				"url": "https://rise.articulate.com/share/zzwudim5iK3dUI9Azq5VjnM3bXb1kLns",
-				"section": "After School Instruction"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
-				"style": "subheading",
+				"style": "paragraph",
 				"text": "Enhancement Activities",
-				"section": "Enhancement Activities"
+				"markup": "<strong>Enhancement Activities</strong>",
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "What: Enhancement Activities are mandatory educational events and activities that happen outside (before/after class or on the weekend) of students’ after school instruction throughout the duration of the program. Enhancement Activities are interactive opportunities for students to enhance their English language and personal skills.",
 				"markup": "<strong>What</strong>: Enhancement Activities are mandatory educational events and activities that happen outside (before/after class or on the weekend) of students’ after school instruction throughout the duration of the program. Enhancement Activities are interactive opportunities for students to enhance their English language and personal skills. ",
-				"section": "Enhancement Activities"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "There are four main topics for Enhancement Activities and providers must conduct a minimum of one (1) Enhancement Activity for each topic listed below during the 2-year program per reporting period (semester or quarterly).",
 				"markup": "There are four main topics for Enhancement Activities and providers must conduct a minimum of <strong>one (1)</strong> Enhancement Activity for each topic listed below during the 2-year program per reporting period (semester or quarterly).",
-				"section": "Enhancement Activities"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "ordered_list",
@@ -413,102 +417,103 @@
 					"Service Learning",
 					"Digital Literacy Skills"
 				],
-				"section": "Enhancement Activities"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Who: Access teachers (in consultation with the U.S. Embassy) plan and facilitate enhancement activities for Access students. Administrators support both students and teachers. Don’t forget to invite U.S. Embassy representatives and/or your RELO in advance!",
 				"markup": "<strong>Who</strong>: Access teachers (in consultation with the U.S. Embassy) plan and facilitate enhancement activities for Access students. Administrators support both students and teachers. Don’t forget to invite U.S. Embassy representatives and/or your RELO in advance!",
-				"section": "Enhancement Activities"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Where: Enhancement Activities can occur within students’ After School Instruction classroom and/or they can occur outside of the classroom (in the program’s host city or nearby city/area).",
 				"markup": "<strong>Where</strong>: Enhancement Activities can occur within students’ After School Instruction classroom and/or they can occur outside of the classroom (in the program’s host city or nearby city/area).",
-				"section": "Enhancement Activities"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Why: Enhancement Activities are often the most memorable experiences for Access students as they usually occur outside the classroom and encourage the development of community. Enhancement Activities should be carefully designed to advance the students’ English skills and reinforce a topic by creating a lasting impression and memory for students.",
 				"markup": "<strong>Why</strong>: Enhancement Activities are often the most memorable experiences for Access students as they usually occur outside the classroom and encourage the development of community. Enhancement Activities should be carefully designed to advance the students’ English skills <strong>and</strong> reinforce a topic by creating a lasting impression and memory for students.",
-				"section": "Enhancement Activities"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "graphic",
 				"title": "Enhancement Activity",
-				"section": "Enhancement Activities",
+				"section": "Planning a 2-Year Access Program",
 				"text": "An Access student describes an Enhancement Activity."
 			},
 			{
 				"style": "external_link",
 				"text": "What are Effective Enhancement Activities?",
 				"url": "https://rise.articulate.com/share/mQAR905yySdtrKam7OrThTGkTX2TfUDu",
-				"section": "Enhancement Activities"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "external_link",
 				"text": "How do I Evaluate a Service Learning Project?",
 				"url": "https://rise.articulate.com/share/5TYhS_VHhrYKaWiZQoEZbAQM4QVAQ_Nu",
-				"section": "Enhancement Activities"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "external_resource",
 				"text": "Example Enhancement Activity Ideas by Topic",
 				"url": "",
-				"section": "Enhancement Activities"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
-				"style": "subheading",
+				"style": "paragraph",
 				"text": "Intensive Sessions",
-				"section": "Intensive Sessions"
+				"markup": "<strong>Intensive Sessions</strong>",
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "What: Intensive Sessions are an optional, but an essential component to the program. Intensive Sessions are between three days to four-week long programs that occur outside of students’ After School Instruction classes and can constitute part of the total 360 hours of the program. Intensive Sessions must include English language instruction and focus on one or more of the following topics: U.S. culture and values, personal development, service learning, and/or digital literacy skills.",
 				"markup": "<strong>What</strong>: Intensive Sessions are an optional, but an essential component to the program. Intensive Sessions are between three days to four-week long programs that occur <strong>outside</strong> of students’ After School Instruction classes and can constitute part of the total 360 hours of the program. Intensive Sessions must include English language instruction and focus on one or more of the following topics: U.S. culture and values, personal development, service learning, and/or digital literacy skills.",
-				"section": "Intensive Sessions"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Who: Access teachers plan and facilitate Intensive Sessions for all Access students. Administrators support both students and teachers. For all Intensive Sessions, there should be at least one adult chaperone per ten students if the activity is outside of the After School Instruction site.",
 				"markup": "<strong>Who</strong>: Access teachers plan and facilitate Intensive Sessions for <strong>all</strong> Access students. Administrators support both students and teachers. For all Intensive Sessions, there should be at least one adult chaperone per ten students if the activity is outside of the After School Instruction site.",
-				"section": "Intensive Sessions"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "When: We recommend at least 1 Intensive Session during your program. Please note that Intensive Session hours should not exceed 30% (108 of 360 hours) of the total number of program hours. Intensive Sessions can occur three (minimum) to eight (maximum) hours a day, and can be held at the beginning, middle, and/or end of the Access Program.",
 				"markup": "<strong>When</strong>: We recommend at least 1 Intensive Session during your program. Please note that Intensive Session hours should not exceed 30% (108 of 360 hours) of the total number of program hours. Intensive Sessions can occur three (minimum) to eight (maximum) hours a day, and can be held at the beginning, middle, and/or end of the Access Program.",
-				"section": "Intensive Sessions"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Why: Intensive Sessions are important opportunities to practice English language skills, build teams, gain confidence, encourage closer relationships with teachers, and opportunities for mentorship and role modeling.",
 				"markup": "<strong>Why</strong>: Intensive Sessions are important opportunities to practice English language skills, build teams, gain confidence, encourage closer relationships with teachers, and opportunities for mentorship and role modeling.",
-				"section": "Intensive Sessions"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "graphic",
 				"title": "Intensive Session Idea",
 				"text": "A teacher discusses an Intensive Session idea with an administrator.",
-				"section": "Intensive Sessions"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "external_link",
 				"url": "https://rise.articulate.com/share/vo5p__L8RdzRgwDxjh6vt1lFnjrLs5Z2",
 				"text": "What are Effective Intensive Session Activities?",
-				"section": "Intensive Sessions"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "external_link",
 				"url": "https://rise.articulate.com/share/zY8MxTaL3YEo8C65BGjSW7-kX4Fn_wTZ",
 				"text": "What Makes a US Culture Activity Effective?",
-				"section": "Intensive Sessions"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Important Points when planning Intensive Session and Enhancement Activity events:",
 				"markup": "<strong>Important Points when planning Intensive Session and Enhancement Activity events:</strong>",
-				"section": "Intensive Sessions"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "unordered_list",
@@ -526,77 +531,78 @@
 					"For every Intensive Session and Enhancement Activity event, there must be a ratio of one (1) or more adult chaperons (teacher, coordinator, parent/guardian volunteer, etc.) for every 10 Access students",
 					"Intensive Session and Enhancement Activity programming must be conducted in English and include English language learning activities"
 				],
-				"section": "Intensive Sessions"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "external_link",
 				"text": "How do I Evaluate a Service Learning Project?",
 				"url": "https://rise.articulate.com/share/5TYhS_VHhrYKaWiZQoEZbAQM4QVAQ_Nu",
-				"section": "Intensive Sessions"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "external_resource",
 				"text": "Example Off-Site Parent Consent Form",
 				"url": "",
-				"section": "Intensive Sessions"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "external_resource",
 				"text": "Example Intensive Session Ideas",
 				"url": "",
-				"section": "Intensive Sessions"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
-				"style": "subheading",
+				"style": "paragraph",
 				"text": "Opening and Closing Ceremonies",
-				"section": "Opening and Closing Ceremonies"
+				"markup": "<strong>Opening and Closing Ceremonies</strong>",
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "What: Providers must organize an official opening ceremony at the beginning and an official closing ceremony at the end of the Access Program. Students must be given a certificate signed by a U.S. Embassy/Consulate official at both the opening and closing ceremonies. It is the responsibility of the provider to request certificates from the U.S. Embassy 30 days before the opening/closing ceremony is scheduled.",
 				"markup": "<strong>What</strong>: Providers must organize an official opening ceremony at the beginning and an official closing ceremony at the end of the Access Program. Students must be given a certificate signed by a U.S. Embassy/Consulate official at both the opening and closing ceremonies. It is the responsibility of the provider to request certificates from the U.S. Embassy 30 days before the opening/closing ceremony is scheduled.",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Who: Access providers organize opening and closing ceremonies for Access students. Access providers, students, teachers, U.S. Embassy officials, and guest speakers all attend the ceremonies. A U.S. Embassy official must be present to deliver the certificates to students.",
 				"markup": "<strong>Who</strong>: Access providers organize opening and closing ceremonies for Access students. Access providers, students, teachers, U.S. Embassy officials, and guest speakers all attend the ceremonies. A U.S. Embassy official must be present to deliver the certificates to students.",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "When: The date and time of both the opening and closing ceremony must be approved by the U.S. Embassy/Consulate. The opening ceremony should occur after the agreement has been signed and either before instruction begins or within 3 months of instruction starting. The closing ceremony usually occurs after instruction has finished and must be held before the end date of the agreement. The ceremony should be no longer than 1-2 hours.",
 				"markup": "<strong>When</strong>: The date and time of both the opening and closing ceremony must be approved by the U.S. Embassy/Consulate. The opening ceremony should occur after the agreement has been signed and either before instruction begins or within 3 months of instruction starting. The closing ceremony usually occurs after instruction has finished and must be held before the end date of the agreement. The ceremony should be no longer than 1-2 hours.",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Where: Opening/Closing ceremonies should be held at the host institution of the Access Program. If this is not possible, the ceremonies can be held at a venue at a convenient central location for all participants and guests.",
 				"markup": "<strong>Where</strong>: Opening/Closing ceremonies should be held at the host institution of the Access Program. If this is not possible, the ceremonies can be held at a venue at a convenient central location for all participants and guests.",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Why: The opening ceremony can motivate and instill a sense of pride in students for having been chosen for and completing the Access Program. It is also motivating for students to see that representatives from the U.S. Embassy, the provider, and teachers are all involved in their learning process and advocating for their success.",
 				"markup": "<strong>Why</strong>: The opening ceremony can motivate and instill a sense of pride in students for having been chosen for and completing the Access Program. It is also motivating for students to see that representatives from the U.S. Embassy, the provider, and teachers are all involved in their learning process and advocating for their success.",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Opening and Closing Ceremony Tips and Recommendations",
 				"markup": "<strong>Opening and Closing Ceremony Tips and Recommendations</strong>",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Program Planning",
 				"markup": "<strong>Program Planning</strong>",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Rembember to:",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "unordered_list",
@@ -607,30 +613,30 @@
 					"Send invitations to family and guests to attend the ceremony",
 					"Plan how you will track students’ future successes (i.e. U.S. Embassy exchange participants, scholarships to college, etc.) and communicate a way for program alumni to stay engaged and keep in touch"
 				],
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "external_resource",
 				"text": "Example Invitation",
 				"url": "",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Reminder: Ceremonies cannot occur outside of the period of performance of a signed agreement.",
 				"markup": "<strong>Reminder</strong>: Ceremonies cannot occur outside of the period of performance of a signed agreement.",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Proposal Budget",
 				"markup": "<strong>Proposal Budget</strong>",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Rembember to include in your budget:",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "unordered_list",
@@ -643,19 +649,19 @@
 					"Supplies (invitations, paper, t-shirts, etc.)",
 					"Banners and/or signs"
 				],
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "external_resource",
 				"text": "Access Branding Guidelines",
 				"url": "",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "Reminder: The items below are not allowed to be purchased with Access funds:",
 				"markup": "<strong>Reminder</strong>: The items below are not allowed to be purchased with Access funds:",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "unordered_list",
@@ -670,35 +676,572 @@
 					"Photographer(s)",
 					"Cameras/technology that will only be used for the ceremony"
 				],
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "external_link",
 				"text": "What are Allowable Expenses for an Opening/Closing Ceremony?",
 				"url": "https://rise.articulate.com/share/8MVMqKOCCswgQ4L-SHXw6ptXRBK4ssnd",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "graphic",
 				"title": "Ceremony",
 				"text": "Administrators discuss preparations for a closing ceremony.",
-				"section": "Opening and Closing Ceremonies"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
-				"style": "subheading",
+				"style": "paragraph",
 				"text": "Professional Development (PD) for Access Teachers",
-				"section": "Professional Development (PD) for Access Teachers"
+				"markup": "<strong>Professional Development (PD) for Access Teachers</strong>",
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "paragraph",
 				"text": "An important goal of the Access Program is to empower and develop the capacity of teacher leaders in the region. Access teachers are recommended to participate in professional development activities at least once a semester. These activities can be led and developed by Access senior teachers, Access coordinator and/or administrator, or could be online PD activities such as American English OPEN courses.",
-				"section": "Professional Development (PD) for Access Teachers"
+				"section": "Planning a 2-Year Access Program"
 			},
 			{
 				"style": "external_resource",
 				"text": "Free Professional Development Resources for Teachers",
 				"url": "",
-				"section": "Professional Development (PD) for Access Teachers"
+				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "subheading",
+				"text": "Application and Proposal Process",
+				"section": "Application and Proposal Process"
+			},
+			{
+				"style": "paragraph",
+				"text": "To apply to be an English Access Microscholarship Program provider, interested institutions must contact their U.S. Embassy/Consulate/RELO to receive the most updated proposal templates.",
+				"section": "Application and Proposal Process"
+			},
+			{
+				"style": "paragraph",
+				"text": "Providers should review the entire handbook before submitting your proposal as providers will be required to describe the activities for the 2-year duration of the program.",
+				"section": "Application and Proposal Process"
+			},
+			{
+				"style": "paragraph",
+				"text": "Please note that submitting a proposal to the U.S. Embassy or Consulate does not mean you have been selected as a provider. The U.S. Embassy will contact you to tell you if your proposal has been accepted or not. You cannot start an Access Program until you have applied, been accepted, and completed all of the agreement paperwork.",
+				"markup": "<strong>Please note</strong> that submitting a proposal to the U.S. Embassy or Consulate does not mean you have been selected as a provider. The U.S. Embassy will contact you to tell you if your proposal has been accepted or not. You cannot start an Access Program until you have applied, been accepted, and completed all of the agreement paperwork.",
+				"section": "Application and Proposal Process"
+			},
+			{
+				"style": "paragraph",
+				"text": "All Access Programs are required to deliver the number of After School Instruction hours, Enhancement Activities, and Intensive Sessions listed in your proposal/agreement.",
+				"section": "Application and Proposal Process"
+			},
+			{
+				"style": "subheading",
+				"text": "Agreement Process",
+				"section": "Agreement Process"
+			},
+			{
+				"style": "subheading",
+				"text": "Branding",
+				"section": "Branding"
+			},
+			{
+				"style": "paragraph",
+				"text": "The Access Program is a U.S. Department of State program funded by the U.S. Government. The official name of the program is the \"English Access Microscholarship Program.\" The shortened forms \"Access Program\" or \"Access\" are acceptable. These are the only names that should be used when referring to the program. A frequent incorrect reference is ACCESS: the word \"access\" should never be in all capital letters, as it is not an acronym.",
+				"section": "Branding"
+			},
+			{
+				"style": "graphic",
+				"title": "Branding Name",
+				"section": "Branding",
+				"text": "A frequent incorrect reference is ACCESS: the word \"access\" should never be in all capital letters, as it is not an acronym."
+			},
+			{
+				"style": "paragraph",
+				"text": "Providers must ensure that the Access Program’s name appears correct in all program-related documentation: \"The English Access Microscholarship Program, funded by the U.S. Department of State.\"",
+				"section": "Branding"
+			},
+			{
+				"style": "paragraph",
+				"text": "All Access Program documents, applications, banners, t-shirts, publications, etc. must feature both the official Access logo and the U.S. Embassy/Consulate logo. The U.S. Embassy/Consulate must be the most prominent logo, if displayed with other logos. Please contact your U.S. Embassy POC/RELO for a link to the Embassy logo.",
+				"section": "Branding"
+			},
+			{
+				"style": "external_link",
+				"text": "How do I Use the Access Program Brand?",
+				"url": "https://rise.articulate.com/share/cs0JH24DPaL-b_3Mu9oedR6ZdONuBZ_9",
+				"section": "Branding"
+			},
+			{
+				"style": "external_resource",
+				"text": "Official Access Logo",
+				"url": "",
+				"section": "Branding"
+			},
+			{
+				"style": "external_resource",
+				"text": "Access Logo Style Guide",
+				"url": "",
+				"section": "Branding"
+			},
+			{
+				"style": "subheading",
+				"text": "Social Media Guidelines and Safety Tips",
+				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
+				"style": "paragraph",
+				"text": "Providers are strongly encouraged to ‘like’ and follow the Access HQ Facebook page:",
+				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
+				"style": "external_link",
+				"text": "Access HQ (Facebook)",
+				"url": "https://www.facebook.com/AccessProgramHQ/",
+				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
+				"style": "paragraph",
+				"text": "Social Media Guidelines",
+				"markup": "<strong>Social Media Guidelines</strong>",
+				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
+				"style": "paragraph",
+				"text": "All social media accounts (Facebook, Twitter, Youtube, Instagram, etc.) created by providers for Access Programs must be approved by the provider’s U.S. Embassy POC and/or RELO and branded with the official Access logo.",
+				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
+				"style": "paragraph",
+				"text": "Providers must also send the link to the social media account:",
+				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
+				"style": "external_link",
+				"text": "Submit Your Social Media Information",
+				"url": "https://forms.office.com/Pages/ResponsePage.aspx?id=dFDPZv5a0UimkaErISH0S1ZKZCWPyrZOo3rwSp15ZlVUOFZNVkxaUTRNTklRNlhKTlJDRU8zVU5FNi4u",
+				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
+				"style": "paragraph",
+				"text": "Social Media Safety Tips",
+				"markup": "<strong>Social Media Safety Tips</strong>",
+				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Use Privacy and Security settings to limit access to your personal information and keep it private",
+					"Do not post email addresses, phone numbers, addresses, etc. on any public and/or social media website",
+					"If someone requests personal information, report it to the site moderator",
+					"Ensure all your posts are appropriate and follow the terms of service",
+					"Protect all electronic devices: Safety and security start with installing security software (such as antivirus or firewall) that is set to update automatically",
+					"If a post is inappropriate or seems harmful, report it to the moderator and/or block the poster"
+				],
+				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
+				"style": "subheading",
+				"text": "Advertising the Access Program and Recruiting Students",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Example Timeline for Advertising and Recruiting Students",
+				"markup": "<strong>Example Timeline for Advertising and Recruiting Students</strong>",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "graphic",
+				"title": "Recruitment Timeline",
+				"section": "Advertising the Access Program and Recruiting Students",
+				"text": "Example Timeline for Advertising and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "It is important for providers to consult with the U.S. Embassy to determine the appropriate population to recruit for your Access program. Typically, Access programs enroll underserved students or students that do not have the means or access to English language or educational opportunities outside of their public school classes. Please note that students enrolled (or have the means to enroll) in private schools and/or classes OR are alumni of U.S. Embassy exchange programs should not be recruited for the Access program.",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Advertising for the Access Program and recruitment for the program’s students should be well thought out and extensive in scope. In order to reach as many potentially appropriate students, this phase of the program can involve reaching out to the following:",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"local departments of education",
+					"schools and other educational institutions",
+					"civic and religious organizations",
+					"local newspapers, and radio and television stations",
+					"the U.S. Embassy or Consulate"
+				],
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Advertising and recruitment should clearly indicate that the program is:",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"free of charge",
+					"sponsored by the U.S. Department of State",
+					"designated for underserved youth",
+					"primarily for 13-to-20-years-old students who are not younger than 13 or older than 20 years old at the beginning of the program",
+					"working with the U.S. Embassy/Consulate"
+				],
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Involving Parents and the Community",
+				"markup": "<strong>Involving Parents and the Community</strong>",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Students are more successful when their entire community is behind their education. We recommend involving parents and relatives in the planning. Those in the students’ homes and neighborhoods can help make their participation in the Access Program a true success.",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Students and parents/guardians must be informed that the Access Program is intensive and both must be dedicated to students’ success",
+					"Students/guardians/families must be aware of attendance policies and the consequences of habitual unexcused absences such as students who miss classes without an excuse or who misbehave regularly can be withdrawn from the Access Program",
+					"Providers must provide forms to both students and guardians with the Access Program rules regarding attendance, behavior, participation in enhancement activities etc. and a letter of commitment that must be signed by students and their parents/guardians",
+					"Students and their guardians need to grant permission at the beginning of the program via a signed consent form before the provider may take and potentially share their photos (providers must keep signed copies on file throughout the duration of the program and may only take and share a photo publicly if they have a permission form for all people in the photo)"
+				],
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Tips for Achieving Gender Balance",
+				"markup": "<strong>Tips for Achieving Gender Balance</strong>",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "1. Recruit in Diverse Places",
+				"markup": "<strong>1. Recruit in Diverse Places</strong>",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Recruit your target gender from diverse places such as...",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Community centers",
+					"Places of worship",
+					"Department of Health, Social Services, Parks and Recreation, etc.",
+					"Sport or hobby clubs",
+					"Local NGOs or organizations",
+					"Recommendations from school officials and/or parents"
+				],
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Providers can also recruit students by going to the places the adults in their lives spend time such as...",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Parent’s night at school",
+					"School events",
+					"Community events",
+					"Youth programs or events"
+				],
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "2. Advertise the Benefits of the Access Program",
+				"markup": "<strong>2. Advertise the Benefits of the Access Program</strong>",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Providers should research what the target gender is looking for in an English education program and promote these activities during the recruitment phase. For example...",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"In addition to English, students develop important soft skills such as teamwork",
+					"Students are empowered with digital literacy skills",
+					"The program promotes the social-emotional development of students",
+					"Students learn about new cultures"
+				],
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "3. Advertise Using Gender Inclusive Pictures and Language",
+				"markup": "<strong>3. Advertise Using Gender Inclusive Pictures and Language</strong>",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "When creating advertisements or program materials (paper or digital), it is important to use inclusive and gender neutral language and show gender diversity in all pictures or graphics. You can also share a success story of a student whose gender you are trying to recruit. It can be hard to imagine yourself as an Access student if you do not see representation of your gender in the advertisements.",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "4. Make Access Classes Accessible to All Genders",
+				"markup": "<strong>4. Make Access Classes Accessible to All Genders</strong>",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Providers must ensure that the schedule for Access classes does not discourage the target gender from joining. For example, if there is a one-hour school activity for the target gender at 3pm, schedule Access classes for 4pm.",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Student Application to the Access Program",
+				"markup": "<strong>Student Application to the Access Program</strong>",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Any students applying for the program must complete an Access application form offered by the program provider and must be in the students’ first language.The application will ask information about the student applicants, their school, and their parents/guardians and/or family. As part of the application, providers can ask applicants to write an essay. The question(s) and response will be written in the applicant’s first language and can ask applicants to write about their motivation for and commitment to the program.",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Interviewing and Selecting Access Students",
+				"markup": "<strong>Interviewing and Selecting Access Students</strong>",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "After the recruitment and application period has ended, the next step is for the program provider to interview all potential Access students and to arrange for a representative of the U.S. Embassy or Consulate to participate in interviews and to be a member of the final selection panel. The provider then sends the final proposed student list to the U.S. Embassy or Consulate for its final approval and must not accept students into the program until the approval is received.",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Providers are required to create a gender-balanced list of replacement students in case students withdraw from the program. In order to maintain the program’s integrity, providers can replace students no later than two quarters/one semester from the start of the program. Permission by the RELO must be given to the provider if replacements are desired more than three months after the program’s start date. Auditing students are not allowed.",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Organizing Access Groups",
+				"markup": "<strong>Organizing Access Groups</strong>",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "paragraph",
+				"text": "Providers are responsible for grouping their program participants in a way that serves the Access Program’s goals and its anticipated outcomes.",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"By students’ English language proficiency: All students in a group should be at approximately the same level, or as close as possible  ",
+					"By age: Because of interest and cognitive differences, younger students must not be placed with older students so there should be no more than a two-year age range in the students within each group (e.g. 13-15, 14-16, 17-19, or 18-20 years-old etc.)",
+					"By gender-balance: Each group should consist of 50 percent male and 50 percent female",
+					"By diversity: Considerations should be made when organizing the program’s groups in include diverse racial, ethnic, religious, geographic, or physically challenged backgrounds as much as possible or is appropriate"
+				],
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "external_link",
+				"url": "",
+				"text": "How do I Identify Potential Access Students?",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "external_resource",
+				"url": "",
+				"text": "Example Access Program Advertisement",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "external_resource",
+				"url": "",
+				"text": "Example Letter of Commitment",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "external_resource",
+				"url": "",
+				"text": "Photo and Video Consent Form",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "external_resource",
+				"url": "",
+				"text": "Example Student Application Form",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "external_resource",
+				"url": "",
+				"text": "Example Student Interview Questions and Rubric",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "subheading",
+				"text": "Recruiting Access Teachers",
+				"section": "Recruiting Access Teachers"
+			},
+			{
+				"style": "paragraph",
+				"text": "Providers must consult with the U.S. Embassy when developing teacher recruitment plans and selecting teachers. It is recommended that the Access teacher position(s) should be advertised outside of the institution and all qualified teachers be encouraged to apply. If Access teachers are hired from within the Access provider institution, please justify this choice in the program proposal.",
+				"section": "Recruiting Access Teachers"
+			},
+			{
+				"style": "paragraph",
+				"text": "Interview",
+				"markup": "<strong>Interview</strong>",
+				"section": "Recruiting Access Teachers"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access teachers are required to use a student-centered and communicative approach to teaching, and the interview can be crucial to determining if a teacher has the skill set required for the Access Program. It is recommended that the provider use multiple methods (teaching demonstration, lesson plan, portfolio, etc.) and a standardized rubric to evaluate potential Access teachers.",
+				"section": "Recruiting Access Teachers"
+			},
+			{
+				"style": "external_link",
+				"url": "https://rise.articulate.com/share/bsq0lkbc-IzQT2u4tRIafgA32G8_C-3E",
+				"text": "How to Select and Interview Great Access Teacher Candidates",
+				"section": "Recruiting Access Teachers"
+			},
+			{
+				"style": "external_resource",
+				"url": "",
+				"text": "Example Access Teacher Position Advertisement",
+				"section": "Recruiting Access Teachers"
+			},
+			{
+				"style": "external_resource",
+				"url": "",
+				"text": "Example Access Teacher Interview Questions and Rubric",
+				"section": "Recruiting Access Teachers"
+			},
+			{
+				"style": "subheading",
+				"text": "Exposure to Americans and U.S. Resources",
+				"section": "Exposure to Americans and U.S. Resources"
+			},
+			{
+				"style": "paragraph",
+				"text": "The Access Program seeks to prepare students for conversational English language skills with both native and non-native speakers of English through a variety of experiential learning activities. There are a number of resources available to enhance the student’s Access Program experience. Each resource varies from region to region so please make sure to contact the local U.S. Embassy/Consulate and/or RELO to see if the listed resources are available in a specific area.",
+				"section": "Exposure to Americans and U.S. Resources"
+			},
+			{
+				"style": "paragraph",
+				"text": "If available, when planning an Access Program, the provider should try to incorporate:",
+				"section": "Exposure to Americans and U.S. Resources"
+			},
+			{
+				"style": "paragraph",
+				"text": "EducationUSA Advising Centers: these centers offer objective and timely information about educational institutions in the United States and how to best access those opportunities. Each year, thousands of prospective students learn about opportunities to study in the United States through EducationUSA centers. This is a great resource and providers can include a trip to an advising center, inviting a speaker, or by visiting educationusa.state.gov during.",
+				"markup": "<strong>EducationUSA Advising Centers</strong>: these centers offer objective and timely information about educational institutions in the United States and how to best access those opportunities. Each year, thousands of prospective students learn about opportunities to study in the United States through EducationUSA centers. This is a great resource and providers can include a trip to an advising center, inviting a speaker, or by visiting educationusa.state.gov during.",
+				"section": "Exposure to Americans and U.S. Resources"
+			},
+			{
+				"style": "paragraph",
+				"text": "American Spaces is a term that refers to the American Corners, International Resource Centers, and Binational Centers located in some countries. Visit the American Spaces site https://americanspaces.state.gov/home/ or contact the U.S. Embassy/Consulate for more information.",
+				"markup": "<strong>American Spaces</strong> is a term that refers to the American Corners, International Resource Centers, and Binational Centers located in some countries. Visit the American Spaces site <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none\" href=\"https://americanspaces.state.gov/home/\" target=\"_blank\">https://americanspaces.state.gov/home/</a> or contact the U.S. Embassy/Consulate for more information.",
+				"section": "Exposure to Americans and U.S. Resources"
+			},
+			{
+				"style": "paragraph",
+				"text": "In addition to visiting these places, think about how you can invite Americans to come and visit the Access classes. The U.S. Embassy and Peace Corps often have a number of American teachers in particular countries. These teachers include, but are not limited to:",
+				"section": "Exposure to Americans and U.S. Resources"
+			},
+			{
+				"style": "paragraph",
+				"text": "English Language Fellows (Fellows) are U.S. English-language teaching professionals placed in universities, ministries of education, and other institutions for ten months. Fellows work with their hosts as well as the local and regional English language teaching community to create and implement courses, materials, curricula, and training programs that build stronger connections between the host and U.S. culture. Fellows can assist teachers with Access Program activities if/when available. Fellows cannot teach in the Access Program.",
+				"markup": "<strong>English Language Fellows (Fellows)</strong> are U.S. English-language teaching professionals placed in universities, ministries of education, and other institutions for ten months. Fellows work with their hosts as well as the local and regional English language teaching community to create and implement courses, materials, curricula, and training programs that build stronger connections between the host and U.S. culture. Fellows can assist teachers with Access Program activities if/when available. Fellows cannot teach in the Access Program.",
+				"section": "Exposure to Americans and U.S. Resources"
+			},
+			{
+				"style": "paragraph",
+				"text": "Fulbright English Teaching Assistants (ETAs) are U.S. college graduates who assist teachers of English. English Teaching Assistants help teach English language in educational institutions while serving as U.S. cultural ambassadors. ETAs can assist teachers with Access Program activities. ETAs cannot teach in the Access Program.",
+				"markup": "<strong>Fulbright English Teaching Assistants (ETAs)</strong> are U.S. college graduates who assist teachers of English. English Teaching Assistants help teach English language in educational institutions while serving as U.S. cultural ambassadors. ETAs can assist teachers with Access Program activities. ETAs cannot teach in the Access Program.",
+				"section": "Exposure to Americans and U.S. Resources"
+			},
+			{
+				"style": "paragraph",
+				"text": "Peace Corps Volunteers work in a variety of contexts and hold different responsibilities.",
+				"markup": "<strong>Peace Corps Volunteers</strong> work in a variety of contexts and hold different responsibilities.",
+				"section": "Exposure to Americans and U.S. Resources"
+			},
+			{
+				"style": "paragraph",
+				"text": "Ask your U.S. Embassy POC if these programs are in your country and ask them for help inviting these teachers to the Access Program.",
+				"section": "Exposure to Americans and U.S. Resources"
+			},
+			{
+				"style": "subheading",
+				"text": "Access Program Curriculum and Materials",
+				"section": "Access Program Curriculum and Materials"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access Curriculum",
+				"markup": "<strong>Access Curriculum</strong>",
+				"section": "Access Program Curriculum and Materials"
+			},
+			{
+				"style": "paragraph",
+				"text": "The Access Program curriculum should be based on the main components of the program of After School Instruction, Enhancement Activities and, if applicable, Intensive Sessions, and must include all four language skills: reading, writing, speaking and listening.",
+				"section": "Access Program Curriculum and Materials"
+			},
+			{
+				"style": "paragraph",
+				"text": "The curriculum should also address the main goals of the Access Program which provide program students a foundation of English language skills, an appreciation for U.S. culture and democratic values and opportunities for students to participate in personal development activities and service learning projects. Providers must also include topics such as: global citizenship, critical thinking, human rights, U.S. democracy and government, U.S. civil society, diversity and tolerance, U.S. History, U.S. education system, U.S. family and relationship values, U.S. and global gender issues, climate and the environment, U.S. and global health, and STEM in their program curriculum.",
+				"section": "Access Program Curriculum and Materials"
+			},
+			{
+				"style": "paragraph",
+				"text": "All After School Instruction and Enhancement/Intensive Session activities require a focus on the interactive and communicative use of language as a main objective, a reasonable balance of the four macro-skills of listening, speaking, reading and writing and the micro-skills of grammar, vocabulary, pronunciation and spelling.",
+				"section": "Access Program Curriculum and Materials"
+			},
+			{
+				"style": "paragraph",
+				"text": "Textbook and Materials",
+				"markup": "<strong>Textbook and Materials</strong>",
+				"section": "Access Program Curriculum and Materials"
+			},
+			{
+				"style": "paragraph",
+				"text": "Although decisions on the selection of the Access Program materials (curriculum and supplementary) are the choice of the Access provider, choosing from a number of textbooks successfully used in Access and using U.S. Department of State American English published materials is strongly recommended. It is also recommended that the provider consult with the U.S. Embassy POC/RELO to select appropriate and approved textbooks for the Access Program.",
+				"section": "Access Program Curriculum and Materials"
+			},
+			{
+				"style": "paragraph",
+				"text": "Please note that each and every student in the program must receive a new (not photocopied) course book or books. The new course books belong to each student, and after the program ends the books are the property of the students. Before proposing a textbook title in the narrative proposal, please be sure that the books can be bought locally or include shipping costs in the budget.",
+				"section": "Access Program Curriculum and Materials"
+			},
+			{
+				"style": "external_resource",
+				"url": "",
+				"text": "List of Commonly Used Textbooks for the Access Program",
+				"section": "Access Program Curriculum and Materials"
+			},
+			{
+				"style": "subheading",
+				"text": "Pre/Post Test",
+				"section": "Pre/Post Test"
+			},
+			{
+				"style": "paragraph",
+				"text": "Providers and/or staff must administer a pre-test to Access students at the program’s beginning and then give the same post-test at the program’s end. The test should holistically assess all four skills (speaking, listening, reading, and writing). This test allows all program stakeholders to track the progress and evaluate the eventual success of the student’s language acquisition from the beginning to the end of the program. Tests should be based on a scale of 0-100 points.",
+				"markup": "Providers and/or staff must administer a pre-test to Access students at the program’s beginning and then give the <strong>same</strong> post-test at the program’s end. The test should holistically assess all four skills (speaking, listening, reading, and writing). This test allows all program stakeholders to track the progress and evaluate the eventual success of the student’s language acquisition from the beginning to the end of the program. Tests should be based on a scale of 0-100 points.",
+				"section": "Pre/Post Test"
+			},
+			{
+				"style": "external_resource",
+				"url": "",
+				"text": "List of Commonly Used Pre/Post Tests for the Access Program",
+				"section": "Pre/Post Test"
 			}
 		]
 	],

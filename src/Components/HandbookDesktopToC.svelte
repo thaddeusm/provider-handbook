@@ -87,8 +87,8 @@
 	}
 
 	ul li {
-		padding: 0 3rem;
-		margin: 1rem 0;
+		padding: 0 2rem;
+		margin: .7rem 0;
 		line-height: 1.5;
 	}
 

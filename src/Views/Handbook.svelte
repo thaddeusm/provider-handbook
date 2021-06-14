@@ -178,27 +178,33 @@
  					<Illustration title={section.title} altText={section.text} />
  				{:else if section.style == "external_link"}
  					<p class="external-link-block">
- 						<span class="external-link-icon" title="Interactive Tutorial Available">
+ 						<span class="external-link-icon" title="External Link">
  							<InteractiveAvailable width={'2rem'} height={'2rem'} />
  						</span>
- 						<a class="external-link" href="{section.url}" target="_blank">
- 							{section.text}
- 							{#if section.url == ''}
- 								(coming soon)
- 							{/if}
- 						</a>
+ 						{#if section.url == ''}
+ 							<span class="external-link">
+ 								{section.text} (coming soon)
+ 							</span>
+ 						{:else}
+ 							<a class="external-link" href="{section.url}" target="_blank">
+	 							{section.text}
+	 						</a>
+ 						{/if}
  					</p>
  				{:else if section.style == "external_resource"}
  					<p class="external-link-block">
  						<span class="external-link-icon" title="Resource Available">
  							<ResourceAvailable width={'2rem'} height={'2rem'} color={'#D11242'} />
  						</span>
- 						<a class="external-link" href="{section.url}" target="_blank">
- 							{section.text}
- 							{#if section.url == ''}
- 								(coming soon)
- 							{/if}
- 						</a>
+ 						{#if section.url == ''}
+ 							<span class="external-link">
+ 								{section.text} (coming soon)
+ 							</span>
+ 						{:else}
+ 							<a class="external-link" href="{section.url}" target="_blank">
+	 							{section.text}
+	 						</a>
+ 						{/if}
  					</p>
  				{:else}
  					{#if $activeResult.section == section.section.split(' ').join('')}
@@ -522,6 +528,7 @@
 		height: 50px;
 		align-items: flex-start;
 		justify-content: center;
+		margin: 40px 0;
 	}
 
 	.external-link-icon {
