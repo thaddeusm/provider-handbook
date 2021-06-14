@@ -1050,7 +1050,7 @@
 			},
 			{
 				"style": "external_link",
-				"url": "",
+				"url": "https://rise.articulate.com/share/k8L4Bd3yhknVMcktsDHD3yxXH_7631X5",
 				"text": "How do I Identify Potential Access Students?",
 				"section": "Advertising the Access Program and Recruiting Students"
 			},
@@ -1140,7 +1140,7 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "EducationUSA Advising Centers: these centers offer objective and timely information about educational institutions in the United States and how to best access those opportunities. Each year, thousands of prospective students learn about opportunities to study in the United States through EducationUSA centers. This is a great resource and providers can include a trip to an advising center, inviting a speaker, or by visiting educationusa.state.gov during.",
+				"text": "EducationUSA Advising Centers: these centers offer objective and timely information about educational institutions in the United States and how to best access those opportunities. Each year, thousands of prospective students learn about opportunities to study in the United States through EducationUSA centers. This is a great resource and providers can include a trip to an advising center, inviting a speaker, or by visiting educationusa.state.gov during the program.",
 				"markup": "<strong>EducationUSA Advising Centers</strong>: these centers offer objective and timely information about educational institutions in the United States and how to best access those opportunities. Each year, thousands of prospective students learn about opportunities to study in the United States through EducationUSA centers. This is a great resource and providers can include a trip to an advising center, inviting a speaker, or by visiting educationusa.state.gov during.",
 				"section": "Exposure to Americans and U.S. Resources"
 			},
@@ -1242,6 +1242,280 @@
 				"url": "",
 				"text": "List of Commonly Used Pre/Post Tests for the Access Program",
 				"section": "Pre/Post Test"
+			}
+		],
+		[
+			{
+				"style": "heading",
+				"text": "During: Program Implementation Information and Activities",
+				"section": "During: Program Implementation Information and Activities"
+			},
+			{
+				"style": "subheading",
+				"text": "Roles and Responsibilities",
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "paragraph",
+				"text": "Each Access Program can structure their staffing as needed. Please see below for example roles and responsibilities.",
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access provider director",
+				"markup": "<strong>Access provider director</strong>",
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access provider director’s responsibilities include, but are not limited to:",
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Recognizing and articulating a strong need in the local community for an Access Program",
+					"Drafting proposals that meet program requirements and submitting them for approval to the U.S. Embassy/Consulates",
+					"Implementing, monitoring and evaluating the program and personnel according to the oral and written guidelines from the U.S. Embassy/Consulate, approved proposal and signed agreement between the cooperating agency based in the United States and the program provider",
+					"Advertising and recruiting participants for the student scholarships",
+					"Collaborating with the U.S. Embassy during teacher and student selection process",
+					"Consulting the U.S. Embassy/RELO to select and provide the same pre and post-test to program students upon entering and exiting the program",
+					"Ensuring the health, safety and welfare of the students during planned classes and activities",
+					"Hiring highly-qualified personnel (i.e. Access Coordinators, Teachers, Teaching Assistants) to implement the program",
+					"Sending invitations to the U.S. Embassy/Consulate to invite them to upcoming special events such as Enhancement Activities or Intensive Sessions",
+					"Notifying the U.S. Embassy POC and/or RELO when there are convenient opportunities to visit and speak with Access students and coordinating and planning such visits to maximize their effectiveness",
+					"Providing letters of congratulations and graduation certificates signed by the U.S. Ambassador (or U.S. Embassy/Consulate Officer) to each Access student at the beginning and end of the Access Program",
+					"Submitting financial and technical reports, accompanying documentation and alumni data according to the schedule of deadlines outlined in the agreement, and when requested by the U.S. Embassy/Consulate"
+				],
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access coordinators",
+				"markup": "<strong>Access coordinators</strong>",
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "paragraph",
+				"text": "Each Access Program must have an Access coordinator who serves as the liaison between the Access teachers and the U.S. Embassy/Consulate. To fulfill these responsibilities the coordinator should possess qualifications for teaching English and have excellent English language skills given the importance of the coordinator’s close working relationship with the U.S. Embassy/Consulate.",
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access coordinator responsibilities and qualifications include, but are not limited to:",
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Liaising with the U.S. Embassy/Consulate regarding the Access program",
+					"Coordinating and assisting in the recruitment and selection of Access teachers, teaching assistants and students",
+					"Providing support to the teachers and teaching assistants concerning administrative duties, curriculum and syllabus design, materials selections and class instruction",
+					"Assisting in the selection and purchase of Access textbooks and materials",
+					"Liaising with the appropriate people to secure access to the Access classroom and/or facility",
+					"Assisting provider administration’s person designated to write and submit financial and progress reports by the agreed deadlines",
+					"Helping organize the opening and closing ceremonies",
+					"Monitoring classes to ensure the appropriate administration and instruction of the program and noting and reporting any recommendations for improvement",
+					"Consulting with Access teachers and teaching assistants on solutions to noted recommendations for improvement",
+					"Notifying the U.S. Embassy/Consulate of sudden changes, emergencies, or interruptions of the Access classes and program",
+					"Assisting teachers in organizing the administration of the Pre/Post test",
+					"Coordinating with teachers in planning, organizing and implementing guest speakers/visitors and any outside classroom Enhancement Activities and Intensive Sessions",
+					"Ensuring student portfolios are accessible and updated on a regular basis by the teachers"
+				],
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access teacher responsibilities include, but are not limited to:",
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Selecting appropriate American English materials that meet program objectives",
+					"Developing a course syllabus that clearly outlines the topics of the classes and expectations of the students",
+					"Creating and implementing quality lesson plans according to the Access Program objectives",
+					"Designing and conducting regular informal and formal assessments on a regular basis to gauge each student’s progress",
+					"Planning and conducting Enhancement Activities in accordance with the schedule and curriculum approved by the Access provider",
+					"Planning Enhancement Activities and Intensive Sessions (if applicable) that provide hands-on and interactive opportunities for students’ engagement to more fully satisfy demands of the Access curriculum",
+					"Submitting progress reports according to the schedule established by the provider",
+					"Monitoring and regularly updating portfolios of the students’ attendance and notifying the coordinator of the students’ progress through regular written reports",
+					"Developing, planning, and implementing the Enhancement Activities according to the Access Program objectives",
+					"Seeking to improve methodical and pedagogical skills through participation in seminars, lessons of visiting experienced colleagues, and self-education and any required professional development events held by the provider or U.S. Embassy",
+					"Working together with the coordinator to select qualified teaching assistants, if needed"
+				],
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access teacher qualifications:",
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"University degree(s) with an applicable qualification (i.e. BA TESOL, second language acquisition, etc.)",
+					"Minimum of three years of experience instructing students in the same age range of Access Program participants",
+					"High-intermediate to advanced level of English",
+					"Strong desire and motivation to work with underserved youth",
+					"Ability to organize and participate in Enhancement and out-of-class activities",
+					"Availability for the weekly number of instructional and program activity hours (after-school, enhancement activities and Intensive Sessions)",
+					"Basic knowledge of and willingness to learn about U.S. society and culture",
+					"Basic or better of computer, technological and digital literacy skills"
+				],
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "paragraph",
+				"text": "Teaching assistants",
+				"markup": "<strong>Teaching assistants</strong>",
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "paragraph",
+				"text": "Each Access group must have a qualified teacher competent in English. If any Access group contains more than 18 students a teaching assistant to provide students more personalized attention is also highly recommended. All teacher and teaching assistant duties are planned and executed in agreement with the Access coordinator. The teachers and coordinators work together to select a qualified teaching assistant, promote the program, recruit students, screen applications, conduct interviews, and notify candidates of the results.",
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "paragraph",
+				"text": "Teaching assistants responsibilities may include but are not limited to:",
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Assisting teachers in their duties and responsibilities, as required",
+					"Providing additional assistance to lower-level students, as required",
+					"Providing supplemental activities for higher-level students who have completed assigned tasks ahead of time",
+					"Assisting to ensure the course runs smoothly and successfully"
+				],
+				"section": "Roles and Responsibilities"
+			},
+			{
+				"style": "subheading",
+				"text": "Access Student Assessment",
+				"section": "Access Student Assessment"
+			},
+			{
+				"style": "paragraph",
+				"text": "Assessing Access students communicatively is an important element of the program. Assessments offer valuable feedback to teachers on the progress of their students and whether or not students are on track to achieve the learning goals.",
+				"section": "Access Student Assessment"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access Assessment Requirements",
+				"markup": "<strong>Access Assessment Requirements</strong>",
+				"section": "Access Student Assessment"
+			},
+			{
+				"style": "paragraph",
+				"text": "Providers are required to:",
+				"section": "Access Student Assessment"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Provide continuous assessment by giving regular tests (4 skills), graded classroom participation, student-curated portfolios, oral tests, individualized feedback, and/or check ups throughout the duration of the program",
+					"Collect all tests and/or rubrics and store them in students’ portfolios",
+					"Support students and guardians if students have problems with classes/tests and work together to create an improvement plan"
+				],
+				"section": "Access Student Assessment"
+			},
+			{
+				"style": "external_resource",
+				"url": "",
+				"text": "List of Example Communicative Assessments",
+				"section": "Access Student Assessment"
+			},
+			{
+				"style": "subheading",
+				"text": "Amendments to the Agreement",
+				"section": "Amendments to the Agreement"
+			},
+			{
+				"style": "paragraph",
+				"text": "During the course of an Access Program, providers might need to amend their agreement to...",
+				"section": "Amendments to the Agreement"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Change the end date of the agreement",
+					"Make a revision to the program budget (see Budget Revisions section)",
+					"Change the scope of work (i.e. add an Intensive Session)",
+					"Change the name of their institution or organization"
+				],
+				"markup": [
+					"Change the end date of the agreement",
+					"Make a revision to the program budget (see <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none\" href=\"/#/handbook#BudgetRevisions\" target=\"_blank\">Budget Revisions</a> section)",
+					"Change the scope of work (i.e. add an Intensive Session)",
+					"Change the name of their institution or organization"
+				],
+				"section": "Amendments to the Agreement"
+			},
+			{
+				"style": "paragraph",
+				"text": "Amendment Request Process",
+				"markup": "<strong>Amendment Request Process</strong>",
+				"section": "Amendments to the Agreement"
+			},
+			{
+				"style": "paragraph",
+				"text": "Amendment requests must be submitted to and approved first by the U.S. Embassy POC and/or RELO at least two weeks before the end of the agreement end date. Requests for amendment submitted and approved less than two weeks prior to the agreement end date will not be processed.",
+				"section": "Amendments to the Agreement"
+			},
+			{
+				"style": "graphic",
+				"title": "Amendment Process",
+				"section": "Amendments to the Agreement",
+				"text": "Requesting an amendment includes the following steps: provider sends U.S. Embassy amendment request or FHI 360 alerts U.S. Embassy that an amendment is needed; U.S. Embassy sends amendment request to FHI 360 and ECA for approval; if approved, FHI 360 sends amendment documents to U.S. Embassy and provider for signatures; once signed by the provider, the documents must be scanned and sent back to FHI 360 for their signature. Please note that the amendment documents are valid from the date of FHI 360's signature."
+			},
+			{
+				"style": "external_resource",
+				"url": "",
+				"text": "Example Amendment Request",
+				"section": "Amendments to the Agreement"
+			},
+			{
+				"style": "subheading",
+				"text": "Budget Revisions",
+				"section": "Budget Revisions"
+			},
+			{
+				"style": "paragraph",
+				"text": "A Letter of Approved Budget Change must be processed if a provider needs to:",
+				"section": "Budget Revisions"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Transfer funds between budget line items that exceeds 10% of the total agreement award amount (does not include the administration line item)",
+					"Move funds into or out of the Administration budget line item"
+				],
+				"section": "Budget Revisions"
+			},
+			{
+				"style": "paragraph",
+				"text": "Budget Revision Process",
+				"markup": "<strong>Budget Revision Process</strong>",
+				"section": "Budget Revisions"
+			},
+			{
+				"style": "paragraph",
+				"text": "If the budget revisions take place before the last period of the program, a Budget Revision Request Form will be used to determine the new budget for the remainder of the program. If the budget revisions occur in the last period of the program, the final program and financial report will be used to determine the revised budget.",
+				"section": "Budget Revisions"
+			},
+			{
+				"style": "graphic",
+				"title": "Budget Revision Process",
+				"section": "Budget Revisions",
+				"text": "Requesting a budget change includes the following steps: provider sends U.S. Embassy budget change request OR FHI 360 alerts U.S. Embassy that a budget revision is needed; U.S. Embassy sends budget change request to FHI 360 and ECA for approval; if approved, FHI 360 sends a letter of approved budget change to U.S. Embassy and provider for their records. Once the provider receives the letter, the revised budget is approved and in effect."
+			},
+			{
+				"style": "external_resource",
+				"url": "",
+				"text": "Example Letter of Approved Budget Change",
+				"section": "Budget Revisions"
 			}
 		]
 	],
