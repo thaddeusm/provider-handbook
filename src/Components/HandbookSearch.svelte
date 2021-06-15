@@ -131,6 +131,7 @@
 		background: var(--white);
 		margin: 0 85px 0 85px;
 		height: 50%;
+		max-height: 500px;
 		overflow: auto;
 		box-shadow: var(--shadow);
 		list-style: none;
