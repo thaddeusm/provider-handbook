@@ -514,6 +514,7 @@
 		text-decoration-color: var(--brand-light);
 		text-decoration-thickness: 3px;
 		text-decoration-skip-ink: none!important;
+		text-decoration-skip: none!important;
 		grid-area: link;
 	}
 

@@ -20,7 +20,7 @@
 			{
 				"style": "paragraph", 
 				"text": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer (RELO)/U.S. Embassy point of contact and/or email accessprogram@state.gov.",
-				"markup": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer (RELO)/U.S. Embassy point of contact and/or email <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none\" href=\"mailto:accessprogram@state.gov\">accessprogram@state.gov</a>.",
+				"markup": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer (RELO)/U.S. Embassy point of contact and/or email <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" href=\"mailto:accessprogram@state.gov\">accessprogram@state.gov</a>.",
 				"section": "Introduction"
 			},
 			{
@@ -720,7 +720,7 @@
 			{
 				"style": "paragraph",
 				"text": "For more information regarding the proposal process, please review pages 19-26 here.",
-				"markup": "For more information regarding the proposal process, please <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none\" target=\"_blank\" href=\"https://mx.usembassy.gov/wp-content/uploads/sites/25/FY2018-Access-Provider-Handbook-1.pdf\">review pages 19-26 here</a>.",
+				"markup": "For more information regarding the proposal process, please <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" target=\"_blank\" href=\"https://mx.usembassy.gov/wp-content/uploads/sites/25/FY2018-Access-Provider-Handbook-1.pdf\">review pages 19-26 here</a>.",
 				"section": "Application and Proposal Process"
 			},
 			{
@@ -747,7 +747,7 @@
 			{
 				"style": "paragraph",
 				"text": "For more information regarding the agreement process, review pages 27-29 here.",
-				"markup": "For more information regarding the agreement process, <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none\" target=\"_blank\" href=\"https://mx.usembassy.gov/wp-content/uploads/sites/25/FY2018-Access-Provider-Handbook-1.pdf\">review pages 27-29 here</a>.",
+				"markup": "For more information regarding the agreement process, <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" target=\"_blank\" href=\"https://mx.usembassy.gov/wp-content/uploads/sites/25/FY2018-Access-Provider-Handbook-1.pdf\">review pages 27-29 here</a>.",
 				"section": "Agreement Process"
 			},
 			{
@@ -1159,7 +1159,7 @@
 			{
 				"style": "paragraph",
 				"text": "American Spaces is a term that refers to the American Corners, International Resource Centers, and Binational Centers located in some countries. Visit the American Spaces site https://americanspaces.state.gov/home/ or contact the U.S. Embassy/Consulate for more information.",
-				"markup": "<strong>American Spaces</strong> is a term that refers to the American Corners, International Resource Centers, and Binational Centers located in some countries. Visit the American Spaces site <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none\" href=\"https://americanspaces.state.gov/home/\" target=\"_blank\">https://americanspaces.state.gov/home/</a> or contact the U.S. Embassy/Consulate for more information.",
+				"markup": "<strong>American Spaces</strong> is a term that refers to the American Corners, International Resource Centers, and Binational Centers located in some countries. Visit the American Spaces site <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" href=\"https://americanspaces.state.gov/home/\" target=\"_blank\">https://americanspaces.state.gov/home/</a> or contact the U.S. Embassy/Consulate for more information.",
 				"section": "Exposure to Americans and U.S. Resources"
 			},
 			{
@@ -1459,7 +1459,7 @@
 				],
 				"markup": [
 					"Change the end date of the agreement",
-					"Make a revision to the program budget (see <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none\" href=\"/#/handbook#BudgetRevisions\" target=\"_blank\">Budget Revisions</a> section)",
+					"Make a revision to the program budget (see <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" href=\"/#/handbook#BudgetRevisions\" target=\"_blank\">Budget Revisions</a> section)",
 					"Change the scope of work (i.e. add an Intensive Session)",
 					"Change the name of their institution or organization"
 				],

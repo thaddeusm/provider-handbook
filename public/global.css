@@ -220,6 +220,7 @@ a:active {
 	text-decoration-color: var(--red)!important;
 	text-decoration-thickness: 3px;
 	text-decoration-skip-ink: none;
+	text-decoration-skip: none;
 }
 
 button {
