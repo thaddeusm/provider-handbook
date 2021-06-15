@@ -451,7 +451,7 @@
 			},
 			{
 				"style": "external_link",
-				"text": "How do I Evaluate a Service Learning Project?",
+				"text": "How Do I Evaluate a Service Learning Project?",
 				"url": "https://rise.articulate.com/share/5TYhS_VHhrYKaWiZQoEZbAQM4QVAQ_Nu",
 				"section": "Planning a 2-Year Access Program"
 			},
@@ -719,6 +719,12 @@
 			},
 			{
 				"style": "paragraph",
+				"text": "For more information regarding the proposal process, please review pages 19-26 here.",
+				"markup": "For more information regarding the proposal process, please <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none\" target=\"_blank\" href=\"https://mx.usembassy.gov/wp-content/uploads/sites/25/FY2018-Access-Provider-Handbook-1.pdf\">review pages 19-26 here</a>.",
+				"section": "Application and Proposal Process"
+			},
+			{
+				"style": "paragraph",
 				"text": "Providers should review the entire handbook before submitting your proposal as providers will be required to describe the activities for the 2-year duration of the program.",
 				"section": "Application and Proposal Process"
 			},
@@ -736,6 +742,12 @@
 			{
 				"style": "subheading",
 				"text": "Agreement Process",
+				"section": "Agreement Process"
+			},
+			{
+				"style": "paragraph",
+				"text": "For more information regarding the agreement process, review pages 27-29 here.",
+				"markup": "For more information regarding the agreement process, <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none\" target=\"_blank\" href=\"https://mx.usembassy.gov/wp-content/uploads/sites/25/FY2018-Access-Provider-Handbook-1.pdf\">review pages 27-29 here</a>.",
 				"section": "Agreement Process"
 			},
 			{
@@ -1516,6 +1528,280 @@
 				"url": "",
 				"text": "Example Letter of Approved Budget Change",
 				"section": "Budget Revisions"
+			},
+			{
+				"style": "subheading",
+				"text": "Reporting Requirements",
+				"section": "Reporting Requirements"
+			},
+			{
+				"style": "paragraph",
+				"text": "Providers are required to submit quarterly or semester programmatic and financial reports by email throughout the duration of the program to the U.S. Embassy according to the schedule in the signed agreement. The purpose of these reports is to record accurate program activities that have occurred, spending of Access Program funds, and formal requesting of continued funding every period. The reports will be reviewed by the U.S. Embassy/Consulate, FHI 360, and ECA. ECA has final authority to approve the reporting documents and authorize disbursement of funds.",
+				"section": "Reporting Requirements"
+			},
+			{
+				"style": "paragraph",
+				"text": "The Financial Report will include information about the provider’s actual expenses and cash balance. The Program Report will include information about Access Programming; for example, information about the different site locations, teachers, students, After School Instruction hours, Enhancement Activities, Intensive sessions, and Service Learning activities.",
+				"section": "Reporting Requirements"
+			},
+			{
+				"style": "external_link",
+				"url": "https://rise.articulate.com/share/CCnSrVeaa6O5EGWKuXG7iM05jgcpqPdA",
+				"text": "What are Important Concepts Related to Financial Reporting?",
+				"section": "Reporting Requirements"
+			},
+			{
+				"style": "paragraph",
+				"text": "Example Reporting Schedule and Deadlines",
+				"markup": "<strong>Example Reporting Schedule and Deadlines</strong>",
+				"section": "Reporting Requirements"
+			},
+			{
+				"style": "graphic",
+				"title": "Reporting Schedule",
+				"section": "Reporting Requirements",
+				"text": "Reports are due 30 days after the end of a reporting period."
+			},
+			{
+				"style": "paragraph",
+				"text": "Program and Finance reports are due on the date indicated in the official agreement and Monthly reports on the 15th of every month. If something beyond the provider’s control is causing delays, please contact the U.S. Embassy. Consistent late submission of reports could mean the U.S. Embassy/Consulate may not select the provider for future programming.",
+				"section": "Reporting Requirements"
+			},
+			{
+				"style": "paragraph",
+				"text": "Program funds will be sent for the next period once accurate reports are received and approved. Late, incomplete, and/or inaccurate reports may result in delayed payments to the program. Payments will be sent only when all questions related to the report have been clarified. Misuse of funds or incomplete reporting can lead to the termination of an agreement.",
+				"section": "Reporting Requirements"
+			},
+			{
+				"style": "paragraph",
+				"text": "Tips for Reporting",
+				"markup": "<strong>Tips for Reporting</strong>",
+				"section": "Reporting Requirements"
+			},
+			{
+				"style": "ordered_list",
+				"text": [
+					"To convert expenses into U.S. Dollar, providers should use the exchange rate based on the day expenses are incurred. Providers should also reconcile their bank account statement so that the calculation of Cash Balance (in U.S. Dollar) in their Financial Report is accurate. In some cases, this will require providers to report an expense or credit due to currency loss or currency gain.",
+					"Expenses should not be rounded (i.e. $5.52) in the reports.",
+					"All salaries should be reported as actual hours worked in that period, monthly salaries are not allowed.",
+					"Keep records of students’ attendance, and, if somebody misses classes, check with parents/guardians for the reason for the student’s absence. Please note that students must attend at least 70% of classes to keep their Access scholarship.",
+					"Providers must also keep all receipts because reported program expenses must be verified by proof of purchase. Receipts must include vendor information, name of good(s), and quantity of good(s) purchased. Please be aware that receipts that are not properly issued may be denied by the U.S. Embassy/Consulate and therefore cannot be expensed to the Access Program. Providers will also not be eligible to receive another disbursement of funds until all receipts are accounted for."
+				],
+				"section": "Reporting Requirements"
+			},
+			{
+				"style": "graphic",
+				"title": "Receipts for Purchases",
+				"section": "Reporting Requirements",
+				"text": "If a receipt for a purchase is not provided, you can use a blank receipt to include vendor informaiton, name of good(s), and the quantity of good(s) purchased."
+			},
+			{
+				"style": "external_link",
+				"url": "https://rise.articulate.com/share/F01YSfTGFAFS4gmBYqeakcgIGJO0Hcxh",
+				"text": "How Do I Effectively Explain My Expenses in a Financial Report?",
+				"section": "Reporting Requirements"
+			},
+			{
+				"style": "external_resource",
+				"url": "",
+				"text": "Quarterly Reporting Guide",
+				"section": "Reporting Requirements"
+			},
+			{
+				"style": "subheading",
+				"text": "Program Monitoring",
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "paragraph",
+				"text": "Program monitoring is a critical element in ensuring that the Access Program is implemented in accordance with the official Access financial and program agreement and achieves the goals of a successful program.",
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access Provider: The provider administrator and/or director is ultimately responsible for evaluating the program as it is implemented but will work closely with the entire staff to ensure a system of monitoring is planned and carried out throughout the program. The administrator/director:",
+				"markup": "<strong>Access Provider</strong>: The provider administrator and/or director is ultimately responsible for evaluating the program as it is implemented but will work closely with the entire staff to ensure a system of monitoring is planned and carried out throughout the program. The administrator/director:",
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Ensures that program staff- coordinator, teachers, teacher assistants carry out required duties and fulfill the program’s goals and objectives",
+					"Observes Access classes and activities to check that proper administration of the program is taking place",
+					"Addresses challenges with any aspect of the program in a timely manner, with assistance and/or recommendations from the U.S. Embassy/Consulate, if necessary",
+					"Provides clear and concrete evidence of monitoring efforts both financial and programmatic in quarterly or semester reports",
+					"Establishes a system for monitoring and evaluating the progress of Access students in collaboration with coordinator and teachers (may include establishing progress benchmarks and providing feedback to students and teachers throughout the program)"
+				],
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "paragraph",
+				"text": "Access Coordinator: In coordination with provider administrators/directors, the coordinator assists in the monitoring process and:",
+				"markup": "<strong>Access Coordinator</strong>: In coordination with provider administrators/directors, the coordinator assists in the monitoring process and:",
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Observes Access classes and notes any recommendations for instructional improvements",
+					"Consults with Access teachers on solutions to noted recommendations for improvement",
+					"Seeks to improve Access Program teachers’ methodical and pedagogical skills through participation in professional development opportunities, consultations and observations of experienced colleagues, and self-education",
+					"Reflects on and monitors one’s own Access Program coordinator duties and takes steps to address any areas deemed necessary for improvement"
+				],
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "paragraph",
+				"text": "Teacher",
+				"markup": "<strong>Teacher</strong>:",
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Reflects on and monitors one’s own teaching and takes steps to address any areas deemed necessary for improvement",
+					"Monitors teacher assistant’s (if any) performance, provides recommendations for improvements and notifies coordinator of any ongoing issues",
+					"Monitors and submits updated student portfolios to program coordinator regarding attendance and students’ academic progress according to the schedule and benchmarks established by the provider",
+					"Monitors student progress by conducting continuous and frequent formative and summative assessments",
+					"Collaborates with the coordinator and teacher assistants to monitor and identify students who need additional support and works with students and respective parents/guardians to design an individualized improvement plan for students who are not progressing as needed"
+				],
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "paragraph",
+				"text": "Teacher Assistant",
+				"markup": "<strong>Teacher Assistant</strong>:",
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Reflects on and monitors one’s own performance and reaches out to lead teacher and/or coordinator to address any areas deemed necessary for improvement",
+					"Assists the teacher in monitoring student performance and progress with formative and summative assessments",
+					"Assists the teacher in monitoring and identifying students who need additional support and working with students and respective parents/guardians to design an individualized improvement plan for students who are not progressing as needed"
+				],
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "paragraph",
+				"text": "Guests and Visitors",
+				"markup": "<strong>Guests and Visitors</strong>:",
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "paragraph",
+				"text": "As part of the monitoring process during program implementation, guests from the U.S. Embassy/Consulate will visit Access Program sites and engage with program participants in after-school classes and other program activities. Some visits could include meeting with provider administrators and staff and teachers, so providers are encouraged to keep their accounting updating and receipts ready for possible review. Other visits may be focused on attending program activities or being guest speakers during lessons. Keep in mind the following:",
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Ensure that time and a space is available for the visitor to speak with program staff or teachers, if requested",
+					"Adequately prepare for a guest speaker because it is an excellent opportunity for students to build confidence in practicing language skills and to learn more about U.S. life and culture",
+					"Plan an opportunity for Access students to have authentic, meaningful, and spontaneous language exchanges with a visitor rather than putting on a “show” (limit rote memorization of songs, poetry, presentations or rehearing the lesson)"
+				],
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "paragraph",
+				"text": "Suggestions:",
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "ordered_list",
+				"text": [
+					"Give the visitor a chance to share with students but don’t expect a presentation by the visitor that does not allow for student participation",
+					"Request visitors to speak on a topic related to the students’ current unit/focus of study and beforehand brainstorm relevant vocabulary and questions for visitors about that topic",
+					"Plan a game to play together with the guest"
+				],
+				"section": "Program Monitoring"
+			},
+			{
+				"style": "external_link",
+				"url": "https://rise.articulate.com/share/lG8nRPZT4CBJ9Rh7wXRB2dMOIJ41FVUJ",
+				"text": "How Do I Prepare for a Visit from U.S. Embassy Staff?",
+				"section": "Program Monitoring"
+			}
+		],
+		[
+			{
+				"style": "heading",
+				"text": "After: Program Close-Out",
+				"section": "After: Program Close-Out"
+			},
+			{
+				"style": "paragraph",
+				"text": "After Access classes have finished and the closing ceremony has been held, providers enter the final phase of the Access Program cycle: Program Close Out.",
+				"section": "After: Program Close-Out"
+			},
+			{
+				"style": "paragraph",
+				"text": "Close Out Process",
+				"markup": "<strong>Close Out Process</strong>",
+				"section": "After: Program Close-Out"
+			},
+			{
+				"style": "paragraph",
+				"text": "See the detailed step-by-step guide to the Close Out Process below.",
+				"section": "After: Program Close-Out"
+			},
+			{
+				"style": "graphic",
+				"title": "Close Out Process",
+				"section": "After: Program Close-Out",
+				"text": "The close-out process includes the following possible steps: submit final report, final report is approved, return unused funds (if any), and receive close-out documents."
+			},
+			{
+				"style": "paragraph",
+				"text": "Post-Program Responsibilities",
+				"markup": "<strong>Post-Program Responsibilities</strong>",
+				"section": "After: Program Close-Out"
+			},
+			{
+				"style": "paragraph",
+				"text": "To comply with auditing and U.S. Government regulations, the provider must keep the following documents for at least three years after the end of the program. These documents include but are not limited to:",
+				"section": "After: Program Close-Out"
+			},
+			{
+				"style": "unordered_list",
+				"text": [
+					"Signed agreement",
+					"Finalized agreement amendment(s) or letter(s) of approved budget change",
+					"Close out Letter and Disbursement Report",
+					"All program & financial report forms",
+					"Original receipts",
+					"Bank statements",
+					"Financial reports that relate to Program costs",
+					"Photo consent forms",
+					"Student applications",
+					"Student contracts",
+					"Student interview rubrics",
+					"Parent consent forms",
+					"Teacher agreements"
+				],
+				"section": "After: Program Close-Out"
+			},
+			{
+				"style": "paragraph",
+				"text": "The U.S. Embassy/Consulate is always ready to assist with any questions or concerns throughout this process, so do not hesitate to ask sooner rather than later.",
+				"section": "After: Program Close-Out"
+			},
+			{
+				"style": "paragraph",
+				"text": "Terminations",
+				"markup": "<strong>Terminations</strong>",
+				"section": "After: Program Close-Out"
+			},
+			{
+				"style": "paragraph",
+				"text": "In rare situations, the U.S. Embassy/Consulate can decide that an Access Program should not continue and the program agreement will be terminated. Termination may occur for a variety of reasons such as environmental (civil unrest, natural disaster, etc.), poor performance, and/or mismanagement of funds.",
+				"section": "After: Program Close-Out"
+			},
+			{
+				"style": "graphic",
+				"title": "Termination",
+				"section": "After: Program Close-Out",
+				"text": "The termination process begins with the U.S. Embassy or Consulate and ECA making a determination decision. FHI 360 sends a letter to the provider to formally terminate the agreement. The provider has 30 days after the effective end date to complete the standard close out process."
 			}
 		]
 	],

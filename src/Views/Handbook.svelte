@@ -182,7 +182,7 @@
  							<InteractiveAvailable width={'2rem'} height={'2rem'} />
  						</span>
  						{#if section.url == ''}
- 							<span class="external-link">
+ 							<span class="coming-soon">
  								{section.text} (coming soon)
  							</span>
  						{:else}
@@ -197,7 +197,7 @@
  							<ResourceAvailable width={'2rem'} height={'2rem'} color={'#D11242'} />
  						</span>
  						{#if section.url == ''}
- 							<span class="external-link">
+ 							<span class="coming-soon">
  								{section.text} (coming soon)
  							</span>
  						{:else}
@@ -542,5 +542,11 @@
 		text-decoration-thickness: 3px;
 		text-decoration-skip-ink: none!important;
 		grid-area: link;
+	}
+
+	.coming-soon {
+		font-size: 16px;
+		grid-area: link;
+		margin-top: 3px;
 	}
 </style>
