@@ -1805,5 +1805,366 @@
 			}
 		]
 	],
-	"glossary": {}
+	"glossary": {
+		"Access goals": {
+			"definition": "The objective of the Access program is to provide participants with improved English skills that may lead to better jobs and educational prospects, including future exchanges and study in the United States.",
+			"form": "phrase"
+		},
+		"ECA": {
+			"definition": "Bureau of Educational and Cultural Affairs",
+			"form": "acronym"
+		},
+		"evaluate": {
+			"definition": "To gauge the success and effectiveness of the program in meeting its overarching goals and objectives.",
+			"form": "word"
+		},
+		"assess": {
+			"definition": "To use a variety of methods and tools to evaluate and measure the learning process during and after instruction. Assessment can be continuous (formative) or periodic and systematic (summative).",
+			"form": "word"
+		},
+		"OELP": {
+			"definition": "Office of English Language Programs",
+			"form": "acronym"
+		},
+		"POC": {
+			"definition": "point of contact",
+			"form": "acronym"
+		},
+		"RELO": {
+			"definition": "Regional English Language Officer",
+			"form": "acronym"
+		},
+		"test": {
+			"definition": "is a product that measures a particular behavior or set of objectives.",
+			"form": "word"
+		},
+		"hybrid": {
+			"definition": "something that is formed by combining two or more things (i.e. both virtual and face to face learning).",
+			"form": "word"
+		},
+		"overview": {
+			"definition": "a general explanation or description of something.",
+			"form": "word"
+		},
+		"interactive": {
+			"definition": "requiring people to talk with each other or do things together.",
+			"form": "word"
+		},
+		"tutorial": {
+			"definition": "a book, computer program, etc., that teaches someone how to do something by explaining each stage of a process.",
+			"form": "word"
+		},
+		"interactive": {
+			"definition": "to talk or do things with other people.",
+			"form": "word"
+		},
+		"cooperative": {
+			"definition": "involving two or more people or groups working together to do something.",
+			"form": "word"
+		},
+		"competitive": {
+			"definition": "as good as or better than others of the same kind : able to compete successfully with others.",
+			"form": "word"
+		},
+		"foundation": {
+			"definition": "something (such as an idea, a principle, or a fact) that provides support for something.",
+			"form": "word"
+		},
+		"civil society": {
+			"definition": "the organizations within a society that promote the common good such as government institutions, charities, religious organizations, and community groups.",
+			"form": "word"
+		},
+		"diversity": {
+			"definition": "the state of having people who are different races or who have different cultures in a group or organization.",
+			"form": "word"
+		},
+		"tolerance": {
+			"definition": "willingness to accept feelings, habits, or beliefs that are different from your own.",
+			"form": "word"
+		},
+		"digital literacy": {
+			"definition": "having the knowledge and ability to use a wide range of technology tools for a variety of purposes.",
+			"form": "word"
+		},
+		"foster": {
+			"definition": "to help (something) grow or develop.",
+			"form": "word"
+		},
+		"service learning": {
+			"definition": "teaching approach that combines specific learning objectives with service to the community to provide a learning experience in which students develop new skills and a deeper understanding of their community.",
+			"form": "word"
+		},
+		"eligibility": {
+			"definition": "able to be chosen for something; able to do or receive something.",
+			"form": "word"
+		},
+		"verify": {
+			"definition": "to prove, show, find out, or state that (something) is true or correct.",
+			"form": "word"
+		},
+		"implement": {
+			"definition": "to begin to do or use (something, such as a plan); to make (something) active or effective.",
+			"form": "word"
+		},
+		"incorporate": {
+			"definition": "to include (something) as part of something else.",
+			"form": "word"
+		},
+		"register": {
+			"definition": "to record information about (something) in a book or system of public record.",
+			"form": "word"
+		},
+		"license": {
+			"definition": "an official document, card, etc., that gives you permission to do, use, or have something.",
+			"form": "word"
+		},
+		"mandatory": {
+			"definition": "required by law or rule.",
+			"form": "word"
+		},
+		"comply": {
+			"definition": "to do what you have been asked or ordered to do.",
+			"form": "word"
+		},
+		"extend": {
+			"definition": "to become longer or to be able to become longer.",
+			"form": "word"
+		},
+		"stakeholder": {
+			"definition": "a person or organization that has invested time in something (such as an education program like Access).",
+			"form": "word"
+		},
+		"allocate": {
+			"definition": "to divide and give out (something) for a special reason or to particular people, companies, etc.",
+			"form": "word"
+		},
+		"disbursement": {
+			"definition": "pay out (money) from a fund that has been created for a special purpose.",
+			"form": "word"
+		},
+		"collaborate": {
+			"definition": "to work with another person or group in order to achieve or do something.",
+			"form": "word"
+		},
+		"trend": {
+			"definition": "a general direction of change; a way of behaving, proceeding, etc., that is developing and becoming more common.",
+			"form": "word"
+		},
+		"lifecycle": {
+			"definition": "the series of stages through which a program passes from the beginning of the program until the end.",
+			"form": "word"
+		},
+		"guidance": {
+			"definition": "help or advice that tells you what to do; the act or process of guiding someone or something.",
+			"form": "word"
+		},
+		"intensive": {
+			"definition": "involving very great effort or work.",
+			"form": "word"
+		},
+		"enhancement": {
+			"definition": "to increase or improve (something).",
+			"form": "acronym"
+		},
+		"socio-economic": {
+			"definition": "of, relating to, or involving a combination of social and economic factors.",
+			"form": "word"
+		},
+		"reimburse": {
+			"definition": "to pay someone an amount of money equal to an amount that person has spent.",
+			"form": "word"
+		},
+		"distribute": {
+			"definition": "to spread or place (something) over an area and/or time period.",
+			"form": "word"
+		},
+		"applicable": {
+			"definition": "able to be applied or used in a particular situation.",
+			"form": "word"
+		},
+		"component": {
+			"definition": "one of the parts of something (such as a program); an important piece of something.",
+			"form": "word"
+		},
+		"minimum": {
+			"definition": "the lowest number or amount that is possible or allowed.",
+			"form": "word"
+		},
+		"maximum": {
+			"definition": "the highest number or amount that is possible or allowed.",
+			"form": "word"
+		},
+		"prefer": {
+			"definition": "to like (someone or something) better than someone or something else.",
+			"form": "word"
+		},
+		"justification": {
+			"definition": "an acceptable reason for doing something; something that justifies an action.",
+			"form": "word"
+		},
+		"fundamental": {
+			"definition": "forming or relating to the most important part of something.",
+			"form": "word"
+		},
+		"essential": {
+			"definition": "extremely important and necessary.",
+			"form": "word"
+		},
+		"authentic": {
+			"definition": "real or genuine; not copied or false.",
+			"form": "word"
+		},
+		"memorization": {
+			"definition": "to learn (something) so well that you are able to remember it perfectly.",
+			"form": "word"
+		},
+		"duration": {
+			"definition": "the length of time that something exists or lasts.",
+			"form": "word"
+		},
+		"facilitate": {
+			"definition": "to help (something) run more smoothly and effectively.",
+			"form": "word"
+		},
+		"memorable": {
+			"definition": "very good or interesting and worth remembering.",
+			"form": "word"
+		},
+		"impression": {
+			"definition": "the effect or influence that something or someone has on a person's thoughts or feelings.",
+			"form": "word"
+		},
+		"consent": {
+			"definition": "to agree to do or allow something; to give permission for something to happen or be done.",
+			"form": "word"
+		},
+		"welfare": {
+			"definition": "the state of being happy, healthy, or successful.",
+			"form": "word"
+		},
+		"instill": {
+			"definition": "to gradually cause someone to have (an attitude, feeling, etc.).",
+			"form": "word"
+		},
+		"convenient": {
+			"definition": "located in a place that is nearby and easy to get to.",
+			"form": "word"
+		},
+		"expenses": {
+			"definition": "the amount of money that is needed to pay for or buy something.",
+			"form": "word"
+		},
+		"accommodation": {
+			"definition": "a place (such as a room in a hotel) where travelers can sleep and find other services.",
+			"form": "word"
+		},
+		"honorarium": {
+			"definition": "an amount of money paid for a service.",
+			"form": "word"
+		},
+		"empower": {
+			"definition": "to give power to (someone).",
+			"form": "word"
+		},
+		"capacity": {
+			"definition": "the ability to do something; a mental, emotional, or physical ability.",
+			"form": "word"
+		},
+		"professional development": {
+			"definition": "process of increasing job-related knowledge and skills through continuous learning.",
+			"form": "phrase"
+		},
+		"documentation": {
+			"definition": "the documents, records, etc., that are used to prove something or make something official.",
+			"form": "word"
+		},
+		"habitual": {
+			"definition": "done regularly or repeatedly.",
+			"form": "word"
+		},
+		"commitment": {
+			"definition": "a promise to do or give something.",
+			"form": "word"
+		},
+		"inclusive": {
+			"definition": "open to everyone; not limited to certain people.",
+			"form": "word"
+		},
+		"integrity": {
+			"definition": "the quality of being honest and fair.",
+			"form": "word"
+		},
+		"auditing": {
+			"definition": "a complete and careful examination of the financial records of a business or person OR to attend a class without having to do any of the course work and without receiving credit.",
+			"form": "word"
+		},
+		"anticipated": {
+			"definition": "to think of (something that will or might happen in the future).",
+			"form": "word"
+		},
+		"approximately": {
+			"definition": "almost correct or exact.",
+			"form": "word"
+		},
+		"consideration": {
+			"definition": "something that you think about when you make a choice or decision.",
+			"form": "word"
+		},
+		"qualified": {
+			"definition": "having the necessary skill, experience, or knowledge to do a particular job or activity; having the qualifications to do something.",
+			"form": "word"
+		},
+		"standardize": {
+			"definition": "to change (things) so that they are similar and consistent and agree with rules about what is proper and acceptable.",
+			"form": "word"
+		},
+		"acquisition": {
+			"definition": "the act of getting or acquiring something; the act or process of gaining skill, knowledge, etc.",
+			"form": "word"
+		},
+		"eventual": {
+			"definition": "coming or happening at a later time.",
+			"form": "word"
+		},
+		"consult": {
+			"definition": "to talk about something with (someone) in order to make a decision.",
+			"form": "word"
+		},
+		"notify": {
+			"definition": "to tell (someone) officially about something.",
+			"form": "word"
+		},
+		"liaison": {
+			"definition": "a person who helps organizations or groups to work together and provide information to each other.",
+			"form": "word"
+		},
+		"amendment": {
+			"definition": "the act or process of changing the words or meaning of a law or document; the act or process of amending something.",
+			"form": "word"
+		},
+		"revision": {
+			"definition": "a change or a set of changes that corrects or improves something.",
+			"form": "word"
+		},
+		"clarify": {
+			"definition": "to make (something) clear or clearer; to make (something) easier to understand.",
+			"form": "word"
+		},
+		"termination": {
+			"definition": "an act of ending something.",
+			"form": "word"
+		},
+		"convert": {
+			"definition": "to change (something) into a different form or so that it can be used in a different way such as currency.",
+			"form": "word"
+		},
+		"accordance": {
+			"definition": "in a way that agrees with or follows (something, such as a rule or request).",
+			"form": "word"
+		},
+		"critical": {
+			"definition": "extremely important.",
+			"form": "word"
+		}
+	}
 }

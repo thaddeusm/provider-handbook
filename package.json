@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "@rollup/plugin-json": "^4.1.0",
-    "@sveltejs/svelte-virtual-list": "^3.0.1",
     "sirv-cli": "^1.0.0"
   }
 }

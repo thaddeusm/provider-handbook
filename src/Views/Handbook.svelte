@@ -27,67 +27,86 @@
 	import ResourceAvailable from './../Graphics/Icons/ResourceAvailable.svelte';
 	import Footer from './../Components/Footer.svelte';
 
-	import VirtualList from '@sveltejs/svelte-virtual-list';
-
 	import Illustration from './../Components/IllustrationContainer.svelte';
 
 	let activeId = "Introduction";
+	let processedSections = {};
 
-	function textWithMarkup(element, text, section, isActive) {
-		let glossary = Handbook.glossary;
+	$: currentId = activeId;
 
-		let terms = Object.keys(glossary);
-		let defs = Object.values(glossary);
+	function textWithMarkup(element, text, section, isActive, currentSection, area, index, listItem) {
+		if (processedSections.hasOwnProperty(area) && processedSections[area].hasOwnProperty(index) && processedSections[area][index].hasOwnProperty(listItem)) {
+			return processedSections[area][index][listItem];
+		} else {
+			let glossary = Handbook.glossary;
 
-		let textWithTooltips = text;
+			let terms = Object.keys(glossary);
+			let defs = Object.values(glossary);
 
-		// add tooltips
-		for (let i=0; i<terms.length; i++) {
-			let term;
+			let textWithTooltips = text;
 
-			if (defs[i].form !== 'acronym') {
-				term = new RegExp(terms[i], 'i', 'g');
-			} else {
-				term = new RegExp(terms[i], 'g');
-			}
+			if (section.split(' ').join('') == currentSection) {
+				// add tooltips
+				for (let i=0; i<terms.length; i++) {
+					let term;
 
-			let termText = terms[i];
+					if (defs[i].form !== 'acronym') {
+						term = new RegExp(terms[i], 'i', 'g');
+					} else {
+						term = new RegExp(terms[i], 'g');
+					}
 
-			if (section !== termText) {
-				if (defs[i].reference) {
-					textWithTooltips = textWithTooltips.replace(term, (match) => {
-						return `<button class="glossary-term"><u>${match}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="action-button-small tooltip-link" onclick="jumpToId('${defs[i].reference.split(' ').join('')}')">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
-					});
-				} else {
-					textWithTooltips = textWithTooltips.replace(term, (match) => {
-						return `<button class="glossary-term"><u>${match}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
-					});
+					let termText = terms[i];
+
+					if (section !== termText) {
+						if (defs[i].reference) {
+							textWithTooltips = textWithTooltips.replace(term, (match) => {
+								return `<button class="glossary-term"><u>${match}</u><aside class="tooltip"><div class="tooltip-body"><p><span class="term">${match} - </span>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="action-button-small tooltip-link" onclick="jumpToId('${defs[i].reference.split(' ').join('')}')">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
+							});
+						} else {
+							textWithTooltips = textWithTooltips.replace(term, (match) => {
+								return `<button class="glossary-term"><u>${match}</u><aside class="tooltip"><div class="tooltip-body"><p><span class="term">${match} - </span>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
+							});
+						}
+					}
 				}
 			}
+
+			// add search highlights
+			let textWithHighlights;
+
+			let query = new RegExp(search_query_value, 'i');
+
+			if (navigating_results_value) {
+				textWithHighlights = textWithTooltips.replace(query, (match) =>{ 
+					return `<span class="bold-text">${match}</span>`
+				});
+			} else {
+				textWithHighlights = textWithTooltips;
+			}
+
+			let finalText;
+
+			if (isActive && text.search(query) !== -1) {
+				finalText = `<${element} class="active-section">${textWithHighlights}</${element}>`;
+			} else {
+				finalText = `<${element}>${textWithHighlights}</${element}>`;
+			}
+
+			if (section.split(' ').join('') == currentSection) {
+				if (!processedSections.hasOwnProperty(area)) {
+					processedSections[area] = {};
+				}
+
+				if (!processedSections[area].hasOwnProperty(index)) {
+					processedSections[area][index] = {};
+				}
+
+				processedSections[area][index][listItem] = finalText;
+			}
+
+			return finalText;
 		}
-
-		// add search highlights
-		let textWithHighlights;
-
-		let query = new RegExp(search_query_value, 'i');
-
-		if (navigating_results_value) {
-			textWithHighlights = textWithTooltips.replace(query, (match) =>{ 
-				return `<span class="bold-text">${match}</span>`
-			});
-		} else {
-			textWithHighlights = textWithTooltips;
-		}
-
-		let finalText;
-
-		if (isActive && text.search(query) !== -1) {
-			finalText = `<${element} class="active-section">${textWithHighlights}</${element}>`;
-		} else {
-			finalText = `<${element}>${textWithHighlights}</${element}>`;
-		}
-
-		return finalText;
 	}
 
 	onMount(async () => {
@@ -120,8 +139,8 @@
 		<HandbookDesktopToC sections={Handbook.sections} {activeId} />
 	</aside>
 	<div id="handbook">
-		{#each Handbook.sections as handbookSection}
- 			{#each handbookSection as section}
+		{#each Handbook.sections as handbookSection, area}
+ 			{#each handbookSection as section, index}
  				{#if section.style == "heading"}
  					<section id="{section.text.split(' ').join('')}">
  						<h2>
@@ -137,19 +156,19 @@
  				{:else if section.style == "ordered_list"}
  					<ol>
  						{#if section.markup}
- 							{#each section.markup as item}
+ 							{#each section.markup as item, listItemNumber}
 	 							{#if $activeResult.section == section.section.split(' ').join('')}
-			 						{@html textWithMarkup('li', item, true, $navigatingResults)}
+			 						{@html textWithMarkup('li', item, section.section, true, currentId, area, index, listItemNumber)}
 			 					{:else}
-									{@html textWithMarkup('li', item, false, $navigatingResults)}
+									{@html textWithMarkup('li', item, section.section, false, currentId, area, index, listItemNumber)}
 			 					{/if}
 	 						{/each}
  						{:else}
-	 						{#each section.text as item}
+	 						{#each section.text as item, listItemNumber}
 	 							{#if $activeResult.section == section.section.split(' ').join('')}
-			 						{@html textWithMarkup('li', item, true, $navigatingResults)}
+			 						{@html textWithMarkup('li', item, section.section, true, currentId, area, index, listItemNumber)}
 			 					{:else}
-									{@html textWithMarkup('li', item, false, $navigatingResults)}
+									{@html textWithMarkup('li', item, section.section, false, currentId, area, index, listItemNumber)}
 			 					{/if}
 	 						{/each}
 	 					{/if}
@@ -157,19 +176,19 @@
  				{:else if section.style == "unordered_list"}
  					<ul>
  						{#if section.markup}
- 							{#each section.markup as item}
+ 							{#each section.markup as item, listItemNumber}
 	 							{#if $activeResult.section == section.section.split(' ').join('')}
-			 						{@html textWithMarkup('li', item, true, $navigatingResults)}
+			 						{@html textWithMarkup('li', item, section.section, true, currentId, area, index, listItemNumber)}
 			 					{:else}
-									{@html textWithMarkup('li', item, false, $navigatingResults)}
+									{@html textWithMarkup('li', item, section.section, false, currentId, area, index, listItemNumber)}
 			 					{/if}
 	 						{/each}
  						{:else}
-	 						{#each section.text as item}
+	 						{#each section.text as item, listItemNumber}
 	 							{#if $activeResult.section == section.section.split(' ').join('')}
-			 						{@html textWithMarkup('li', item, true, $navigatingResults)}
+			 						{@html textWithMarkup('li', item, section.section, true, currentId, area, index, listItemNumber)}
 			 					{:else}
-									{@html textWithMarkup('li', item, false, $navigatingResults)}
+									{@html textWithMarkup('li', item, section.section, false, currentId, area, index, listItemNumber)}
 			 					{/if}
 	 						{/each}
 	 					{/if}
@@ -210,15 +229,15 @@
  					{#if $activeResult.section == section.section.split(' ').join('')}
  						{@html 
  							section.markup ? 
- 								textWithMarkup('p', section.markup, section.section, true, $navigatingResults)
+ 								textWithMarkup('p', section.markup, section.section, true, currentId, area, index, 0)
  									:
- 								textWithMarkup('p', section.text, section.section, true, $navigatingResults)
+ 								textWithMarkup('p', section.text, section.section, true, currentId, area, index, 0)
  							}
  					{:else}
 						{@html 
 							section.markup ? 
-								textWithMarkup('p', section.markup, section.section, false, $navigatingResults) :
-								textWithMarkup('p', section.text, section.section, false, $navigatingResults)
+								textWithMarkup('p', section.markup, section.section, false, currentId, area, index, 0) :
+								textWithMarkup('p', section.text, section.section, false, currentId, area, index, 0)
 						}
  					{/if}
  				{/if}
@@ -252,11 +271,15 @@
 		}
 
 		:global(.tooltip) {
-			height: 40%;
+			height: 35%;
+			left: 0;
+			text-align: left;
 		}
 
 		:global(.tooltip)::before {
-			height: 60%;
+			height: 65%;
+			left: 0;
+			top: 0;
 		}
 
 		:global(.tooltip-body) {
@@ -265,6 +288,10 @@
 
 		:global(.tooltip-footer) {
 			align-self: flex-start;
+		}
+
+		:global(.term) {
+			display: none;
 		}
 	}
 
@@ -290,20 +317,28 @@
 
 		:global(.tooltip) {
 			height: 25%;
+			left: 0;
+			text-align: left;
 		}
 
 		:global(.tooltip)::before {
 			height: 75%;
+			left: 0;
+			top: 0;
 		}
 
 		:global(.tooltip-body) {
 			padding: 0 32px;
 		}
+
+		:global(.term) {
+			display: none;
+		}
 	}
 
 	@media screen and (min-width: 1101px) {
 		.container {
-			grid-template-columns: 445px auto;
+			grid-template-columns: 410px auto;
 			grid-template-areas: 
 				". handbook"
 				". footer";
@@ -313,100 +348,32 @@
 		#handbook {
 			max-width: 725px;
 			margin: 0 auto;
-			padding: 0 1rem;
-		}
-	}
-
-	/* touch devices */
-	@media (pointer: coarse), (hover: none) {
-		:global(.glossary-term:hover .tooltip) {
-			visibility: visible;
-		}
-
-		:global(.tooltip-close, .tooltip-link) {
-			pointer-events: auto!important;
-		}
-
-		:global(.tooltip:hover) {
-			visibility: hidden!important;
 		}
 
 		:global(.tooltip) {
-			position: fixed;
-			background: var(--white);
-			bottom: 0;
-			left: 0;
-			z-index: 1000;
-			box-shadow: var(--shadow);
-			text-align: left;
-			display: grid;
-			visibility: hidden;
-			align-items: center;
-			pointer-events: none;
-			transition: visibility .05s;
-			-webkit-transition: visibility .05s;
-			transition-delay: .05s;
-			-webkit-transition-delay: .05s;
+			height: 20%;
+			left: 410px;
+			right: 0;
+			text-align: center;
 		}
 
 		:global(.tooltip)::before {
-			content: " ";
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			background: rgba(0, 0, 0, .2);
+			height: calc(80% - 50px);
+			left: 410px;
+			top: 50px;
 		}
 
-		:global(.tooltip-close) {
-			margin-left: 10px;
-		}
-	}
-
-	/* devices with a mouse */
-	@media (hover: hover) {
-		:global(.glossary-term:hover .tooltip) {
-			visibility: visible;
+		:global(.tooltip-body) {
+			max-width: 725px;
+			margin: 0 auto;
 		}
 
-		:global(.glossary-term) {
-			position: relative;
-  			display: inline-block;
-		}
-
-		:global(.tooltip::before:hover) {
-			visibility: visible;
-		}
-
-		:global(.tooltip-close) {
+		:global(.tooltip-footer) {
 			display: none;
 		}
 
-		:global(.tooltip) {
-			visibility: hidden;
-			position: absolute;
-			background: var(--white);
-			padding: 10px 20px;
-			width: 260px;
-			top: 185%;
-			left: 50%;
-			margin-left: -150px;
-			z-index: 1000;
-			border-radius: var(--radius);
-			box-shadow: var(--shadow);
-			text-align: left;
-			display: inline;
-		}
-
-		:global(.tooltip)::before {
-			content: " ";
-			position: absolute;
-			top: -30px;
-			left: 50%;
-			margin-left: -15px;
-			border-width: 15px;
-			border-style: solid;
-			border-color: transparent transparent #c4c4c4 transparent;
+		:global(.term) {
+			font-weight: 800;
 		}
 	}
 
@@ -455,7 +422,7 @@
 		height: 100%;
 		margin-top: 10px;
 		top: 0;
-		width: 445px;
+		width: 410px;
 		overflow: auto;
 		grid-area: links;
 		z-index: 1;
@@ -488,6 +455,7 @@
 	:global(.glossary-term) {
 		cursor: default;
 		font-size: 16px;
+		font-weight: inherit;
 	}
 
 	:global(.tooltip-footer) {
@@ -535,5 +503,44 @@
 		font-size: 16px;
 		grid-area: link;
 		margin-top: 3px;
+	}
+
+	:global(.glossary-term:hover .tooltip) {
+		visibility: visible;
+	}
+
+	:global(.tooltip-close, .tooltip-link) {
+		pointer-events: auto!important;
+	}
+
+	:global(.tooltip:hover) {
+		visibility: hidden!important;
+	}
+
+	:global(.tooltip) {
+		position: fixed;
+		background: var(--white);
+		bottom: 0;
+		z-index: 1000;
+		box-shadow: var(--shadow);
+		display: grid;
+		visibility: hidden;
+		align-items: center;
+		pointer-events: none;
+		transition: visibility .05s;
+		-webkit-transition: visibility .05s;
+		transition-delay: .05s;
+		-webkit-transition-delay: .05s;
+	}
+
+	:global(.tooltip)::before {
+		content: " ";
+		position: fixed;
+		width: 100%;
+		background: rgba(0, 0, 0, .2);
+	}
+
+	:global(.tooltip-close) {
+		margin-left: 10px;
 	}
 </style>

@@ -88,7 +88,7 @@
 
 	ul li {
 		padding: 0 2rem;
-		margin: .5rem 0;
+		margin: .4rem 0;
 	}
 
 	ul li:first-child {
