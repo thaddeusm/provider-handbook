@@ -41,14 +41,25 @@
 
 		// add tooltips
 		for (let i=0; i<terms.length; i++) {
-			let term = new RegExp(terms[i], 'i');
+			let term;
+
+			if (defs[i].form !== 'acronym') {
+				term = new RegExp(terms[i], 'i', 'g');
+			} else {
+				term = new RegExp(terms[i], 'g');
+			}
+
 			let termText = terms[i];
 
 			if (section !== termText) {
 				if (defs[i].reference) {
-					textWithTooltips = textWithTooltips.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="action-button-small tooltip-link" onclick="jumpToId('${defs[i].reference}')">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
+					textWithTooltips = textWithTooltips.replace(term, (match) => {
+						return `<button class="glossary-term"><u>${match}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="action-button-small tooltip-link" onclick="jumpToId('${defs[i].reference.split(' ').join('')}')">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
+					});
 				} else {
-					textWithTooltips = textWithTooltips.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
+					textWithTooltips = textWithTooltips.replace(term, (match) => {
+						return `<button class="glossary-term"><u>${match}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
+					});
 				}
 			}
 		}
