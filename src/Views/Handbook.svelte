@@ -27,6 +27,8 @@
 	import ResourceAvailable from './../Graphics/Icons/ResourceAvailable.svelte';
 	import Footer from './../Components/Footer.svelte';
 
+	import VirtualList from '@sveltejs/svelte-virtual-list';
+
 	import Illustration from './../Components/IllustrationContainer.svelte';
 
 	let activeId = "Introduction";
