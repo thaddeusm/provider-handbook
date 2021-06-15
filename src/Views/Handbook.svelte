@@ -290,7 +290,7 @@
 
 	@media screen and (min-width: 1101px) {
 		.container {
-			grid-template-columns: 410px auto;
+			grid-template-columns: 445px auto;
 			grid-template-areas: 
 				". handbook"
 				". footer";
@@ -442,7 +442,7 @@
 		height: 100%;
 		margin-top: 10px;
 		top: 0;
-		width: 410px;
+		width: 445px;
 		overflow: auto;
 		grid-area: links;
 		z-index: 1;

@@ -127,7 +127,7 @@
 		}
 
 		.secondary-list {
-			max-height: 150px;
+			max-height: 300px;
 			overflow: auto;
 		}
 
@@ -146,7 +146,7 @@
 		}
 
 		.secondary-list {
-			max-height: 255px;
+			max-height: 300px;
 			overflow: auto;
 		}
 

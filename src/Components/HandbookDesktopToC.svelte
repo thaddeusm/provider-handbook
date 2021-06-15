@@ -88,12 +88,11 @@
 
 	ul li {
 		padding: 0 2rem;
-		margin: .7rem 0;
-		line-height: 1.5;
+		margin: .5rem 0;
 	}
 
 	ul li:first-child {
-		margin-top: 13rem;
+		margin-top: 12.5rem;
 	}
 
 	ul li a {
@@ -114,6 +113,6 @@
 	}
 
 	.subheading {
-		margin-left: 1rem;
+		margin-left: .5rem;
 	}
 </style>

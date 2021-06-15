@@ -65,7 +65,7 @@
 		top: 0;
 		left: 2rem;
 		background: var(--white);
-		padding: 3rem;
+		padding: 3rem 4rem;
 		z-index: 7;
 	}
 
