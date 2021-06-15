@@ -25,26 +25,11 @@
 	import HandbookDesktopToC from './../Components/HandbookDesktopToC.svelte';
 	import InteractiveAvailable from './../Graphics/Icons/InteractiveAvailable.svelte';
 	import ResourceAvailable from './../Graphics/Icons/ResourceAvailable.svelte';
-	import PreviewModal from './../Components/PreviewModal.svelte';
 	import Footer from './../Components/Footer.svelte';
 
 	import Illustration from './../Components/IllustrationContainer.svelte';
 
 	let activeId = "Introduction";
-	let showPreview = false;
-	
-	let previewSection;
-	let previewURL;
-	let previewDescription;
-	let previewImage;
-
-	function openPreview(previewImageTitle, link, description) {
-		showPreview = !showPreview;
-		
-		previewSection = previewImageTitle;
-		previewURL = link;
-		previewDescription = description;
-	}
 
 	function textWithMarkup(element, text, section, isActive) {
 		let glossary = Handbook.glossary;
@@ -229,26 +214,6 @@
 		<Footer />
 	</footer>
 </div>
-
-{#if showPreview}
-	<PreviewModal>
-		<div slot="body" class="modal-body">
-			{#if previewSection}
-				<img class="large-preview-image" src={`/PreviewImages/${previewSection.replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Large.png`} />
-				<img class="small-preview-image" src={`/PreviewImages/${previewSection.replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Small.png`} />
-			{/if}
-		</div>
-		<div slot="footer" class="modal-footer">
-			<p class="description">
-				{previewDescription}
-			</p>
-			<div class="actions">
-				<button class="regular-button-small" on:click={() => {showPreview = false}}>close</button>
-				<a class="action-button-small" href="{previewURL}" target="_blank">go</a>
-			</div>
-		</div>
-	</PreviewModal>
-{/if}
 
 <style>
 	@media screen and (max-width: 450px) {
