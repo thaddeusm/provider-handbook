@@ -37,7 +37,7 @@
 		let terms = Object.keys(glossary);
 		let defs = Object.values(glossary);
 
-		let textWithTooltips;
+		let textWithTooltips = text;
 
 		// add tooltips
 		for (let i=0; i<terms.length; i++) {
@@ -45,9 +45,11 @@
 			let termText = terms[i];
 
 			if (section !== termText) {
-				textWithTooltips = text.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="action-button-small tooltip-link" onclick="jumpToId('${defs[i].reference}')">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
-			} else {
-				textWithTooltips = text;
+				if (defs[i].reference) {
+					textWithTooltips = textWithTooltips.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="action-button-small tooltip-link" onclick="jumpToId('${defs[i].reference}')">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
+				} else {
+					textWithTooltips = textWithTooltips.replace(term, `<button class="glossary-term"><u>${termText}</u><aside class="tooltip"><div class="tooltip-body"><p>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="regular-button-small tooltip-close">close</a></div></aside></button>`);
+				}
 			}
 		}
 
@@ -354,6 +356,11 @@
 			visibility: visible;
 		}
 
+		:global(.glossary-term) {
+			position: relative;
+  			display: inline-block;
+		}
+
 		:global(.tooltip::before:hover) {
 			visibility: visible;
 		}
@@ -366,10 +373,11 @@
 			visibility: hidden;
 			position: absolute;
 			background: var(--white);
-			padding: 10px 25px;
+			padding: 10px 20px;
 			width: 260px;
-			margin-top: 35px;
-			margin-left: -210px;
+			top: 185%;
+			left: 50%;
+			margin-left: -150px;
 			z-index: 1000;
 			border-radius: var(--radius);
 			box-shadow: var(--shadow);
