@@ -272,6 +272,7 @@
 
 		:global(.tooltip) {
 			height: 35%;
+			width: 100%;
 			left: 0;
 			text-align: left;
 		}
@@ -317,6 +318,7 @@
 
 		:global(.tooltip) {
 			height: 25%;
+			width: 100%;
 			left: 0;
 			text-align: left;
 		}
