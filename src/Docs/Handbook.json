@@ -1884,7 +1884,7 @@
 		},
 		"digital literacy": {
 			"definition": "having the knowledge and ability to use a wide range of technology tools for a variety of purposes.",
-			"form": "word"
+			"form": "phrase"
 		},
 		"foster": {
 			"definition": "to help (something) grow or develop.",
@@ -1892,7 +1892,7 @@
 		},
 		"service learning": {
 			"definition": "teaching approach that combines specific learning objectives with service to the community to provide a learning experience in which students develop new skills and a deeper understanding of their community.",
-			"form": "word"
+			"form": "phrase"
 		},
 		"eligibility": {
 			"definition": "able to be chosen for something; able to do or receive something.",
@@ -1962,9 +1962,9 @@
 			"definition": "involving very great effort or work.",
 			"form": "word"
 		},
-		"enhancement": {
+		"enhance": {
 			"definition": "to increase or improve (something).",
-			"form": "acronym"
+			"form": "word"
 		},
 		"socio-economic": {
 			"definition": "of, relating to, or involving a combination of social and economic factors.",

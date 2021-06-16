@@ -35,7 +35,7 @@
 	$: currentId = activeId;
 
 	function textWithMarkup(element, text, section, isActive, currentSection, area, index, listItem) {
-		if (processedSections.hasOwnProperty(area) && processedSections[area].hasOwnProperty(index) && processedSections[area][index].hasOwnProperty(listItem)) {
+		if (!isActive && processedSections.hasOwnProperty(area) && processedSections[area].hasOwnProperty(index) && processedSections[area][index].hasOwnProperty(listItem)) {
 			return processedSections[area][index][listItem];
 		} else {
 			let glossary = Handbook.glossary;
@@ -59,13 +59,13 @@
 					let termText = terms[i];
 
 					if (section !== termText) {
-						if (defs[i].reference) {
+						if (defs[i].form == 'word') {
 							textWithTooltips = textWithTooltips.replace(term, (match) => {
-								return `<button class="glossary-term"><u>${match}</u><aside class="tooltip"><div class="tooltip-body"><p><span class="term">${match} - </span>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="action-button-small tooltip-link" onclick="jumpToId('${defs[i].reference.split(' ').join('')}')">read more</a><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
+								return `<button class="glossary-term">${match}<aside class="tooltip"><div class="tooltip-body"><p><span class="term">${match} - </span><span class="definition">${defs[i].definition}</span> <span class="source">(Merriam-Webster)</span></p></div><div class="tooltip-footer"><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
 							});
 						} else {
 							textWithTooltips = textWithTooltips.replace(term, (match) => {
-								return `<button class="glossary-term"><u>${match}</u><aside class="tooltip"><div class="tooltip-body"><p><span class="term">${match} - </span>${defs[i].definition}</p></div><div class="tooltip-footer"><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
+								return `<button class="glossary-term">${match}<aside class="tooltip"><div class="tooltip-body"><p><span class="term">${match} - </span><span class="definition">${defs[i].definition}</span></p></div><div class="tooltip-footer"><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
 							});
 						}
 					}
@@ -373,10 +373,6 @@
 		:global(.tooltip-footer) {
 			display: none;
 		}
-
-		:global(.term) {
-			font-weight: 800;
-		}
 	}
 
 	.container {
@@ -458,6 +454,12 @@
 		cursor: default;
 		font-size: 16px;
 		font-weight: inherit;
+		text-decoration: underline;
+		text-decoration-style: dotted;
+		text-decoration-thickness: 2px;
+		text-decoration-color: var(--brand);
+		text-decoration-skip-ink: none!important;
+		text-decoration-skip: none!important;
 	}
 
 	:global(.tooltip-footer) {
@@ -544,5 +546,17 @@
 
 	:global(.tooltip-close) {
 		margin-left: 10px;
+	}
+
+	:global(.term) {
+		font-weight: 800;
+	}
+
+	:global(.definition) {
+		font-weight: 400;
+	}
+
+	:global(.source) {
+		font-style: italic;
 	}
 </style>
