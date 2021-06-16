@@ -1,4 +1,6 @@
 <script>
+	import { exportPDF } from './../exportHandbook.js';
+
 	import PreviewModal from './../Components/PreviewModal.svelte';
 	import Footer from './../Components/Footer.svelte';
 	import Play from './../Graphics/Icons/Play.svelte';
@@ -35,6 +37,7 @@
 	</p>
 	<section class="action">
 		<a class="action-button" href="/handbook">view handbook</a>
+		<button on:click={exportPDF}>export PDF</button>
 	</section>
 	<footer>
 		<Footer />

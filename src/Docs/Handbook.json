@@ -2165,6 +2165,14 @@
 		"critical": {
 			"definition": "extremely important.",
 			"form": "word"
+		},
+		"communicative language teaching": {
+			"definition": "an approach to teaching foreign languages with an emphasis on interaction as the means and goal of language learning.",
+			"form": "phrase"
+		},
+		"student-centered": {
+			"definition": "focusing on the needs, abilities, interests, and learning styles of the students.",
+			"form": "phrase"
 		}
 	}
 }
