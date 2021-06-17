@@ -301,7 +301,7 @@
 			text-align: left;
 		}
 
-		:global(.tooltip)::before {
+		:global(.tooltip)::after {
 			height: 65%;
 			left: 0;
 			top: 0;
@@ -348,7 +348,7 @@
 			text-align: left;
 		}
 
-		:global(.tooltip)::before {
+		:global(.tooltip)::after {
 			height: 75%;
 			left: 0;
 			top: 0;
@@ -386,7 +386,7 @@
 			text-align: center;
 		}
 
-		:global(.tooltip)::before {
+		:global(.tooltip)::after {
 			height: calc(80% - 50px);
 			left: 410px;
 			top: 50px;
@@ -565,9 +565,10 @@
 		-webkit-transition-delay: .05s;
 	}
 
-	:global(.tooltip)::before {
+	:global(.tooltip)::after {
 		content: " ";
 		position: fixed;
+		z-index: 1;
 		width: 100%;
 	}
 
