@@ -2,6 +2,7 @@
 	import { router } from 'tinro';
 	import { onMount } from 'svelte';
 	import { navigatingResults, searchOpen, results, searchQuery, activeResult } from './../stores.js';
+	import { exportPDF } from './../exportHandbook.js';
 
 	let search_query_value;
 
@@ -139,6 +140,7 @@
 		<HandbookDesktopToC sections={Handbook.sections} {activeId} />
 	</aside>
 	<div id="handbook">
+		<button id="pdfExportButton" class="action-button-small" on:click={exportPDF}>download PDF</button>
 		{#each Handbook.sections as handbookSection, area}
  			{#each handbookSection as section, index}
  				{#if section.style == "heading"}
@@ -558,5 +560,9 @@
 
 	:global(.source) {
 		font-style: italic;
+	}
+
+	#pdfExportButton {
+		margin-top: 50px;
 	}
 </style>
