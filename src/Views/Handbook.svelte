@@ -388,7 +388,6 @@
 			height: calc(80% - 50px);
 			left: 410px;
 			top: 50px;
-			background: rgba(0, 0, 0, .2)!important;
 		}
 
 		:global(.tooltip-body) {
@@ -568,6 +567,7 @@
 		position: fixed;
 		width: 100%;
 		background: rgba(0, 0, 0, .2);
+		z-index: 1001;
 	}
 
 	:global(.tooltip-close) {
