@@ -36,22 +36,27 @@ export const exportPDF = async function(callback) {
 					return {ul: section.text.map((item) => {return {text: item, style: 'paragraph'}}), style: 'list'};
 				}
 			} else {
-				if (section.style == 'subheading') {
-					return {text: section.text.toUpperCase(), style: section.style};
+				if (section.style == 'heading') {
+					return {text: section.text, style: section.style, tocItem: true};
+				} else if (section.style == 'subheading') {
+					return {text: section.text.toUpperCase(), style: section.style, tocItem: true, tocMargin: [20, 0, 0, 0]};
 				} else if (section.style == 'graphic') {
-					return {svg: illustrations[section.title], width: 400, alignment: 'center', margin: [0, 10, 0, 10]};
+					return {svg: illustrations[section.title], width: 320, alignment: 'center', margin: [0, 20, 0, 20]};
+				} else if(section.style == 'paragraph' && section.markup && section.text.length < 60 && !section.text.includes(':')) {
+					return {text: section.text, style: 'paragraph', bold: true};
 				} else {
-					return {text: section.text, style: section.style};	
+					if (!section.text.includes('href')) {
+						return {text: section.text, style: section.style};	
+					}
 				}
 			}
 		}
 	}).filter((item) => item !== undefined);
 
-	console.log(content)
-
 	let docDefinition = {
 		pageSize: 'A4',
 		pageMargins: 72,
+		defaultStyle: {font: 'Montserrat'},
 		info: {
 			title: 'Test',
 			author: 'Access',
@@ -63,6 +68,13 @@ export const exportPDF = async function(callback) {
 			{text: today, style: 'paragraph', alignment: 'center', margin: [0, 180, 0, 120]},
 			{text: 'Sponsored by the U.S. Department of State', style: 'caption'},
 			{svg: illustrations['DOS Seal'], width: 90, alignment: 'center', margin: [0, 30, 0, 0], pageBreak: 'after'},
+			{
+		    	toc: {
+		    		title: {text: 'Table of Contents', style: 'heading'},
+		    		numberStyle: 'paragraph',
+		    		style: 'paragraph'
+		    	}
+		    },
 			...content
 		],
 		header: function(currentPage, pageCount) {
@@ -126,12 +138,6 @@ export const exportPDF = async function(callback) {
 				lineHeight: 1.5,
 				color: '#D11242',
 				margin: [0, 20, 0, 0]
-			},
-			list: {
-				font: 'Montserrat',
-				fontSize: 11,
-				alignment: 'left',
-				lineHeight: 1.5
 			}
 		}
 	}
