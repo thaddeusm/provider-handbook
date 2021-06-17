@@ -33,7 +33,19 @@
 	let activeId = "Introduction";
 	let processedSections = {};
 
+	let exportingPDF = false;
+
 	$: currentId = activeId;
+
+	async function handlePDFExport() {
+		exportingPDF = true;
+
+		setTimeout(() => {
+			exportPDF(() => {
+				exportingPDF = false;
+			});
+		}, 500)
+	}
 
 	function textWithMarkup(element, text, section, isActive, currentSection, area, index, listItem) {
 		if (!isActive && processedSections.hasOwnProperty(area) && processedSections[area].hasOwnProperty(index) && processedSections[area][index].hasOwnProperty(listItem)) {
@@ -140,7 +152,17 @@
 		<HandbookDesktopToC sections={Handbook.sections} {activeId} />
 	</aside>
 	<div id="handbook">
-		<button id="pdfExportButton" class="action-button-small" on:click={exportPDF}>download PDF</button>
+		<button 
+			id="pdfExportButton" 
+			class="action-button-small" 
+			on:click={handlePDFExport} disabled={exportingPDF}
+		>
+			{#if exportingPDF}
+				Loading PDF...
+			{:else}
+				Download PDF
+			{/if}
+		</button>
 		{#each Handbook.sections as handbookSection, area}
  			{#each handbookSection as section, index}
  				{#if section.style == "heading"}
@@ -352,6 +374,7 @@
 		#handbook {
 			max-width: 725px;
 			margin: 0 auto;
+			padding: 0 2rem;
 		}
 
 		:global(.tooltip) {
@@ -564,5 +587,10 @@
 
 	#pdfExportButton {
 		margin-top: 50px;
+	}
+
+	button:disabled {
+		cursor: not-allowed;
+		opacity: .7;
 	}
 </style>

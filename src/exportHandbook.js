@@ -12,7 +12,7 @@ async function formatDate() {
 	return `${arr[1]}. ${arr[2]}, ${arr[3]}`;
 }
 
-export const exportPDF = async function(doc) {
+export const exportPDF = async function(callback) {
 	pdfMake.vfs = pdfFonts;
 	pdfMake.fonts = {
 		Montserrat: {
@@ -136,5 +136,7 @@ export const exportPDF = async function(doc) {
 		}
 	}
 
-	pdfMake.createPdf(docDefinition).download('Handbook.pdf');
+	await pdfMake.createPdf(docDefinition).download('Handbook.pdf', () => {
+		callback()
+	});
 }
