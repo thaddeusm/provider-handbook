@@ -47,18 +47,28 @@
 		}, 500)
 	}
 
-	function textWithMarkup(element, text, section, isActive, currentSection, area, index, listItem) {
-		if (!isActive && processedSections.hasOwnProperty(area) && processedSections[area].hasOwnProperty(index) && processedSections[area][index].hasOwnProperty(listItem)) {
+	function textWithGlossary(element, textSample, section, area, index, listItem, isActive, isActiveResult) {
+		if (processedSections.hasOwnProperty(area) && processedSections[area].hasOwnProperty(index) && processedSections[area][index].hasOwnProperty(listItem)) {
 			return processedSections[area][index][listItem];
 		} else {
+			let text;
+
+			if (section.markup) {
+				if (element == 'li') {
+					text = section.markup[listItem];
+				} else {
+					text = section.markup;
+				}
+			} else {
+				text = textSample;
+			}
+
 			let glossary = Handbook.glossary;
 
 			let terms = Object.keys(glossary);
 			let defs = Object.values(glossary);
 
-			let textWithTooltips = text;
-
-			if (section.split(' ').join('') == currentSection) {
+			if (isActive) {
 				// add tooltips
 				for (let i=0; i<terms.length; i++) {
 					let term;
@@ -73,11 +83,11 @@
 
 					if (section !== termText) {
 						if (defs[i].form == 'word') {
-							textWithTooltips = textWithTooltips.replace(term, (match) => {
+							text = text.replace(term, (match) => {
 								return `<button class="glossary-term">${match}<aside class="tooltip"><div class="tooltip-body"><p><span class="term">${match} - </span><span class="definition">${defs[i].definition}</span> <span class="source">(Merriam-Webster)</span></p></div><div class="tooltip-footer"><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
 							});
 						} else {
-							textWithTooltips = textWithTooltips.replace(term, (match) => {
+							text = text.replace(term, (match) => {
 								return `<button class="glossary-term">${match}<aside class="tooltip"><div class="tooltip-body"><p><span class="term">${match} - </span><span class="definition">${defs[i].definition}</span></p></div><div class="tooltip-footer"><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
 							});
 						}
@@ -85,28 +95,9 @@
 				}
 			}
 
-			// add search highlights
-			let textWithHighlights;
+			let finalText = `<${element}>${text}</${element}>`;
 
-			let query = new RegExp(search_query_value, 'i');
-
-			if (navigating_results_value) {
-				textWithHighlights = textWithTooltips.replace(query, (match) =>{ 
-					return `<span class="bold-text">${match}</span>`
-				});
-			} else {
-				textWithHighlights = textWithTooltips;
-			}
-
-			let finalText;
-
-			if (isActive && text.search(query) !== -1) {
-				finalText = `<${element} class="active-section">${textWithHighlights}</${element}>`;
-			} else {
-				finalText = `<${element}>${textWithHighlights}</${element}>`;
-			}
-
-			if (section.split(' ').join('') == currentSection) {
+			if (isActive) {
 				if (!processedSections.hasOwnProperty(area)) {
 					processedSections[area] = {};
 				}
@@ -119,6 +110,36 @@
 			}
 
 			return finalText;
+		}
+	}
+
+	function textWithSearchHighlights(element, textSample, section, area, index, listItem, isActive, isActiveResult) {
+		let text = textSample;
+
+		let query = new RegExp(search_query_value, 'i');
+
+		if (navigating_results_value) {
+			text = text.replace(query, (match) =>{ 
+				return `<span class="bold-text">${match}</span>`
+			});
+		}
+
+		let finalText;
+
+		if (active_result_value.section == section.section.split(' ').join('') && text.search(query) !== -1) {
+			finalText = `<${element} class="active-section">${text}</${element}>`;
+		} else {
+			finalText = `<${element}>${text}</${element}>`;
+		}		
+
+		return finalText;
+	}
+
+	function textWithMarkup(element, text, section, area, index, listItem, isActive) {
+		if (navigating_results_value == true) {
+			return textWithSearchHighlights(element, text, section, area, index, listItem, isActive);
+		} else {
+			return textWithGlossary(element, text, section, area, index, listItem, isActive);
 		}
 	}
 
@@ -179,43 +200,15 @@
  					</section>
  				{:else if section.style == "ordered_list"}
  					<ol>
- 						{#if section.markup}
- 							{#each section.markup as item, listItemNumber}
-	 							{#if $activeResult.section == section.section.split(' ').join('')}
-			 						{@html textWithMarkup('li', item, section.section, true, currentId, area, index, listItemNumber)}
-			 					{:else}
-									{@html textWithMarkup('li', item, section.section, false, currentId, area, index, listItemNumber)}
-			 					{/if}
-	 						{/each}
- 						{:else}
-	 						{#each section.text as item, listItemNumber}
-	 							{#if $activeResult.section == section.section.split(' ').join('')}
-			 						{@html textWithMarkup('li', item, section.section, true, currentId, area, index, listItemNumber)}
-			 					{:else}
-									{@html textWithMarkup('li', item, section.section, false, currentId, area, index, listItemNumber)}
-			 					{/if}
-	 						{/each}
-	 					{/if}
+ 						{#each section.text as item, listItemNumber}
+ 							{@html textWithMarkup('li', item, section, area, index, listItemNumber, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''))}
+ 						{/each}
  					</ol>
  				{:else if section.style == "unordered_list"}
  					<ul>
- 						{#if section.markup}
- 							{#each section.markup as item, listItemNumber}
-	 							{#if $activeResult.section == section.section.split(' ').join('')}
-			 						{@html textWithMarkup('li', item, section.section, true, currentId, area, index, listItemNumber)}
-			 					{:else}
-									{@html textWithMarkup('li', item, section.section, false, currentId, area, index, listItemNumber)}
-			 					{/if}
-	 						{/each}
- 						{:else}
-	 						{#each section.text as item, listItemNumber}
-	 							{#if $activeResult.section == section.section.split(' ').join('')}
-			 						{@html textWithMarkup('li', item, section.section, true, currentId, area, index, listItemNumber)}
-			 					{:else}
-									{@html textWithMarkup('li', item, section.section, false, currentId, area, index, listItemNumber)}
-			 					{/if}
-	 						{/each}
-	 					{/if}
+ 						{#each section.text as item, listItemNumber}
+ 							{@html textWithMarkup('li', item, section, area, index, listItemNumber, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''))}
+ 						{/each}
  					</ul>
  				{:else if section.style == "graphic"}
  					<Illustration title={section.title} altText={section.text} />
@@ -250,20 +243,7 @@
  						{/if}
  					</p>
  				{:else}
- 					{#if $activeResult.section == section.section.split(' ').join('')}
- 						{@html 
- 							section.markup ? 
- 								textWithMarkup('p', section.markup, section.section, true, currentId, area, index, 0)
- 									:
- 								textWithMarkup('p', section.text, section.section, true, currentId, area, index, 0)
- 							}
- 					{:else}
-						{@html 
-							section.markup ? 
-								textWithMarkup('p', section.markup, section.section, false, currentId, area, index, 0) :
-								textWithMarkup('p', section.text, section.section, false, currentId, area, index, 0)
-						}
- 					{/if}
+ 					{@html textWithMarkup('p', section.text, section, area, index, null, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''))}
  				{/if}
  			{/each}
  		{/each}
