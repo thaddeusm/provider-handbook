@@ -165,8 +165,6 @@
 		if ($router.hash.length > 1) {
 			activeId = router.hash;
 		}
-
-		console.log('navigating', navigating_results_value)
 	});
 </script>
 
