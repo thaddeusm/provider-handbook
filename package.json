@@ -20,7 +20,7 @@
   "dependencies": {
     "@rollup/plugin-json": "^4.1.0",
     "downloadjs": "^1.4.7",
-    "pdfmake": "^0.1.71",
+    "pdfmake-lite": "^0.1.70",
     "sirv-cli": "^1.0.0"
   }
 }

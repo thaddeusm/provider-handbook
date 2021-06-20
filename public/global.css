@@ -46,19 +46,19 @@ html, body {
 
 @font-face {
 	font-family: "Montserrat";
-	src: url("./Montserrat.ttf");
+	src: url("https://montserrat.thaddeus.education/MontserratMedium.ttf");
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "Montserrat-Bold";
-	src: url("./Montserrat-Bold.ttf");
+	src: url("https://montserrat.thaddeus.education/MontserratBold.ttf");
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "Montserrat-ExtraBold";
-	src: url("./Montserrat-ExtraBold.ttf");
+	src: url("https://montserrat.thaddeus.education/MontserratExtraBold.ttf");
 	font-display: swap;
 }
 
