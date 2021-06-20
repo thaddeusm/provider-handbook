@@ -165,6 +165,8 @@
 		if ($router.hash.length > 1) {
 			activeId = router.hash;
 		}
+
+		console.log('navigating', navigating_results_value)
 	});
 </script>
 
@@ -201,13 +203,13 @@
  				{:else if section.style == "ordered_list"}
  					<ol>
  						{#each section.text as item, listItemNumber}
- 							{@html textWithMarkup('li', item, section, area, index, listItemNumber, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''))}
+ 							{@html textWithMarkup('li', item, section, area, index, listItemNumber, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''), $navigatingResults)}
  						{/each}
  					</ol>
  				{:else if section.style == "unordered_list"}
  					<ul>
  						{#each section.text as item, listItemNumber}
- 							{@html textWithMarkup('li', item, section, area, index, listItemNumber, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''))}
+ 							{@html textWithMarkup('li', item, section, area, index, listItemNumber, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''), $navigatingResults)}
  						{/each}
  					</ul>
  				{:else if section.style == "graphic"}
@@ -243,7 +245,7 @@
  						{/if}
  					</p>
  				{:else}
- 					{@html textWithMarkup('p', section.text, section, area, index, null, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''))}
+ 					{@html textWithMarkup('p', section.text, section, area, index, null, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''), $navigatingResults)}
  				{/if}
  			{/each}
  		{/each}
