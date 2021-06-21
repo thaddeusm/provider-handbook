@@ -2,7 +2,13 @@
 	import { router } from 'tinro';
 	import { onMount } from 'svelte';
 	import { navigatingResults, searchOpen, results, searchQuery, activeResult } from './../stores.js';
-	import { exportPDF } from './../exportHandbook.js';
+	// import { exportPDF } from './../exportHandbook.js';
+
+	let exportPDF;
+
+	import('./../exportHandbook.js').then(module => {
+  		exportPDF = module.exportPDF
+	})
 
 	let search_query_value;
 
