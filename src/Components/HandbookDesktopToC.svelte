@@ -44,6 +44,21 @@
 			openSubmenu = headingIndex;
 		}
 	}
+
+	function includesSubheadings(handbookSection) {
+		let test = false;
+
+		for (let i=0; i<handbookSection.length; i++) {
+			let section = handbookSection[i];
+
+			if (section.style == 'subheading') {
+				test = true;
+				break;
+			}
+		}
+
+		return test;
+	}
 </script>
 
 <ul>
@@ -57,13 +72,15 @@
 					>
 						{section.text}
 					</a>
-					<button on:click={() => {toggleSub(i)}}>
-						{#if openSubmenu == i}
-							<!-- <UpArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} /> -->
-						{:else}
-							<DownArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} />
-						{/if}
-					</button>
+					{#if includesSubheadings(handbookSection)}
+						<button on:click={() => {toggleSub(i)}}>
+							{#if openSubmenu == i}
+								<!-- <UpArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} /> -->
+							{:else}
+								<DownArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} />
+							{/if}
+						</button>
+					{/if}
 				</li>
 			{:else if section.style == 'subheading'}
 				{#if openSubmenu == i || activeId == section.section}
