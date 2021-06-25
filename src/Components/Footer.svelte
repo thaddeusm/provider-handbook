@@ -4,52 +4,58 @@
 </script>
 
 <div>
-	<section class="left">
-		<Access width={'6rem'} showTagline={false} />
+	<section class="logo">
+		<Access width={'9rem'} />
 	</section>
-	<h6>sponsored by the U.S. Department of State</h6>
-	<section class="right">
-		<DOS width={'5rem'} height={'5rem'} />
-	</section>
+	<h6>Sponsored by the U.S. Department of State.</h6>
 </div>
 
 <style>
 	@media screen and (max-width: 450px) {
 		div {
-			grid-column-gap: 5px;
 			display: grid;
-			grid-template-rows: .25fr 1fr;
-			grid-template-columns: 1fr 1fr;
+			grid-template-rows: .5fr 1fr;
+			grid-template-columns: 1fr;
 			grid-template-areas: 
-				"center center"
-				"left right";
+				"copyright"
+				"logo";
 			margin-top: 4rem;
-			height: 200px;
+			height: 300px;
+		}
+
+		h6 {
+			align-self: flex-end;
 		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		div {
-			grid-column-gap: 5px;
 			display: grid;
-			grid-template-rows: 1fr 1fr;
-			grid-template-columns: 1fr 1fr;
+			grid-template-rows: .5fr 1fr;
+			grid-template-columns: 1fr;
 			grid-template-areas: 
-				"center center"
-				"left right";
+				"copyright"
+				"logo";
 			margin-top: 4rem;
-			height: 200px;
+			height: 300px;
+		}
+
+		h6 {
+			align-self: flex-end;
 		}
 	}
 
 	@media screen and (min-width: 1101px) {
 		div {
-			grid-column-gap: 10px;
 			display: grid;
-			grid-template-columns: .5fr 1fr .5fr;
-			grid-template-areas: "left center right";
+			grid-template-columns: 1fr;
+			grid-template-areas: "copyright";
 			margin-top: 4rem;
 			height: 100px;
+		}
+
+		.logo {
+			display: none;
 		}
 	}
 
@@ -58,16 +64,12 @@
 		align-items: center;
 	}
 
-	.left {
+	.logo {
 		padding-top: .5rem;
-		grid-area: left;
-	}
-
-	.right {
-		grid-area: right;
+		grid-area: logo;
 	}
 
 	h6 {
-		grid-area: center;
+		grid-area: copyright;
 	}
 </style>
