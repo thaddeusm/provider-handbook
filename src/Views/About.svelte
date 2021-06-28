@@ -1,6 +1,5 @@
 <script>
 	import PreviewModal from './../Components/PreviewModal.svelte';
-	import Footer from './../Components/Footer.svelte';
 	import Play from './../Graphics/Icons/Play.svelte';
 
 	let showVideo = false;
@@ -36,9 +35,6 @@
 	<section class="action">
 		<a class="action-button" href="/handbook">view handbook</a>
 	</section>
-	<footer>
-		<Footer />
-	</footer>
 </div>
 
 {#if showVideo}
@@ -79,13 +75,13 @@
 
 	@media screen and (max-width: 450px) {
 		.container {
-			grid-template-rows: 250px 120px auto auto;
+			grid-template-rows: 250px 120px auto;
 		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.container {
-			grid-template-rows: 350px 100px 50px auto;
+			grid-template-rows: 350px 100px 50px;
 		}
 
 		.action {
@@ -95,7 +91,7 @@
 
 	@media screen and (min-width: 1101px) {
 		.container {
-			grid-template-rows: 1.5fr .5fr .5fr auto;
+			grid-template-rows: 1.5fr .5fr .5fr;
 		}
 	}
 
