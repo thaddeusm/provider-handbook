@@ -527,7 +527,11 @@
 		visibility: visible;
 	}
 
-	:global(.tooltip-close, .tooltip-link) {
+	:global(.tooltip-close) {
+		pointer-events: auto!important;
+	}
+
+	:global(.tooltip-link) {
 		pointer-events: auto!important;
 	}
 
