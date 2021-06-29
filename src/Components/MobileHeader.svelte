@@ -10,29 +10,29 @@
 
 	import Handbook from './../Docs/Handbook.json';
 
-	import Access from './../Graphics/Icons/Access.svelte';
-	import DownArrow from './../Graphics/Icons/DownArrow.svelte';
-	import UpArrow from './../Graphics/Icons/UpArrow.svelte';
-	import Search from './../Graphics/Icons/Search.svelte';
+	import Access from './../Icons/Access.svelte';
+	import DownArrow from './../Icons/DownArrow.svelte';
+	import UpArrow from './../Icons/UpArrow.svelte';
+	import Search from './../Icons/Search.svelte';
 
 	import HamburgerMenu from './../Components/HamburgerMenu.svelte';
 	import MobileHandbookSearch from './../Components/MobileHandbookSearch.svelte';
 	import ResultNavigator from './../Components/ResultNavigator.svelte';
 
-	let showSub = false;
+	let showSecondaryList = false;
 	let menuOpen = false;
 	let scrolled = false;;
 
 	$: {
 		if ($router.path == '/handbook') {
-			showSub = true;
+			showSecondaryList = true;
 		} else {
-			showSub = false;
+			showSecondaryList = false;
 		}
 	}
 
-	function toggleSub() {
-		showSub = !showSub;
+	function toggleSecondaryList() {
+		showSecondaryList = !showSecondaryList;
 	}
 
 	function navigate(sectionId) {	
@@ -64,24 +64,24 @@
 				<div class="tray">
 					<ul class="primary-list">
 						<li><a href="/">about</a></li>
-						<li class="sub">
+						<li class="secondary-list-item">
 							<a href="/handbook">handbook</a>
-							<button on:click={toggleSub}>
-								{#if showSub}
+							<button on:click={toggleSecondaryList}>
+								{#if showSecondaryList}
 									<UpArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} />
 								{:else}
 									<DownArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} />
 								{/if}
 							</button>
-							{#if showSub}
+							{#if showSecondaryList}
 								<ul class="secondary-list" in:slide="{{duration: 200}}">
 									{#each Handbook.sections as handbookSection, i}
 										{#each handbookSection as section, j}
 											{#if section.style.includes('heading')}
 												<li class={section.style.includes('subheading') ? 'subheading' : ''}>
-													<a on:click={() => {navigate(section.text.split(' ').join(''))}}>
+													<button on:click={() => {navigate(section.text.split(' ').join(''))}}>
 														{section.text}
-													</a>
+													</button>
 												</li>
 											{/if}
 										{/each}
@@ -89,8 +89,7 @@
 								</ul>
 							{/if}
 						</li>
-						<!-- <li><a href="/documents">documents</a></li>
-						<li><a href="/help">help</a></li> -->
+						<!-- <li><a href="/documents">documents</a></li> -->
 					</ul>
 				</div>
 			</HamburgerMenu>
@@ -122,7 +121,7 @@
 			grid-template-columns: 65px 1fr 65px;
 		}
 
-		.sub {
+		.secondary-list-item {
 			grid-template-columns: 80% 20%;
 		}
 
@@ -141,7 +140,7 @@
 			grid-template-columns: 100px 1fr 100px;
 		}
 
-		.sub {
+		.secondary-list-item {
 			grid-template-columns: 90% 10%;
 		}
 
@@ -199,6 +198,7 @@
 		list-style: none;
 		background: var(--brand);
 		grid-area: primaryList;
+		text-align: left;
 	}
 
 	.primary-list > li {
@@ -214,7 +214,7 @@
 		text-transform: uppercase;
 	}
 
-	.sub {
+	.secondary-list-item {
 		display: grid;
 		grid-template-rows: auto auto;
 		grid-template-areas: 
@@ -223,11 +223,11 @@
 		align-items: center;
 	}
 
-	.sub > a {
+	.secondary-list-item > a {
 		grid-area: link;
 	}
 
-	.sub > button {
+	.secondary-list-item > button {
 		grid-area: btn;
 	}
 
@@ -244,11 +244,12 @@
 		margin: 15px 0;
 	}
 
-	.secondary-list > li > a {
+	.secondary-list > li > button {
 		color: var(--white);
 		font-size: 16px;
 		font-family: "Montserrat";
 		cursor: pointer;
+		text-align: left;
 	}
 
 	.subheading {

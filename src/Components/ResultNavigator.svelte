@@ -1,10 +1,10 @@
 <script>
 	import { search, clearResults, resetSearchQuery, openSearch, closeSearch, openResultNavigator, closeResultNavigator, incrementActiveResult, decrementActiveResult, resetSearch } from './../search.js';
 
-	import Search from './../Graphics/Icons/Search.svelte';
-	import RightArrow from './../Graphics/Icons/RightArrow.svelte';
-	import LeftArrow from './../Graphics/Icons/LeftArrow.svelte';
-	import Close from './../Graphics/Icons/Close.svelte';
+	import Search from './../Icons/Search.svelte';
+	import RightArrow from './../Icons/RightArrow.svelte';
+	import LeftArrow from './../Icons/LeftArrow.svelte';
+	import Close from './../Icons/Close.svelte';
 
 	import { navigatingResults, searchOpen, results, searchQuery, activeResult } from './../stores.js';
 

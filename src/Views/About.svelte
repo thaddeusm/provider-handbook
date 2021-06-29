@@ -1,27 +1,9 @@
 <script>
 	import PreviewModal from './../Components/PreviewModal.svelte';
-	import Play from './../Graphics/Icons/Play.svelte';
+	import Play from './../Icons/Play.svelte';
 
 	let showVideo = false;
-
-	let innerWidth = 0;
-	let videoHeight = 0;
-	let videoLoading = true;
-
-	$: {
-		if (innerWidth > 560) {
-			videoHeight = 315;
-		} else {
-			videoHeight = innerWidth * .56;
-		}
-	}
-
-	function handleLoad() {
-		videoLoading = false;
-	}
 </script>
-
-<svelte:window bind:innerWidth={innerWidth} />
 
 <div class="container">
 	<section class="video-button-area">
@@ -40,9 +22,6 @@
 {#if showVideo}
 	<PreviewModal allowClose={true} background={'none'} on:close={() => {showVideo = false}}>
 		<div slot="body" class="modal-body">
-			<!-- <section class="{videoLoading ? 'placeholder' : 'video-container'}">
-				<iframe class="video" width={innerWidth} height={videoHeight} src="https://www.youtube-nocookie.com/embed/V1ZA4UG9XYk" title="Access Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen on:load={handleLoad}></iframe>
-			</section> -->
 			<video
 				preload
 				controls
@@ -50,11 +29,6 @@
 			>		
 			</video>
 		</div>
-		<!-- <div slot="footer" class="modal-footer">
-			<div class="actions">
-				<button class="regular-button-small" on:click={() => {showVideo = false}}>close</button>
-			</div>
-		</div> -->
 	</PreviewModal>
 {/if}
 
@@ -118,18 +92,6 @@
 		border-radius: var(--radius);
 		display: grid;
 		align-items: center;
-	}
-
-	.video-container {
-		text-align: center;
-		background: var(--black);
-	}
-
-	.placeholder {
-		background: var(--black);
-		width: 100%;
-		max-width: 800px;
-		margin: 0 auto;
 	}
 
 	video {

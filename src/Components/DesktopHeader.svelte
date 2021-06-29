@@ -9,8 +9,8 @@
 	
 	const dispatch = createEventDispatcher();
 	
-	import Search from './../Graphics/Icons/Search.svelte';
-	import Access from './../Graphics/Icons/Access.svelte';
+	import Search from './../Icons/Search.svelte';
+	import Access from './../Icons/Access.svelte';
 
 	import HandbookSearch from './../Components/HandbookSearch.svelte';
 	import ResultNavigator from './../Components/ResultNavigator.svelte';
@@ -34,8 +34,7 @@
 				<ul>
 					<li><a href="/" use:active exact>About</a></li>
 					<li><a href="/handbook" use:active>Handbook</a></li>
-					<!-- <li><a href="/documents" use:active>Documents</a></li>
-					<li><a href="/help" use:active>Help</a></li> -->
+					<!-- <li><a href="/documents" use:active>Documents</a></li>-->
 				</ul>
 				<button id="searchButton" on:click={openSearch}>
 					<Search color={'#FFFFFF'} width={'25px'} height={'25px'} />

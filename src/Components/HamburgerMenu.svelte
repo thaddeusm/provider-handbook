@@ -1,8 +1,8 @@
 <script>
 	import { router } from 'tinro';
 
-	import Hamburger from './../Graphics/Icons/Hamburger.svelte';
-	import Close from './../Graphics/Icons/Close.svelte';
+	import Hamburger from './../Icons/Hamburger.svelte';
+	import Close from './../Icons/Close.svelte';
 
 	export let menuOpen = false;
 
@@ -22,13 +22,6 @@
 	}
 </script>
 
-<style>
-	.button-container {
-		height: 100%;
-		width: 100%;
-		z-index: 200;
-	}
-</style>
 {#if menuOpen}
 	<div class="button-container">
 		<button on:click={closeMenu}>
@@ -45,3 +38,11 @@
 		</button>
 	</div>
 {/if}
+
+<style>
+	.button-container {
+		height: 100%;
+		width: 100%;
+		z-index: 200;
+	}
+</style>

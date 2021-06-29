@@ -18,8 +18,8 @@
 
 	import ResultCard from './../Components/ResultCard.svelte';
 
-	import Search from './../Graphics/Icons/Search.svelte';
-	import Close from './../Graphics/Icons/Close.svelte';
+	import Search from './../Icons/Search.svelte';
+	import Close from './../Icons/Close.svelte';
 
 	import { onMount, onDestroy } from 'svelte';
 
@@ -198,9 +198,5 @@
 		background: var(--gray);
 		padding: 10px 10px 20px 10px;
 		margin: 30px 0;
-	}
-
-	#resultList > li > h3 {
-		margin-top: 0!important;
 	}
 </style>

@@ -1,6 +1,6 @@
 <script>
-	import DownArrow from './../Graphics/Icons/DownArrow.svelte';
-	import UpArrow from './../Graphics/Icons/UpArrow.svelte';
+	import DownArrow from './../Icons/DownArrow.svelte';
+	import UpArrow from './../Icons/UpArrow.svelte';
 
 	export let sections;
 	export let activeId;
@@ -38,9 +38,7 @@
 	}
 
 	function toggleSub(headingIndex) {
-		if (openSubmenu == headingIndex) {
-			// openSubmenu = null;
-		} else {
+		if (openSubmenu !== headingIndex) {
 			openSubmenu = headingIndex;
 		}
 	}
@@ -66,17 +64,15 @@
 		{#each handbookSection as section, j}
 			{#if section.style == 'heading'}
 				<li class="heading">
-					<a 
+					<button 
 						class={activeId == section.text.split(' ').join('') ? 'active': 'inactive'}
 						on:click={() => {handleJump(section.text.split(' ').join(''))}}
 					>
 						{section.text}
-					</a>
+					</button>
 					{#if includesSubheadings(handbookSection)}
-						<button on:click={() => {toggleSub(i)}}>
-							{#if openSubmenu == i}
-								<!-- <UpArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} /> -->
-							{:else}
+						<button on:click={() => {toggleSub(i)}} class="arrow">
+							{#if openSubmenu !== i}
 								<DownArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} />
 							{/if}
 						</button>
@@ -85,12 +81,12 @@
 			{:else if section.style == 'subheading'}
 				{#if openSubmenu == i || activeId == section.section}
 					<li class="subheading">
-						<a 
+						<button 
 							class={activeId == section.text.split(' ').join('') ? 'active': 'inactive'}
 							on:click={() => {handleJump(section.text.split(' ').join(''))}}
 						>
 							{section.section}
-						</a>
+						</button>
 					</li>
 				{/if}
 			{/if}
@@ -101,6 +97,7 @@
 <style>
 	ul {
 		list-style: none;
+		text-align: left;
 	}
 
 	ul li {
@@ -112,10 +109,11 @@
 		margin-top: 12.5rem;
 	}
 
-	ul li a {
+	ul li button {
 		color: var(--white);
 		font-size: 16px;
 		cursor: pointer;
+		text-align: left;
 	}
 
 	.heading {
@@ -123,9 +121,10 @@
 		grid-template-columns: auto 1fr;
 		align-items: center;
 		justify-content: center;
+		text-align: left;
 	}
 
-	.heading button {
+	.arrow {
 		text-align: right;
 	}
 

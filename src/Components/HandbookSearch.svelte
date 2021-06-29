@@ -26,8 +26,8 @@
 
 	import ResultCard from './../Components/ResultCard.svelte';
 
-	import Search from './../Graphics/Icons/Search.svelte';
-	import Close from './../Graphics/Icons/Close.svelte';
+	import Search from './../Icons/Search.svelte';
+	import Close from './../Icons/Close.svelte';
 
 	let input;
 	let message = 'Enter a keyword to search the handbook.';
@@ -150,10 +150,6 @@
 		background: var(--gray);
 		padding: 10px 20px 20px 20px;
 		margin: 50px 0;
-	}
-
-	#resultList > li > h3 {
-		margin-top: 0!important;
 	}
 
 	#inputArea {

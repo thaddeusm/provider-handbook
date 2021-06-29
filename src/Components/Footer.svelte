@@ -1,6 +1,6 @@
 <script>
-	import Access from './../Graphics/Icons/Access.svelte';
-	import UpArrow from './../Graphics/Icons/UpArrow.svelte';
+	import Access from './../Icons/Access.svelte';
+	import UpArrow from './../Icons/UpArrow.svelte';
 </script>
 
 <div>

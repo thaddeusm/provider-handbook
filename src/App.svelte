@@ -2,12 +2,10 @@
 	import { Route, router, meta } from 'tinro';
 	router.mode.hash();
 	import { onMount } from 'svelte';
-
 	import { closeSearch, closeResultNavigator, resetSearchQuery, clearResults } from './search';
 
 	import About from './Views/About.svelte';
 	import Handbook from './Views/Handbook.svelte';
-
 	import Transition from './Components/Transition.svelte';
 	import MobileHeader from './Components/MobileHeader.svelte';
 	import DesktopHeader from './Components/DesktopHeader.svelte';
@@ -92,9 +90,5 @@
 		height: 100%;
 		display: grid;
 		grid-template-rows: 100px auto;
-	}
-
-	main {
-		/*overflow: auto;*/
 	}
 </style>
