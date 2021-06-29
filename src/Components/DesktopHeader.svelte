@@ -34,7 +34,7 @@
 				<ul>
 					<li><a href="/" use:active exact>About</a></li>
 					<li><a href="/handbook" use:active>Handbook</a></li>
-					<!-- <li><a href="/documents" use:active>Documents</a></li>-->
+					 <li><a href="/documents" use:active>Documents</a></li>
 				</ul>
 				<button id="searchButton" on:click={openSearch}>
 					<Search color={'#FFFFFF'} width={'25px'} height={'25px'} />

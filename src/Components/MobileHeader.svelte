@@ -89,7 +89,7 @@
 								</ul>
 							{/if}
 						</li>
-						<!-- <li><a href="/documents">documents</a></li> -->
+						<li><a href="/documents">documents</a></li>
 					</ul>
 				</div>
 			</HamburgerMenu>

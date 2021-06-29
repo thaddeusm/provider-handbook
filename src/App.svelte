@@ -6,6 +6,8 @@
 
 	import About from './Views/About.svelte';
 	import Handbook from './Views/Handbook.svelte';
+	import Documents from './Views/Documents.svelte';
+
 	import Transition from './Components/Transition.svelte';
 	import MobileHeader from './Components/MobileHeader.svelte';
 	import DesktopHeader from './Components/DesktopHeader.svelte';
@@ -77,6 +79,9 @@
 			</Route>
 			<Route path="/handbook">
 				<Handbook />
+			</Route>
+			<Route path="/documents">
+				<Documents />
 			</Route>
 			<Route fallback>
 				<About />
