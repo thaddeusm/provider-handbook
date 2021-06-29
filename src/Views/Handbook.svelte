@@ -32,7 +32,6 @@
 	import InteractiveAvailable from './../Icons/InteractiveAvailable.svelte';
 	import ResourceAvailable from './../Icons/ResourceAvailable.svelte';
 	import Footer from './../Components/Footer.svelte';
-
 	import Illustration from './../Components/IllustrationContainer.svelte';
 
 	let activeId = "Introduction";
@@ -50,6 +49,14 @@
 				exportingPDF = false;
 			});
 		}, 500)
+	}
+
+	function textWithMarkup(element, text, section, area, index, listItem, isActive) {
+		if (navigating_results_value == true) {
+			return textWithSearchHighlights(element, text, section, area, index, listItem, isActive);
+		} else {
+			return textWithGlossary(element, text, section, area, index, listItem, isActive);
+		}
 	}
 
 	function textWithGlossary(element, textSample, section, area, index, listItem, isActive, isActiveResult) {
@@ -138,14 +145,6 @@
 		}		
 
 		return finalText;
-	}
-
-	function textWithMarkup(element, text, section, area, index, listItem, isActive) {
-		if (navigating_results_value == true) {
-			return textWithSearchHighlights(element, text, section, area, index, listItem, isActive);
-		} else {
-			return textWithGlossary(element, text, section, area, index, listItem, isActive);
-		}
 	}
 
 	onMount(async () => {
