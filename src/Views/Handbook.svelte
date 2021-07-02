@@ -403,7 +403,7 @@
 		font-size: 16px;
 		line-height: 1.5;
 		color: var(--black);
-		font-family: "Montserrat";
+		font-family: "NotoSans";
 	}
 
 	:global(ul li):first-child {
@@ -415,7 +415,7 @@
 		font-size: 16px;
 		line-height: 1.5;
 		color: var(--black);
-		font-family: "Montserrat";
+		font-family: "NotoSans";
 	}
 
 	aside {

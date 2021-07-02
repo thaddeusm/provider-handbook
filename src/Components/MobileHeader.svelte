@@ -210,7 +210,7 @@
 	.primary-list > li > a {
 		color: var(--white);
 		font-size: 21px;
-		font-family: "Montserrat-Bold";
+		font-family: "NotoSans-Bold";
 		text-transform: uppercase;
 	}
 
@@ -247,7 +247,7 @@
 	.secondary-list > li > button {
 		color: var(--white);
 		font-size: 16px;
-		font-family: "Montserrat";
+		font-family: "NotoSans";
 		cursor: pointer;
 		text-align: left;
 	}

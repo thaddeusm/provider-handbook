@@ -104,7 +104,7 @@
 		font-size: 21px;
 		padding: 0;
 		color: var(--white);
-		font-family: "Montserrat-Bold";
+		font-family: "NotoSans-Bold";
 		text-transform: uppercase;
 	}
 

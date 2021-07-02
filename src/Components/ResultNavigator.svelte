@@ -206,7 +206,7 @@
 
 	#resultLocation {
 		letter-spacing: 2px;
-		font-family: "Montserrat-Bold";
+		font-family: "NotoSans-Bold";
 		background: none;
 		border: none;
 		text-align: right;
@@ -219,7 +219,7 @@
 	input {
 		font-size: 21px;
 		letter-spacing: 2px;
-		font-family: "Montserrat-Bold";
+		font-family: "NotoSans-Bold";
 		background: none;
 		border: none;
 		outline: none;
