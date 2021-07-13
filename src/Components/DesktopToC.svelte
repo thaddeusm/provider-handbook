@@ -60,17 +60,17 @@
 </script>
 
 <ul>
-	{#each sections as handbookSection, i}
-		{#each handbookSection as section, j}
-			{#if section.style == 'heading'}
+	{#each sections as section, i}
+		{#each section as subSection, j}
+			{#if subSection.style == 'heading'}
 				<li class="heading">
 					<button 
-						class={activeId == section.text.split(' ').join('') ? 'active': 'inactive'}
-						on:click={() => {handleJump(section.text.split(' ').join(''))}}
+						class={activeId == subSection.text.split(' ').join('') ? 'active': 'inactive'}
+						on:click={() => {handleJump(subSection.text.split(' ').join(''))}}
 					>
-						{section.text}
+						{subSection.text}
 					</button>
-					{#if includesSubheadings(handbookSection)}
+					{#if includesSubheadings(section)}
 						<button on:click={() => {toggleSub(i)}} class="arrow">
 							{#if openSubmenu !== i}
 								<DownArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} />
@@ -78,14 +78,14 @@
 						</button>
 					{/if}
 				</li>
-			{:else if section.style == 'subheading'}
-				{#if openSubmenu == i || activeId == section.section}
+			{:else if subSection.style == 'subheading'}
+				{#if openSubmenu == i || activeId == subSection.section}
 					<li class="subheading">
 						<button 
-							class={activeId == section.text.split(' ').join('') ? 'active': 'inactive'}
-							on:click={() => {handleJump(section.text.split(' ').join(''))}}
+							class={activeId == subSection.text.split(' ').join('') ? 'active': 'inactive'}
+							on:click={() => {handleJump(subSection.text.split(' ').join(''))}}
 						>
-							{section.section}
+							{subSection.section}
 						</button>
 					</li>
 				{/if}
@@ -102,11 +102,11 @@
 
 	ul li {
 		padding: 0 2rem;
-		margin: .4rem 0;
+		margin: .5rem 0;
 	}
 
 	ul li:first-child {
-		margin-top: 12.5rem;
+		margin-top: 11rem;
 	}
 
 	ul li button {

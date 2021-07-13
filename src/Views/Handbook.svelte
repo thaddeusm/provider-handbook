@@ -28,10 +28,10 @@
 	});
 
 	import Handbook from './../Docs/Handbook.json';
-	import HandbookDesktopToC from './../Components/HandbookDesktopToC.svelte';
+
+	import Expanded from './../ViewTemplates/Expanded.svelte';
 	import InteractiveAvailable from './../Icons/InteractiveAvailable.svelte';
 	import ResourceAvailable from './../Icons/ResourceAvailable.svelte';
-	import Footer from './../Components/Footer.svelte';
 	import Illustration from './../Components/IllustrationContainer.svelte';
 
 	let activeId = "Introduction";
@@ -172,108 +172,85 @@
 	});
 </script>
 
-<div class="container">
-	<aside>
-		<HandbookDesktopToC sections={Handbook.sections} {activeId} />
-	</aside>
-	<div id="handbook">
-		<button 
-			id="pdfExportButton" 
-			class="action-button-small" 
-			on:click={handlePDFExport} disabled={exportingPDF}
-		>
-			{#if exportingPDF}
-				Loading PDF...
+<Expanded contentSource={Handbook.sections} {activeId}>
+	<button 
+		id="pdfExportButton" 
+		class="action-button-small" 
+		on:click={handlePDFExport} disabled={exportingPDF}
+	>
+		{#if exportingPDF}
+			Loading PDF...
+		{:else}
+			Download PDF
+		{/if}
+	</button>
+	{#each Handbook.sections as handbookSection, area}
+		{#each handbookSection as section, index}
+			{#if section.style == "heading"}
+				<section id="{section.text.split(' ').join('')}">
+					<h2>
+						{section.text}
+					</h2>
+				</section>
+			{:else if section.style == "subheading"}
+				<section id="{section.text.split(' ').join('')}">
+					<h3>
+						{section.text}
+					</h3>
+				</section>
+			{:else if section.style == "ordered_list"}
+				<ol>
+					{#each section.text as item, listItemNumber}
+						{@html textWithMarkup('li', item, section, area, index, listItemNumber, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''), $navigatingResults)}
+					{/each}
+				</ol>
+			{:else if section.style == "unordered_list"}
+				<ul>
+					{#each section.text as item, listItemNumber}
+						{@html textWithMarkup('li', item, section, area, index, listItemNumber, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''), $navigatingResults)}
+					{/each}
+				</ul>
+			{:else if section.style == "graphic"}
+				<Illustration title={section.title} altText={section.text} />
+			{:else if section.style == "external_link"}
+				<p class="external-link-block">
+					<span class="external-link-icon" title="External Link">
+						<InteractiveAvailable width={'2rem'} height={'2rem'} />
+					</span>
+					{#if section.url == ''}
+						<span class="coming-soon">
+							{section.text} (coming soon)
+						</span>
+					{:else}
+						<a class="external-link" href="{section.url}" target="_blank">
+							{section.text}
+						</a>
+					{/if}
+				</p>
+			{:else if section.style == "external_resource"}
+				<p class="external-link-block">
+					<span class="external-link-icon" title="Resource Available">
+						<ResourceAvailable width={'2rem'} height={'2rem'} color={'#D11242'} />
+					</span>
+					{#if section.url == ''}
+						<span class="coming-soon">
+							{section.text} (coming soon)
+						</span>
+					{:else}
+						<a class="external-link" href="{section.url}" target="_blank">
+							{section.text}
+						</a>
+					{/if}
+				</p>
 			{:else}
-				Download PDF
+				{@html textWithMarkup('p', section.text, section, area, index, null, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''), $navigatingResults)}
 			{/if}
-		</button>
-		{#each Handbook.sections as handbookSection, area}
- 			{#each handbookSection as section, index}
- 				{#if section.style == "heading"}
- 					<section id="{section.text.split(' ').join('')}">
- 						<h2>
- 							{section.text}
- 						</h2>
- 					</section>
- 				{:else if section.style == "subheading"}
- 					<section id="{section.text.split(' ').join('')}">
- 						<h3>
-	 						{section.text}
-	 					</h3>
- 					</section>
- 				{:else if section.style == "ordered_list"}
- 					<ol>
- 						{#each section.text as item, listItemNumber}
- 							{@html textWithMarkup('li', item, section, area, index, listItemNumber, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''), $navigatingResults)}
- 						{/each}
- 					</ol>
- 				{:else if section.style == "unordered_list"}
- 					<ul>
- 						{#each section.text as item, listItemNumber}
- 							{@html textWithMarkup('li', item, section, area, index, listItemNumber, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''), $navigatingResults)}
- 						{/each}
- 					</ul>
- 				{:else if section.style == "graphic"}
- 					<Illustration title={section.title} altText={section.text} />
- 				{:else if section.style == "external_link"}
- 					<p class="external-link-block">
- 						<span class="external-link-icon" title="External Link">
- 							<InteractiveAvailable width={'2rem'} height={'2rem'} />
- 						</span>
- 						{#if section.url == ''}
- 							<span class="coming-soon">
- 								{section.text} (coming soon)
- 							</span>
- 						{:else}
- 							<a class="external-link" href="{section.url}" target="_blank">
-	 							{section.text}
-	 						</a>
- 						{/if}
- 					</p>
- 				{:else if section.style == "external_resource"}
- 					<p class="external-link-block">
- 						<span class="external-link-icon" title="Resource Available">
- 							<ResourceAvailable width={'2rem'} height={'2rem'} color={'#D11242'} />
- 						</span>
- 						{#if section.url == ''}
- 							<span class="coming-soon">
- 								{section.text} (coming soon)
- 							</span>
- 						{:else}
- 							<a class="external-link" href="{section.url}" target="_blank">
-	 							{section.text}
-	 						</a>
- 						{/if}
- 					</p>
- 				{:else}
- 					{@html textWithMarkup('p', section.text, section, area, index, null, activeId == section.section.split(' ').join(''), $activeResult == section.section.split(' ').join(''), $navigatingResults)}
- 				{/if}
- 			{/each}
- 		{/each}
-	</div>
-	<footer>
-		<Footer />
-	</footer>
-</div>
+		{/each}
+	{/each}
+</Expanded>
 
 <style>
 	@media screen and (max-width: 450px) {
-		.container {
-			grid-template-columns: 0 1fr;
-			grid-template-areas: 
-				". handbook"
-				". footer";
-		}
-
-		#handbook {
-			padding: 0 1rem;
-		}
-
-		aside {
-			display: none;
-		}
-
 		:global(.tooltip) {
 			height: 35%;
 			width: 100%;
@@ -302,21 +279,6 @@
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
-		.container {
-			grid-template-columns: 0 1fr;
-			grid-template-areas: 
-				". handbook"
-				". footer";
-		}
-
-		#handbook {
-			padding: 0 2rem;
-		}
-
-		aside {
-			display: none;
-		}
-
 		:global(.tooltip) {
 			height: 25%;
 			width: 100%;
@@ -341,20 +303,6 @@
 	}
 
 	@media screen and (min-width: 1101px) {
-		.container {
-			grid-template-columns: 410px auto;
-			grid-template-areas: 
-				". handbook"
-				". footer";
-			margin-top: -50px;
-		}
-
-		#handbook {
-			max-width: 725px;
-			margin: 0 auto;
-			padding: 0 2rem;
-		}
-
 		:global(.tooltip) {
 			height: 20%;
 			left: 410px;
@@ -377,16 +325,6 @@
 		:global(.tooltip-footer) {
 			display: none;
 		}
-	}
-
-	.container {
-		height: 100%;
-		display: grid;
-		grid-template-rows: 1fr 100px;
-	}
-
-	#handbook {
-		grid-area: handbook;
 	}
 
 	ol, ul {
@@ -416,22 +354,6 @@
 		line-height: 1.5;
 		color: var(--black);
 		font-family: "NotoSans";
-	}
-
-	aside {
-		background: var(--brand-dark);
-		position: fixed;
-		height: 100%;
-		margin-top: 10px;
-		top: 0;
-		width: 410px;
-		overflow: auto;
-		grid-area: links;
-		z-index: 1;
-	}
-
-	footer {
-		grid-area: footer;
 	}
 
 	:global(.glossary-term) {
