@@ -46,13 +46,13 @@ html, body {
 
 @font-face {
 	font-family: "NotoSans";
-	src: url("./NotoSans-Regular.ttf");
+	src: url("./NotoSans-Regular.woff");
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "NotoSans-Bold";
-	src: url("./NotoSans-Bold.ttf");
+	src: url("./NotoSans-Bold.woff");
 	font-display: swap;
 }
 
