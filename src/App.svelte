@@ -36,12 +36,6 @@
 			closeSearch();
 			clearResults();
 			resetSearchQuery();
-		} else {
-			if ($router.hash.length > 1) {
-				setTimeout(() => {
-					jumpToId($router.hash);
-				}, 500)
-			}
 		}
 	}
 
@@ -77,11 +71,11 @@
 			<Route path="/">
 				<About />
 			</Route>
-			<Route path="/handbook">
-				<Handbook />
+			<Route path="/handbook" let:meta>
+				<Handbook {meta} />
 			</Route>
-			<Route path="/documents">
-				<Documents />
+			<Route path="/documents" let:meta>
+				<Documents {meta} />
 			</Route>
 			<Route fallback>
 				<About />

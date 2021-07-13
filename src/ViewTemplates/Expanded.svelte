@@ -5,13 +5,13 @@
 	import Footer from './../Components/Footer.svelte';
 
 	export let contentSource;
-
+	export let path;
 	export let activeId;
 </script>
 
 <div class="container">
 	<aside>
-		<DesktopToC sections={contentSource} {activeId} />
+		<DesktopToC sections={contentSource} {activeId} {path} />
 	</aside>
 	<div id="bodyContent">
 		<slot></slot>

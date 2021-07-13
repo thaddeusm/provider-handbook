@@ -4,7 +4,7 @@
 </script>
 
 {#key $router.path}
-    <div transition:fade|local="{{ duration: 100}}">
+    <div transition:fade|local="{{ duration: 50}}">
         <slot></slot>
     </div>
 {/key}

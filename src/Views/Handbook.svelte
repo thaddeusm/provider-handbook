@@ -1,7 +1,10 @@
 <script>
 	import { router } from 'tinro';
+
 	import { onMount } from 'svelte';
 	import { navigatingResults, searchOpen, results, searchQuery, activeResult } from './../stores.js';
+
+	export let meta;
 
 	let exportPDF;
 
@@ -38,8 +41,6 @@
 	let processedSections = {};
 
 	let exportingPDF = false;
-
-	$: currentId = activeId;
 
 	async function handlePDFExport() {
 		exportingPDF = true;
@@ -166,13 +167,13 @@
 			observer.observe(section);
 		});
 
-		if ($router.hash.length > 1) {
-			activeId = router.hash;
+		if (meta.length > 1) {
+			activeId = meta.hash;
 		}
 	});
 </script>
 
-<Expanded contentSource={Handbook.sections} {activeId}>
+<Expanded contentSource={Handbook.sections} {activeId} path={meta.match}>
 	<button 
 		id="pdfExportButton" 
 		class="action-button-small" 

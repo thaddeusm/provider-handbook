@@ -4,6 +4,7 @@
 
 	export let sections;
 	export let activeId;
+	export let path;
 
 	let openSubmenu = 0;
 
@@ -30,7 +31,7 @@
 	}
 
 	function handleJump(section) {
-		jumpToId(section);
+		jumpToId(section, path);
 
 		setTimeout(() => {
 			activeId = section;
