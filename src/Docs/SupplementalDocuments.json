@@ -16,7 +16,12 @@
 				"customizable": "true",
 				"url": "",
 				"customizations": [
-					"subheading"
+					{
+						"prompt": "Include your organization’s name under the Access Logo:",
+						"format": "text",
+						"placeholder": "Your Organization",
+						"name": "subheading"
+					}
 				],
 				"text": "Access Logo",
 				"section": "Branding"

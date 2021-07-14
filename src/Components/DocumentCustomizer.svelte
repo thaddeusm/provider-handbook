@@ -1,21 +1,38 @@
 <script>
+	import { onMount } from 'svelte';
+
 	export let documentToCustomize;
+
+	let customizationChoices = [];
+
+	onMount(() => {
+		for (let i=0; i<documentToCustomize.customizations.length; i++) {
+			customizationChoices.push({
+				"customization": "",
+				"choice": ""
+			});
+		}
+	});
 </script>
 
 <div class="arrow"></div>
 <div class="container">
-	<h6 class="prompt">
-		
-	</h6>
-	<div class="preview">
-		
-	</div>
-	<div class="input-area">
-		
-	</div>
-	<div class="footer">
-		
-	</div>
+	{#each documentToCustomize.customizations as customization, i}
+		<p class="prompt">
+			{customization.prompt}
+		</p>
+		<div class="preview">
+			<!-- <svelte:component this={} /> -->
+		</div>
+		<div class="input-area">
+			{#if customization.format == "text"}
+				<input type="text" name={customization.name} placeholder={customization.placeholder} />
+			{/if}
+		</div>
+		<div class="footer">
+			
+		</div>
+	{/each}
 </div>
 
 <style>
@@ -30,5 +47,11 @@
 
 	.container {
 		background: var(--gray);
+	}
+
+	p {
+		margin: 0 auto;
+		padding: 2rem 0;
+		text-align: center;
 	}
 </style>
