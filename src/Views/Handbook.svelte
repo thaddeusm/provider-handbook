@@ -473,9 +473,4 @@
 	#pdfExportButton {
 		margin-top: 50px;
 	}
-
-	button:disabled {
-		cursor: not-allowed;
-		opacity: .7;
-	}
 </style>

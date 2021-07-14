@@ -8,4 +8,4 @@ This web application aims to help new and experienced providers plan and manage 
 ## Technology
 The application relies upon [Svelte JS](https://svelte.dev) to provide both a positive developer experience and quick performance. Page routing (hash-based) is handled by [Tinro](https://github.com/AlexxNB/tinro).
 
-Text content is served via a static JSON file to simulate the possibility of dynamic content in the future. SVG images are used to the extent possible in order to keep assets minimal
+Text content is served via a static JSON file to simulate the possibility of dynamic content in the future. SVG images are used to the extent possible in order to keep assets minimal.

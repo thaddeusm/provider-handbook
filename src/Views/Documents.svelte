@@ -8,10 +8,25 @@
 	import InteractiveAvailable from './../Icons/InteractiveAvailable.svelte';
 	import ResourceAvailable from './../Icons/ResourceAvailable.svelte';
 	import Illustration from './../Components/IllustrationContainer.svelte';
+	import DocumentCustomizer from './../Components/DocumentCustomizer.svelte';
 
 	import SupplementalDocuments from './../Docs/SupplementalDocuments.json';
 
 	let activeId = 'Documents';
+	let customizing = false;
+	let documentToCustomize = null;
+	let documentIndexMatrix = null;
+
+	function openCustomizationPanel(section, subsection) {
+		customizing = true;
+		documentIndexMatrix = [section, subsection];
+		documentToCustomize = SupplementalDocuments.documents[documentIndexMatrix[0]][documentIndexMatrix[1]];
+	}
+
+	function closeCustomizationPanel() {
+		customizing = false;
+		documentToCustomize = null;
+	}
 
 	onMount(async () => {
 		const observer = new IntersectionObserver(entries => {
@@ -39,8 +54,8 @@
 </script>
 
 <Expanded contentSource={SupplementalDocuments.documents} {activeId} path={meta.match}>
-	{#each SupplementalDocuments.documents as documentSection}
-		{#each documentSection as section}
+	{#each SupplementalDocuments.documents as documentSection, i}
+		{#each documentSection as section, j}
 			{#if section.style == "heading"}
 				<section id="{section.text.split(' ').join('')}">
 					<h2>
@@ -70,10 +85,19 @@
 						</a>
 					{/if}
 					<i class="line"></i>
-					<button class="action-button-small customize">
-						customize
-					</button>
+					{#if customizing && documentIndexMatrix[0] == i && documentIndexMatrix[1] == j}
+						<button class="regular-button-small customize" on:click={closeCustomizationPanel}>
+							cancel
+						</button>
+					{:else}
+						<button class="action-button-small customize" on:click={() => {openCustomizationPanel(i, j)}} disabled={customizing}>
+							customize
+						</button>
+					{/if}
 				</p>
+				{#if customizing && documentIndexMatrix[0] == i && documentIndexMatrix[1] == j}
+					<DocumentCustomizer {documentToCustomize}/>
+				{/if}
 			{:else}
 				<p class="not-customizable">
 					<span class="link-icon" title="External Link">

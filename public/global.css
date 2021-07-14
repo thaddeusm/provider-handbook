@@ -255,3 +255,8 @@ button {
 		padding-right: 2rem;
 	}
 }
+
+button:disabled {
+	cursor: not-allowed;
+	opacity: .7;
+}
