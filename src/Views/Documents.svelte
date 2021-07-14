@@ -1,8 +1,8 @@
 <script>
 	import { router } from 'tinro';
+	export let meta;
 
 	import { onMount } from 'svelte';
-	export let meta;
 
 	import Expanded from './../ViewTemplates/Expanded.svelte';
 	import InteractiveAvailable from './../Icons/InteractiveAvailable.svelte';
@@ -32,8 +32,8 @@
 			observer.observe(section);
 		});
 
-		if (meta.length > 1) {
-			activeId = meta.hash;
+		if ($router.hash.length > 1) {
+			activeId = $router.hash;
 		}
 	});
 </script>

@@ -1,5 +1,4 @@
 <script>
-	import SupplementalDocuments from './../Docs/SupplementalDocuments.json';
 	import DesktopToC from './../Components/DesktopToC.svelte';
 	import ResourceAvailable from './../Icons/ResourceAvailable.svelte';
 	import Footer from './../Components/Footer.svelte';

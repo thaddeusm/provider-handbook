@@ -167,8 +167,8 @@
 			observer.observe(section);
 		});
 
-		if (meta.length > 1) {
-			activeId = meta.hash;
+		if ($router.hash.length > 1) {
+			activeId = $router.hash;
 		}
 	});
 </script>

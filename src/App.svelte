@@ -49,6 +49,12 @@
 
 	onMount(() => {
 		handleResize();
+
+		if ($router.path.includes('handbook') && $router.hash.length > 0) {
+			setTimeout(() => {
+				jumpToId($router.hash, 'handbook');
+			}, 500)
+		}
 	});
 </script>
 
