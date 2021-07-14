@@ -69,12 +69,13 @@
 							{section.text}
 						</a>
 					{/if}
+					<i class="line"></i>
 					<button class="action-button-small customize">
 						customize
 					</button>
 				</p>
 			{:else}
-				<p>
+				<p class="not-customizable">
 					<span class="link-icon" title="External Link">
 						<ResourceAvailable width={'2rem'} height={'2rem'} color={'#D11242'} />
 					</span>
@@ -95,44 +96,19 @@
 
 <style>
 	@media screen and (max-width: 450px) {
-		
+		.line {
+			display: none;
+		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
-		
+		.line {
+			display: none;
+		}
 	}
 
 	@media screen and (min-width: 1101px) {
 		
-	}
-
-	ol, ul {
-		list-style-position: inside;
-		margin: 1rem 0 3rem 0;
-	}
-
-	:global(ol li):first-child {
-		margin-top: -.5rem;
-	}
-
-	:global(ol li) {
-		margin: 1rem 0;
-		font-size: 16px;
-		line-height: 1.5;
-		color: var(--black);
-		font-family: "NotoSans";
-	}
-
-	:global(ul li):first-child {
-		margin-top: -.5rem;
-	}
-
-	:global(ul li) {
-		margin: 1rem 0;
-		font-size: 16px;
-		line-height: 1.5;
-		color: var(--black);
-		font-family: "NotoSans";
 	}
 
 	[id]::before { 
@@ -145,17 +121,29 @@
 	}
 
 	.customizable {
-		grid-template-areas: "icon link customize";
-		grid-template-columns: 3rem 1fr auto;
-	}
-
-	p {
 		display: grid;
-		grid-template-columns: 3rem auto 1fr;
-		grid-template-areas: "icon link .";
+		grid-template-areas: "icon link line customize";
+		grid-template-columns: 3rem auto 1fr auto;
 		height: 50px;
 		align-items: center;
 		justify-content: center;
+	}
+
+	.not-customizable {
+		display: grid;
+		grid-template-columns: 3rem 1fr;
+		grid-template-areas: "icon link";
+		height: 50px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.line {
+		grid-area: line;
+		background: var(--gray);
+		height: 2px;
+		width: 90%;
+		margin: 0 auto;
 	}
 
 	.customize {
