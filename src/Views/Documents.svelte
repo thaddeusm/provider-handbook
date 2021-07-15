@@ -3,6 +3,7 @@
 	export let meta;
 
 	import { onMount } from 'svelte';
+	import { slide } from 'svelte/transition';
 
 	import Expanded from './../ViewTemplates/Expanded.svelte';
 	import InteractiveAvailable from './../Icons/InteractiveAvailable.svelte';
@@ -96,7 +97,9 @@
 					{/if}
 				</p>
 				{#if customizing && documentIndexMatrix[0] == i && documentIndexMatrix[1] == j}
-					<DocumentCustomizer {documentToCustomize}/>
+					<div transition:slide="{{duration: 300}}">
+						<DocumentCustomizer {documentToCustomize} />
+					</div>
 				{/if}
 			{:else}
 				<p class="not-customizable">
