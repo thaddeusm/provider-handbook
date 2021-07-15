@@ -98,7 +98,7 @@
 				</p>
 				{#if customizing && documentIndexMatrix[0] == i && documentIndexMatrix[1] == j}
 					<div transition:slide="{{duration: 300}}">
-						<DocumentCustomizer {documentToCustomize} />
+						<DocumentCustomizer {documentToCustomize} on:close-panel={closeCustomizationPanel} />
 					</div>
 				{/if}
 			{:else}

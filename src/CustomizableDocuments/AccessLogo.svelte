@@ -23,8 +23,6 @@
 <style>
 	div {
 		display: inline-block;
-		margin: 1rem;
-		padding: 0 2rem;
 		background: var(--white);
 	}
 </style>

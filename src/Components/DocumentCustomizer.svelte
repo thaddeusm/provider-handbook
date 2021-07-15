@@ -2,6 +2,10 @@
 	import download from 'downloadjs';
 	import { onMount } from 'svelte';
 
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
 	let SVGToImage;
 
 	import('./../exportSVGToPNG.js').then(module => {
@@ -19,21 +23,15 @@
 	let customizationChoices = [];
 	let customizedSVGString = '';
 
-	async function svg2img(svg) {
-	    let svg64 = btoa(unescape(encodeURIComponent(svg)));
-    	let b64start = 'data:image/png;base64,';
-    	let image64 = b64start + svg64;
-
-	    return await image64;
-	}
-
 	async function prepareDocumentDownload() {
 		SVGToImage({
 			svg: `${customizedSVGString}`,
 			mimetype: 'image/jpeg'
 		}).then((output) => {
-			download(output, 'test', 'image/jpeg')
+			download(output, documentToCustomize.text, 'image/jpeg')
 		}).catch(error => {console.log(error)})
+
+		dispatch('close-panel');
 	}
 
 	function handleUpdate(e) {
@@ -57,7 +55,7 @@
 			{customization.prompt}
 		</p>
 		<div class="preview">
-			<svelte:component this={customizableDocuments[documentToCustomize.text]} width={'50%'} {customizationChoices} on:document-updated={handleUpdate} />
+			<svelte:component this={customizableDocuments[documentToCustomize.text]} width={'100%'} {customizationChoices} on:document-updated={handleUpdate} />
 		</div>
 		<div class="input-area">
 			{#if customization.format == "text"}
@@ -73,6 +71,36 @@
 </div>
 
 <style>
+	@media screen and (max-width: 450px) {
+		input {
+			width: 80%;
+		}
+	}
+
+	@media screen and (min-width: 451px) and (max-width: 1100px) {
+		input {
+			width: 70%;
+		}
+
+		.preview {
+			padding: 0 15%;
+			margin: 0 auto;
+			background: var(--white);
+		}
+	}
+
+	@media screen and (min-width: 1101px) {
+		input {
+			width: 50%;
+		}
+
+		.preview {
+			padding: 0 20%;
+			margin: 0 auto;
+			background: var(--white);
+		}
+	}
+
 	.arrow {
 		width: 0; 
   		height: 0; 
@@ -84,11 +112,12 @@
 
 	.container {
 		background: var(--gray);
+		padding: 1rem;
 	}
 
 	p {
 		margin: 0 auto;
-		padding: 2rem 0;
+		padding: 1rem 0;
 		text-align: center;
 	}
 
@@ -104,8 +133,7 @@
 		background: var(--white);
 		outline: none;
 		display: block;
-		width: 50%;
-		margin: 1rem auto;
+		margin: 2rem auto;
 		border: 1px solid var(--brand);
 		border-radius: var(--radius);
 	}
