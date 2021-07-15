@@ -143,7 +143,7 @@
 
 	#inputArea {
 		border: 1px solid var(--brand);
-		border-radius: 1px;
+		border-radius: var(--radius);
 		padding: 10px 5px 8px 5px;
 		grid-area: inputArea;
 		display: grid;

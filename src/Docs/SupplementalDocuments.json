@@ -14,13 +14,14 @@
 			{
 				"style": "link",
 				"customizable": "true",
-				"url": "",
+				"url": "/documents/Access Logo.png",
 				"customizations": [
 					{
 						"prompt": "Include your organization’s name under the Access Logo:",
 						"format": "text",
 						"placeholder": "Your Organization",
-						"name": "subheading"
+						"name": "subheading",
+						"characterLimit": "30"
 					}
 				],
 				"text": "Access Logo",
@@ -32,43 +33,8 @@
 				"section": "Recruitment"
 			},
 			{
-				"style": "link",
-				"customizable": "true",
-				"url": "",
-				"customizations": [
-					"subheading",
-					"keywords"
-				],
-				"text": "Access Logo",
-				"section": "Recruitment"
-			},
-			{
-				"style": "link",
-				"customizable": "true",
-				"url": "",
-				"customizations": [
-					"secondary_text"
-				],
-				"text": "Access Logo",
-				"section": "Recruitment"
-			},
-			{
 				"style": "subheading",
 				"text": "Program Planning",
-				"section": "Program Planning"
-			},
-			{
-				"style": "link",
-				"customizable": "false",
-				"url": "",
-				"text": "2-Year Program Planning Guide",
-				"section": "Program Planning"
-			},
-			{
-				"style": "link",
-				"customizable": "false",
-				"url": "",
-				"text": "Intensive Session Planning Guide",
 				"section": "Program Planning"
 			}
 		]

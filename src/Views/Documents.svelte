@@ -150,7 +150,7 @@
 	.customizable {
 		display: grid;
 		grid-template-areas: "icon link line customize";
-		grid-template-columns: 3rem auto 1fr auto;
+		grid-template-columns: 3rem auto 1fr 100px;
 		height: 50px;
 		align-items: center;
 		justify-content: center;

@@ -13,7 +13,7 @@
 <style>
 	@media screen and (min-width: 1101px) {
 		div {
-			display: none;
+			display: none!important;
 		}
 	}
 
