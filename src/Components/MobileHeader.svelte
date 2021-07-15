@@ -35,12 +35,13 @@
 		showSecondaryList = !showSecondaryList;
 	}
 
-	function navigate(sectionId) {	
+	function navigate(sectionId, route) {	
 		menuOpen = false;
 		document.body.style.overflow = 'auto';
-		router.goto('/handbook');
+
+		router.goto(`/${route}`);
 		setTimeout(() => {
-			jumpToId(sectionId);
+			jumpToId(sectionId, `/${route}`);
 		}, 100, sectionId);
 	}
 
@@ -79,7 +80,7 @@
 										{#each handbookSection as section, j}
 											{#if section.style.includes('heading')}
 												<li class={section.style.includes('subheading') ? 'subheading' : ''}>
-													<button on:click={() => {navigate(section.text.split(' ').join(''))}}>
+													<button on:click={() => {navigate(section.text.split(' ').join(''), 'handbook')}}>
 														{section.text}
 													</button>
 												</li>
@@ -126,7 +127,7 @@
 		}
 
 		.secondary-list {
-			max-height: 300px;
+			max-height: 200px;
 			overflow: auto;
 		}
 
