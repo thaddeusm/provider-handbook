@@ -72,7 +72,7 @@
 						{subSection.text}
 					</button>
 					{#if includesSubheadings(section)}
-						<button on:click={() => {toggleSub(i)}} class="arrow">
+						<button on:click={() => {toggleSub(i)}} class="arrow" aria-label="Toggle Secondary List Display">
 							{#if openSubmenu !== i}
 								<DownArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} />
 							{/if}

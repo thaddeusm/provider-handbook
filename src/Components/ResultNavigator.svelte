@@ -33,7 +33,7 @@
 			</span>
 		</section>
 		<section id="arrowArea">
-			<button on:click={decrementActiveResult} disabled={$activeResult.index == 0}>
+			<button on:click={decrementActiveResult} disabled={$activeResult.index == 0} aria-label="Show Previous Result">
 				<div class="small-icon">
 					<LeftArrow color={'#000000'} width={'2rem'} height={'2rem'} />
 				</div>
@@ -41,7 +41,7 @@
 					<LeftArrow color={'#FFFFFF'} width={'25px'} height={'25px'} />
 				</div>
 			</button>
-			<button on:click={incrementActiveResult} disabled={$activeResult.index == $results.length - 1}>
+			<button on:click={incrementActiveResult} disabled={$activeResult.index == $results.length - 1} aria-label="Show Next Result">
 				<div class="small-icon">
 					<RightArrow color={'#000000'} width={'2rem'} height={'2rem'} />
 				</div>
@@ -51,7 +51,7 @@
 			</button>
 		</section>
 		<section id="closeArea">
-			<button on:click={resetSearch}>
+			<button on:click={resetSearch} aria-label="Close Search">
 				<div class="small-icon">
 					<Close color={'#000000'} width={'2rem'} height={'2rem'} />
 				</div>

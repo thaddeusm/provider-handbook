@@ -4,7 +4,7 @@
 
 <div>
 	<section class="button-area">
-		<button class="up-button" on:click={() => {window.scrollTo(0, 0)}}>
+		<button class="up-button" on:click={() => {window.scrollTo(0, 0)}} aria-label="Scroll to Top">
 			<UpArrow width={'1.5rem'} height={'1.5rem'} color={'#000000'} />
 		</button>
 	</section>

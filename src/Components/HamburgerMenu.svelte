@@ -24,7 +24,7 @@
 
 {#if menuOpen}
 	<div class="button-container">
-		<button on:click={closeMenu}>
+		<button on:click={closeMenu} aria-label="Close Navigation Menu">
 			<Close width={'2rem'} height={'2rem'}  />
 		</button>
 		<slot>
@@ -33,7 +33,7 @@
 	</div>
 {:else}
 	<div class="button-container">
-		<button on:click={openMenu}>
+		<button on:click={openMenu} aria-label="Open Navigation Menu">
 			<Hamburger width={'2rem'} height={'2rem'}  />
 		</button>
 	</div>

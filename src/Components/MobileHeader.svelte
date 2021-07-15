@@ -67,7 +67,7 @@
 						<li><a href="/">about</a></li>
 						<li class="secondary-list-item">
 							<a href="/handbook">handbook</a>
-							<button on:click={toggleSecondaryList}>
+							<button on:click={toggleSecondaryList} aria-label="Toggle Secondary List Display">
 								{#if showSecondaryList}
 									<UpArrow color={'#ffffff'} width={'1.2rem'} height={'1.2rem'} />
 								{:else}
@@ -109,7 +109,7 @@
 		{:else if $navigatingResults}
 			<ResultNavigator />
 		{:else}
-			<button id="searchButton" class:scrolled on:click={openSearch}>
+			<button id="searchButton" class:scrolled on:click={openSearch} aria-label="Search">
 				<Search color={'#000000'} width={'2rem'} height={'2rem'} />
 			</button>
 		{/if}

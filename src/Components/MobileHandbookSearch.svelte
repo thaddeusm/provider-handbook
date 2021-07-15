@@ -81,7 +81,7 @@
 			<input type="text" bind:this={input} bind:value={$searchQuery} on:keyup={handleKeyup} />
 		</section>
 		<section id="closeArea">
-			<button on:click={closeSearch}>
+			<button on:click={closeSearch} aria-label="Close Search">
 				<Close width={'2rem'} height={'2rem'}  />
 			</button>
 		</section>

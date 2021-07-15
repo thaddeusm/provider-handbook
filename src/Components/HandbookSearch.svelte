@@ -81,7 +81,7 @@
 			<input type="text" bind:this={input} bind:value={$searchQuery} placeholder="search the handbook" on:keyup={handleKeyup} />
 		</section>
 		<section id="closeArea">
-			<button on:click={resetSearch}>
+			<button on:click={resetSearch} aria-label="Close Search">
 				<Close width={'25px'} height={'25px'} color={'#FFFFFF'} />
 			</button>
 		</section>
