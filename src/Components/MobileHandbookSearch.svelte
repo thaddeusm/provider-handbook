@@ -55,7 +55,7 @@
 
 		router.goto('/handbook');
 		setTimeout(() => {
-			jumpToId(section);
+			jumpToId(section, '/handbook');
 			openResultNavigator();
 			closeSearch();
 		}, 100, section);

@@ -150,7 +150,7 @@ export const incrementActiveResult = () => {
 		section: newSection
 	});
 
-	jumpToId(newSection);
+	jumpToId(newSection, '/handbook');
 };
 
 export const decrementActiveResult = () => {
@@ -162,7 +162,7 @@ export const decrementActiveResult = () => {
 		section: newSection
 	});
 
-	jumpToId(newSection);
+	jumpToId(newSection, '/handbook');
 };
 
 export const resetSearch = () => {
