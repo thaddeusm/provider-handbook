@@ -28,14 +28,11 @@
 				"section": "Branding"
 			},
 			{
-				"style": "subheading",
-				"text": "Recruitment",
-				"section": "Recruitment"
-			},
-			{
-				"style": "subheading",
-				"text": "Program Planning",
-				"section": "Program Planning"
+				"style": "link",
+				"customizable": "false",
+				"url": "/documents/Participant Consent and Release Form.pdf",
+				"text": "Participant Consent and Release Form",
+				"section": "Branding"
 			}
 		]
 	]
