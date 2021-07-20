@@ -97,7 +97,7 @@
 					if (section !== termText) {
 						if (defs[i].form == 'word') {
 							text = text.replace(term, (match) => {
-								return `<button class="glossary-term">${match}<aside class="tooltip"><div class="tooltip-body"><p><span class="term">${match} - </span><span class="definition">${defs[i].definition}</span> <span class="source">(Merriam-Webster)</span></p></div><div class="tooltip-footer"><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
+								return `<button class="glossary-term">${match}<aside class="tooltip"><div class="tooltip-body"><p><span class="term">${match} - </span><span class="definition">${defs[i].definition}</span> <span class="source">(${defs[i].source})</span></p></div><div class="tooltip-footer"><a class="regular-button-small tooltip-close">close</a></div></aside></button>`;
 							});
 						} else {
 							text = text.replace(term, (match) => {
