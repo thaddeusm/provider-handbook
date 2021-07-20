@@ -14,7 +14,7 @@
 			{
 				"style": "link",
 				"customizable": "true",
-				"url": "/documents/Access Logo.jpg",
+				"url": "/static_documents/Access Logo.jpg",
 				"customizations": [
 					{
 						"prompt": "Include your organization’s name under the Access Logo:",
@@ -30,7 +30,7 @@
 			{
 				"style": "link",
 				"customizable": "false",
-				"url": "/documents/Participant Consent and Release Form.pdf",
+				"url": "/static_documents/Participant Consent and Release Form.pdf",
 				"text": "Participant Consent and Release Form",
 				"section": "Branding"
 			}

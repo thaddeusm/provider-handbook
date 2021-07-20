@@ -727,7 +727,7 @@
 			{
 				"style": "paragraph",
 				"text": "For more information regarding the proposal process, please review pages 19-26 here.",
-				"markup": "For more information regarding the proposal process, please <a class=\"embedded-link\" target=\"_blank\" href=\"/documents/FY2018.pdf\">review pages 19-26 here</a>.",
+				"markup": "For more information regarding the proposal process, please <a class=\"embedded-link\" target=\"_blank\" href=\"/static_documents/FY2018.pdf\">review pages 19-26 here</a>.",
 				"section": "Application and Proposal Process"
 			},
 			{
@@ -754,7 +754,7 @@
 			{
 				"style": "paragraph",
 				"text": "For more information regarding the agreement process, review pages 27-29 here.",
-				"markup": "For more information regarding the agreement process, <a class=\"embedded-link\" target=\"_blank\" href=\"/documents/FY2018.pdf\">review pages 27-29 here</a>.",
+				"markup": "For more information regarding the agreement process, <a class=\"embedded-link\" target=\"_blank\" href=\"/static_documents/FY2018.pdf\">review pages 27-29 here</a>.",
 				"section": "Agreement Process"
 			},
 			{
@@ -826,7 +826,7 @@
 			{
 				"style": "external_link",
 				"text": "Photo Consent Form",
-				"url": "/documents/Participant Consent and Release Form.pdf",
+				"url": "/static_documents/Participant Consent and Release Form.pdf",
 				"section": "Social Media Guidelines and Safety Tips"
 			},
 			{
