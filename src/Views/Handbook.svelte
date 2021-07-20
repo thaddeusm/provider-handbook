@@ -470,6 +470,14 @@
 		font-style: italic;
 	}
 
+	:global(.embedded-link) {
+		text-decoration: underline; 
+		text-decoration-thickness: 3px; 
+		text-decoration-color: #3470B7; 
+		text-decoration-skip-ink: none;
+		text-decoration-skip: none;
+	}
+
 	#pdfExportButton {
 		margin-top: 50px;
 	}

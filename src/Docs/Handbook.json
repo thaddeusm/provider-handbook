@@ -727,7 +727,7 @@
 			{
 				"style": "paragraph",
 				"text": "For more information regarding the proposal process, please review pages 19-26 here.",
-				"markup": "For more information regarding the proposal process, please <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" target=\"_blank\" href=\"/documents/FY2018.pdf\">review pages 19-26 here</a>.",
+				"markup": "For more information regarding the proposal process, please <a class=\"embedded-link\" target=\"_blank\" href=\"/documents/FY2018.pdf\">review pages 19-26 here</a>.",
 				"section": "Application and Proposal Process"
 			},
 			{
@@ -754,7 +754,7 @@
 			{
 				"style": "paragraph",
 				"text": "For more information regarding the agreement process, review pages 27-29 here.",
-				"markup": "For more information regarding the agreement process, <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" target=\"_blank\" href=\"/documents/FY2018.pdf\">review pages 27-29 here</a>.",
+				"markup": "For more information regarding the agreement process, <a class=\"embedded-link\" target=\"_blank\" href=\"/documents/FY2018.pdf\">review pages 27-29 here</a>.",
 				"section": "Agreement Process"
 			},
 			{
@@ -809,13 +809,24 @@
 			{
 				"style": "paragraph",
 				"text": "Providers are strongly encouraged to ‘like’ and follow the Access HQ Facebook page.",
-				"markup": "Providers are strongly encouraged to ‘like’ and follow <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" target=\"_blank\" href=\"https://www.facebook.com/AccessProgramHQ/\">the Access HQ Facebook page</a>.",
+				"markup": "Providers are strongly encouraged to ‘like’ and follow <a class=\"embedded-link\" target=\"_blank\" href=\"https://www.facebook.com/AccessProgramHQ/\">the Access HQ Facebook page</a>.",
 				"section": "Social Media Guidelines and Safety Tips"
 			},
 			{
 				"style": "paragraph",
 				"text": "Social Media Guidelines",
 				"markup": "<strong>Social Media Guidelines</strong>",
+				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
+				"style": "paragraph",
+				"text": "The most important guideline Providers must follow is to have each Access student and parent sign a photo consent form at the beginning of the program. By signing this form, the student and parent agree to allow any pictures taken of the student to be published on public platforms such as social media and promotional materials.",
+				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
+				"style": "external_link",
+				"text": "Photo Consent Form",
+				"url": "/documents/Participant Consent and Release Form.pdf",
 				"section": "Social Media Guidelines and Safety Tips"
 			},
 			{
@@ -1155,13 +1166,13 @@
 			{
 				"style": "paragraph",
 				"text": "EducationUSA Advising Centers: these centers offer objective and timely information about educational institutions in the United States and how to best access those opportunities. Each year, thousands of prospective students learn about opportunities to study in the United States through EducationUSA centers. This is a great resource and providers can include a trip to an advising center, inviting a speaker, or by visiting https://educationusa.state.gov/ during the program.",
-				"markup": "<strong>EducationUSA Advising Centers</strong>: these centers offer objective and timely information about educational institutions in the United States and how to best access those opportunities. Each year, thousands of prospective students learn about opportunities to study in the United States through EducationUSA centers. This is a great resource and providers can include a trip to an advising center, inviting a speaker, or by visiting <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" href=\"https://educationusa.state.gov/\" target=\"_blank\">https://educationusa.state.gov/</a> during the program.",
+				"markup": "<strong>EducationUSA Advising Centers</strong>: these centers offer objective and timely information about educational institutions in the United States and how to best access those opportunities. Each year, thousands of prospective students learn about opportunities to study in the United States through EducationUSA centers. This is a great resource and providers can include a trip to an advising center, inviting a speaker, or by visiting <a class=\"embedded-link\" href=\"https://educationusa.state.gov/\" target=\"_blank\">https://educationusa.state.gov/</a> during the program.",
 				"section": "Exposure to Americans and U.S. Resources"
 			},
 			{
 				"style": "paragraph",
 				"text": "American Spaces is a term that refers to the American Corners, International Resource Centers, and Binational Centers located in some countries. Visit the American Spaces site https://americanspaces.state.gov/home/ or contact the U.S. Embassy/Consulate for more information.",
-				"markup": "<strong>American Spaces</strong> is a term that refers to the American Corners, International Resource Centers, and Binational Centers located in some countries. Visit the American Spaces site <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" href=\"https://americanspaces.state.gov/home/\" target=\"_blank\">https://americanspaces.state.gov/home/</a> or contact the U.S. Embassy/Consulate for more information.",
+				"markup": "<strong>American Spaces</strong> is a term that refers to the American Corners, International Resource Centers, and Binational Centers located in some countries. Visit the American Spaces site <a class=\"embedded-link\" href=\"https://americanspaces.state.gov/home/\" target=\"_blank\">https://americanspaces.state.gov/home/</a> or contact the U.S. Embassy/Consulate for more information.",
 				"section": "Exposure to Americans and U.S. Resources"
 			},
 			{
@@ -1172,19 +1183,19 @@
 			{
 				"style": "paragraph",
 				"text": "English Language Fellows (Fellows) are U.S. English-language teaching professionals placed in universities, ministries of education, and other institutions for ten months. Fellows work with their hosts as well as the local and regional English language teaching community to create and implement courses, materials, curricula, and training programs that build stronger connections between the host and U.S. culture. Fellows can assist teachers with Access Program activities if/when available. Fellows cannot teach in the Access Program.",
-				"markup": "<strong>English Language Fellows (Fellows)</strong> are U.S. English-language teaching professionals placed in universities, ministries of education, and other institutions for ten months. <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" href=\"https://elprograms.org/\" target=\"_blank\">Fellows</a> work with their hosts as well as the local and regional English language teaching community to create and implement courses, materials, curricula, and training programs that build stronger connections between the host and U.S. culture. Fellows can assist teachers with Access Program activities if/when available. Fellows cannot teach in the Access Program.",
+				"markup": "<strong>English Language Fellows (Fellows)</strong> are U.S. English-language teaching professionals placed in universities, ministries of education, and other institutions for ten months. Fellows work with their hosts as well as the local and regional English language teaching community to create and implement courses, materials, curricula, and training programs that build stronger connections between the host and U.S. culture. Fellows can assist teachers with Access Program activities if/when available. Fellows cannot teach in the Access Program. Visit the English Language Programs website to learn more: <a class=\"embedded-link\" href=\"https://www.elprograms.org/\" target=\"_blank\">https://www.elprograms.org/</a>.",
 				"section": "Exposure to Americans and U.S. Resources"
 			},
 			{
 				"style": "paragraph",
 				"text": "Fulbright English Teaching Assistants (ETAs) are U.S. college graduates who assist teachers of English. English Teaching Assistants help teach English language in educational institutions while serving as U.S. cultural ambassadors. ETAs can assist teachers with Access Program activities. ETAs cannot teach in the Access Program.",
-				"markup": "<strong>Fulbright English Teaching Assistants (ETAs)</strong> are U.S. college graduates who assist teachers of English. <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" href=\"https://exchanges.state.gov/us/program/fulbright-english-teaching-assistant-program/\" target=\"_blank\">English Teaching Assistants</a> help teach English language in educational institutions while serving as U.S. cultural ambassadors. ETAs can assist teachers with Access Program activities. ETAs cannot teach in the Access Program.",
+				"markup": "<strong>Fulbright English Teaching Assistants (ETAs)</strong> are U.S. college graduates who assist teachers of English. English Teaching Assistants help teach English language in educational institutions while serving as U.S. cultural ambassadors. ETAs can assist teachers with Access Program activities. ETAs cannot teach in the Access Program. Learn more at <a class=\"embedded-link\" href=\"https://exchanges.state.gov/us/program/fulbright-english-teaching-assistant-program/\" target=\"_blank\">https://exchanges.state.gov/us/program/fulbright-english-teaching-assistant-program/</a>.",
 				"section": "Exposure to Americans and U.S. Resources"
 			},
 			{
 				"style": "paragraph",
 				"text": "Peace Corps Volunteers work in a variety of contexts and hold different responsibilities.",
-				"markup": "<strong>Peace Corps Volunteers</strong> work in a variety of contexts and hold different responsibilities. Visit the Peace Corps website to learn more: <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" href=\"https://www.peacecorps.gov/about/\" target=\"_blank\">https://www.peacecorps.gov/about/</a>.",
+				"markup": "<strong>Peace Corps Volunteers</strong> work in a variety of contexts and hold different responsibilities. Visit the Peace Corps website to learn more: <a class=\"embedded-link\" href=\"https://www.peacecorps.gov/about/\" target=\"_blank\">https://www.peacecorps.gov/about/</a>.",
 				"section": "Exposure to Americans and U.S. Resources"
 			},
 			{
@@ -1210,7 +1221,7 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "The curriculum should also address the main goals of the Access Program which provide program students a foundation of English language skills, an appreciation for U.S. culture and democratic values and opportunities for students to participate in personal development activities and service learning projects. Providers must also include topics such as: global citizenship, critical thinking, human rights, U.S. democracy and government, U.S. civil society, diversity and tolerance, U.S. History, U.S. education system, U.S. and global gender issues, climate and the environment, U.S. and global health, and STEM in their program curriculum.",
+				"text": "The curriculum should also address the main goals of the Access Program which provide program students a foundation of English language skills, an appreciation for U.S. culture and democratic values and opportunities for students to participate in personal development activities and service learning projects. Providers should also include topics such as: global citizenship, critical thinking, human rights, U.S. democracy and government, U.S. civil society, diversity and tolerance, U.S. History, U.S. education system, U.S. and global gender issues, climate and the environment, U.S. and global health, and STEM in their program curriculum.",
 				"section": "Access Program Curriculum and Materials"
 			},
 			{
@@ -1271,7 +1282,7 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "Each Access Program can structure their staffing as needed. Please see below for example roles and responsibilities.",
+				"text": "Each Access Program can structure their staffing as needed with the exception of the coordinator position, which is mandatory. Please see below for example roles and responsibilities.",
 				"section": "Roles and Responsibilities"
 			},
 			{
