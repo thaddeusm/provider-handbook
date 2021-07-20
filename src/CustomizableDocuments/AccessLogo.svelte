@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte';
 	import { createEventDispatcher } from 'svelte';
 
 	const dispatch = createEventDispatcher();
@@ -18,6 +19,12 @@
 			svg: outputSVG
 		});
 	}
+
+	onMount(() => {
+		dispatch('document-updated', {
+			svg: outputSVG
+		});
+	})
 </script>
 
 <style>

@@ -23,13 +23,17 @@
 	let customizationChoices = [];
 	let customizedSVGString = '';
 
-	async function prepareDocumentDownload() {
+	async function prepareDocumentDownload(callback) {
 		SVGToImage({
 			svg: `${customizedSVGString}`,
 			mimetype: 'image/jpeg'
 		}).then((output) => {
-			download(output, documentToCustomize.text, 'image/jpeg')
-		}).catch(error => {console.log(error)})
+			download(output, documentToCustomize.text, 'image/jpeg');
+
+			if (callback) {
+				callback();
+			}
+		})
 	}
 
 	function handleUpdate(e) {
@@ -42,8 +46,11 @@
 		}
 	}
 
-	function handleClick() {
-		prepareDocumentDownload();
+	async function handleClick() {
+		await prepareDocumentDownload(close());
+	}
+
+	function close() {
 		dispatch('close-panel');
 	}
 
@@ -122,6 +129,7 @@
 	.container {
 		background: var(--gray);
 		padding: 1rem;
+		margin-bottom: 5rem;
 	}
 
 	p {
