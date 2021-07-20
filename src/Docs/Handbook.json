@@ -147,12 +147,6 @@
 				"section": "Introduction to Access Stakeholders"
 			},
 			{
-				"style": "graphic",
-				"title": "Stakeholders",
-				"section": "Introduction to Access Stakeholders",
-				"text": "Access Program stakeholders include: the Bureau of Educational and Cultural Affairs, FHI 360, a Regional English Language Officer, U.S. Embassy/Consulate, an Access provider, and Access students."
-			},
-			{
 				"style": "paragraph",
 				"text": "Bureau of Educational and Cultural Affairs (ECA)",
 				"markup": "<strong>Bureau of Educational and Cultural Affairs (ECA)</strong>",
@@ -247,6 +241,12 @@
 					"Develop knowledge and skills through Access classes that can contribute to the socio-economic development of their countries"
 				],
 				"section": "Introduction to Access Stakeholders"
+			},
+			{
+				"style": "graphic",
+				"title": "Stakeholders",
+				"section": "Introduction to Access Stakeholders",
+				"text": "Access Program stakeholders include: the Bureau of Educational and Cultural Affairs, FHI 360, a Regional English Language Officer, U.S. Embassy/Consulate, an Access provider, and Access students."
 			},
 			{
 				"style": "subheading",
