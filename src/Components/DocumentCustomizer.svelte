@@ -30,12 +30,21 @@
 		}).then((output) => {
 			download(output, documentToCustomize.text, 'image/jpeg')
 		}).catch(error => {console.log(error)})
-
-		dispatch('close-panel');
 	}
 
 	function handleUpdate(e) {
 		customizedSVGString = e.detail.svg;
+	}
+
+	function handleKeyup(e) {
+		if (e.keyCode == 13) {
+			prepareDocumentDownload();
+		}
+	}
+
+	function handleClick() {
+		prepareDocumentDownload();
+		dispatch('close-panel');
 	}
 
 	onMount(() => {
@@ -59,11 +68,11 @@
 		</div>
 		<div class="input-area">
 			{#if customization.format == "text"}
-				<input type="text" name={customization.name} placeholder={customization.placeholder} bind:value={customizationChoices[customization.name]} maxlength={customization.characterLimit} />
+				<input type="text" name={customization.name} placeholder={customization.placeholder} bind:value={customizationChoices[customization.name]} maxlength={customization.characterLimit} on:keyup={handleKeyup} />
 			{/if}
 		</div>
 		<div class="footer">
-			<button class="action-button-small" on:click={prepareDocumentDownload}>
+			<button enterkeyhint="download" class="action-button-small" on:click={handleClick}>
 				download
 			</button>
 		</div>
