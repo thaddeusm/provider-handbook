@@ -23,11 +23,14 @@
 <style>
 	@media screen and (max-width: 450px) {
 		.container {
-			grid-template-columns: 0 1fr;
+			grid-template-columns: 1fr;
+			grid-template-areas: 
+				"bodyContent"
+				"footer";
 		}
 
 		#bodyContent {
-			padding: 0 1rem;
+			padding: 0 1rem;	
 		}
 
 		aside {
@@ -37,7 +40,10 @@
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.container {
-			grid-template-columns: 0 1fr;
+			grid-template-columns: 1fr;
+			grid-template-areas: 
+				"bodyContent"
+				"footer";
 		}
 
 		#bodyContent {
@@ -52,6 +58,9 @@
 	@media screen and (min-width: 1101px) {
 		.container {
 			grid-template-columns: 410px 1fr;
+			grid-template-areas: 
+				". bodyContent"
+				". footer";
 			margin-top: -50px;
 		}
 
@@ -67,9 +76,6 @@
 		width: 100%;
 		display: grid;
 		grid-template-rows: 1fr 100px;
-		grid-template-areas: 
-			". bodyContent"
-			". footer";
 	}
 
 	#bodyContent {

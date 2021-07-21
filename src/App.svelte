@@ -93,6 +93,7 @@
 <style>
 	#app {
 		height: 100%;
+		width: 100%;
 		display: grid;
 		grid-template-rows: 100px auto;
 	}

@@ -23,8 +23,9 @@
 		grid-template-columns: 1fr;
 		grid-template-areas: 
 			"button";
-		margin-top: 2rem;
+		margin: 2rem 0 2rem 0;
 		height: 100px;
+		width: 100%;
 		text-align: center;
 		align-items: center;
 	}
