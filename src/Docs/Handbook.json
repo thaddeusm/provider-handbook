@@ -2295,6 +2295,11 @@
 		"STEM": {
 			"definition": "Science, Technology, Engineering, and Math",
 			"form": "acronym"
+		},
+		"portfolio": {
+			"definition": "can be both a physical and digital collection of academic work (i.e. journal entries, tests, presentations, essays, etc.) to demonstrate knowledge or skills.",
+			"form": "word",
+			"source": ""
 		}
 	}
 }
