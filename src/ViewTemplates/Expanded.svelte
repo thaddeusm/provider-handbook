@@ -24,13 +24,14 @@
 	@media screen and (max-width: 450px) {
 		.container {
 			grid-template-columns: 1fr;
-			grid-template-areas: 
+			grid-template-rows: 1fr 175px;
+			grid-template-areas:
 				"bodyContent"
 				"footer";
 		}
 
 		#bodyContent {
-			padding: 0 1rem;	
+			padding: 0 1rem;
 		}
 
 		aside {
@@ -41,6 +42,7 @@
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.container {
 			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 200px;
 			grid-template-areas: 
 				"bodyContent"
 				"footer";
@@ -62,6 +64,7 @@
 				". bodyContent"
 				". footer";
 			margin-top: -50px;
+			margin-bottom: 50px;
 		}
 
 		#bodyContent {
@@ -75,7 +78,6 @@
 		height: 100%;
 		width: 100%;
 		display: grid;
-		grid-template-rows: 1fr 100px;
 	}
 
 	#bodyContent {

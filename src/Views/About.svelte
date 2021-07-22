@@ -1,4 +1,5 @@
 <script>
+	import Footer from './../Components/Footer.svelte';
 	import PreviewModal from './../Components/PreviewModal.svelte';
 	import Play from './../Icons/Play.svelte';
 
@@ -17,6 +18,9 @@
 	<section class="action">
 		<a class="action-button" href="/handbook">view handbook</a>
 	</section>
+	<footer>
+		<Footer showArrow={false} />
+	</footer>
 </div>
 
 {#if showVideo}
@@ -49,13 +53,13 @@
 
 	@media screen and (max-width: 450px) {
 		.container {
-			grid-template-rows: 250px 120px auto;
+			grid-template-rows: 250px 120px 70px 175px;
 		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.container {
-			grid-template-rows: 350px 100px 50px;
+			grid-template-rows: 350px 100px 1fr 200px;
 		}
 
 		.action {
@@ -65,19 +69,20 @@
 
 	@media screen and (min-width: 1101px) {
 		.container {
-			grid-template-rows: 1.5fr .5fr .5fr;
+			grid-template-rows: 1.5fr .5fr 1fr 100px;
 		}
 	}
 
 	.container {
+		height: 100%;
+		width: 100%;
 		display: grid;
 		align-items: center;
-		height: 90%;
 	}
 
 	p {
 		text-align: center;
-		max-width: 450px;
+		max-width: 750px;
 		margin: 0 auto;
 		padding: 0 1rem;
 		align-self: flex-start;
