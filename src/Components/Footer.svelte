@@ -14,15 +14,36 @@
 </div>
 
 <style>
+	@media screen and (max-width: 1100px) {
+		div {
+			grid-template-rows: 70% 30%;
+		}
+
+		.attribution {
+			align-self: flex-start;
+		}
+
+		.button-area {
+			align-self: flex-end;
+		}
+	}
+
 	@media screen and (min-width: 1101px) {
 		.button-area {
 			display: none!important;
+		}
+
+		div {
+			grid-template-rows: 1fr;
+		}
+
+		.attribution {
+			align-self: flex-end;
 		}
 	}
 
 	div {
 		display: grid;
-		grid-template-rows: 70% 30%;
 		grid-template-columns: 1fr;
 		grid-template-areas: 
 			"attribution"
@@ -38,11 +59,9 @@
 		grid-area: attribution;
 		max-width: 750px;
 		margin: 0 auto;
-		align-self: flex-start;
 	}
 
 	.button-area {
 		grid-area: button;
-		align-self: flex-end;
 	}
 </style>
