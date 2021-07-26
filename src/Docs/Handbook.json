@@ -148,8 +148,8 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "Bureau of Educational and Cultural Affairs (ECA)",
-				"markup": "<strong>Bureau of Educational and Cultural Affairs (ECA)</strong>",
+				"text": "The U.S. Department of State (DOS)",
+				"markup": "<strong>The U.S. Department of State (DOS)</strong>",
 				"section": "Introduction to Access Stakeholders"
 			},
 			{
@@ -172,7 +172,7 @@
 				"style": "unordered_list",
 				"text": [
 					"Disburse funds to Access providers",
-					"Collaborate with ECA and RELO to evaluate trending issues and identify solutions",
+					"Collaborate with DOS and RELO to evaluate trending issues and identify solutions",
 					"Create and maintain online systems to track the lifecycle of programs",
 					"Collect, review, and provide feedback on official program documentation"
 				],
@@ -188,7 +188,7 @@
 				"style": "unordered_list",
 				"text": [
 					"Provide guidance on program preparation, design, and implementation",
-					"Communicate with ECA, FHI 360, U.S. Embassy/Consulate, and Access providers to resolve issues",
+					"Communicate with DOS, FHI 360, U.S. Embassy/Consulate, and Access providers to resolve issues",
 					"Review and certify proposals",
 					"Visit and monitor Access Program sites"
 				],
@@ -1499,7 +1499,7 @@
 				"style": "graphic",
 				"title": "Amendment Process",
 				"section": "Amendments to the Agreement",
-				"text": "Requesting an amendment includes the following steps: provider sends U.S. Embassy amendment request or FHI 360 alerts U.S. Embassy/Consulate that an amendment is needed; U.S. Embassy/Consulate sends amendment request to FHI 360 and ECA for approval; if approved, FHI 360 sends amendment documents to U.S. Embassy/Consulate and provider for signatures; once signed by the provider, the documents must be scanned and sent back to FHI 360 for their signature. Please note that the amendment documents are valid from the date of FHI 360's signature."
+				"text": "Requesting an amendment includes the following steps: provider sends U.S. Embassy amendment request or FHI 360 alerts U.S. Embassy/Consulate that an amendment is needed; U.S. Embassy/Consulate sends amendment request to FHI 360 and DOS for approval; if approved, FHI 360 sends amendment documents to U.S. Embassy/Consulate and provider for signatures; once signed by the provider, the documents must be scanned and sent back to FHI 360 for their signature. Please note that the amendment documents are valid from the date of FHI 360's signature."
 			},
 			{
 				"style": "external_resource",
@@ -1540,7 +1540,7 @@
 				"style": "graphic",
 				"title": "Budget Revision Process",
 				"section": "Budget Revisions",
-				"text": "Requesting a budget change includes the following steps: provider sends U.S. Embassy/Consulate budget change request OR FHI 360 alerts U.S. Embassy that a budget revision is needed; U.S. Embassy/Consulate sends budget change request to FHI 360 and ECA for approval; if approved, FHI 360 sends a letter of approved budget change to U.S. Embassy/Consulate and provider for their records. Once the provider receives the letter, the revised budget is approved and in effect."
+				"text": "Requesting a budget change includes the following steps: provider sends U.S. Embassy/Consulate budget change request OR FHI 360 alerts U.S. Embassy that a budget revision is needed; U.S. Embassy/Consulate sends budget change request to FHI 360 and DOS for approval; if approved, FHI 360 sends a letter of approved budget change to U.S. Embassy/Consulate and provider for their records. Once the provider receives the letter, the revised budget is approved and in effect."
 			},
 			{
 				"style": "external_resource",
@@ -1555,7 +1555,7 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "Providers are required to submit quarterly or semester programmatic and financial reports by email throughout the duration of the program to the U.S. Embassy/Consulate according to the schedule in the signed agreement. The purpose of these reports is to record accurate program activities that have occurred, spending of Access Program funds, and formal requesting of continued funding every period. The reports will be reviewed by the U.S. Embassy/Consulate, FHI 360, and ECA. ECA has final authority to approve the reporting documents and authorize disbursement of funds.",
+				"text": "Providers are required to submit quarterly or semester programmatic and financial reports by email throughout the duration of the program to the U.S. Embassy/Consulate according to the schedule in the signed agreement. The purpose of these reports is to record accurate program activities that have occurred, spending of Access Program funds, and formal requesting of continued funding every period. The reports will be reviewed by the U.S. Embassy/Consulate, FHI 360, and DOS. DOS has final authority to approve the reporting documents and authorize disbursement of funds.",
 				"section": "Reporting Requirements"
 			},
 			{
@@ -1832,7 +1832,7 @@
 				"style": "graphic",
 				"title": "Termination",
 				"section": "After: Program Close-Out",
-				"text": "The termination process begins with the U.S. Embassy/Consulate and ECA making a determination decision. FHI 360 sends a letter to the provider to formally terminate the agreement. The provider has 30 days after the effective end date to complete the standard close out process."
+				"text": "The termination process begins with the U.S. Embassy/Consulate and DOS making a determination decision. FHI 360 sends a letter to the provider to formally terminate the agreement. The provider has 30 days after the effective end date to complete the standard close out process."
 			}
 		]
 	],
@@ -1841,8 +1841,8 @@
 			"definition": "The objective of the Access Program is to provide participants with improved English skills that may lead to better jobs and educational prospects, including future exchanges and study in the United States.",
 			"form": "phrase"
 		},
-		"ECA": {
-			"definition": "Bureau of Educational and Cultural Affairs",
+		"DOS": {
+			"definition": "the U.S. Department of State",
 			"form": "acronym"
 		},
 		"evaluate": {
