@@ -107,7 +107,7 @@
 	}
 
 	ul li:first-child {
-		margin-top: 13rem;
+		margin-top: 12rem;
 	}
 
 	ul li button {
