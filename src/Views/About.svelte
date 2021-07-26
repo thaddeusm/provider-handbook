@@ -53,13 +53,13 @@
 
 	@media screen and (max-width: 450px) {
 		.container {
-			grid-template-rows: 250px 120px 70px 175px;
+			grid-template-rows: 250px 120px 70px 200px;
 		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.container {
-			grid-template-rows: 350px 100px 1fr 200px;
+			grid-template-rows: 400px 100px 200px 200px;
 		}
 
 		.action {
@@ -78,6 +78,10 @@
 		width: 100%;
 		display: grid;
 		align-items: center;
+	}
+
+	footer {
+		align-self: flex-end;
 	}
 
 	p {

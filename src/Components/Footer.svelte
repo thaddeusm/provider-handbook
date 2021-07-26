@@ -22,25 +22,27 @@
 
 	div {
 		display: grid;
-		grid-template-rows: 60% 40%;
+		grid-template-rows: 70% 30%;
 		grid-template-columns: 1fr;
 		grid-template-areas: 
 			"attribution"
 			"button";
-		margin: 2rem 0 2rem 0;
 		height: 100%;
 		width: 100%;
 		text-align: center;
 		align-items: center;
+		padding: 1rem 0;
 	}
 
 	.attribution {
 		grid-area: attribution;
 		max-width: 750px;
 		margin: 0 auto;
+		align-self: flex-start;
 	}
 
 	.button-area {
 		grid-area: button;
+		align-self: flex-end;
 	}
 </style>

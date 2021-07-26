@@ -24,7 +24,7 @@
 	@media screen and (max-width: 450px) {
 		.container {
 			grid-template-columns: 1fr;
-			grid-template-rows: 1fr 175px;
+			grid-template-rows: 1fr 200px;
 			grid-template-areas:
 				"bodyContent"
 				"footer";
@@ -60,11 +60,11 @@
 	@media screen and (min-width: 1101px) {
 		.container {
 			grid-template-columns: 410px 1fr;
+			grid-template-rows: 95% 5%;
 			grid-template-areas: 
 				". bodyContent"
 				". footer";
 			margin-top: -50px;
-			margin-bottom: 50px;
 		}
 
 		#bodyContent {
@@ -82,6 +82,7 @@
 
 	#bodyContent {
 		grid-area: bodyContent;
+		height: 100%;
 	}
 
 	aside {
@@ -98,5 +99,6 @@
 
 	footer {
 		grid-area: footer;
+		align-self: flex-end;
 	}
 </style>
