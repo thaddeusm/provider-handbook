@@ -60,7 +60,7 @@
 	@media screen and (min-width: 1101px) {
 		.container {
 			grid-template-columns: 410px 1fr;
-			grid-template-rows: 95% 5%;
+			grid-template-rows: 1fr auto;
 			grid-template-areas: 
 				". bodyContent"
 				". footer";

@@ -451,7 +451,13 @@
 			{
 				"style": "external_link",
 				"text": "How Do I Evaluate a Service Learning Project?",
-				"url": "",
+				"url": "https://rise.articulate.com/share/5TYhS_VHhrYKaWiZQoEZbAQM4QVAQ_Nu",
+				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "external_resource",
+				"text": "Enhancement Activity Planning Template",
+				"url": "/static_documents/Enhancement Activity Planning Template.docx",
 				"section": "Planning a 2-Year Access Program"
 			},
 			{
@@ -497,18 +503,6 @@
 				"section": "Planning a 2-Year Access Program"
 			},
 			{
-				"style": "external_link",
-				"url": "https://rise.articulate.com/share/vo5p__L8RdzRgwDxjh6vt1lFnjrLs5Z2",
-				"text": "What are Effective Intensive Session Activities?",
-				"section": "Planning a 2-Year Access Program"
-			},
-			{
-				"style": "external_link",
-				"url": "https://rise.articulate.com/share/zY8MxTaL3YEo8C65BGjSW7-kX4Fn_wTZ",
-				"text": "What Makes a U.S. Culture Activity Effective?",
-				"section": "Planning a 2-Year Access Program"
-			},
-			{
 				"style": "paragraph",
 				"text": "Important Points when planning Intensive Session and Enhancement Activity events:",
 				"markup": "<strong>Important Points when planning Intensive Session and Enhancement Activity events:</strong>",
@@ -534,8 +528,26 @@
 			},
 			{
 				"style": "external_link",
+				"url": "https://rise.articulate.com/share/vo5p__L8RdzRgwDxjh6vt1lFnjrLs5Z2",
+				"text": "What are Effective Intensive Session Activities?",
+				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "external_link",
+				"url": "https://rise.articulate.com/share/zY8MxTaL3YEo8C65BGjSW7-kX4Fn_wTZ",
+				"text": "What Makes a U.S. Culture Activity Effective?",
+				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "external_link",
 				"text": "How do I Evaluate a Service Learning Project?",
 				"url": "https://rise.articulate.com/share/5TYhS_VHhrYKaWiZQoEZbAQM4QVAQ_Nu",
+				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "external_resource",
+				"text": "Intensive Session Planning Template",
+				"url": "/static_documents/Intensive Session Planning Template.docx",
 				"section": "Planning a 2-Year Access Program"
 			},
 			{
@@ -792,13 +804,13 @@
 			{
 				"style": "external_resource",
 				"text": "Official Access Logo",
-				"url": "",
+				"url": "/static_documents/Access Logo.jpg",
 				"section": "Branding"
 			},
 			{
 				"style": "external_resource",
-				"text": "Access Logo Style Guide",
-				"url": "",
+				"text": "Access Brand Guide",
+				"url": "/static_documents/Access Brand Guide.png",
 				"section": "Branding"
 			},
 			{
@@ -825,7 +837,7 @@
 			},
 			{
 				"style": "external_link",
-				"text": "Photo Consent Form",
+				"text": "Participant Consent and Release Form",
 				"url": "/static_documents/Participant Consent and Release Form.pdf",
 				"section": "Social Media Guidelines and Safety Tips"
 			},
@@ -1144,8 +1156,14 @@
 			},
 			{
 				"style": "external_resource",
-				"url": "",
-				"text": "Example Access Teacher Interview Questions and Rubric",
+				"url": "/static_documents/Access Teacher Interview Questions.pdf",
+				"text": "Example Access Teacher Interview Questions",
+				"section": "Recruiting Access Teachers"
+			},
+			{
+				"style": "external_resource",
+				"url": "/static_documents/Access Teacher Interview Rubrics.pdf",
+				"text": "Example Access Teacher Interview Rubrics",
 				"section": "Recruiting Access Teachers"
 			},
 			{

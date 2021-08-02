@@ -8,7 +8,33 @@
 			},
 			{
 				"style": "subheading",
+				"text": "Planning a 2-Year Access Program",
+				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "link",
+				"customizable": "false",
+				"url": "/static_documents/Enhancement Activity Planning Template.docx",
+				"text": "Enhancement Activity Planning Template",
+				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "link",
+				"customizable": "false",
+				"url": "/static_documents/Intensive Session Planning Template.docx",
+				"text": "Intensive Session Planning Template",
+				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "subheading",
 				"text": "Branding",
+				"section": "Branding"
+			},
+			{
+				"style": "link",
+				"customizable": "false",
+				"url": "/static_documents/Access Brand Guide.png",
+				"text": "Access Brand Guide",
 				"section": "Branding"
 			},
 			{
@@ -28,11 +54,35 @@
 				"section": "Branding"
 			},
 			{
+				"style": "subheading",
+				"text": "Social Media Guidelines and Safety Tips",
+				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
 				"style": "link",
 				"customizable": "false",
 				"url": "/static_documents/Participant Consent and Release Form.pdf",
 				"text": "Participant Consent and Release Form",
-				"section": "Branding"
+				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
+				"style": "subheading",
+				"text": "Recruiting Access Teachers",
+				"section": "Recruiting Access Teachers"
+			},
+			{
+				"style": "link",
+				"customizable": "false",
+				"url": "/static_documents/Access Teacher Interview Questions.pdf",
+				"text": "Access Teacher Interview Questions",
+				"section": "Recruiting Access Teachers"
+			},
+			{
+				"style": "link",
+				"customizable": "false",
+				"url": "/static_documents/Access Teacher Interview Rubrics.pdf",
+				"text": "Access Teacher Interview Rubrics",
+				"section": "Recruiting Access Teachers"
 			}
 		]
 	]
