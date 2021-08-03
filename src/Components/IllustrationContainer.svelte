@@ -4,8 +4,8 @@
 </script>
 
 <div>
-	<img class="large-illustration" src={`illustrations/${title.split(' ').join('').replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Desktop.svg`} alt={altText} {title} />
-	<img class="small-illustration" src={`illustrations/${title.split(' ').join('').replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Mobile.svg`} alt={altText} {title} />
+	<img class="large-illustration" src={`images/${title.split(' ').join('').replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Desktop.svg`} alt={altText} {title} />
+	<img class="small-illustration" src={`images/${title.split(' ').join('').replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")}Mobile.svg`} alt={altText} {title} />
 </div>
 
 <style>
