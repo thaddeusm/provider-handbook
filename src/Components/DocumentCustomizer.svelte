@@ -90,16 +90,10 @@
 
 <style>
 	@media screen and (max-width: 450px) {
-		input {
-			width: 80%;
-		}
+		
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
-		input {
-			width: 70%;
-		}
-
 		.preview {
 			padding: 0 15%;
 			margin: 0 auto;
@@ -108,10 +102,6 @@
 	}
 
 	@media screen and (min-width: 1101px) {
-		input {
-			width: 50%;
-		}
-
 		.preview {
 			padding: 0 20%;
 			margin: 0 auto;
@@ -147,6 +137,7 @@
 	input {
 		font-size: 16px;
 		padding: 10px;
+		width: 270px;
 		color: var(--black);
 		font-family: "NotoSans";
 		background: var(--white);
