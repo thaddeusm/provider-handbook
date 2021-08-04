@@ -13,9 +13,11 @@
 	});
 
 	import AccessLogo from './../CustomizableDocuments/AccessLogo.svelte';
+	import FacebookCoverPhoto from './../CustomizableDocuments/FacebookCoverPhoto.svelte';
 
 	const customizableDocuments = {
-		"Access Logo": AccessLogo
+		"Access Logo": AccessLogo,
+		"Facebook Cover Photo": FacebookCoverPhoto
 	};
 
 	export let documentToCustomize;
