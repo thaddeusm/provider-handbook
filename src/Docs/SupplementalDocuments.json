@@ -63,7 +63,7 @@
 						"format": "text",
 						"placeholder": "Provider Organization Name",
 						"name": "subheading",
-						"characterLimit": "38"
+						"characterLimit": "35"
 					}
 				],
 				"text": "Facebook Cover Photo",

@@ -28,7 +28,7 @@
 	async function prepareDocumentDownload(callback) {
 		SVGToImage({
 			svg: `${customizedSVGString}`,
-			mimetype: 'image/jpeg'
+			mimetype: "image/jpeg"
 		}).then((output) => {
 			download(output, documentToCustomize.text, 'image/jpeg');
 
