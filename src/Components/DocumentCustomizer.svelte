@@ -23,11 +23,11 @@
 	export let documentToCustomize;
 
 	let customizationChoices = [];
-	let customizedSVGString = '';
+	let customizedSVG;
 
 	async function prepareDocumentDownload(callback) {
 		SVGToImage({
-			svg: `${customizedSVGString}`,
+			svg: customizedSVG,
 			mimetype: "image/jpeg"
 		}).then((output) => {
 			download(output, documentToCustomize.text, 'image/jpeg');
@@ -39,7 +39,7 @@
 	}
 
 	function handleUpdate(e) {
-		customizedSVGString = e.detail.svg;
+		customizedSVG = e.detail.svg;
 	}
 
 	function handleKeyup(e) {
@@ -73,7 +73,7 @@
 			{customization.prompt}
 		</p>
 		<div class="preview">
-			<svelte:component this={customizableDocuments[documentToCustomize.text]} width={'100%'} {customizationChoices} on:document-updated={handleUpdate} />
+			<svelte:component this={customizableDocuments[documentToCustomize.text]} {customizationChoices} on:document-updated={handleUpdate} />
 		</div>
 		<div class="input-area">
 			{#if customization.format == "text"}
