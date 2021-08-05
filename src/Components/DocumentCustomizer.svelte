@@ -14,10 +14,12 @@
 
 	import AccessLogo from './../CustomizableDocuments/AccessLogo.svelte';
 	import FacebookCoverPhoto from './../CustomizableDocuments/FacebookCoverPhoto.svelte';
+	import ProgramDiagram from './../CustomizableDocuments/ProgramDiagram.svelte';
 
 	const customizableDocuments = {
 		"Access Logo": AccessLogo,
-		"Facebook Cover Photo": FacebookCoverPhoto
+		"Facebook Cover Photo": FacebookCoverPhoto,
+		"2-Year Program Diagram": ProgramDiagram
 	};
 
 	export let documentToCustomize;

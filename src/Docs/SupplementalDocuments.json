@@ -13,6 +13,50 @@
 			},
 			{
 				"style": "link",
+				"customizable": "true",
+				"url": "/static_documents/Example Program Hours.png",
+				"customizations": [
+					{
+						"prompt": "How many days a week will students receive After School Instruction?",
+						"format": "number",
+						"name": "afterSchoolInstructionDays"
+					},
+					{
+						"prompt": "How many hours will each After School Instruction session last?",
+						"format": "number",
+						"name": "afterSchoolInstructionHours"
+					},
+					{
+						"prompt": "How many weeks each year will students receive After School Instruction?",
+						"format": "number",
+						"name": "afterSchoolInstructionWeeks"
+					},
+					{
+						"prompt": "How many Enhancement Activites will you have each year?",
+						"format": "number",
+						"name": "enhancementActivitiesNumber"
+					},
+					{
+						"prompt": "How many hours on average will each Enhancement Activity last?",
+						"format": "number",
+						"name": "enhancementActivitiesHours"
+					},
+					{
+						"prompt": "How many Intensive Session days will you have each year?",
+						"format": "number",
+						"name": "enhancementActivitiesDays"
+					},
+					{
+						"prompt": "How many hours on average will each Intensive Session day last?",
+						"format": "number",
+						"name": "enhancementActivitiesHours"
+					}
+				],
+				"text": "2-Year Program Diagram",
+				"section": "Planning a 2-Year Access Program"
+			},
+			{
+				"style": "link",
 				"customizable": "false",
 				"url": "/static_documents/Enhancement Activity Planning Template.docx",
 				"text": "Enhancement Activity Planning Template",
