@@ -19,7 +19,7 @@
 		<a class="action-button" href="/handbook">view handbook</a>
 	</section>
 	<footer>
-		<Footer showArrow={false} />
+		<Footer />
 	</footer>
 </div>
 
