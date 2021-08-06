@@ -26,12 +26,12 @@
 <style>
 	@media screen and (max-width: 450px) {
 		.result {
-			grid-template-rows: 75px 100px;
+			grid-template-rows: 90px 110px;
 			grid-template-columns: 75% 22% 3%;
 			grid-template-areas: 
 				"heading heading ."
 				"sample actionButton .";
-			min-height: 175px;
+			min-height: 200px;
 			align-items: center;
 		}
 
@@ -43,6 +43,10 @@
 
 		.result > .action-button {
 			height: 100px;
+		}
+
+		.result > h3 {
+			align-self: center;
 		}
 	}
 
@@ -64,6 +68,10 @@
 		.result > .action-button {
 			height: 100%;
 		}
+
+		.result > h3 {
+			align-self: center;
+		}
 	}
 
 	@media screen and (min-width: 1101px) {
@@ -83,6 +91,10 @@
 		.result > .action-button {
 			height: 100%;
 		}
+
+		.result > h3 {
+			align-self: flex-start;
+		}
 	}
 
 	.result {
@@ -92,7 +104,6 @@
 
 	.result > h3 {
 		grid-area: heading;
-		align-self: flex-start;
 		margin: 0;
 	}
 
