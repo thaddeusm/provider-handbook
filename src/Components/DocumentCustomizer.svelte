@@ -24,7 +24,7 @@
 
 	export let documentToCustomize;
 
-	let customizationChoices = [];
+	let customizationChoices = {};
 	let customizationIndex = 0;
 	let customizedSVG;
 
@@ -75,10 +75,11 @@
 
 	onMount(() => {
 		for (let i=0; i<documentToCustomize.customizations.length; i++) {
-			customizationChoices.push({
-				"customization": "",
-				"choice": ""
-			});
+			if (documentToCustomize.customizations[i].format == 'number') {
+				customizationChoices[documentToCustomize.customizations[i].name] = 0;
+			} else {
+				customizationChoices[documentToCustomize.customizations[i].name] = '';
+			}
 		}
 	});
 </script>

@@ -44,12 +44,12 @@
 					{
 						"prompt": "How many Intensive Session days will you have each year?",
 						"format": "number",
-						"name": "enhancementActivitiesDays"
+						"name": "intensiveSessionDays"
 					},
 					{
 						"prompt": "How many hours on average will each Intensive Session day last?",
 						"format": "number",
-						"name": "enhancementActivitiesHours"
+						"name": "intensiveSessionHours"
 					}
 				],
 				"text": "2-Year Program Diagram",
