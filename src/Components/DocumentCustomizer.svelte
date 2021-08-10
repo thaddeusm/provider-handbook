@@ -25,7 +25,10 @@
 	export let documentToCustomize;
 
 	let customizationChoices = [];
+	let customizationIndex = 0;
 	let customizedSVG;
+
+	$: customization = documentToCustomize.customizations[customizationIndex];
 
 	async function prepareDocumentDownload(callback) {
 		SVGToImage({
@@ -50,8 +53,20 @@
 		}
 	}
 
-	async function handleClick() {
+	async function triggerDownload() {
 		await prepareDocumentDownload(close());
+	}
+
+	function incrementCustomizationIndex() {
+		if (customizationIndex !== documentToCustomize.customizations.length) {
+			customizationIndex++;
+		}
+	}
+
+	function decrementCustomizationIndex() {
+		if (customizationIndex !== 0) {
+			customizationIndex--;
+		}
 	}
 
 	function close() {
@@ -70,24 +85,52 @@
 
 <div class="arrow"></div>
 <div class="container">
-	{#each documentToCustomize.customizations as customization, i}
-		<p class="prompt">
-			{customization.prompt}
-		</p>
-		<div class="preview">
-			<svelte:component this={customizableDocuments[documentToCustomize.text]} {customizationChoices} on:document-updated={handleUpdate} />
-		</div>
-		<div class="input-area">
-			{#if customization.format == "text"}
-				<input type="text" name={customization.name} placeholder={customization.placeholder} bind:value={customizationChoices[customization.name]} maxlength={customization.characterLimit} on:keyup={handleKeyup} />
-			{/if}
-		</div>
-		<div class="footer">
-			<button enterkeyhint="download" class="action-button-small" on:click={handleClick}>
+	{#if documentToCustomize.customizations.length > 1}
+		<h6>
+			Step {customizationIndex + 1} of {documentToCustomize.customizations.length}
+		</h6>
+	{/if}
+	<p class="prompt">
+		{customization.prompt}
+	</p>
+	<div class="preview">
+		<svelte:component this={customizableDocuments[documentToCustomize.text]} {customizationChoices} on:document-updated={handleUpdate} />
+	</div>
+	<div class="input-area">
+		{#if customization.format == "text"}
+			<input 
+				type="text" 
+				name={customization.name} 
+				placeholder={customization.placeholder || ''} 
+				bind:value={customizationChoices[customization.name]} 
+				maxlength={customization.characterLimit || 50} 
+				on:keyup={handleKeyup} 
+			/>
+		{:else if customization.format == "number"}
+			<input 
+				type="number" 
+				name={customization.name} 
+				bind:value={customizationChoices[customization.name]} 
+				on:keyup={handleKeyup} 
+			/>
+		{/if}
+	</div>
+	<div class="footer">
+		{#if customizationIndex > 0 && documentToCustomize.customizations.length !== 1}
+			<button enterkeyhint="back" class="regular-button-small" on:click={decrementCustomizationIndex}>
+				back
+			</button>
+		{/if}
+		{#if customizationIndex + 1 == documentToCustomize.customizations.length || documentToCustomize.customizations.length == 1}
+			<button enterkeyhint="download" class="action-button-small" on:click={triggerDownload}>
 				download
 			</button>
-		</div>
-	{/each}
+		{:else}
+			<button enterkeyhint="next" class="action-button-small" on:click={incrementCustomizationIndex}>
+				next
+			</button>
+		{/if}
+	</div>
 </div>
 
 <style>
@@ -124,6 +167,10 @@
 		background: var(--gray);
 		padding: 1rem;
 		margin-bottom: 5rem;
+	}
+
+	h6 {
+		text-align: center;
 	}
 
 	p {
