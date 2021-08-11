@@ -8,45 +8,85 @@
 
 	let svg;
 
-	/*
-		customization choices props:
-		
-		afterSchoolInstructionDays
-		afterSchoolInstructionHours
-		afterSchoolInstructionWeeks
-		enhancementActivitiesNumber
-		enhancementActivitiesHours
-		intensiveSessionDays
-		intensiveSessionHours
-	*/
+	let chartData = [{degrees: 0}, {degrees: 0}, {degrees: 0}];
+	let colors = ["#002D62", "#F5F5F5", "#D11242"];
+	let textColors = ["#FFFFFF", "#000000", "#FFFFFF"];
+	let transforms = [];
+	let cx = 200;
+	let cy = 200;
+	let radius = 120;
+	let strokeWidth = 150;
+	let angleOffset = -90;
 
-	let totalHours = 360;
-
-	let newHours = 0;
-	$: {
-		newHours = (customizationChoices.afterSchoolInstructionHours * customizationChoices.afterSchoolInstructionDays * customizationChoices.afterSchoolInstructionWeeks) + (customizationChoices.enhancementActivitiesNumber * customizationChoices.enhancementActivitiesHours) + (customizationChoices.intensiveSessionDays * customizationChoices.intensiveSessionHours) * 2;
-
-		console.log('actual hours: ', newHours);
-
-		if (newHours > totalHours) {
-			totalHours = newHours;
-		}
-	}
+	$: circumference = 2 * Math.PI * radius;
 
 	$: ASI = customizationChoices.afterSchoolInstructionHours * customizationChoices.afterSchoolInstructionDays * customizationChoices.afterSchoolInstructionWeeks * 2;
 	$: EA = customizationChoices.enhancementActivitiesNumber * customizationChoices.enhancementActivitiesHours * 2;
 	$: IS = customizationChoices.intensiveSessionDays * customizationChoices.intensiveSessionHours * 2;
 
-	$: ASIPercentage = ASI / totalHours * 100 || 0;
-	$: EAPercentage = EA / totalHours * 100 || 0;
-	$: ISPercentage = IS / totalHours * 100 || 0;
+	$: values = [ASI, EA, IS];
 
-	$: EAOffset = 100 - ASIPercentage + 0;
-	$: ISOffset = 100 - EAPercentage + EAOffset;
+	$: dataTotal = values.reduce((acc, val) => acc + val);
 
-	$: {
-		console.log('EAPercentage: ', EAPercentage)
-		console.log('EAOffset: ', EAOffset)
+	function calculateChartData() {
+ 		chartData = [];
+
+ 		values.forEach((dataVal, index) => {
+	    	const { x, y } = calculateTextCoords(dataVal, angleOffset)        
+    		const data = {
+      			degrees: angleOffset,
+      			textX: x,
+      			textY: y
+    		}
+
+			chartData.push(data);
+    		angleOffset = dataPercentage(dataVal) * 360 + angleOffset;
+  		});
+
+  		chartData = chartData;
+	}
+
+	function dataPercentage(dataVal) {
+	    return dataVal / dataTotal;
+	}
+
+	function calculateStrokeDashOffset(dataVal, circumference) {
+		const strokeDiff = dataPercentage(dataVal) * circumference;
+		return circumference - strokeDiff;
+	}
+
+	function getTransform(index) {
+		return `rotate(${chartData[index].degrees}, ${cx}, ${cy})`;
+	}
+
+	function degreesToRadians(angle) {
+		return angle * (Math.PI / 180);
+	}
+
+	function calculateTextCoords(dataVal, angleOffset) {
+		const angle = (dataPercentage(dataVal) * 360) / 2 + angleOffset
+		const radians = degreesToRadians(angle)
+
+		const textCoords = {
+			x: (radius * Math.cos(radians) + cx),
+			y: (radius * Math.sin(radians) + cy)
+		}
+
+		return textCoords;
+	}
+
+	function segmentBigEnough(dataVal) {
+  		return Math.round(dataPercentage(dataVal) * 100) > 5
+	}
+
+	$: if (dataTotal) {
+		calculateChartData();
+		console.log('total: ', dataTotal);
+		console.log('data: ', chartData);
+
+		transforms[0] = `rotate(${chartData[0].degrees}, ${cx}, ${cy})`;
+		transforms[1] = `rotate(${chartData[1].degrees}, ${cx}, ${cy})`;
+		transforms[2] = `rotate(${chartData[2].degrees}, ${cx}, ${cy})`;
 	}
 
 	$: {
@@ -74,92 +114,34 @@
 </style>
 
 <div>
-	<svg width="100%" height="100%" viewBox="0 0 63 63">
-		<circle 
-			class="donut-hole" 
-			cx="31.5" 
-			cy="31.5" 
-			r="15.91549430918954" 
-			fill="#fff"
-		>	
-		</circle>
-		<circle 
-			class="donut-ring" 
-			cx="31.5" 
-			cy="31.5" 
-			r="15.91549430918954" 
-			fill="transparent" 
-			stroke="#fff" 
-			stroke-width="22"
-		>
-		</circle>
-		<!-- ASI -->
-		<circle 
-			class="donut-segment" 
-			cx="31.5" 
-			cy="31.5" 
-			r="15.91549430918954" 
-			fill="transparent" 
-			stroke="#002D62" 
-			stroke-width="22" 
-			stroke-dasharray={`${ASIPercentage} ${100-ASIPercentage}`} 
-			stroke-dashoffset="0"
-		>		
-		</circle>
-		{#if ASI > 120}
-			<text 
-				text-anchor="middle" 
-				x={`${ASIPercentage >= 50 ? 50 : 50 + ((50 - ASIPercentage) / 1.5)}%`} 
-				y={`${75}%`} 
-				style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:5px;fill:#fff;"
-			>
-				{ASI} HOURS
-			</text>
-		{/if}
-		<!-- EA -->
-		<circle 
-			class="donut-segment" 
-			cx="31.5" 
-			cy="31.5" 
-			r="15.91549430918954" 
-			fill="transparent" 
-			stroke="#F5F5F5" 
-			stroke-width="22" 
-			stroke-dasharray={`${EAPercentage} ${100-EAPercentage}`} 
-			stroke-dashoffset={EAOffset}
-		>
-		</circle>
-		{#if EA > 0}
-			<text 
-				text-anchor="middle" 
-				x={`25%`} 
-				y={EAOffset - (EAPercentage / 1.14)} 
-				style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:5px;"
-			>
-				{EA}
-			</text>
-		{/if}
-		<!-- IS -->
-		<circle 
-			class="donut-segment" 
-			cx="31.5" 
-			cy="31.5" 
-			r="15.91549430918954" 
-			fill="transparent" 
-			stroke="#D11242" 
-			stroke-width="22" 
-			stroke-dasharray={`${ISPercentage} ${100-ISPercentage}`} 
-			stroke-dashoffset={ISOffset}
-		>
-		</circle>
-		{#if IS > 0}
-			<text 
-				x="408.052px" 
-				y="221.865px" 
-				style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:66.667px;fill:#fff;"
-			>
-				40
-			</text>
-		{/if}
+	<svg bind:this={svg} height="400" width="400" viewBox="0 0 400 400">
+	    {#each values as value, index}
+		    <g>
+		    	<circle {cx} {cy} r={radius} fill="transparent" stroke={colors[index]} stroke-width={strokeWidth} stroke-dasharray={circumference} stroke-dashoffset={calculateStrokeDashOffset(value, circumference)} transform={transforms[index]}></circle>
+		    	{#if segmentBigEnough(value)}
+			    	{#if index == 0}
+			    		<text 
+				    		text-anchor="middle" 
+				    		dy="3px" 
+				    		x="50%"
+				    		y="77%"
+				    		style={`font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:21px;fill:${textColors[index]}`}
+				    	>
+				    		{ `${value} HOURS` } 
+				    	</text>
+			    	{:else}
+			    		<text 
+				    		text-anchor="middle" 
+				    		dy="3px" 
+				    		x={chartData[index].textX} 
+				    		y={chartData[index].textY}
+				    		style={`font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:21px;fill:${textColors[index]}`}
+				    	>
+				    		{ value } 
+				    	</text>
+			    	{/if}
+		    	{/if}
+		    </g>
+		{/each}
 	</svg>
 </div>
