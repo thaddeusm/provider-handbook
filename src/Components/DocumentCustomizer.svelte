@@ -87,7 +87,7 @@
 <div class="arrow"></div>
 <div class="container">
 	{#if documentToCustomize.customizations.length > 1}
-		<h6>
+		<h6 class="step">
 			Step {customizationIndex + 1} of {documentToCustomize.customizations.length}
 		</h6>
 	{/if}
@@ -141,10 +141,26 @@
 
 <style>
 	@media screen and (max-width: 450px) {
-		
+		.container {
+			grid-template-areas: 
+				"step"
+				"preview"
+				"prompt"
+				"inputArea"
+				"footer";
+		}
 	}
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
+		.container {
+			grid-template-areas: 
+				"step"
+				"preview"
+				"prompt"
+				"inputArea"
+				"footer";
+		}
+
 		.preview {
 			padding: 0 15%;
 			margin: 0 auto;
@@ -153,6 +169,15 @@
 	}
 
 	@media screen and (min-width: 1101px) {
+		.container {
+			grid-template-areas: 
+				"step"
+				"prompt"
+				"preview"
+				"inputArea"
+				"footer";
+		}
+
 		.preview {
 			/*padding: 0 20%;*/
 			margin: 0 auto;
@@ -173,10 +198,12 @@
 		background: var(--gray);
 		padding: 1rem;
 		margin-bottom: 5rem;
+		display: grid;
 	}
 
-	h6 {
+	.step {
 		text-align: center;
+		grid-area: step;
 	}
 
 	p {
@@ -185,12 +212,18 @@
 		text-align: center;
 	}
 
+	.prompt {
+		grid-area: prompt;
+	}
+
 	.preview {
 		text-align: center;
+		grid-area: preview;
 	}
 
 	.input-area {
 		text-align: center;
+		grid-area: inputArea;
 	}
 
 	input[type="text"] {
@@ -237,5 +270,6 @@
 
 	.footer {
 		text-align: center;
+		grid-area: footer;
 	}
 </style>
