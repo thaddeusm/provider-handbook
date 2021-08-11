@@ -103,17 +103,111 @@
 </script>
 
 <style>
+	@media screen and (max-width: 1100px) {
+		div {
+			grid-template-rows: auto 1fr;
+			grid-template-columns: .1fr 1fr .1fr;
+			grid-template-areas: 
+				"legend legend legend"
+				". chart .";
+			padding: 1rem 0;
+		}
+
+		li {
+			display: inline-block;
+			margin: .5rem;
+		}
+	}
+
+	@media screen and (min-width: 1101px) {
+		div {
+			min-height: 400px;
+			grid-template-columns: .1fr 1fr 1fr .1fr;
+			grid-template-areas: 
+				". legend chart .";
+			align-items: center;
+		}
+
+		li {
+			text-align: left;
+			margin-top: 2rem;
+		}
+	}
+
 	div {
 		background: var(--white);
+		width: 100%;
+		height: 100%;
+		display: grid;
+	}
+
+	ul {
+		list-style: none;
+		grid-area: legend;
+	}
+
+	li {
+		font-size: 12px;
+		color: var(--black);
+		font-family: "NotoSans-Bold";
 	}
 
 	svg {
 		max-width: 100%;
 		height: auto;
+		grid-area: chart;
+		margin: 0 auto;
+	}
+
+	.blue::before {
+		vertical-align: middle;
+		margin-right: .5rem;
+		content: '';
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-radius: 12px;
+		background-color: var(--brand);
+		border: 1px solid black;
+	}
+
+	.gray::before {
+		vertical-align: middle;
+		margin-right: .5rem;
+		content: '';
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-radius: 12px;
+		background-color: #F5F5F5;
+		border: 1px solid black;
+	}
+
+	.red::before {
+		vertical-align: middle;
+		margin-right: .5rem;
+		content: '';
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-radius: 12px;
+		background-color: var(--red);
+		border: 1px solid black;
 	}
 </style>
 
 <div>
+	<ul>
+		<li class="blue">
+			after school instruction
+		</li>
+		<li class="gray">
+			enhancement activities
+		</li>
+		<li class="red">
+			intensive sessions
+		</li>
+	</ul>
 	<svg bind:this={svg} height="400" width="400" viewBox="0 0 400 400">
 	    {#each values as value, index}
 		    <g>
@@ -123,8 +217,8 @@
 			    		<text 
 				    		text-anchor="middle" 
 				    		dy="3px" 
-				    		x="50%"
-				    		y="77%"
+				    		x={chartData[index].textX} 
+				    		y={chartData[index].textY}
 				    		style={`font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:21px;fill:${textColors[index]}`}
 				    	>
 				    		{ `${value} HOURS` } 

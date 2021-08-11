@@ -48,7 +48,7 @@
 	}
 
 	function handleKeyup(e) {
-		if (e.keyCode == 13) {
+		if (e.keyCode == 13 && customizationIndex + 1 == documentToCustomize.customizations.length) {
 			prepareDocumentDownload();
 		}
 	}
@@ -108,12 +108,17 @@
 				on:keyup={handleKeyup} 
 			/>
 		{:else if customization.format == "number"}
-			<input 
-				type="number" 
-				name={customization.name} 
-				bind:value={customizationChoices[customization.name]} 
-				on:keyup={handleKeyup} 
-			/>
+			<section class="number-box">
+				<input 
+					type="number" 
+					name={customization.name} 
+					min={customization.min}
+					max={customization.max}
+					bind:value={customizationChoices[customization.name]} 
+					on:keyup={handleKeyup} 
+				/>
+				<span class="units">{customization.units}</span>
+			</section>
 		{/if}
 	</div>
 	<div class="footer">
@@ -149,7 +154,7 @@
 
 	@media screen and (min-width: 1101px) {
 		.preview {
-			padding: 0 20%;
+			/*padding: 0 20%;*/
 			margin: 0 auto;
 			background: var(--white);
 		}
@@ -184,18 +189,50 @@
 		text-align: center;
 	}
 
-	input {
+	.input-area {
+		text-align: center;
+	}
+
+	input[type="text"] {
 		font-size: 16px;
 		padding: 10px;
-		width: 270px;
 		color: var(--black);
 		font-family: "NotoSans";
 		background: var(--white);
 		outline: none;
-		display: block;
 		margin: 2rem auto;
 		border: 1px solid var(--brand);
 		border-radius: var(--radius);
+		width: 270px;
+		display: block;
+	}
+
+	.number-box {
+		font-size: 16px;
+		padding: 10px;
+		color: var(--black);
+		font-family: "NotoSans";
+		background: var(--white);
+		outline: none;
+		margin: 2rem auto;
+		border: 1px solid var(--brand);
+		border-radius: var(--radius);
+		width: 150px;
+		display: grid;
+		grid-template-columns: 50px 100px;
+		grid-template-areas: "numberInput units";
+	}
+
+	input[type="number"] {
+		width: 50px;
+		font-size: 16px;
+		grid-area: numberInput;
+		outline: none;
+		border: none;
+	}
+
+	.units {
+		grid-area: units;
 	}
 
 	.footer {

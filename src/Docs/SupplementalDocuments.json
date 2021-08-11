@@ -19,37 +19,58 @@
 					{
 						"prompt": "How many days a week will students receive After School Instruction?",
 						"format": "number",
-						"name": "afterSchoolInstructionDays"
+						"name": "afterSchoolInstructionDays",
+						"units": "days",
+						"min": "1",
+						"max": "7"
 					},
 					{
 						"prompt": "How many hours will each After School Instruction session last?",
 						"format": "number",
-						"name": "afterSchoolInstructionHours"
+						"name": "afterSchoolInstructionHours",
+						"units": "hours",
+						"min": "1",
+						"max": "6"
 					},
 					{
 						"prompt": "How many weeks each year will students receive After School Instruction?",
 						"format": "number",
-						"name": "afterSchoolInstructionWeeks"
+						"name": "afterSchoolInstructionWeeks",
+						"units": "weeks",
+						"min": "1",
+						"max": "52"
 					},
 					{
 						"prompt": "How many Enhancement Activites will you have each year?",
 						"format": "number",
-						"name": "enhancementActivitiesNumber"
+						"name": "enhancementActivitiesNumber",
+						"units": "activities",
+						"min": "2",
+						"max": "10"
 					},
 					{
 						"prompt": "How many hours on average will each Enhancement Activity last?",
 						"format": "number",
-						"name": "enhancementActivitiesHours"
+						"name": "enhancementActivitiesHours",
+						"units": "hours",
+						"min": "1",
+						"max": "8"
 					},
 					{
 						"prompt": "How many Intensive Session days will you have each year?",
 						"format": "number",
-						"name": "intensiveSessionDays"
+						"name": "intensiveSessionDays",
+						"units": "days",
+						"min": "0",
+						"max": "50"
 					},
 					{
 						"prompt": "How many hours on average will each Intensive Session day last?",
 						"format": "number",
-						"name": "intensiveSessionHours"
+						"name": "intensiveSessionHours",
+						"units": "hours",
+						"min": "0",
+						"max": "8"
 					}
 				],
 				"text": "2-Year Program Diagram",
