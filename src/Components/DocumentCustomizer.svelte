@@ -203,6 +203,7 @@
 
 	.step {
 		text-align: center;
+		margin-bottom: 1rem;
 		grid-area: step;
 	}
 
@@ -214,6 +215,7 @@
 
 	.prompt {
 		grid-area: prompt;
+		margin: 1rem auto;
 	}
 
 	.preview {
@@ -247,7 +249,7 @@
 		font-family: "NotoSans";
 		background: var(--white);
 		outline: none;
-		margin: 2rem auto;
+		margin: 0 auto 2rem auto;
 		border: 1px solid var(--brand);
 		border-radius: var(--radius);
 		width: 150px;

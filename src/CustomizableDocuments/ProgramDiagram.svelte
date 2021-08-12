@@ -110,7 +110,6 @@
 			grid-template-areas: 
 				"legend legend legend"
 				". chart .";
-			padding: 1rem 0;
 		}
 
 		li {
