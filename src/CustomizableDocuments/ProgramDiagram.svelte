@@ -5,6 +5,7 @@
 	const dispatch = createEventDispatcher();
 
 	export let customizationChoices;
+	export let step;
 
 	let svg;
 
@@ -79,10 +80,76 @@
   		return Math.round(dataPercentage(dataVal) * 100) > 5
 	}
 
+	function checkInputs() {
+		console.log('checking...')
+
+		let errorMessage = null;
+		let interrupt = false;
+		let errorIndex = null;
+
+		// there is at least one day of ASI
+		if (step < 3 && customizationChoices.afterSchoolInstructionDays == 0) {	
+			errorMessage = 'Programs must include After School Instruction.';
+			interrupt = true;
+			errorIndex = 0;
+
+		// a single ASI session does not exceed 6 hours
+		} else if (step < 3 && customizationChoices.afterSchoolInstructionHours > 6) {
+			errorMessage = 'After School Instruction sessions should not exceed 6 hours.';
+			interrupt = true;
+			errorIndex = 1;
+
+		// total ASI for a week does not exceed 10 hours
+		} else if (step < 3 && customizationChoices.afterSchoolInstructionDays * customizationChoices.afterSchoolInstructionHours > 10) {
+			errorMessage = 'Programs should not include more than 10 hours of After School Instruction in a week without clear justification in the proposal.';
+			errorIndex = 2;
+
+		// there are at least 2 EAs per year
+		} else if (step > 2 && customizationChoices.enhancementActivitiesNumber < 3) {
+			errorMessage = 'There should be at least one Enhancement Activity per reporting period.';
+			interrupt = true;
+			errorIndex = 3;
+
+		// IS days include at least 3 hours of instruction
+		} else if (step > 4 && customizationChoices.intensiveSessionHours < 3) {
+			errorMessage = 'Each day of an Intensive Session should include more than 3 hours of instruction.';
+			interrupt = true;
+			errorIndex = 4;
+
+		// IS days do not exceed 8 hours of instruction
+		} else if (step > 4 && customizationChoices.intensiveSessionHours > 8) {
+			errorMessage = 'Each day of an Intensive Session should not exceed 8 hours of instruction.';
+			interrupt = true;
+			errorIndex = 5;
+
+		// total IS hours do not exceed 30% of 360 hours
+		} else if (step > 4 && (customizationChoices.intensiveSessionsNumber * customizationChoices.intensiveSessionHours * 2) / dataTotal > .30) {
+			errorMessage = 'Intensive Session hours should not exceed 30% of the total program hours';
+			interrupt = true;
+			errorIndex = 6;
+		}
+
+		if (errorMessage) {
+			displayError(errorMessage, interrupt, errorIndex);
+		} else {
+			resolveError();
+		}
+	}
+
+	function displayError(message, interrupt, errorIndex) {
+		dispatch('input-error', {message: message, interrupt: interrupt, index: errorIndex});
+	}
+
+	function resolveError() {
+		dispatch('input-error-resolved');
+	}
+
+	$: if (step) {
+		checkInputs();
+	}
+
 	$: if (dataTotal) {
 		calculateChartData();
-		console.log('total: ', dataTotal);
-		console.log('data: ', chartData);
 
 		transforms[0] = `rotate(${chartData[0].degrees}, ${cx}, ${cy})`;
 		transforms[1] = `rotate(${chartData[1].degrees}, ${cx}, ${cy})`;

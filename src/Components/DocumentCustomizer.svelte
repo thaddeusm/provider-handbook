@@ -28,6 +28,11 @@
 	let customizationIndex = 0;
 	let customizedSVG;
 
+	let error = false;
+	let errorMessage = '';
+
+	$: alert = errorMessage !== '';
+
 	$: customization = documentToCustomize.customizations[customizationIndex];
 
 	async function prepareDocumentDownload(callback) {
@@ -61,6 +66,8 @@
 		if (customizationIndex !== documentToCustomize.customizations.length) {
 			customizationIndex++;
 		}
+
+		customizationChoices = customizationChoices;
 	}
 
 	function decrementCustomizationIndex() {
@@ -71,6 +78,23 @@
 
 	function close() {
 		dispatch('close-panel');
+	}
+
+	function displayErrorMessage(e) {
+		if (e.detail.interrupt) {
+			error = true;
+		}
+		customizationIndex = e.detail.index;
+		errorMessage = e.detail.message;
+	}
+
+	function hideErrorMessage() {
+		error = false;
+		errorMessage = '';
+	}
+
+	function allowProgress() {
+		error = false;
 	}
 
 	onMount(() => {
@@ -91,11 +115,16 @@
 			Step {customizationIndex + 1} of {documentToCustomize.customizations.length}
 		</h6>
 	{/if}
+	<section class="error-section">
+		{#if errorMessage !== ''}
+			<span class="error-text">{errorMessage}</span>
+		{/if}
+	</section>
 	<p class="prompt">
 		{customization.prompt}
 	</p>
 	<div class="preview">
-		<svelte:component this={customizableDocuments[documentToCustomize.text]} {customizationChoices} on:document-updated={handleUpdate} />
+		<svelte:component this={customizableDocuments[documentToCustomize.text]} {customizationChoices} on:document-updated={handleUpdate} on:input-error={displayErrorMessage} on:input-error-resolved={hideErrorMessage} step={customizationIndex} />
 	</div>
 	<div class="input-area">
 		{#if customization.format == "text"}
@@ -105,10 +134,12 @@
 				placeholder={customization.placeholder || ''} 
 				bind:value={customizationChoices[customization.name]} 
 				maxlength={customization.characterLimit || 50} 
-				on:keyup={handleKeyup} 
+				on:keyup={handleKeyup}
+				on:focus={allowProgress}
+				class:alert
 			/>
 		{:else if customization.format == "number"}
-			<section class="number-box">
+			<section class="number-box" class:alert>
 				<input 
 					type="number" 
 					name={customization.name} 
@@ -116,6 +147,7 @@
 					max={customization.max}
 					bind:value={customizationChoices[customization.name]} 
 					on:keyup={handleKeyup} 
+					on:focus={allowProgress}
 				/>
 				<span class="units">{customization.units}</span>
 			</section>
@@ -128,11 +160,11 @@
 			</button>
 		{/if}
 		{#if customizationIndex + 1 == documentToCustomize.customizations.length || documentToCustomize.customizations.length == 1}
-			<button enterkeyhint="download" class="action-button-small" on:click={triggerDownload}>
+			<button enterkeyhint="download" class="action-button-small" on:click={triggerDownload} disabled={error}>
 				download
 			</button>
 		{:else}
-			<button enterkeyhint="next" class="action-button-small" on:click={incrementCustomizationIndex}>
+			<button enterkeyhint="next" class="action-button-small" on:click={incrementCustomizationIndex} disabled={error}>
 				next
 			</button>
 		{/if}
@@ -146,8 +178,22 @@
 				"step"
 				"preview"
 				"prompt"
+				"error"
 				"inputArea"
 				"footer";
+		}
+
+		.error-section {
+			margin: -.5rem auto;
+			text-align: center;
+		}
+
+		.step {
+			margin-bottom: 1rem;
+		}
+
+		.number-box {
+			margin: 1rem auto;
 		}
 	}
 
@@ -157,14 +203,27 @@
 				"step"
 				"preview"
 				"prompt"
+				"error"
 				"inputArea"
 				"footer";
+		}
+
+		.error-section {
+			margin: 1rem auto -.5rem auto;
+		}
+
+		.step {
+			margin-bottom: 1rem;
 		}
 
 		.preview {
 			padding: 0 15%;
 			margin: 0 auto;
 			background: var(--white);
+		}
+
+		.number-box {
+			margin: 1rem auto;
 		}
 	}
 
@@ -174,14 +233,23 @@
 				"step"
 				"prompt"
 				"preview"
+				"error"
 				"inputArea"
 				"footer";
+		}
+
+		.error-section {
+			margin: 2rem auto -1.5rem auto;
 		}
 
 		.preview {
 			/*padding: 0 20%;*/
 			margin: 0 auto;
 			background: var(--white);
+		}
+
+		.number-box {
+			margin: 2rem auto;
 		}
 	}
 
@@ -203,7 +271,6 @@
 
 	.step {
 		text-align: center;
-		margin-bottom: 1rem;
 		grid-area: step;
 	}
 
@@ -211,6 +278,15 @@
 		margin: 0 auto;
 		padding: 1rem 0;
 		text-align: center;
+	}
+
+	.error-section {
+		grid-area: error;
+		min-height: 50px;
+	}
+
+	.error-text {
+		color: var(--red);
 	}
 
 	.prompt {
@@ -249,7 +325,6 @@
 		font-family: "NotoSans";
 		background: var(--white);
 		outline: none;
-		margin: 0 auto 2rem auto;
 		border: 1px solid var(--brand);
 		border-radius: var(--radius);
 		width: 150px;
@@ -264,6 +339,10 @@
 		grid-area: numberInput;
 		outline: none;
 		border: none;
+	}
+
+	.alert {
+		border: 1px solid var(--red);
 	}
 
 	.units {
