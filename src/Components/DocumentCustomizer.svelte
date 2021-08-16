@@ -66,8 +66,6 @@
 		if (customizationIndex !== documentToCustomize.customizations.length) {
 			customizationIndex++;
 		}
-
-		customizationChoices = customizationChoices;
 	}
 
 	function decrementCustomizationIndex() {
@@ -93,7 +91,7 @@
 		errorMessage = '';
 	}
 
-	function allowProgress() {
+	function handleFocus() {
 		error = false;
 	}
 
@@ -116,7 +114,7 @@
 		</h6>
 	{/if}
 	<section class="error-section">
-		{#if errorMessage !== ''}
+		{#if alert}
 			<span class="error-text">{errorMessage}</span>
 		{/if}
 	</section>
@@ -135,7 +133,7 @@
 				bind:value={customizationChoices[customization.name]} 
 				maxlength={customization.characterLimit || 50} 
 				on:keyup={handleKeyup}
-				on:focus={allowProgress}
+				on:focus={handleFocus}
 				class:alert
 			/>
 		{:else if customization.format == "number"}
@@ -147,7 +145,7 @@
 					max={customization.max}
 					bind:value={customizationChoices[customization.name]} 
 					on:keyup={handleKeyup} 
-					on:focus={allowProgress}
+					on:focus={handleFocus}
 				/>
 				<span class="units">{customization.units}</span>
 			</section>
@@ -209,7 +207,7 @@
 		}
 
 		.error-section {
-			margin: 1rem auto -.5rem auto;
+			margin: -.5rem auto -1.5rem auto;
 		}
 
 		.step {
