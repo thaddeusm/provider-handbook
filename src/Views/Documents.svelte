@@ -189,6 +189,7 @@
 		text-decoration-skip-ink: none!important;
 		text-decoration-skip: none!important;
 		grid-area: link;
+		padding-right: 1rem;
 	}
 
 	.coming-soon {
