@@ -30,6 +30,7 @@
 
 	let error = false;
 	let errorMessage = '';
+	let focused = false;
 
 	$: alert = errorMessage !== '';
 
@@ -101,6 +102,11 @@
 
 	function handleFocus() {
 		error = false;
+		focused = true;
+	}
+
+	function handleBlur() {
+		focused = false;
 	}
 
 	onMount(() => {
@@ -130,7 +136,7 @@
 		{customization.prompt}
 	</p>
 	<div class="preview">
-		<svelte:component this={customizableDocuments[documentToCustomize.text]} {customizationChoices} on:document-updated={handleUpdate} on:input-error={displayErrorMessage} on:input-error-resolved={hideErrorMessage} step={customizationIndex} />
+		<svelte:component this={customizableDocuments[documentToCustomize.text]} {customizationChoices} on:document-updated={handleUpdate} on:input-error={displayErrorMessage} on:input-error-resolved={hideErrorMessage} step={customizationIndex} {focused} />
 	</div>
 	<div class="input-area">
 		{#if customization.format == "text"}
@@ -142,6 +148,7 @@
 				maxlength={customization.characterLimit || 50} 
 				on:keyup={handleKeyup}
 				on:focus={handleFocus}
+				on:blur={handleBlur}
 				class:alert
 			/>
 		{:else if customization.format == "number"}
@@ -154,6 +161,7 @@
 					bind:value={customizationChoices[customization.name]} 
 					on:keyup={handleKeyup} 
 					on:focus={handleFocus}
+					on:blur={handleBlur}
 				/>
 				<span class="units">{customizationChoices[customization.name] == 1 ? makeSingular(customization.units) : customization.units}</span>
 			</section>

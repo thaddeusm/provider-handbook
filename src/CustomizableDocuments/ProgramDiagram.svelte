@@ -6,6 +6,7 @@
 
 	export let customizationChoices;
 	export let step;
+	export let focused;
 
 	let svg;
 
@@ -76,8 +77,14 @@
 		return textCoords;
 	}
 
-	function segmentBigEnough(dataVal) {
-  		return Math.round(dataPercentage(dataVal) * 100) > 15;
+	function formattedLabel(dataVal) {
+  		if (Math.round(dataPercentage(dataVal) * 100) > 15) {
+  			return `${dataVal} HOURS`;
+  		} else if (Math.round(dataPercentage(dataVal) * 100) > 5) {
+  			return `${dataVal}`;
+  		} else {
+  			return '';
+  		}
 	}
 
 	function check() {
@@ -154,7 +161,7 @@
 		dispatch('input-error-resolved');
 	}
 
-	$: if (step) {
+	$: if (step || focused) {
 		check();
 	}
 
@@ -288,17 +295,15 @@
 	    {#each values as value, index}
 		    <g>
 		    	<circle {cx} {cy} r={radius} fill="transparent" stroke={colors[index]} stroke-width={strokeWidth} stroke-dasharray={circumference} stroke-dashoffset={calculateStrokeDashOffset(value, circumference)} transform={transforms[index]}></circle>
-		    	{#if segmentBigEnough(value)}
-			    	<text 
-			    		text-anchor="middle" 
-			    		dy="3px" 
-			    		x={chartData[index].textX} 
-			    		y={chartData[index].textY}
-			    		style={`font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:32px;fill:${textColors[index]}`}
-			    	>
-			    		{ `${value} HOURS` } 
-			    	</text>
-		    	{/if}
+		    	<text 
+		    		text-anchor="middle" 
+		    		dy="3px" 
+		    		x={chartData[index].textX} 
+		    		y={chartData[index].textY}
+		    		style={`font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:32px;fill:${textColors[index]}`}
+		    	>
+		    		{ formattedLabel(value) } 
+		    	</text>
 		    </g>
 		{/each}
 	</svg>
