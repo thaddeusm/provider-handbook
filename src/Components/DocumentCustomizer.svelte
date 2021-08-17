@@ -15,11 +15,13 @@
 	import AccessLogo from './../CustomizableDocuments/AccessLogo.svelte';
 	import FacebookCoverPhoto from './../CustomizableDocuments/FacebookCoverPhoto.svelte';
 	import ProgramDiagram from './../CustomizableDocuments/ProgramDiagram.svelte';
+	import StudentRecruitmentFlyer from './../CustomizableDocuments/StudentRecruitmentFlyer.svelte';
 
 	const customizableDocuments = {
 		"Access Logo": AccessLogo,
 		"Facebook Cover Photo": FacebookCoverPhoto,
-		"2-Year Program Diagram": ProgramDiagram
+		"2-Year Program Diagram": ProgramDiagram,
+		"Student Recruitment Flyer": StudentRecruitmentFlyer
 	};
 
 	export let documentToCustomize;
@@ -165,6 +167,8 @@
 				/>
 				<span class="units">{customizationChoices[customization.name] == 1 ? makeSingular(customization.units) : customization.units}</span>
 			</section>
+		{:else if customization.format == "file"}
+			<input type="file" name={customization.name} accept={customization.accept} />
 		{/if}
 	</div>
 	<div class="footer">
@@ -195,10 +199,13 @@
 				"error"
 				"inputArea"
 				"footer";
+			padding: 1rem .5rem;
+			margin-left: 0;
+			margin-right: 0;
 		}
 
 		.error-section {
-			margin: -.5rem auto;
+			margin: -1rem auto -.5rem auto;
 			text-align: center;
 		}
 
@@ -208,6 +215,10 @@
 
 		.number-box {
 			margin: 1rem auto;
+		}
+
+		.prompt {
+			margin: 0 auto .5rem auto;
 		}
 	}
 
@@ -220,6 +231,7 @@
 				"error"
 				"inputArea"
 				"footer";
+			padding: 1rem;
 		}
 
 		.error-section {
@@ -233,10 +245,13 @@
 		.preview {
 			padding: 0 15%;
 			margin: 0 auto;
-			background: var(--white);
 		}
 
 		.number-box {
+			margin: 1rem auto;
+		}
+
+		.prompt {
 			margin: 1rem auto;
 		}
 	}
@@ -250,6 +265,7 @@
 				"error"
 				"inputArea"
 				"footer";
+			padding: 1rem;
 		}
 
 		.error-section {
@@ -265,6 +281,10 @@
 		.number-box {
 			margin: 2rem auto;
 		}
+
+		.prompt {
+			margin: 1rem auto;
+		}
 	}
 
 	.arrow {
@@ -278,7 +298,6 @@
 
 	.container {
 		background: var(--gray);
-		padding: 1rem;
 		margin-bottom: 5rem;
 		display: grid;
 	}
@@ -305,7 +324,6 @@
 
 	.prompt {
 		grid-area: prompt;
-		margin: 1rem auto;
 	}
 
 	.preview {

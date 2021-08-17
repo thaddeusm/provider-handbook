@@ -108,7 +108,7 @@
 				"url": "/static_documents/Access Logo.png",
 				"customizations": [
 					{
-						"prompt": "Include your organization’s name under the Access Logo:",
+						"prompt": "Include your organization’s name under the Access logo:",
 						"format": "text",
 						"placeholder": "Provider Organization Name",
 						"name": "subheading",
@@ -124,7 +124,7 @@
 				"url": "/static_documents/Access Wide Logo.png",
 				"customizations": [
 					{
-						"prompt": "Include your organization’s name beside the Access Logo:",
+						"prompt": "Include your organization’s name beside the Access logo:",
 						"format": "text",
 						"placeholder": "Provider Organization Name",
 						"name": "subheading",
@@ -145,6 +145,75 @@
 				"url": "/static_documents/Participant Consent and Release Form.pdf",
 				"text": "Participant Consent and Release Form",
 				"section": "Social Media Guidelines and Safety Tips"
+			},
+			{
+				"style": "subheading",
+				"text": "Advertising the Access Program and Recruiting Students",
+				"section": "Advertising the Access Program and Recruiting Students"
+			},
+			{
+				"style": "link",
+				"customizable": "true",
+				"url": "/static_documents/Recruitment Flyer.png",
+				"customizations": [
+					{
+						"prompt": "Include your organization’s name under the Access logo:",
+						"format": "text",
+						"placeholder": "Provider Organization Name",
+						"name": "subheading",
+						"characterLimit": "35"
+					},
+					{
+						"prompt": "Add the first keyword to help draw attention:",
+						"format": "text",
+						"placeholder": "English language",
+						"name": "keyword1",
+						"characterLimit": "20"
+					},
+					{
+						"prompt": "Add the second keyword to help draw attention:",
+						"format": "text",
+						"placeholder": "service learning",
+						"name": "keyword2",
+						"characterLimit": "20"
+					},
+					{
+						"prompt": "Add the final keyword to help draw attention:",
+						"format": "text",
+						"placeholder": "personal development",
+						"name": "keyword2",
+						"characterLimit": "20"
+					},
+					{
+						"prompt": "Add a custom photo with permission:",
+						"format": "file",
+						"name": "image",
+						"accept": "image/png, image/jpeg"
+					},
+					{
+						"prompt": "Add a custom description:",
+						"format": "textarea",
+						"placeholder": "Access is a free 2 year program for youth between 13-20 years of age, sponsored by the U.S. Department of State.",
+						"name": "description",
+						"characterLimit": "250"
+					},
+					{
+						"prompt": "Add a custom notice:",
+						"format": "text",
+						"placeholder": "now accepting applications",
+						"name": "notice",
+						"characterLimit": "20"
+					},
+					{
+						"prompt": "Add contact information",
+						"format": "text",
+						"placeholder": "",
+						"name": "contact",
+						"characterLimit": "100"
+					}
+				],
+				"text": "Student Recruitment Flyer",
+				"section": "Advertising the Access Program and Recruiting Students"
 			},
 			{
 				"style": "subheading",
