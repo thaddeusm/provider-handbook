@@ -181,7 +181,7 @@
 						"prompt": "Add the final keyword to help draw attention:",
 						"format": "text",
 						"placeholder": "personal development",
-						"name": "keyword2",
+						"name": "keyword3",
 						"characterLimit": "20"
 					},
 					{
@@ -195,7 +195,7 @@
 						"format": "textarea",
 						"placeholder": "Access is a free 2 year program for youth between 13-20 years of age, sponsored by the U.S. Department of State.",
 						"name": "description",
-						"characterLimit": "250"
+						"characterLimit": "130"
 					},
 					{
 						"prompt": "Add a custom notice:",

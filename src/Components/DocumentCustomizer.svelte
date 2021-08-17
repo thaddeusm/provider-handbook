@@ -111,6 +111,10 @@
 		focused = false;
 	}
 
+	function handleChange(e) {
+		console.log(e)
+	}
+
 	onMount(() => {
 		for (let i=0; i<documentToCustomize.customizations.length; i++) {
 			if (documentToCustomize.customizations[i].format == 'number') {
@@ -168,7 +172,19 @@
 				<span class="units">{customizationChoices[customization.name] == 1 ? makeSingular(customization.units) : customization.units}</span>
 			</section>
 		{:else if customization.format == "file"}
-			<input type="file" name={customization.name} accept={customization.accept} />
+			<input 
+				type="file" 
+				id="fileInput" 
+				name={customization.name} 
+				accept={customization.accept} 
+				on:change={handleChange}
+			/>
+			<label for="fileInput" class="regular-button-small">select image</label>
+		{:else if customization.format == "textarea"}
+			<textarea 
+				bind:value={customizationChoices[customization.name]} 
+				maxlength={customization.characterLimit || 100}
+			></textarea>
 		{/if}
 	</div>
 	<div class="footer">
@@ -347,6 +363,28 @@
 		border: 1px solid var(--brand);
 		border-radius: var(--radius);
 		width: 270px;
+		display: block;
+	}
+
+	input[type="file"] {
+		opacity: 0;
+  		width: 0.1px;
+  		height: 0.1px;
+  		position: absolute;
+	}
+
+	textarea {
+		font-size: 16px;
+		padding: 10px;
+		color: var(--black);
+		font-family: "NotoSans";
+		background: var(--white);
+		outline: none;
+		margin: 2rem auto;
+		border: 1px solid var(--brand);
+		border-radius: var(--radius);
+		width: 310px;
+		height: 75px;
 		display: block;
 	}
 
