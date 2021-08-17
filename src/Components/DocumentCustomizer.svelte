@@ -48,6 +48,14 @@
 		})
 	}
 
+	function makeSingular(unit) {
+		if (unit.indexOf('ies') !== -1) {
+			return unit.slice(0, -3) + 'y';
+		} else {
+			return unit.slice(0, -1);
+		}
+	}
+
 	function handleUpdate(e) {
 		customizedSVG = e.detail.svg;
 	}
@@ -98,9 +106,9 @@
 	onMount(() => {
 		for (let i=0; i<documentToCustomize.customizations.length; i++) {
 			if (documentToCustomize.customizations[i].format == 'number') {
-				customizationChoices[documentToCustomize.customizations[i].name] = 0;
+				customizationChoices[documentToCustomize.customizations[i].name] = parseInt(documentToCustomize.customizations[i].min);
 			} else {
-				customizationChoices[documentToCustomize.customizations[i].name] = '';
+				customizationChoices[documentToCustomize.customizations[i].name] = documentToCustomize.customizations[i].placeholder;
 			}
 		}
 	});
@@ -147,7 +155,7 @@
 					on:keyup={handleKeyup} 
 					on:focus={handleFocus}
 				/>
-				<span class="units">{customization.units}</span>
+				<span class="units">{customizationChoices[customization.name] == 1 ? makeSingular(customization.units) : customization.units}</span>
 			</section>
 		{/if}
 	</div>

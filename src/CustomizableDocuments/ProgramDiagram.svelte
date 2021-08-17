@@ -13,10 +13,10 @@
 	let colors = ["#002D62", "#F5F5F5", "#D11242"];
 	let textColors = ["#FFFFFF", "#000000", "#FFFFFF"];
 	let transforms = [];
-	let cx = 200;
-	let cy = 200;
-	let radius = 120;
-	let strokeWidth = 150;
+	let cx = 400;
+	let cy = 400;
+	let radius = 240;
+	let strokeWidth = 300;
 	let angleOffset = -90;
 
 	$: circumference = 2 * Math.PI * radius;
@@ -77,12 +77,10 @@
 	}
 
 	function segmentBigEnough(dataVal) {
-  		return Math.round(dataPercentage(dataVal) * 100) > 5
+  		return Math.round(dataPercentage(dataVal) * 100) > 15;
 	}
 
 	function check() {
-		console.log('checking...')
-
 		let errorMessage = null;
 		let interrupt = false;
 		let errorIndex = null;
@@ -111,19 +109,19 @@
 			errorIndex = 2;
 
 		// there are at least 2 EAs per year
-		} else if (customizationChoices.enhancementActivitiesNumber < 3) {
+		} else if (customizationChoices.enhancementActivitiesNumber < 2) {
 			errorMessage = 'There should be at least one Enhancement Activity per reporting period.';
 			interrupt = true;
 			errorIndex = 3;
 
 		// IS days include at least 3 hours of instruction
-		} else if (customizationChoices.intensiveSessionHours < 3) {
+		} else if (customizationChoices.intensiveSessionHours < 3 && customizationChoices.intensiveSessionHours !== 0) {
 			errorMessage = 'Each day of an Intensive Session should include more than 3 hours of instruction.';
 			interrupt = true;
 			errorIndex = 4;
 
 		// IS days do not exceed 8 hours of instruction
-		} else if (customizationChoices.intensiveSessionHours > 8) {
+		} else if (customizationChoices.intensiveSessionHours > 8 && customizationChoices.intensiveSessionHours !== 0) {
 			errorMessage = 'Each day of an Intensive Session should not exceed 8 hours of instruction.';
 			interrupt = true;
 			errorIndex = 5;
@@ -133,9 +131,13 @@
 			errorMessage = 'Intensive Session hours should not exceed 30% of the total program hours';
 			interrupt = true;
 			errorIndex = 6;
-		}
 
-		console.log('error: ', errorMessage)
+		// total hours are at least 360
+		} else if (step == 6 && dataTotal < 360) {
+			errorMessage = 'A 2-year program must include at least 360 hours of instruction.';
+			interrupt = true;
+			errorIndex = 6;
+		}
 
 		if (errorMessage) {
 			displayError(errorMessage, interrupt, errorIndex);
@@ -282,32 +284,20 @@
 			intensive sessions
 		</li>
 	</ul>
-	<svg bind:this={svg} height="400" width="400" viewBox="0 0 400 400">
+	<svg bind:this={svg} height="800" width="800" viewBox="0 0 800 800">
 	    {#each values as value, index}
 		    <g>
 		    	<circle {cx} {cy} r={radius} fill="transparent" stroke={colors[index]} stroke-width={strokeWidth} stroke-dasharray={circumference} stroke-dashoffset={calculateStrokeDashOffset(value, circumference)} transform={transforms[index]}></circle>
 		    	{#if segmentBigEnough(value)}
-			    	{#if index == 0}
-			    		<text 
-				    		text-anchor="middle" 
-				    		dy="3px" 
-				    		x={chartData[index].textX} 
-				    		y={chartData[index].textY}
-				    		style={`font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:21px;fill:${textColors[index]}`}
-				    	>
-				    		{ `${value} HOURS` } 
-				    	</text>
-			    	{:else}
-			    		<text 
-				    		text-anchor="middle" 
-				    		dy="3px" 
-				    		x={chartData[index].textX} 
-				    		y={chartData[index].textY}
-				    		style={`font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:21px;fill:${textColors[index]}`}
-				    	>
-				    		{ value } 
-				    	</text>
-			    	{/if}
+			    	<text 
+			    		text-anchor="middle" 
+			    		dy="3px" 
+			    		x={chartData[index].textX} 
+			    		y={chartData[index].textY}
+			    		style={`font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:32px;fill:${textColors[index]}`}
+			    	>
+			    		{ `${value} HOURS` } 
+			    	</text>
 		    	{/if}
 		    </g>
 		{/each}
