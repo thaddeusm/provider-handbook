@@ -5,6 +5,8 @@
 	const dispatch = createEventDispatcher();
 
 	export let customizationChoices;
+	export let step;
+	export let focused;
 
 	let svg;
 
@@ -112,13 +114,13 @@
 	<svg bind:this={svg} width="820" height="312" viewBox="0 0 820 312" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;;background-color:white">
 		<rect x="513.553" y="30.016" width="2.876" height="251.968" style="fill:#002d62;"/>
 		<g transform="matrix(0.57382,0,0,0.57382,88.345,11.9568)">
-			<text x="808.718px" y="209.008px" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:45.833px;fill:#d11242;text-transform: uppercase">
+			<text x="808.718px" y="209.008px" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:bold;font-size:45.833px;fill:#d11242;text-transform:uppercase;letter-spacing:5px">
 				{top}
 			</text>
-			<text x="808.718px" y="267.342px" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:45.833px;fill:#d11242;text-transform: uppercase">
+			<text x="808.718px" y="267.342px" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:bold;font-size:45.833px;fill:#d11242;text-transform:uppercase;letter-spacing:5px">
 				{middle}
 			</text>
-			<text x="808.718px" y="325.675px" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:45.833px;fill:#d11242;text-transform: uppercase">
+			<text x="808.718px" y="325.675px" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:bold;font-size:45.833px;fill:#d11242;text-transform:uppercase;letter-spacing:5px">
 				{bottom}
 			</text>
 		</g>

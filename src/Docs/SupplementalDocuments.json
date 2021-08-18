@@ -112,7 +112,7 @@
 						"format": "text",
 						"placeholder": "Provider Organization Name",
 						"name": "subheading",
-						"characterLimit": "30"
+						"characterLimit": "26"
 					}
 				],
 				"text": "Access Logo",
@@ -128,7 +128,7 @@
 						"format": "text",
 						"placeholder": "Provider Organization Name",
 						"name": "subheading",
-						"characterLimit": "35"
+						"characterLimit": "26"
 					}
 				],
 				"text": "Facebook Cover Photo",
@@ -161,7 +161,7 @@
 						"format": "text",
 						"placeholder": "Provider Organization Name",
 						"name": "subheading",
-						"characterLimit": "35"
+						"characterLimit": "26"
 					},
 					{
 						"prompt": "Add the first keyword to help draw attention:",
@@ -202,14 +202,14 @@
 						"format": "text",
 						"placeholder": "now accepting applications",
 						"name": "notice",
-						"characterLimit": "20"
+						"characterLimit": "30"
 					},
 					{
 						"prompt": "Add contact information",
 						"format": "text",
-						"placeholder": "",
+						"placeholder": "contact 555-555-5555 or your@email.com ",
 						"name": "contact",
-						"characterLimit": "100"
+						"characterLimit": "50"
 					}
 				],
 				"text": "Student Recruitment Flyer",

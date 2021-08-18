@@ -111,8 +111,17 @@
 		focused = false;
 	}
 
-	function handleChange(e) {
-		console.log(e)
+	function handleChange(e, name) {
+		// customizationChoices[name] = e.target.files[0].name;
+
+		let file = e.target.files[0];
+		let reader  = new FileReader();
+	    
+	    reader.onload = function(e)  {
+	    	customizationChoices[name] = e.target.result;
+	    }
+		
+		reader.readAsDataURL(file);
 	}
 
 	onMount(() => {
@@ -177,9 +186,9 @@
 				id="fileInput" 
 				name={customization.name} 
 				accept={customization.accept} 
-				on:change={handleChange}
+				on:change={(e) => {handleChange(e, customization.name)}}
 			/>
-			<label for="fileInput" class="regular-button-small">select image</label>
+			<label for="fileInput" class="regular-button-small file-button">select{customizationChoices[customization.name] == undefined ? ' ' : ' a different '}image</label>
 		{:else if customization.format == "textarea"}
 			<textarea 
 				bind:value={customizationChoices[customization.name]} 
@@ -371,6 +380,10 @@
   		width: 0.1px;
   		height: 0.1px;
   		position: absolute;
+	}
+
+	.file-button {
+		margin: 2rem auto;
 	}
 
 	textarea {
