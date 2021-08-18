@@ -5,7 +5,7 @@
  * @see https://ourcodeworld.com/articles/read/1456/how-to-convert-a-plain-svg-string-or-svg-node-to-an-image-png-or-jpeg-in-the-browser-with-javascript
  * @returns {Promise}
  */
-export const SVGToImage = function(settings){
+export const SVGToImage = (settings) => {
     let _settings = {
         svg: null,
         // Usually all SVG have transparency, so PNG is the way to go by default

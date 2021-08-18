@@ -9,7 +9,7 @@
 	let SVGToImage;
 
 	import('./../exportSVGToPNG.js').then(module => {
-  		SVGToImage = module.SVGToImage
+  		SVGToImage = module.SVGToImage;
 	});
 
 	import AccessLogo from './../CustomizableDocuments/AccessLogo.svelte';
@@ -30,6 +30,8 @@
 	let customizationIndex = 0;
 	let customizedSVG;
 
+	let preparingDownload = false;
+
 	let error = false;
 	let errorMessage = '';
 	let focused = false;
@@ -45,10 +47,14 @@
 		}).then((output) => {
 			download(output, documentToCustomize.text, 'image/jpeg');
 
+			preparingDownload = false;
+
 			if (callback) {
-				callback();
+				setTimeout(() => {
+					callback();
+				}, 500)
 			}
-		})
+		});
 	}
 
 	function makeSingular(unit) {
@@ -70,7 +76,11 @@
 	}
 
 	async function triggerDownload() {
-		await prepareDocumentDownload(close());
+		preparingDownload = true;
+
+		setTimeout(async () => {
+			await prepareDocumentDownload(close());
+		}, 500)
 	}
 
 	function incrementCustomizationIndex() {
@@ -93,6 +103,7 @@
 		if (e.detail.interrupt) {
 			error = true;
 		}
+
 		customizationIndex = e.detail.index;
 		errorMessage = e.detail.message;
 	}
@@ -112,8 +123,6 @@
 	}
 
 	function handleChange(e, name) {
-		// customizationChoices[name] = e.target.files[0].name;
-
 		let file = e.target.files[0];
 		let reader  = new FileReader();
 	    
@@ -203,8 +212,8 @@
 			</button>
 		{/if}
 		{#if customizationIndex + 1 == documentToCustomize.customizations.length || documentToCustomize.customizations.length == 1}
-			<button enterkeyhint="download" class="action-button-small" on:click={triggerDownload} disabled={error}>
-				download
+			<button enterkeyhint="download" class="action-button-small" on:click={triggerDownload} disabled={error || preparingDownload}>
+				{preparingDownload ? 'loading...' : 'download'}
 			</button>
 		{:else}
 			<button enterkeyhint="next" class="action-button-small" on:click={incrementCustomizationIndex} disabled={error}>
@@ -217,13 +226,6 @@
 <style>
 	@media screen and (max-width: 450px) {
 		.container {
-			grid-template-areas: 
-				"step"
-				"preview"
-				"prompt"
-				"error"
-				"inputArea"
-				"footer";
 			padding: 1rem .5rem;
 			margin-left: 0;
 			margin-right: 0;
@@ -249,13 +251,6 @@
 
 	@media screen and (min-width: 451px) and (max-width: 1100px) {
 		.container {
-			grid-template-areas: 
-				"step"
-				"preview"
-				"prompt"
-				"error"
-				"inputArea"
-				"footer";
 			padding: 1rem;
 		}
 
@@ -283,28 +278,24 @@
 
 	@media screen and (min-width: 1101px) {
 		.container {
-			grid-template-areas: 
-				"step"
-				"prompt"
-				"preview"
-				"error"
-				"inputArea"
-				"footer";
 			padding: 1rem;
 		}
 
 		.error-section {
-			margin: 2rem auto -1.5rem auto;
+			margin: -.5rem auto -1.5rem auto;
+		}
+
+		.step {
+			margin-bottom: 1rem;
 		}
 
 		.preview {
-			/*padding: 0 20%;*/
+			/*padding: 0 15%;*/
 			margin: 0 auto;
-			background: var(--white);
 		}
 
 		.number-box {
-			margin: 2rem auto;
+			margin: 1rem auto;
 		}
 
 		.prompt {
@@ -325,6 +316,13 @@
 		background: var(--gray);
 		margin-bottom: 5rem;
 		display: grid;
+		grid-template-areas: 
+				"step"
+				"preview"
+				"prompt"
+				"error"
+				"inputArea"
+				"footer";
 	}
 
 	.step {

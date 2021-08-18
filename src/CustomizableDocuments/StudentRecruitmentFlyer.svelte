@@ -7,8 +7,8 @@
 	export let customizationChoices;
 	export let step;
 	export let focused;
-	
-	const defaultPhotoPath = "/images/Example Flyer Photo.jpg";
+
+	let defaultPhoto;
 
 	let svg;
 	
@@ -21,7 +21,6 @@
 	let placedCharacters = 0;
 	let word;
 	let wordLength;
-
 
 	$: {
 		if (customizationChoices.description) {
@@ -90,6 +89,15 @@
 		}
 	}
 
+	async function processDefaultPhoto() {
+		let blob = await fetch("/images/Example Flyer Photo.jpg").then(r => r.blob());
+    	defaultPhoto = await new Promise(resolve => {
+      		let reader = new FileReader();
+      		reader.onload = () => resolve(reader.result);
+     		reader.readAsDataURL(blob);
+    	});
+	}
+
 	$: {
 		dispatch('document-updated', {
 			svg: svg
@@ -97,6 +105,8 @@
 	}
 
 	onMount(() => {
+		processDefaultPhoto();
+
 		dispatch('document-updated', {
 			svg: svg
 		});
@@ -115,7 +125,7 @@
 </style>
 
 <div>
-	<svg width="595" height="842" viewBox="0 0 595 842" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<svg bind:this={svg} width="2975" height="4210" viewBox="0 0 595 842" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<g clip-path="url(#clip0)">
 			<rect width="595" height="842" fill="white"/>
 				<g opacity="0.02">
@@ -134,7 +144,7 @@
 				<text x="50%" y="652" style="font-family:'Noto Sans', sans-serif;font-weight:400;font-size:18px;fill:#000000" text-anchor="middle">
 					{bottom}
 				</text>
-				<text x="50%" y="725" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:bold;font-size:21px;fill:#d11242;text-transform:uppercase;letter-spacing:2px" text-anchor="middle">
+				<text x="50%" y="725" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:bold;font-size:21px;fill:#d11242;letter-spacing:2px;text-transform:uppercase" text-anchor="middle">
 					{customizationChoices.notice}
 				</text>
 				<rect y="157" width="595" height="353" fill="url(#pattern0)"/>
@@ -383,22 +393,14 @@
 				<path d="M217.939 113.611C218.133 113.611 218.295 113.625 218.424 113.654L218.315 115C218.199 114.969 218.058 114.953 217.892 114.953C217.434 114.953 217.076 115.071 216.821 115.306C216.565 115.542 216.437 115.871 216.437 116.295V118.974H215.001V113.71H216.088L216.3 114.595H216.371C216.534 114.3 216.755 114.063 217.033 113.882C217.31 113.702 217.612 113.611 217.939 113.611V113.611Z" fill="#002D62"/>
 				<path d="M222.577 118.976L222.299 118.261H222.262C222.02 118.565 221.771 118.776 221.515 118.894C221.259 119.012 220.926 119.071 220.515 119.071C220.009 119.071 219.612 118.926 219.321 118.638C219.031 118.349 218.886 117.937 218.886 117.404C218.886 116.845 219.081 116.433 219.472 116.168C219.863 115.903 220.452 115.756 221.24 115.728L222.153 115.7V115.469C222.153 114.935 221.88 114.669 221.334 114.669C220.913 114.669 220.419 114.796 219.851 115.05L219.375 114.08C219.981 113.763 220.653 113.605 221.391 113.605C222.097 113.605 222.638 113.758 223.015 114.066C223.392 114.373 223.58 114.841 223.58 115.469V118.976H222.577V118.976ZM222.153 116.538L221.598 116.556C221.18 116.569 220.869 116.644 220.665 116.782C220.461 116.921 220.359 117.131 220.359 117.413C220.359 117.818 220.592 118.021 221.056 118.021C221.389 118.021 221.655 117.925 221.854 117.733C222.054 117.542 222.153 117.288 222.153 116.971V116.538V116.538Z" fill="#002D62"/>
 				<path d="M229.857 118.974H228.421V115.899C228.421 115.52 228.358 115.235 228.231 115.045C228.104 114.855 227.904 114.76 227.63 114.76C227.263 114.76 226.996 114.895 226.83 115.165C226.664 115.435 226.581 115.879 226.581 116.497V118.974H225.145V113.71H226.242L226.435 114.383H226.515C226.656 114.142 226.86 113.953 227.127 113.816C227.393 113.68 227.699 113.611 228.045 113.611C228.833 113.611 229.366 113.869 229.646 114.383H229.773C229.914 114.139 230.122 113.949 230.396 113.814C230.671 113.679 230.981 113.611 231.326 113.611C231.923 113.611 232.374 113.764 232.68 114.07C232.986 114.376 233.139 114.867 233.139 115.542V118.974H231.698V115.899C231.698 115.52 231.635 115.235 231.508 115.045C231.38 114.855 231.18 114.76 230.907 114.76C230.556 114.76 230.293 114.886 230.119 115.137C229.945 115.388 229.857 115.786 229.857 116.333V118.974V118.974Z" fill="#002D62"/>
-				<text x="135" y="135" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:bold;font-size:9px;fill:#d11242;text-transform:uppercase;letter-spacing:2px" text-anchor="middle">
+				<text x="135" y="135" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:bold;font-size:9px;fill:#d11242;letter-spacing:2px;text-transform:uppercase" text-anchor="middle">
 					{customizationChoices.subheading || "organization name"}
 				</text>
+				{#if customizationChoices['image'] !== undefined}
+					<image x="0" y="160" id="image0" width="100%" height="375px" xlink:href={customizationChoices['image']} />
+				{:else}
+					<image x="0" y="160" id="image0" width="100%" height="375px" xlink:href={defaultPhoto} />
+				{/if}
 			</g>
-		<defs>
-			<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-				<use xlink:href="#image0" transform="translate(0 -0.0621317) scale(0.0005 0.000842776)"/>
-			</pattern>
-			<clipPath id="clip0">
-				<rect width="595" height="842" fill="white"/>
-			</clipPath>
-			{#if customizationChoices['image'] !== undefined}
-				<image id="image0" width="2000" height="1334" xlink:href={customizationChoices['image']} />
-			{:else}
-				<image id="image0" width="2000" height="1334" xlink:href={defaultPhotoPath} />
-			{/if}
-		</defs>
 	</svg>
 </div>
