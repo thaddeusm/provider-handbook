@@ -11,6 +11,15 @@
 	let defaultPhoto;
 
 	let svg;
+	let imageElement;
+
+	$: if (customizationChoices['image'] || defaultPhoto) {
+		if (customizationChoices['image'] !== undefined) {
+			imageElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', customizationChoices['image']);
+		} else {
+			imageElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', defaultPhoto);
+		}
+	}
 	
 	// split description into three lines
 	let top = '';
@@ -396,11 +405,7 @@
 				<text x="135" y="135" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:bold;font-size:9px;fill:#d11242;letter-spacing:2px;text-transform:uppercase" text-anchor="middle">
 					{customizationChoices.subheading || "organization name"}
 				</text>
-				{#if customizationChoices['image'] !== undefined}
-					<image x="0" y="160" id="image0" width="100%" height="375px" xlink:href={customizationChoices['image']} />
-				{:else}
-					<image x="0" y="160" id="image0" width="100%" height="375px" xlink:href={defaultPhoto} />
-				{/if}
+				<image bind:this={imageElement} x="0" y="160" id="image0" width="595px" height="375px" />
 			</g>
 	</svg>
 </div>
