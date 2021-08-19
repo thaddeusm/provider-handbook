@@ -19,17 +19,17 @@ export const SVGToImage = (settings) => {
     // Override default settings
     for (let key in settings) { _settings[key] = settings[key]; }
 
-    return new Promise(function(resolve, reject){
+    return new Promise(async function(resolve, reject) {
         let svgNode;
 
         // Create SVG Node if a plain string has been provided
-        if(typeof(_settings.svg) == "string"){
+        if (typeof(_settings.svg) == "string"){
             // Create a non-visible node to render the SVG string
             let SVGContainer = document.createElement("div");
             SVGContainer.style.display = "none";
             SVGContainer.innerHTML = _settings.svg;
             svgNode = SVGContainer.firstElementChild;
-        }else{
+        } else {
             svgNode = _settings.svg;
         }
 
@@ -37,32 +37,33 @@ export const SVGToImage = (settings) => {
         let context = canvas.getContext('2d'); 
 
         let svgXml = new XMLSerializer().serializeToString(svgNode);
-        let svgBase64 = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgXml)));
+
+        let svgBase64 = "data:image/svg+xml;base64," + btoa(svgXml);
 
         const image = new Image();
 
-        image.onload = function(){
+        image.onload = function() {
             let finalWidth, finalHeight;
 
             // Calculate width if set to auto and the height is specified (to preserve aspect ratio)
-            if(_settings.width === "auto" && _settings.height !== "auto"){
+            if (_settings.width === "auto" && _settings.height !== "auto"){
                 finalWidth = (this.width / this.height) * _settings.height;
             // Use image original width
-            }else if(_settings.width === "auto"){
+            } else if (_settings.width === "auto"){
                 finalWidth = this.naturalWidth;
             // Use custom width
-            }else{
+            } else{
                 finalWidth = _settings.width;
             }
 
             // Calculate height if set to auto and the width is specified (to preserve aspect ratio)
-            if(_settings.height === "auto" && _settings.width !== "auto"){
+            if (_settings.height === "auto" && _settings.width !== "auto"){
                 finalHeight = (this.height / this.width) * _settings.width;
             // Use image original height
-            }else if(_settings.height === "auto"){
+            } else if (_settings.height === "auto"){
                 finalHeight = this.naturalHeight;
             // Use custom height
-            }else{
+            } else{
                 finalHeight = _settings.height;
             }
 
@@ -73,12 +74,12 @@ export const SVGToImage = (settings) => {
             // Render image in the canvas
             context.drawImage(this, 0, 0, finalWidth, finalHeight);
 
-            if(_settings.outputFormat == "blob"){
+            if (_settings.outputFormat == "blob") {
                 // Fullfil and Return the Blob image
                 canvas.toBlob(function(blob){
                     resolve(blob);
                 }, _settings.mimetype, _settings.quality);
-            }else{
+            } else {
                 // Fullfil and Return the Base64 image
                 resolve(canvas.toDataURL(_settings.mimetype, _settings.quality));
             }

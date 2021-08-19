@@ -8,7 +8,7 @@
 
 	let SVGToImage;
 
-	import('./../exportSVGToPNG.js').then(module => {
+	import('./../exportSVGToRaster.js').then(module => {
   		SVGToImage = module.SVGToImage;
 	});
 
@@ -122,15 +122,14 @@
 		focused = false;
 	}
 
-	function handleChange(e, name) {
+	async function handleChange(e, name) {
 		let file = e.target.files[0];
-		let reader  = new FileReader();
-	    
-	    reader.onload = function(e)  {
-	    	customizationChoices[name] = e.target.result;
-	    }
-		
-		reader.readAsDataURL(file);
+
+		customizationChoices[name] = await new Promise(resolve => {
+      		let reader = new FileReader();
+      		reader.onload = () => resolve(reader.result);
+     		reader.readAsDataURL(file);
+    	});
 	}
 
 	onMount(() => {

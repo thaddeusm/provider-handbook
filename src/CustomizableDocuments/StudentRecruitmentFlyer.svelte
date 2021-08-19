@@ -11,15 +11,6 @@
 	let defaultPhoto;
 
 	let svg;
-	let imageElement;
-
-	$: if (customizationChoices['image'] || defaultPhoto) {
-		if (customizationChoices['image'] !== undefined) {
-			imageElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', customizationChoices['image']);
-		} else {
-			imageElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href', defaultPhoto);
-		}
-	}
 	
 	// split description into three lines
 	let top = '';
@@ -43,12 +34,12 @@
 
 			// split long words
 			for (let h=0; h<arr.length; h++) {
-				if (arr[h].length > 10) {
-					let subStr = arr[h].slice(10);
+				if (arr[h].length > 15) {
+					let subStr = arr[h].slice(15);
 					let rootStr = arr[h].split(subStr)[0] + '-';
 
-					if (subStr.length > 10) {
-						let subSubStr = subStr.slice(10);
+					if (subStr.length > 15) {
+						let subSubStr = subStr.slice(15);
 						let rootSubStr = subStr.split(subSubStr)[0] + '-';
 
 						newArr.push(rootStr);
@@ -405,7 +396,7 @@
 				<text x="135" y="135" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:bold;font-size:9px;fill:#d11242;letter-spacing:2px;text-transform:uppercase" text-anchor="middle">
 					{customizationChoices.subheading || "organization name"}
 				</text>
-				<image bind:this={imageElement} x="0" y="160" id="image0" width="595px" height="375px" />
+				<image x="0" y="160" width="595px" height="375px" href="{customizationChoices['image'] !== undefined ? customizationChoices['image'] : defaultPhoto}" />
 			</g>
 	</svg>
 </div>
