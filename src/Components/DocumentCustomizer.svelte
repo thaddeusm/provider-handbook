@@ -199,7 +199,7 @@
 				accept={customization.accept} 
 				on:change={(e) => {handleChange(e, customization.name)}}
 			/>
-			<label for="fileInput" class="regular-button-small file-button">select{customizationChoices[customization.name] == undefined ? ' ' : ' a different '}image</label>
+			<label for="fileInput" class={`${customizationChoices[customization.name] == undefined ? 'action' : 'regular'}-button-small file-button`}>select{customizationChoices[customization.name] == undefined ? ' ' : ' a different '}image</label>
 		{:else if customization.format == "textarea"}
 			<textarea 
 				bind:value={customizationChoices[customization.name]} 
@@ -384,6 +384,7 @@
 
 	.file-button {
 		margin: 2rem auto;
+		cursor: pointer;
 	}
 
 	textarea {
