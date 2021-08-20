@@ -28,6 +28,7 @@
 
 	let customizationChoices = {};
 	let customizationIndex = 0;
+	let errorIndex = null;
 	let customizedSVG;
 
 	let preparingDownload = false;
@@ -104,6 +105,7 @@
 			error = true;
 		}
 
+		errorIndex = e.detail.index;
 		customizationIndex = e.detail.index;
 		errorMessage = e.detail.message;
 	}
@@ -111,6 +113,7 @@
 	function hideErrorMessage() {
 		error = false;
 		errorMessage = '';
+		errorIndex = null;
 	}
 
 	function handleFocus() {
@@ -215,7 +218,7 @@
 				{preparingDownload ? 'loading...' : 'download'}
 			</button>
 		{:else}
-			<button enterkeyhint="next" class="action-button-small" on:click={incrementCustomizationIndex} disabled={error}>
+			<button enterkeyhint="next" class="action-button-small" on:click={incrementCustomizationIndex} disabled={errorIndex && errorIndex <= customizationIndex}>
 				next
 			</button>
 		{/if}
