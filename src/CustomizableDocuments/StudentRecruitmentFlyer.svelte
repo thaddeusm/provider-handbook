@@ -98,6 +98,8 @@
     	});
 	}
 
+	$: photo = customizationChoices['image'] !== undefined ? customizationChoices['image'] : defaultPhoto;
+
 	$: {
 		dispatch('document-updated', {
 			svg: svg
@@ -396,7 +398,7 @@
 				<text x="135" y="135" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:bold;font-size:9px;fill:#d11242;letter-spacing:2px;text-transform:uppercase" text-anchor="middle">
 					{customizationChoices.subheading || "organization name"}
 				</text>
-				<image x="0" y="160" width="595px" height="375px" href="{customizationChoices['image'] !== undefined ? customizationChoices['image'] : defaultPhoto}" />
+				<image x="0" y="160" width="595px" height="375px" xlink:href={photo} />
 			</g>
 	</svg>
 </div>
