@@ -1663,7 +1663,7 @@
 			{
 				"style": "paragraph",
 				"text": "The provider administrator and/or director is ultimately responsible for evaluating the program as it is implemented but will work closely with the entire staff to ensure a system of monitoring is planned and carried out throughout the program. The administrator/director:",
-				"markup": "<strong>Access Provider</strong>: The provider administrator and/or director is ultimately responsible for evaluating the program as it is implemented but will work closely with the entire staff to ensure a system of monitoring is planned and carried out throughout the program. The administrator/director:",
+				"markup": "The provider administrator and/or director is ultimately responsible for evaluating the program as it is implemented but will work closely with the entire staff to ensure a system of monitoring is planned and carried out throughout the program. The administrator/director:",
 				"section": "Program Monitoring"
 			},
 			{
@@ -1680,13 +1680,13 @@
 			{
 				"style": "paragraph",
 				"text": "Access Coordinator",
-				"markup": "<strong>Access Provider</strong>:",
+				"markup": "<strong>Access Coordinator</strong>:",
 				"section": "Program Monitoring"
 			},
 			{
 				"style": "paragraph",
 				"text": "In coordination with provider administrators/directors, the coordinator assists in the monitoring process and:",
-				"markup": "<strong>Access Coordinator</strong>: In coordination with provider administrators/directors, the coordinator assists in the monitoring process and:",
+				"markup": "In coordination with provider administrators/directors, the coordinator assists in the monitoring process and:",
 				"section": "Program Monitoring"
 			},
 			{
