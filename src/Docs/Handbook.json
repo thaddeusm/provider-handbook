@@ -338,7 +338,7 @@
 			{
 				"style": "unordered_list",
 				"text": [
-					"Instruction can occur before and/or after school for a maximum of 6 hours a day in 60 minute increments (no less) for up to 5 days a week",
+					"After school classes must be 60-minute hours, not shorter \"academic\" hours, and should not occur for a maximum of two hours in a day at least twice but not more than three times per week",
 					"Please note that additional justification in the proposal is needed if students will be attending Access After School Instruction classes more than 10 hours per week",
 					"With RELO approval, online instruction can be counted as after school instruction hours. Consult your U.S. Embassy/Consulate POC or RELO for guidance on the maximum number of online hours for the program"
 				],
@@ -404,8 +404,8 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "There are four main topics for Enhancement Activities and providers must conduct a minimum of one (1) Enhancement Activity for each topic listed below during the 2-year program per reporting period (semester or quarterly).",
-				"markup": "There are four main topics for Enhancement Activities and providers must conduct a minimum of <strong>one (1)</strong> Enhancement Activity for each topic listed below during the 2-year program per reporting period (semester or quarterly).",
+				"text": "There are four main topics for Enhancement Activities and providers are expected to conduct a minimum of one Enhancement Activity per reporting period during the 2-year program.",
+				"markup": "There are four main topics for Enhancement Activities and providers are expected to conduct a minimum of <strong>one</strong> Enhancement Activity per reporting period during the 2-year program.",
 				"section": "Planning a 2-Year Access Program"
 			},
 			{
@@ -474,8 +474,8 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "What: Intensive Sessions are an optional, but an essential component to the program. Intensive Sessions are between three days to four-week long programs that occur outside of students’ After School Instruction classes and can constitute part of the total 360 hours of the program. Intensive Sessions must include English language instruction and focus on one or more of the following topics: U.S. culture and democratic values, personal development, service learning, and/or digital literacy skills.",
-				"markup": "<strong>What</strong>: Intensive Sessions are an optional, but an essential component to the program. Intensive Sessions are between three days to four-week long programs that occur <strong>outside</strong> of students’ After School Instruction classes and can constitute part of the total 360 hours of the program. Intensive Sessions must include English language instruction and focus on one or more of the following topics: U.S. culture and democratic values, personal development, service learning, and/or digital literacy skills.",
+				"text": "What: Intensive Sessions are an optional, but an essential component to the program. Intensive Sessions are typically between four day to four-week long programs that occur outside of students’ After School Instruction classes and can constitute part of the total 360 hours of the program. Intensive Sessions must include English language instruction and focus on one or more of the following topics: U.S. culture and democratic values, personal development, service learning, and/or digital literacy skills.",
+				"markup": "<strong>What</strong>: Intensive Sessions are an optional, but an essential component to the program. Intensive Sessions are typically between four day to four-week long programs that occur <strong>outside</strong> of students’ After School Instruction classes and can constitute part of the total 360 hours of the program. Intensive Sessions must include English language instruction and focus on one or more of the following topics: U.S. culture and democratic values, personal development, service learning, and/or digital literacy skills.",
 				"section": "Planning a 2-Year Access Program"
 			},
 			{
@@ -688,7 +688,7 @@
 					"Cash gifts",
 					"Electronic gifts such as tablets and laptops",
 					"Live bands, singers, MCs, and DJs are not allowed, unless these are Access students that would like to perform as part of their graduation ceremony",
-					"Flowers or plants",
+					"Flowers or plants (modest costs for flowers and decorations are allowable)",
 					"Alcohol",
 					"Graduation gowns and hats",
 					"Any expenses related to the press (i.e. Access funds cannot be used to pay for the travel expenses for a newspaper reporter to attend the ceremony)",
@@ -717,7 +717,7 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "An important goal of the Access Program is to empower and develop the capacity of teacher leaders in the region. Access teachers are recommended to participate in professional development activities at least once a semester. These activities can be led and developed by Access senior teachers, Access coordinator and/or administrator, or could be online professional development activities such as American English Online Professional English Network (OPEN) Program courses.",
+				"text": "An important goal of the Access Program is to empower and develop the capacity of teacher leaders in the region. Access teachers are recommended to participate in professional development activities at least once a semester. These activities may be organized by the RELO or may be available at no cost through OPEN or American English. They can also be organized through the Access provider as part of the program.",
 				"section": "Planning a 2-Year Access Program"
 			},
 			{
@@ -1061,7 +1061,7 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "Providers are required to create a gender-balanced list of replacement students in case students withdraw from the program. In order to maintain the program’s integrity, providers can replace students no later than two quarters/one semester from the start of the program. Permission by the RELO must be given to the provider if replacements are desired more than three months after the program’s start date. Auditing students are not allowed.",
+				"text": "Providers are required to create a gender-balanced list of replacement students in case students withdraw from the program. In order to maintain the program’s integrity, providers can only replace students who leave the program during the first three months of the program. Permission from the RELO must be given to the provider if replacements are desired more than three months after the program's start date. Auditing students are not allowed.",
 				"section": "Advertising the Access Program and Recruiting Students"
 			},
 			{
@@ -1620,7 +1620,7 @@
 				"text": [
 					"To convert expenses into U.S. Dollar, providers should use the exchange rate based on the day expenses are incurred. Providers should also reconcile their bank account statement so that the calculation of Cash Balance (in U.S. Dollar) in their Financial Report is accurate. In some cases, this will require providers to report an expense or credit due to currency loss or currency gain.",
 					"Expenses should not be rounded (i.e. $5.52) in the reports.",
-					"All salaries should be reported as actual hours worked in that period, monthly salaries are not allowed.",
+					"All salaries should be reported as actual hours worked in that period. Monthly salaries are allowed only if permitted by local laws.",
 					"Keep records of students’ attendance, and, if somebody misses classes, check with parents/guardians for the reason for the student’s absence. Please note that students must attend at least 70% of classes to keep their Access scholarship.",
 					"Providers must also keep all receipts because reported program expenses must be verified by proof of purchase. Receipts must include vendor information, name of good(s), and quantity of good(s) purchased. Please be aware that receipts that are not properly issued may be denied by the U.S. Embassy/Consulate and therefore cannot be expensed to the Access Program. Providers will also not be eligible to receive another disbursement of funds until all receipts are accounted for."
 				],
@@ -1815,18 +1815,19 @@
 				"style": "unordered_list",
 				"text": [
 					"Signed agreement",
-					"Finalized agreement amendment(s) or letter(s) of approved budget change",
-					"Close out Letter and Disbursement Report",
-					"All program & financial report forms",
-					"Original receipts",
+					"Finalized agreement amendment(s) or letter(s) of approved budget change (hard copies)",
+					"Close out Letter and Disbursement Report (soft copy)",
+					"All program & financial report forms (soft copies)",
+					"Original receipts (hard copies)",
 					"Bank statements",
-					"Financial reports that relate to Program costs",
-					"Photo consent forms",
-					"Student applications",
-					"Student contracts",
+					"Financial reports that relate to Program costs (soft copies)",
+					"Recruitment materials (hard copies)"
+					"Photo consent forms (hard copies)",
+					"Student applications (hard copies)",
+					"Student contracts (hard copies)",
 					"Student interview rubrics",
-					"Parent consent forms",
-					"Teacher agreements"
+					"Parent consent forms (hard copies)",
+					"Teacher agreements (hard copies)"
 				],
 				"section": "After: Program Close-Out"
 			},
