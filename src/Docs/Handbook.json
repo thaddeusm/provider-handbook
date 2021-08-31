@@ -14,7 +14,7 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "The goal of this handbook is to give an overview of the Access Program, detail the process of applying to host an Access Program, and to serve as a guide that highlights important program policies and resources available to Access providers and teachers. The policies and procedures of the Access Program will be updated in this handbook on an as needed basis and providers will be notified of major changes.",
+				"text": "The goal of this handbook is to give an overview of the Access Program, detail the process of applying to host an Access Program, and to serve as a guide that highlights important program policies and resources available to Access providers and teachers. The policies and procedures of the Access Program will be updated in this handbook on an as needed basis and providers will be notified of major changes. ",
 				"section": "Introduction"
 			},
 			{
@@ -273,8 +273,8 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "To achieve the ultimate goal and objectives of the Access Program, the program is designed to take place over a 2-year period. Providers are required to provide a detailed plan for their 2-year program (which could be in-person or hybrid) and list all program activities that will occur in their initial application and proposal. All programs (even hybrid) must begin in-person. The proposal and agreement start and end dates should include any Access-related activities that occur prior to the start of instruction (recruiting teachers and students, purchasing books and supplies, etc.) and following the completion of instruction (closing ceremony, final reports, etc.). Please note that the Access Program can only reimburse costs that are incurred within the approved agreement start and end dates.",
-				"markup": "To achieve the ultimate goal and objectives of the Access Program, the program is designed to take place over a 2-year period. Providers are required to provide a detailed plan for their 2-year program (which could be in-person or hybrid) and list all program activities that will occur in their initial application and proposal. All programs (even hybrid) must begin in-person. The proposal and agreement start and end dates should include any Access-related activities that occur prior to the start of instruction (recruiting teachers and students, purchasing books and supplies, etc.) and following the completion of instruction (closing ceremony, final reports, etc.). <strong>Please note</strong> that the Access Program can only reimburse costs that are incurred <strong>within</strong> the approved agreement start and end dates.",
+				"text": "To achieve the ultimate goal and objectives of the Access Program, the program is designed to take place over a 2-year period. Providers are required to provide a detailed plan for their 2-year program and list all program activities that will occur in their initial application and proposal. All programs must begin in-person. The proposal and agreement start and end dates should include any Access-related activities that occur prior to the start of instruction (recruiting teachers and students, purchasing books and supplies, etc.) and following the completion of instruction (closing ceremony, final reports, etc.). Please note that the Access Program can only reimburse costs that are incurred within the approved agreement start and end dates.",
+				"markup": "To achieve the ultimate goal and objectives of the Access Program, the program is designed to take place over a 2-year period. Providers are required to provide a detailed plan for their 2-year program and list all program activities that will occur in their initial application and proposal. All programs must begin in-person. The proposal and agreement start and end dates should include any Access-related activities that occur prior to the start of instruction (recruiting teachers and students, purchasing books and supplies, etc.) and following the completion of instruction (closing ceremony, final reports, etc.). <strong>Please note</strong> that the Access Program can only reimburse costs that are incurred <strong>within</strong> the approved agreement start and end dates.",
 				"section": "Planning a 2-Year Access Program"
 			},
 			{
@@ -314,7 +314,7 @@
 				"style": "unordered_list",
 				"text": [
 					"Each Access group must receive a minimum of 360 hours of instruction within 20-24 months",
-					"Providers are required to complete (at minimum) 180 hours or more of instruction per academic year. If this is not possible at any point during the program, please consult with your U.S. Embassy/Consulate POC and/or RELO"
+					"Providers should complete 180 hours or more of instruction per academic year. If this is not possible at any point during the program, providers should consult with their U.S. Embassy POC and/or RELO"
 				],
 				"section": "Planning a 2-Year Access Program"
 			},
@@ -358,7 +358,7 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "To achieve the language and personal development goals of the Access Program, teachers are encouraged to use a student-centered approach such as the Communicative Language Teaching (CLT) approach.",
+				"text": "To achieve the language and personal development goals of the Access Program, teachers should use a student-centered approach such as the Communicative Language Teaching (CLT) approach.",
 				"section": "Planning a 2-Year Access Program"
 			},
 			{
@@ -513,14 +513,14 @@
 				"text": [
 					"The provider must undertake efforts to project the health, safety, and welfare of all participants in the Access Program and address any issues immediately",
 					"Students must have signed consent forms from their parents/guardians before any off-site activities",
-					"The students must have some form of medical/travel insurance for any activities that occur outside of the city/area of the Access Program (insurance is not required for activities that occur within the city/area of the Access Program)",
+					"The students must have some form of medical/travel insurance for any activities that occur outside of the city/area of the Access Program (insurance is not required for activities that occur within the city/area of the Access Program, unless required locally)",
 					"For every off-site Intensive Session and Enhancement Activity event, there must be a ratio of one (1) or more adult chaperones (teacher, coordinator, parent/guardian volunteer, etc.) for every ten (10) Access students",
 					"Intensive Session and Enhancement Activity programming must be conducted in English and include English language learning activities"
 				],
 				"markup": [
 					"The provider must undertake efforts to project the health, safety, and welfare of all participants in the Access Program and address any issues immediately",
 					"Students must have signed consent forms from their parents/guardians before any off-site activities",
-					"The students must have some form of medical/travel insurance for any activities that occur outside of the city/area of the Access Program (insurance is not required for activities that occur <strong>within</strong> the city/area of the Access Program)",
+					"The students must have some form of medical/travel insurance for any activities that occur outside of the city/area of the Access Program (insurance is not required for activities that occur <strong>within</strong> the city/area of the Access Program, unless required locally)",
 					"For every off-site Intensive Session and Enhancement Activity event, there must be a ratio of one (1) or more adult chaperones (teacher, coordinator, parent/guardian volunteer, etc.) for every 10 Access students",
 					"Intensive Session and Enhancement Activity programming must be conducted in English and include English language learning activities"
 				],
@@ -854,7 +854,7 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "All social media accounts (Facebook, Twitter, Youtube, Instagram, etc.) created by providers for Access Programs must be approved by the provider’s U.S. Embassy/Consulate POC and/or RELO and branded with the official Access logo.",
+				"text": "All social media accounts (Facebook, Twitter, Youtube, Instagram, etc.) created by providers for Access Programs must be approved by the provider’s U.S. Embassy/Consulate POC and/or RELO and branded with the official Access logo. In addition, any social media page created for the Access Program should include the following disclaimer: \"This website is not an official U.S. Department of State website. The views and information presented are the author's own and do not represent the English Access Microscholarship Program or the U.S. Department of State. The English Access Microscholarship Program is funded by the U.S. Department of State.\"",
 				"section": "Social Media Guidelines and Safety Tips"
 			},
 			{
@@ -956,7 +956,7 @@
 				"text": [
 					"Students and parents/guardians must be informed that the Access Program is intensive and both must be dedicated to students’ success",
 					"Attendance at all classes and events is mandatory. Any absence should be justified, and providers and posts should consult RELOs to determine policies for excused absences. Students/guardians/families must be aware of attendance policies and the consequences of habitual unexcused absences, such as students who miss classes without an excuse or who misbehave regularly can be withdrawn from the Access Program. Note: Providers should identify problematic behavioral trends as soon as possible and work with the student to develop a corrective action plan to address the issue. If the student does not make progress, they can be dismissed by the provider after consultation with the RELO and/or post POC.",
-					"Providers must provide forms to both students and guardians with the Access Program rules regarding attendance, behavior, participation in enhancement activities etc. and a letter of commitment that must be signed by students and their parents/guardians",
+					"Providers must provide forms in the local language to both students and guardians with the Access Program rules regarding attendance, behavior, participation in enhancement activities etc. and a letter of commitment that must be signed by students and their parents/guardians",
 					"Students and their guardians need to grant permission at the beginning of the program via a signed consent form before the provider may take and potentially share their photos (providers must keep signed copies on file throughout the duration of the program and may only take and share a photo publicly if they have a permission form for all people in the photo)"
 				],
 				"section": "Advertising the Access Program and Recruiting Students"
@@ -1067,7 +1067,7 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "After the recruitment and application period has ended, the next step is for the program provider to interview all potential Access students and to arrange for a representative of the U.S. Embassy/Consulate to participate in interviews and to be a member of the final selection panel. The provider then sends the final proposed student list to the U.S. Embassy/Consulate for its final approval and must not accept students into the program until the approval is received.",
+				"text": "After the recruitment and application period has ended, the next step is for the program provider to interview all potential Access students and invite a representative of the U.S. Embassy/Consulate to participate in interviews and to be a member of the final selection panel. The provider then sends the final proposed student list to the U.S. Embassy/Consulate for its final approval and must not accept students into the program until the approval is received.",
 				"section": "Advertising the Access Program and Recruiting Students"
 			},
 			{
@@ -1475,7 +1475,7 @@
 			{
 				"style": "unordered_list",
 				"text": [
-					"Provide continuous assessment by giving regular tests (4 skills), graded classroom participation, student-curated portfolios, oral tests, individualized feedback, and/or check ups throughout the duration of the program",
+					"Provide continuous assessment through graded classroom participation, student-curated portfolios, oral feedback, individualized feedback, occasional quizzes on the four skills, and/or other check ups throughout the duration of the program. Providers are also encouraged to consider performance, alternative, and peer assessment",
 					"Collect all tests and/or rubrics and store them in students’ portfolios",
 					"Support students and guardians if students have problems with classes/tests and work together to create an improvement plan"
 				],
@@ -1501,13 +1501,13 @@
 				"style": "unordered_list",
 				"text": [
 					"Change the end date of the agreement",
-					"Make a revision to the program budget (see Budget Revisions section)",
+					"Make a revision to the program budget, which would require an amendment if a change to the total award amount is required (see Budget Revisions section)",
 					"Change the scope of work (i.e. add an Intensive Session)",
 					"Change the name of their institution or organization"
 				],
 				"markup": [
 					"Change the end date of the agreement",
-					"Make a revision to the program budget (see <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" href=\"/#/handbook#BudgetRevisions\" target=\"_blank\">Budget Revisions</a> section)",
+					"Make a revision to the program budget, which would require an amendment if a change to the total award amount is required (see <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" href=\"/#/handbook#BudgetRevisions\" target=\"_blank\">Budget Revisions</a> section)",
 					"Change the scope of work (i.e. add an Intensive Session)",
 					"Change the name of their institution or organization"
 				],
@@ -1662,7 +1662,7 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "Program monitoring is a critical element in ensuring that the Access Program is implemented in accordance with the official Access agreement and achieves the goals of a successful program.",
+				"text": "Program monitoring is a critical element in ensuring that the Access Program is implemented in accordance with the official Access agreement and achieves the goals of a successful program. Note that the position titles indicated below may not match a partiular title used in a provider organization. Also, not all positions may be held by different people.",
 				"section": "Program Monitoring"
 			},
 			{
@@ -1899,11 +1899,6 @@
 		},
 		"test": {
 			"definition": "is a product that measures a particular behavior or set of objectives.",
-			"form": "word",
-			"source": "Merriam-Webster"
-		},
-		"hybrid": {
-			"definition": "something that is formed by combining two or more things (i.e. both virtual and face to face learning).",
 			"form": "word",
 			"source": "Merriam-Webster"
 		},
