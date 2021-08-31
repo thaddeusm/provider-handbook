@@ -8,17 +8,17 @@
 				"section": "Introduction"
 			},
 			{
-				"style": "paragraph", 
+				"style": "paragraph",
 				"text": "The intended audience of this handbook are both potential and current English Microscholarship Program  (\"hereafter known as \"Access\" or \"Access Program\" providers’ administrative staff and teachers.",
 				"section": "Introduction"
 			},
 			{
-				"style": "paragraph", 
+				"style": "paragraph",
 				"text": "The goal of this handbook is to give an overview of the Access Program, detail the process of applying to host an Access Program, and to serve as a guide that highlights important program policies and resources available to Access providers and teachers. The policies and procedures of the Access Program will be updated in this handbook on an as needed basis and providers will be notified of major changes.",
 				"section": "Introduction"
 			},
 			{
-				"style": "paragraph", 
+				"style": "paragraph",
 				"text": "If you have any questions about policies and procedures that have not been specifically addressed in this handbook or have suggestions to improve this handbook, please consult with your Regional English Language Officer (RELO)/U.S. Embassy/Consulate point of contact (POC).",
 				"section": "Introduction"
 			},
@@ -1631,7 +1631,7 @@
 				"text": [
 					"To convert expenses into U.S. Dollar, providers should use the exchange rate based on the day expenses are incurred. Providers should also reconcile their bank account statement so that the calculation of Cash Balance (in U.S. Dollar) in their Financial Report is accurate. In some cases, this will require providers to report an expense or credit due to currency loss or currency gain.",
 					"Expenses should not be rounded (i.e. $5.52) in the reports.",
-					"All salaries should be reported as actual hours worked in that period. Monthly salaries are allowed only if permitted by local laws.",
+					"It is highly recommended that teachers' payment be made hourly as the program is cost-reimbursable; however, other payment structures may be possible if exceptions need to be made to conform to local labor laws.",
 					"Keep records of students’ attendance, and, if somebody misses classes, check with parents/guardians for the reason for the student’s absence. Please note that students must attend at least 70% of classes to keep their Access scholarship.",
 					"Providers must also keep all receipts because reported program expenses must be verified by proof of purchase. Receipts must include vendor information, name of good(s), and quantity of good(s) purchased. Please be aware that receipts that are not properly issued may be denied by the U.S. Embassy/Consulate and therefore cannot be expensed to the Access Program. Providers will also not be eligible to receive another disbursement of funds until all receipts are accounted for."
 				],
@@ -1832,7 +1832,7 @@
 					"Original receipts (hard copies)",
 					"Bank statements",
 					"Financial reports that relate to Program costs (soft copies)",
-					"Recruitment materials (hard copies)"
+					"Recruitment materials (hard copies)",
 					"Photo consent forms (hard copies)",
 					"Student applications (hard copies)",
 					"Student contracts (hard copies)",
@@ -1919,11 +1919,6 @@
 		},
 		"tutorial": {
 			"definition": "a book, computer program, etc., that teaches someone how to do something by explaining each stage of a process.",
-			"form": "word",
-			"source": "Merriam-Webster"
-		},
-		"interactive": {
-			"definition": "to talk or do things with other people.",
 			"form": "word",
 			"source": "Merriam-Webster"
 		},
