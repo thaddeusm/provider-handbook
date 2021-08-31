@@ -1507,7 +1507,7 @@
 				],
 				"markup": [
 					"Change the end date of the agreement",
-					"Make a revision to the program budget, which would require an amendment if a change to the total award amount is required (see <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none\" href=\"/#/handbook#BudgetRevisions\" target=\"_blank\">Budget Revisions</a> section)",
+					"Make a revision to the program budget, which would require an amendment if a change to the total award amount is required (see <a style=\"text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #3470B7; text-decoration-skip-ink: none; text-decoration-skip: none; cursor: pointer\" onclick=\"jumpToId('BudgetRevisions', 'handbook')\">Budget Revisions</a> section)",
 					"Change the scope of work (i.e. add an Intensive Session)",
 					"Change the name of their institution or organization"
 				],

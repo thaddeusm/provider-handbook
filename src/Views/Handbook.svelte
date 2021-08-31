@@ -38,6 +38,7 @@
 	import Illustration from './../Components/IllustrationContainer.svelte';
 
 	let activeId = "Introduction";
+
 	let processedSections = {};
 
 	let exportingPDF = false;
@@ -138,7 +139,7 @@
 		let query = new RegExp(search_query_value, 'i');
 
 		if (navigating_results_value) {
-			text = text.replace(query, (match) =>{ 
+			text = text.replace(query, (match) =>{
 				return `<span class="bold-text">${match}</span>`
 			});
 		}
@@ -149,7 +150,7 @@
 			finalText = `<${element} class="active-section">${text}</${element}>`;
 		} else {
 			finalText = `<${element}>${text}</${element}>`;
-		}		
+		}
 
 		return finalText;
 	}
@@ -180,9 +181,9 @@
 </script>
 
 <Expanded contentSource={Handbook.sections} {activeId} path={meta.match}>
-	<button 
-		id="pdfExportButton" 
-		class="action-button-small" 
+	<button
+		id="pdfExportButton"
+		class="action-button-small"
 		on:click={handlePDFExport} disabled={exportingPDF}
 	>
 		{#if exportingPDF}
@@ -383,12 +384,12 @@
 		cursor: pointer;
 	}
 
-	[id]::before { 
-		display: inline-block; 
-		content: " "; 
-		margin-top: -300px; 
-		height: 300px; 
-		visibility: hidden; 
+	[id]::before {
+		display: inline-block;
+		content: " ";
+		margin-top: -300px;
+		height: 300px;
+		visibility: hidden;
 		pointer-events: none;
 	}
 
@@ -477,9 +478,9 @@
 	}
 
 	:global(.embedded-link) {
-		text-decoration: underline; 
-		text-decoration-thickness: 3px; 
-		text-decoration-color: #3470B7; 
+		text-decoration: underline;
+		text-decoration-thickness: 3px;
+		text-decoration-color: #3470B7;
 		text-decoration-skip-ink: none;
 		text-decoration-skip: none;
 	}
