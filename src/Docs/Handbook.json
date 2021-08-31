@@ -688,12 +688,23 @@
 					"Cash gifts",
 					"Electronic gifts such as tablets and laptops",
 					"Live bands, singers, MCs, and DJs are not allowed, unless these are Access students that would like to perform as part of their graduation ceremony",
-					"Flowers or plants (modest costs for flowers and decorations are allowable)",
 					"Alcohol",
 					"Graduation gowns and hats",
 					"Any expenses related to the press (i.e. Access funds cannot be used to pay for the travel expenses for a newspaper reporter to attend the ceremony)",
 					"Photographer(s)",
-					"Cameras/technology that will only be used for the ceremony"
+					"Cameras/technology that will only be used for the ceremony",
+					"Flowers or plants (modest costs for flowers and decorations are allowable)"
+				],
+				"markup": [
+					"Cash gifts",
+					"Electronic gifts such as tablets and laptops",
+					"Live bands, singers, MCs, and DJs are not allowed, unless these are Access students that would like to perform as part of their graduation ceremony",
+					"Alcohol",
+					"Graduation gowns and hats",
+					"Any expenses related to the press (i.e. Access funds cannot be used to pay for the travel expenses for a newspaper reporter to attend the ceremony)",
+					"Photographer(s)",
+					"Cameras/technology that will only be used for the ceremony",
+					"Flowers or plants (<strong>modest</strong> costs for flowers and decorations are allowable)"
 				],
 				"section": "Planning a 2-Year Access Program"
 			},
@@ -1061,7 +1072,7 @@
 			},
 			{
 				"style": "paragraph",
-				"text": "Providers are required to create a gender-balanced list of replacement students in case students withdraw from the program. In order to maintain the program’s integrity, providers can only replace students who leave the program during the first three months of the program. Permission from the RELO must be given to the provider if replacements are desired more than three months after the program's start date. Auditing students are not allowed.",
+				"text": "Providers are required to create a gender-balanced list of replacement students in case students withdraw from the program. In order to maintain the program’s integrity, providers can only replace students who leave the program during the first three months of the program. Permission from the RELO must be given to the provider if replacements are desired more than three months after the program's start date. Additional materials such as textbooks can be purchased at the start of the program for replacement students at 10% of the class size. Auditing students are not allowed.",
 				"section": "Advertising the Access Program and Recruiting Students"
 			},
 			{
